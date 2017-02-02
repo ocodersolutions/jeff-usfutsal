@@ -1,0 +1,343 @@
+/*
+Theme Name: Megastar
+Theme URI: https://themeforest.net/item/megastar-business-wordpress-theme/16954448
+Author: BdThemes
+Author URI: https://bdthemes.com
+Description: Megastar Theme designed by BdThemes Ltd. For online documentation look at our documentation site. For get support please go to our support system.
+Version: 1.0.3
+License: Custom
+License URI: http://themeforest.net/licenses
+Text Domain: megastar
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready, accessibility-ready
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Titlebar / Logo Styles 
+ * 2.0 - Pagination Styles
+ * 3.0 - Widget Styles
+ *   3.1 - Search Styles
+ *   3.2 - Calendar Styles
+ *   3.3 - Tags & Cloud
+ *   3.4 - Nav Widget Styles
+ *   3.5 - Bottom B Widget
+ *   3.6 - Give Donation Form
+ * 4.0 - Search page
+ * 5.0 - Commnet Form
+ * 6.0 - Archive Page
+ * 7.0 - Countdown Styles
+ * 8.0 - Navbar style
+ * 9.0 - Offcanvas Menu Style
+ * 10.0 - Humberger menu style
+ */
+
+
+/*===========================
+  1.0 Titlebar / Logo Styles 
+============================*/
+.logo h1 {
+    line-height: normal;
+}
+.wp-caption {}
+.wp-caption-text{}
+.sticky{}
+.gallery-caption{}
+.bypostauthor{}
+.screen-reader-text{}
+.alignright{}
+.alignleft{}
+.aligncenter{}
+
+
+/*===========================
+  2.0 Pagination Styles 
+============================*/
+.uk-article .wp-post-image {
+  width: 100%;
+}
+
+
+/*------------------------
+ 3.1 Search Styles
+-------------------------*/
+.tm-sidebar .widget_search .screen-reader-text, 
+.tm-sidebar .widget_search .search-submit, 
+.tm-sidebar .widget_search [type="submit"],
+.tm-copyright .widget_search [type="submit"],
+.tm-drawer .widget_search [type="submit"] {
+  display: none;
+}
+.tm-sidebar .widget_search .searchform {
+    margin: 0;
+}
+.widget_search input[type="search"] {
+    background: transparent;
+    border: 0;
+    outline: none;
+    height: 30px;
+    padding: 0 0 0 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.widget_search .search-form {
+    position: relative;
+}
+.widget_search .search-form:before {
+    content: "\f002";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.2);
+}
+.tm-headerbar .searchform {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.tm-headerbar .searchform [type="text"] {
+    max-width: 220px;
+    font-size: 13px;
+    color: #bbb;
+}
+.tm-headerbar .searchform .uk-button {
+    display: none;
+}
+.tm-headerbar .searchform > div {
+    margin-bottom: 0 !important;
+}
+.uk-offcanvas-bar .searchform [type="text"] {
+    background-color: rgba(255,255,255,0.03);
+    outline: none;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+/*------------------------
+ 3.2 Calendar Styles
+-------------------------*/
+.widget_calendar table {
+    width: 100%;
+}
+.widget_calendar table caption {
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+.widget_calendar thead, .widget_calendar tbody {
+    text-align: center;
+}
+
+/*------------------------
+ 3.3 Tags & Cloud
+-------------------------*/
+body .tm-sidebar .widget_tag_cloud a {
+    background: #eee;
+    color: #444;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+body .tm-sidebar .widget_tag_cloud a:hover {
+    background: #e5e5e5;
+}
+
+.widget_tag_cloud .tagcloud:before {
+    content: "";
+    display: table-cell;
+}
+.widget_tag_cloud .tagcloud:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*------------------------
+ 3.4 Nav Widget Styles
+-------------------------*/
+.widget_nav_menu ul li i {
+    margin-right: 5px;
+}
+.no-menu {
+  padding: 20px 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+/*-----------------------
+  3.5  Bottom Widget
+-------------------------*/
+.tm-footer .widget_recent_entries ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.tm-footer .widget div > ul > li:nth-child(n+2) {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+
+
+/*-----------------------
+  3.6  Recent Form Styles
+-------------------------*/
+.drawer-wrapper .widget_recent_entries ul {
+	padding-left: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.drawer-wrapper .widget_recent_entries ul li + li {
+    padding-top: 5px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+/*=====================
+  4.0  Search page
+======================*/
+select.uk-form-large, textarea.uk-form-large, input[type].uk-form-large, input:not([type]).uk-form-large {
+    font-size: 14px;
+}
+.search .tm-content .uk-alert-warning {
+    padding: 15px 20
+}
+.search-results .entry-search .entry-title h3 {
+    margin-bottom: 0;
+}
+.search-results .entry-search .entry-type {
+    display: inline-block;
+    background: #fbfafa;
+    padding: 0px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.search-results .entry-content {
+    margin-top: 25px;
+}
+.search-results .searchform > div {
+    margin-bottom: 12px;
+}
+
+/*=====================
+  5.0  Commnet Form
+======================*/
+input.uk-button {
+  color: white !important;
+}
+#commentform #respond-textarea textarea {
+    padding: 10px 12px;
+}
+#commentform #respond-inputs [type="text"] {
+    height: 40px;
+    padding: 3px 12px;
+}
+.uk-alert {
+    padding: 15px 20px;
+}
+
+
+/*=====================
+  6.0  Archive Page
+======================*/
+
+div#author-info {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+}
+
+/*========================
+  7.0  Countdown Styles
+==========================*/
+.bdt_countdown .bdt_countdown-section {
+  margin-bottom: 0;
+}
+
+/*======================
+  8.0 Navbar style 
+========================*/
+
+
+
+
+@media (max-width: 480px) {
+  .uk-navbar-center {
+  	max-width: 55%;
+  }
+}
+
+
+/*============================
+   9.0 Offcanvas Menu Style
+==============================*/
+
+.offcanvas-search.uk-panel {
+    margin: 30px 25px 20px;
+}
+
+.uk-offcanvas-bar .uk-nav-offcanvas li a {
+    background: none !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.uk-offcanvas .uk-nav {
+    padding: 0 35px;
+    list-style-type: none;
+}
+.uk-offcanvas .uk-nav a {
+    display: block;
+    text-decoration: none;
+}
+.uk-offcanvas .uk-nav a i {margin-right: 5px;}
+.uk-offcanvas .uk-nav > li > a {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ccc;
+}
+.uk-offcanvas .uk-nav > li > ul {
+    font-size: 13px;
+    border-left: 1px solid #404040;
+    padding: 5px 0 5px 13px;
+    list-style-type: circle;
+}
+.uk-offcanvas .uk-nav > li > ul > li a {
+    padding: 4px 0;
+    color: #999;
+}
+
+
+/*================================
+   10.0 Humberger menu style 
+==================================*/
+
+.uk-offcanvas-page {
+    -webkit-transition: margin-left 0.3s cubic-bezier(0, 0.45, 0.45, 1);
+    transition: margin-left 0.3s cubic-bezier(0, 0.45, 0.45, 1);
+}
+
+.uk-offcanvas-bar {
+    -webkit-transition: transform 0.3s cubic-bezier(0, 0.45, 0.45, 1);
+    transition: transform 0.3s cubic-bezier(0, 0.45, 0.45, 1);
+    width: 300px;
+}
+
+.uk-offcanvas {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* ======================
+  11.0 Footer menu style 
+=========================*/
+
+.tm-copyright-menu .uk-subnav li a > i {
+  margin-right: 5px;
+}

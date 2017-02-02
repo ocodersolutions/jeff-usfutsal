@@ -1,0 +1,209 @@
+// Copyright (C) BdThemes, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Search
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@search-width:                                  @search-padding;
+@search-focus-width:                            140px;
+@search-height:                                 auto;
+@search-color:                                  @global-color;
+@search-placeholder-color:                      transparent;
+@search-icon-color:                             #888;
+
+@dropdown-search-background:                    #fff;
+@dropdown-search-color:                         @global-color;
+@dropdown-search-navbar-margin-top:             10px;
+@dropdown-search-navbar-margin-right:           -9px;
+
+@nav-search-color:                              @global-color;
+@nav-search-active-background:                  #fff;
+@nav-search-active-color:                       @global-link-color;
+@nav-search-header-color:                       @global-muted-color;
+@nav-search-divider-border:                     @global-border;
+@nav-search-divider-border-width:               @global-border-width;
+@nav-search-nested-color:                       @global-muted-color;
+@nav-search-nested-hover-color:                 @global-link-color;
+@dropdown-search-margin-top: 					25px;
+
+@offcanvas-search-margin:                       30px;
+@offcanvas-search-color:                 	    #fff;
+@offcanvas-search-background:                   rgba(0,0,0,0);
+@offcanvas-search-border:                       transparent;
+@offcanvas-search-placeholder-color:            rgba(255,255,255,0.4);
+
+//
+// New
+//
+
+@nav-search-hover-color:                        @global-link-color;
+
+
+// Component
+// ========================================================================
+
+.hook-search() {}
+
+.hook-search-icon() {
+	top: 2px;
+}
+
+
+// Sub-object `uk-search-field`
+// ========================================================================
+
+.hook-search-field() {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1;
+    .transition(all cubic-bezier(0.01, 0.72, 0.32, 0.98) 0.4s);
+}
+
+.hook-search-field-focus() {
+	color: @search-color;
+	&::-webkit-input-placeholder {
+	    color: #aaa;
+	}
+	&:-moz-placeholder {
+	    color: #aaa;
+	}
+	&::-moz-placeholder {
+	    color: #aaa;
+	}
+	&:-ms-input-placeholder {
+	    color: #aaa;
+	}
+}
+
+
+// Dropdown modifier: `uk-dropdown-search`
+// ========================================================================
+
+.hook-dropdown-search() {}
+
+
+// Nav modifier `uk-nav-search`
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-nav-search() {
+
+    &:hover { color: @nav-search-hover-color; }
+
+}
+
+// Active
+.hook-nav-search-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-search-header() {
+    color: @global-color;
+    margin: 0 25px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px 0 10px;
+}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-search-divider() {}
+
+
+// Search in offcanvas
+// ========================================================================
+
+.hook-offcanvas-search-field() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-search-misc() {
+	.uk-search-field:focus,
+	.uk-search.uk-active .uk-search-field {
+	    padding: 0 @search-padding;
+	    cursor: text;
+	}
+
+	.uk-search.uk-loading:after {
+	  content: "";
+	  width: 20px;
+	  height: 20px;
+	  margin: 0;
+	  background-color: @global-link-color;
+	  border-radius: 100%;
+	  -webkit-animation: searchanimation 1s infinite ease-in-out;
+	  animation: searchanimation 1s infinite ease-in-out;
+	  position: absolute;
+	  right: 10px;
+	  top: 3px;
+	}
+	@-webkit-keyframes searchanimation {
+	  0% { -webkit-transform: scale(0.0) }
+	  100% {
+	    -webkit-transform: scale(1.0);
+	    opacity: 0;
+	  }
+	}
+
+	@keyframes searchanimation {
+	  0% { 
+	    transform: scale(0.0);
+	    -webkit-transform: scale(0.0);
+	  } 100% {
+	    transform: scale(1.0);
+	    -webkit-transform: scale(1.0);
+	    opacity: 0;
+	  }
+	}
+
+	// search dropdown
+	.tm-toolbar {
+		input.uk-search-field {
+			height: auto;
+		  	color: #f9f9f9;
+		}
+		.uk-search:before {
+		    color: inherit;
+		    line-height: inherit;
+		}
+		.uk-search.uk-loading:after {
+			top: 0;
+		}
+	}
+
+	.uk-dropdown-search {
+	    margin-right: @dropdown-search-navbar-margin-right;
+	    box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.1);
+	    padding-top: 10px !important;
+	    padding-bottom: 10px !important;
+	    .uk-nav-search {
+	        > li { 
+	            > a {
+	                padding: 10px 25px;
+	                color: #444;
+	            }
+	            &.uk-active {
+	                > a {
+	                    background: #444;      
+	                    color: #fff;
+	                }
+	            }
+	        }
+	    } 
+	}
+}

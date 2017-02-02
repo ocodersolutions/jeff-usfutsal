@@ -1,0 +1,52 @@
+<article id="item-<?php the_ID(); ?>" class="uk-article post-format-audio" data-permalink="<?php the_permalink(); ?>">
+    
+    <div class="entry-audio">
+        <?php $audio = get_post_meta( get_the_ID(), 'bdt_audio_src', true );
+        if (!empty($audio)) : ?>
+
+        <?php echo wp_kses($audio, megastar_allowed_tags()); ?>
+
+        <?php endif ?>
+    </div>
+    
+    <?php if(get_the_date()) : ?>
+    <span class="catDateWrap">
+        <span class="date">
+            <?php
+                printf(get_the_date('j'));
+            ?>
+        </span>
+        <span class="time">
+            <?php
+                printf(get_the_date('M'));
+            ?>
+        </span>
+    </span>
+    <?php endif; ?>
+
+    <?php if(!is_single()) :?>
+    <h1 class="uk-article-title catBlogTitle">
+        <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+        <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+                <?php printf( '<span class="sticky-post featured">%s</span>', esc_html__( 'Featured', 'megastar') ); ?>
+        <?php endif; ?>
+    </h1>
+    <?php elseif(is_single()) :?>
+        <h1 class="uk-article-title catBlogTitle"><?php the_title(); ?></h1>
+    <?php endif ?>
+
+    <?php if(get_theme_mod('megastar-blog_meta', 1)) :?>
+        <div class="entry-meta">
+            <?php get_template_part( 'template-parts/post-format/meta' ); ?>
+        </div>
+    <?php endif; ?>
+    
+    <div class="entry-content">
+    <?php if(!is_single()){ ?>
+        <p><?php echo wp_kses_post(megastar_custom_excerpt(50)); ?></p>
+    <?php } else { ?>
+        <?php the_content(); ?>
+    <?php } ?>
+    </div>
+
+</article>

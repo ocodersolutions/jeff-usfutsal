@@ -1,0 +1,21 @@
+/*
+Theme Name: megastar
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right_to_Left_Language_Support
+
+[Note: base rtl style located in css/rtl-theme.css, css/rtl-woocommerce.css because of less compiler. 
+we process all right-to-left direction automatically you don't need to write any code 
+for rtl style actually, happy coding!]
+
+*/
+
+/*
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+*/

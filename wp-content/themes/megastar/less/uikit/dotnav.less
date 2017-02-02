@@ -1,0 +1,148 @@
+// Copyright (C) BdThemes, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Dotnav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dotnav-margin-horizontal:                      10px;
+@dotnav-width:                                  20px;
+@dotnav-height:                                 @dotnav-width;
+@global-secondary-background: 					#444;
+@global-contrast-color:							#ddd;
+
+@dotnav-background:                             rgba(0,0,0,0);
+@dotnav-hover-background:                       rgba(0,0,0,0);
+@dotnav-onclick-background:                     fade(@global-secondary-background, 10%);
+@dotnav-active-background:                      fade(@global-secondary-background, 10%);
+
+@dotnav-contrast-background:                    rgba(0,0,0,0);
+@dotnav-contrast-hover-background:              rgba(0,0,0,0);
+@dotnav-contrast-onclick-background:            fade(@global-contrast-color, 20%);
+@dotnav-contrast-active-background:             fade(@global-contrast-color, 20%);
+
+//
+// New
+//
+
+@dotnav-centered-offset:                        7px;
+@dotnav-centered-background:                    fade(@global-secondary-background, 30%);
+@dotnav-centered-hover-background:              fade(@global-secondary-background, 50%);
+@dotnav-centered-onclick-background:            fade(@global-secondary-background, 80%);
+@dotnav-centered-active-background:             @global-secondary-background;
+
+@dotnav-contrast-centered-background:           fade(@global-contrast-color, 30%);
+@dotnav-contrast-centered-hover-background:     fade(@global-contrast-color, 50%);
+@dotnav-contrast-centered-onclick-background:   fade(@global-contrast-color, 80%);
+@dotnav-contrast-centered-active-background:    @global-contrast-color;
+
+
+
+// Component
+// ========================================================================
+
+.hook-dotnav-item() {
+
+    position: relative;
+    .transition();
+
+    // Dot centered
+    &::before {
+        content: '';
+        top: @dotnav-centered-offset;
+        bottom: @dotnav-centered-offset;
+        right: @dotnav-centered-offset;
+        left: @dotnav-centered-offset;
+        position: absolute;
+        border-radius: 50%;
+        background: @dotnav-centered-background;
+    }
+
+}
+
+.hook-dotnav-item-hover() {
+
+    // Dot centered
+    &::before { background: @dotnav-centered-hover-background; }
+
+}
+
+.hook-dotnav-item-onclick() {
+
+    // Dot centered
+    &::before { background: @dotnav-centered-onclick-background; }
+
+}
+
+.hook-dotnav-item-active() {
+
+    // Dot centered
+    &::before { background: @dotnav-centered-active-background; }
+
+}
+
+.hook-dotnav-contrast-item() {
+
+    // Dot centered
+    &::before { background: @dotnav-contrast-centered-background; }
+
+}
+
+.hook-dotnav-contrast-item-hover() {
+
+    // Dot centered
+    &::before { background: @dotnav-contrast-centered-hover-background; }
+
+}
+
+.hook-dotnav-contrast-item-onclick() {
+
+    // Dot centered
+    &::before { background: @dotnav-contrast-centered-onclick-background; }
+
+}
+
+.hook-dotnav-contrast-item-active() {
+
+    // Dot centered
+    &::before { background: @dotnav-contrast-centered-active-background; }
+
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dotnav-misc() {
+
+    // Centering dotnav items
+    .uk-dotnav:extend(.uk-flex-middle all) {}
+
+
+    //
+    // Dotnav Follower
+    //
+
+    // 'tm-dotnav' follower 'tm-dotnav-follower'
+    .tm-dotnav-follower {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: @dotnav-width;
+        height: @dotnav-height;
+        margin: round((@dotnav-width / 2)) 0 0 round((@dotnav-width / 2));
+        padding: 0;
+        border-radius: round((@dotnav-width / 2));
+        background: @dotnav-active-background;
+        transition: top .2s, height .2s;
+        z-index: -1;
+    }
+
+    // removing the active background from items
+    .tm-dotnav > .uk-active > * { background: rgba(0,0,0,0); }
+
+}

@@ -1,0 +1,125 @@
+// Copyright (C) BdThemes, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Off-canvas
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@offcanvas-z-index:                             @global-z-index;
+@offcanvas-bar-width: 							300px;
+@offcanvas-search-icon-color:					#fff;
+@offcanvas-search-color:						#fff;
+
+// Component
+// ========================================================================
+
+.hook-offcanvas() {
+	.uk-panel:first-child {
+		margin-bottom: 50px;
+	}
+
+}
+
+
+// Sub-object `uk-offcanvas-bar`
+// ========================================================================
+
+.hook-offcanvas-bar() {
+    .uk-nav-offcanvas {
+    	padding: 0 35px;
+    	> li > a {
+    		padding: 5px 0;
+    	}
+    	.uk-nav-sub {
+    		//border-top: 1px solid #414141;
+    		//padding: 0;
+    	}
+    	ul.uk-nav-sub {
+    		font-size: @dropdown-font-size - .1;
+            border-left: 1px solid lighten(@offcanvas-bar-background, 5%);
+    		> li:not(.uk-parent) {
+    			font-size: @dropdown-font-size - .1;
+    			> a {
+    				padding: 5px 0;
+    			}
+    		}
+    		> li.uk-parent {
+    			> a {
+    			}
+    			> ul {
+    				font-size: @dropdown-font-size - .1;
+    				> li {
+    				}
+    			}
+    		}
+    	}
+    	li {
+    		//border-bottom: 1px solid #414141;
+    		a {
+    			background: none !important;
+    			padding-top: 10px;
+    			padding-bottom: 10px;
+    		}
+    		&.uk-active {
+    			> a {
+    				color: #fff;
+    			}
+    		}
+    		&:last-child {
+    			border-bottom: none;
+    		}
+    	}
+    }	
+    form.searchform {
+    	border-bottom: 1px solid lighten(@global-link-color, 10%);
+    	margin-top: 15px;
+    	z-index: 10;
+    	input[type="text"] {
+    		background: none;
+            border: 0;
+            color: @navbar-toggle-color;
+            height: 46px;
+    		&::-webkit-input-placeholder {
+    		    color: #ccc;
+    		}
+    		&:-moz-placeholder {
+    		    color: #fff;
+    		}
+    		&::-moz-placeholder {
+    		    color: #fff;
+    		}
+    		&:-ms-input-placeholder {
+    		    color: #fff;
+    		}
+    	}
+    	&:before {
+    		top: 12px;
+    		left: 0px;
+    	}
+        > div {
+            margin-bottom: 0;
+        }
+    }
+    .uk-article-divider {
+        border-color: lighten(@offcanvas-bar-background, 10%);
+    }
+}
+
+
+// Panel in offcanvas
+// ========================================================================
+
+.hook-offcanvas-panel() {
+	margin: 20px 30px;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-offcanvas-misc() {
+}

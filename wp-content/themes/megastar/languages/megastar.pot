@@ -1,0 +1,7003 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Megastar\n"
+"POT-Creation-Date: 2016-09-26 21:36+0600\n"
+"PO-Revision-Date: 2016-09-26 21:36+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:22
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:25
+msgid "Go back"
+msgstr ""
+
+#: 404.php:28
+#, php-format
+msgid ""
+"The Page you are looking for doesn't exist or an other error occurred. %s or "
+"head over to %s %s homepage to choose a new direction."
+msgstr ""
+
+#: admin/compile.php:7
+msgctxt "backend"
+msgid "Compile Less To Css"
+msgstr ""
+
+#: admin/compile.php:7 admin/compile.php:23
+msgctxt "backend"
+msgid "Compile Less"
+msgstr ""
+
+#: admin/compile.php:19
+msgctxt "backend"
+msgid "Megastar Theme Less Compiler"
+msgstr ""
+
+#: admin/compile.php:20
+msgctxt "backend"
+msgid ""
+"If you edit any less file in less folder so you must need to compile the "
+"less. <br>This compile button give you this featurto compile less."
+msgstr ""
+
+#: admin/compile.php:76
+msgctxt "backend"
+msgid "Compiled Successfully"
+msgstr ""
+
+#: admin/compile.php:78
+msgctxt "backend"
+msgid "Fail To Compile!"
+msgstr ""
+
+#: archive.php:33
+msgid "About"
+msgstr ""
+
+#: comments.php:13
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: comments.php:13
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:20
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:37
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:47
+msgid "Comments"
+msgstr ""
+
+#: comments.php:47 template-parts/post-format/meta.php:32
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:47 template-parts/post-format/meta.php:32
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:89
+msgid "Name (required)"
+msgstr ""
+
+#: comments.php:91
+msgid "E-Mail (required)"
+msgstr ""
+
+#: comments.php:93
+msgid "Website"
+msgstr ""
+
+#: comments.php:100
+msgid "Leave a reply"
+msgstr ""
+
+#: comments.php:101
+msgid "Your comment here (required)"
+msgstr ""
+
+#: comments.php:102
+msgid "Submit Comment"
+msgstr ""
+
+#: customizer/class-customizer-base.php:83
+msgctxt "backend"
+msgid "Logo Upload"
+msgstr ""
+
+#: customizer/class-customizer-base.php:93
+msgctxt "backend"
+msgid "Mobile Logo Upload"
+msgstr ""
+
+#: customizer/class-customizer-base.php:105
+msgctxt "backend"
+msgid "General"
+msgstr ""
+
+#: customizer/class-customizer-base.php:115
+msgctxt "backend"
+msgid "Show Global Page Comment"
+msgstr ""
+
+#: customizer/class-customizer-base.php:116
+msgctxt "backend"
+msgid "Enable / Disable global page comments (not post comment)."
+msgstr ""
+
+#: customizer/class-customizer-base.php:121
+#: customizer/class-customizer-base.php:139
+#: customizer/class-customizer-base.php:302
+#: customizer/class-customizer-base.php:321
+#: customizer/class-customizer-base.php:340
+#: customizer/class-customizer-base.php:359
+#: customizer/class-customizer-base.php:378
+#: customizer/class-customizer-base.php:492
+#: customizer/class-customizer-base.php:943
+#: customizer/class-customizer-base.php:1301
+#: customizer/class-customizer-base.php:1316 inc/meta-boxes.php:219
+#: inc/meta-boxes.php:234 inc/meta-boxes.php:249 inc/vc/vc.contentSlider.php:46
+#: inc/vc/vc.contentSlider.php:55 inc/vc/vc.counter.php:55
+#: inc/vc/vc.counter.php:65 inc/vc/vc.customCarousel.php:84
+#: inc/vc/vc.customCarousel.php:96 inc/vc/vc.customCarousel.php:108
+#: inc/vc/vc.deviceSlider.php:49 inc/vc/vc.deviceSlider.php:59
+#: inc/vc/vc.deviceSlider.php:69 inc/vc/vc.deviceSlider.php:79
+#: inc/vc/vc.deviceSlider.php:89 inc/vc/vc.deviceSlider.php:99
+#: inc/vc/vc.divider.php:75 inc/vc/vc.eventCarousel.php:117
+#: inc/vc/vc.eventCarousel.php:129 inc/vc/vc.eventCarousel.php:141
+#: inc/vc/vc.flickr.php:32 inc/vc/vc.iconListItem.php:204 inc/vc/vc.note.php:42
+#: inc/vc/vc.partnerLogo.php:85 inc/vc/vc.partnerLogo.php:97
+#: inc/vc/vc.partnerLogo.php:109 inc/vc/vc.postCarousel.php:34
+#: inc/vc/vc.postCarousel.php:110 inc/vc/vc.postCarousel.php:122
+#: inc/vc/vc.postCarousel.php:134 inc/vc/vc.pricingPlan.php:53
+#: inc/vc/vc.progressBar.php:30 inc/vc/vc.testimonial.php:71
+#: inc/vc/vc.timeline.php:57 inc/vc/vc.timeline.php:66
+#: inc/vc/vc.timeline.php:75 inc/vc/vc.timeline.php:84
+#: inc/vc/vc.timeline.php:93 inc/vc/vc.timeline.php:102
+#: inc/vc/vc.timeline.php:111 inc/vc/vc.timeline.php:120
+msgctxt "backend"
+msgid "Yes"
+msgstr ""
+
+#: customizer/class-customizer-base.php:122
+#: customizer/class-customizer-base.php:140
+#: customizer/class-customizer-base.php:303
+#: customizer/class-customizer-base.php:322
+#: customizer/class-customizer-base.php:341
+#: customizer/class-customizer-base.php:360
+#: customizer/class-customizer-base.php:379
+#: customizer/class-customizer-base.php:493
+#: customizer/class-customizer-base.php:944
+#: customizer/class-customizer-base.php:1300
+#: customizer/class-customizer-base.php:1315 inc/meta-boxes.php:220
+#: inc/meta-boxes.php:235 inc/meta-boxes.php:250
+#: inc/vc/vc.customCarousel.php:85 inc/vc/vc.customCarousel.php:97
+#: inc/vc/vc.customCarousel.php:109 inc/vc/vc.eventCarousel.php:118
+#: inc/vc/vc.eventCarousel.php:130 inc/vc/vc.eventCarousel.php:142
+#: inc/vc/vc.iconListItem.php:203 inc/vc/vc.partnerLogo.php:86
+#: inc/vc/vc.partnerLogo.php:98 inc/vc/vc.partnerLogo.php:110
+#: inc/vc/vc.postCarousel.php:35 inc/vc/vc.postCarousel.php:111
+#: inc/vc/vc.postCarousel.php:123 inc/vc/vc.postCarousel.php:135
+#: inc/vc/vc.pricingPlan.php:52
+msgctxt "backend"
+msgid "No"
+msgstr ""
+
+#: customizer/class-customizer-base.php:133
+msgctxt "backend"
+msgid "Offcanvas Search"
+msgstr ""
+
+#: customizer/class-customizer-base.php:134
+msgctxt "backend"
+msgid "Enable / Disable Offcanvas search display"
+msgstr ""
+
+#: customizer/class-customizer-base.php:151
+msgctxt "backend"
+msgid "Offcanvas Alignment"
+msgstr ""
+
+#: customizer/class-customizer-base.php:152
+msgctxt "backend"
+msgid "Set the offcanvas bar alignment."
+msgstr ""
+
+#: customizer/class-customizer-base.php:157
+msgctxt "backend"
+msgid "Right Side"
+msgstr ""
+
+#: customizer/class-customizer-base.php:158
+msgctxt "backend"
+msgid "Left Side"
+msgstr ""
+
+#: customizer/class-customizer-base.php:168 inc/meta-boxes.php:269
+#: inc/meta-boxes.php:575
+msgctxt "backend"
+msgid "Titlebar"
+msgstr ""
+
+#: customizer/class-customizer-base.php:177 inc/meta-boxes.php:282
+#: inc/meta-boxes.php:394 inc/meta-boxes.php:591
+msgctxt "backend"
+msgid "Titlebar Layout"
+msgstr ""
+
+#: customizer/class-customizer-base.php:183 inc/meta-boxes.php:287
+#: inc/meta-boxes.php:399 inc/meta-boxes.php:596
+msgctxt "backend"
+msgid "Titlebar (Left Align)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:184 inc/meta-boxes.php:288
+#: inc/meta-boxes.php:400 inc/meta-boxes.php:597
+msgctxt "backend"
+msgid "Titlebar (Center Align)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:185 inc/meta-boxes.php:598
+msgctxt "backend"
+msgid "No Titlebar"
+msgstr ""
+
+#: customizer/class-customizer-base.php:195 inc/meta-boxes.php:298
+#: inc/meta-boxes.php:408 inc/meta-boxes.php:606
+msgctxt "backend"
+msgid "Titlebar Style"
+msgstr ""
+
+#: customizer/class-customizer-base.php:201 inc/meta-boxes.php:303
+#: inc/meta-boxes.php:413 inc/meta-boxes.php:611
+msgctxt "backend"
+msgid "Dark (for dark backgrounds)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:202 inc/meta-boxes.php:302
+#: inc/meta-boxes.php:412 inc/meta-boxes.php:610
+msgctxt "backend"
+msgid "Light (for light backgrounds)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:211 inc/meta-boxes.php:312
+msgctxt "backend"
+msgid "Titlebar Background"
+msgstr ""
+
+#: customizer/class-customizer-base.php:217
+#: customizer/class-customizer-base.php:261 inc/meta-boxes.php:126
+msgctxt "backend"
+msgid "Blog"
+msgstr ""
+
+#: customizer/class-customizer-base.php:222
+msgctxt "backend"
+msgid "Blog Title: "
+msgstr ""
+
+#: customizer/class-customizer-base.php:229
+#: customizer/class-customizer-base.php:1175
+msgctxt "backend"
+msgid "Shop"
+msgstr ""
+
+#: customizer/class-customizer-base.php:234
+msgctxt "backend"
+msgid "WooCommerce Title: "
+msgstr ""
+
+#: customizer/class-customizer-base.php:245
+msgctxt "backend"
+msgid "Right Element"
+msgstr ""
+
+#: customizer/class-customizer-base.php:251 inc/meta-boxes.php:325
+msgctxt "backend"
+msgid "Nothing"
+msgstr ""
+
+#: customizer/class-customizer-base.php:252 inc/meta-boxes.php:326
+msgctxt "backend"
+msgid "Back Button"
+msgstr ""
+
+#: customizer/class-customizer-base.php:253 inc/meta-boxes.php:327
+msgctxt "backend"
+msgid "Breadcrumb"
+msgstr ""
+
+#: customizer/class-customizer-base.php:272
+msgctxt "backend"
+msgid "Blog Page Layout"
+msgstr ""
+
+#: customizer/class-customizer-base.php:273
+msgctxt "backend"
+msgid ""
+"If you select static blog page so you need to select your blog page layout "
+"from here."
+msgstr ""
+
+#: customizer/class-customizer-base.php:279
+#: customizer/class-customizer-base.php:1148 inc/meta-boxes.php:143
+msgctxt "backend"
+msgid "Sidebar Left"
+msgstr ""
+
+#: customizer/class-customizer-base.php:280
+#: customizer/class-customizer-base.php:407
+#: customizer/class-customizer-base.php:1149 inc/meta-boxes.php:141
+msgctxt "backend"
+msgid "Fullwidth"
+msgstr ""
+
+#: customizer/class-customizer-base.php:281
+#: customizer/class-customizer-base.php:1150 inc/meta-boxes.php:142
+msgctxt "backend"
+msgid "Sidebar Right"
+msgstr ""
+
+#: customizer/class-customizer-base.php:296
+msgctxt "backend"
+msgid "Read More Button in Blog Posts"
+msgstr ""
+
+#: customizer/class-customizer-base.php:297
+msgctxt "backend"
+msgid "Enable / Disable read more button on blog posts."
+msgstr ""
+
+#: customizer/class-customizer-base.php:315
+msgctxt "backend"
+msgid "Metadata on Blog Posts"
+msgstr ""
+
+#: customizer/class-customizer-base.php:316
+msgctxt "backend"
+msgid "Enable / Disable metadata on blog post."
+msgstr ""
+
+#: customizer/class-customizer-base.php:334
+msgctxt "backend"
+msgid "Previous / Next Pagination"
+msgstr ""
+
+#: customizer/class-customizer-base.php:335
+msgctxt "backend"
+msgid "Enable / Disable next previous button on blog posts."
+msgstr ""
+
+#: customizer/class-customizer-base.php:353
+msgctxt "backend"
+msgid "Author Info in Blog Details"
+msgstr ""
+
+#: customizer/class-customizer-base.php:354
+msgctxt "backend"
+msgid "Enable / Disable author info from underneath of blog posts."
+msgstr ""
+
+#: customizer/class-customizer-base.php:372
+msgctxt "backend"
+msgid "Related Posts in Blog Details"
+msgstr ""
+
+#: customizer/class-customizer-base.php:373
+msgctxt "backend"
+msgid "Enable / Disable related post underneath of blog posts."
+msgstr ""
+
+#: customizer/class-customizer-base.php:393 inc/meta-boxes.php:114
+#: inc/meta-boxes.php:136 inc/vc/vc.portfolio.php:36
+msgctxt "backend"
+msgid "Layout"
+msgstr ""
+
+#: customizer/class-customizer-base.php:402
+msgctxt "backend"
+msgid "Global Layout"
+msgstr ""
+
+#: customizer/class-customizer-base.php:408
+msgctxt "backend"
+msgid "Boxed"
+msgstr ""
+
+#: customizer/class-customizer-base.php:418 inc/meta-boxes.php:164
+msgctxt "backend"
+msgid "Header Style"
+msgstr ""
+
+#: customizer/class-customizer-base.php:423
+#: customizer/class-customizer-base.php:441
+#: customizer/class-customizer-base.php:474 inc/meta-boxes.php:140
+#: inc/vc/vc.divider.php:99 inc/vc/vc.faq.php:31 inc/vc/vc.faq.php:52
+#: inc/vc/vc.heading.php:38 inc/vc/vc.portfolio.php:98
+#: inc/vc/vc.postGrid.php:55 inc/vc/vc.progressBar.php:94
+#: inc/vc/vc.timeline.php:30
+msgctxt "backend"
+msgid "Default"
+msgstr ""
+
+#: customizer/class-customizer-base.php:424
+#: customizer/class-customizer-base.php:475 inc/meta-boxes.php:170
+#: inc/meta-boxes.php:203 inc/vc/vc.heading.php:40 inc/vc/vc.note.php:17
+#: inc/vc/vc.portfolio.php:30 inc/vc/vc.teamMember.php:27
+msgctxt "backend"
+msgid "Style 2"
+msgstr ""
+
+#: customizer/class-customizer-base.php:425
+#: customizer/class-customizer-base.php:476 inc/meta-boxes.php:171
+#: inc/meta-boxes.php:204 inc/vc/vc.heading.php:41 inc/vc/vc.note.php:18
+#: inc/vc/vc.teamMember.php:28
+msgctxt "backend"
+msgid "Style 3"
+msgstr ""
+
+#: customizer/class-customizer-base.php:436 inc/meta-boxes.php:180
+msgctxt "backend"
+msgid "Header Type"
+msgstr ""
+
+#: customizer/class-customizer-base.php:442 inc/meta-boxes.php:186
+msgctxt "backend"
+msgid "Sticky"
+msgstr ""
+
+#: customizer/class-customizer-base.php:443 inc/meta-boxes.php:187
+msgctxt "backend"
+msgid "Smart Sticky"
+msgstr ""
+
+#: customizer/class-customizer-base.php:444 inc/meta-boxes.php:188
+msgctxt "backend"
+msgid "Fixed"
+msgstr ""
+
+#: customizer/class-customizer-base.php:454
+msgctxt "backend"
+msgid "Transparent Header"
+msgstr ""
+
+#: customizer/class-customizer-base.php:455
+msgctxt "backend"
+msgid "(Enable / Disable header transparancy on fixed state)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:469 inc/meta-boxes.php:197
+msgctxt "backend"
+msgid "Menu Style"
+msgstr ""
+
+#: customizer/class-customizer-base.php:477 inc/meta-boxes.php:205
+#: inc/vc/vc.heading.php:42 inc/vc/vc.note.php:19 inc/vc/vc.teamMember.php:29
+msgctxt "backend"
+msgid "Style 4"
+msgstr ""
+
+#: customizer/class-customizer-base.php:487 inc/meta-boxes.php:229
+msgctxt "backend"
+msgid "Show Toolbar"
+msgstr ""
+
+#: customizer/class-customizer-base.php:503
+msgctxt "backend"
+msgid "Toolbar Left Area"
+msgstr ""
+
+#: customizer/class-customizer-base.php:516
+msgctxt "backend"
+msgid "Toolbar Left Custom Text"
+msgstr ""
+
+#: customizer/class-customizer-base.php:528
+msgctxt "backend"
+msgid "Toolbar Right Area"
+msgstr ""
+
+#: customizer/class-customizer-base.php:529
+msgctxt "backend"
+msgid ""
+"This element automatically hide on mobile mode, for better preview shopping "
+"cart."
+msgstr ""
+
+#: customizer/class-customizer-base.php:542
+msgctxt "backend"
+msgid "Toolbar Right Custom Text"
+msgstr ""
+
+#: customizer/class-customizer-base.php:558
+msgctxt "backend"
+msgid "Search on Header"
+msgstr ""
+
+#: customizer/class-customizer-base.php:559
+msgctxt "backend"
+msgid "(Enable / Disable search on header position)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:581
+msgctxt "backend"
+msgid ""
+"You must set your layout mode Boxed for use this feature. Otherwise you "
+"can't see what happening in background"
+msgstr ""
+
+#: customizer/class-customizer-base.php:603
+msgctxt "backend"
+msgid "Drawer Background Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:625
+msgctxt "backend"
+msgid "Drawer Text Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:646
+msgctxt "backend"
+msgid "Header Background Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:663
+msgctxt "backend"
+msgid "Main Menu Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:682
+msgctxt "backend"
+msgid "Main Menu Hover Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:704
+msgctxt "backend"
+msgid "Dropdown Background Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:723
+msgctxt "backend"
+msgid "Dropdown Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:741
+msgctxt "backend"
+msgid "Dropdown Hover Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:782
+msgctxt "backend"
+msgid "Page Background Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:831
+msgctxt "backend"
+msgid "Global Link Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:875
+msgctxt "backend"
+msgid "Global Link Hover Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:912
+msgctxt "backend"
+msgid "Main Text Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:926 inc/meta-boxes.php:123
+msgctxt "backend"
+msgid "Footer"
+msgstr ""
+
+#: customizer/class-customizer-base.php:927
+msgctxt "backend"
+msgid "All Megastar theme specific settings."
+msgstr ""
+
+#: customizer/class-customizer-base.php:938
+msgctxt "backend"
+msgid "Show Footer Widgets"
+msgstr ""
+
+#: customizer/class-customizer-base.php:956
+msgctxt "backend"
+msgid "Footer Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:961
+msgctxt "backend"
+msgid "One Column"
+msgstr ""
+
+#: customizer/class-customizer-base.php:962
+msgctxt "backend"
+msgid "Two Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:963
+msgctxt "backend"
+msgid "Three Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:964
+msgctxt "backend"
+msgid "Four Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:981
+msgctxt "backend"
+msgid "Footer Background Image"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1007
+msgctxt "backend"
+msgid "Footer Background Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1029
+msgctxt "backend"
+msgid "Footer Text Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1048
+msgctxt "backend"
+msgid "Copyright Background Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1075
+msgctxt "backend"
+msgid "Copyright Text Color"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1091
+msgctxt "backend"
+msgid "Disable \"Go to top\" link"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1105
+msgctxt "backend"
+msgid "Show Custom Copyright Text"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1114
+msgctxt "backend"
+msgid "https://www.bdthemes.com"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1119
+msgctxt "backend"
+msgid "Copyright Text"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1132 inc/plugin-activation.php:65
+msgctxt "backend"
+msgid "WooCommerce"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1143
+msgctxt "backend"
+msgid "Shop Page Sidebar"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1144
+msgctxt "backend"
+msgid "Make sure you add your widget in shop widget position."
+msgstr ""
+
+#: customizer/class-customizer-base.php:1162
+msgctxt "backend"
+msgid "Shopping Cart Icon in Header:"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1163
+msgctxt "backend"
+msgid "Enable / Disable Shopping Cart Icon"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1168
+msgctxt "backend"
+msgid "No Need"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1169
+msgctxt "backend"
+msgid "Yes (in header)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1170
+msgctxt "backend"
+msgid "Yes (in toolbar)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1179
+msgctxt "backend"
+msgid "WooCommerce Page Title: "
+msgstr ""
+
+#: customizer/class-customizer-base.php:1191
+msgctxt "backend"
+msgid "WooCommerce Columns:"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1196
+msgctxt "backend"
+msgid "2 Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1197
+msgctxt "backend"
+msgid "3 Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1198
+msgctxt "backend"
+msgid "4 Columns"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1207
+msgctxt "backend"
+msgid "Items per Shop Page: "
+msgstr ""
+
+#: customizer/class-customizer-base.php:1208
+msgctxt "backend"
+msgid ""
+"Enter how many items you want to show on Shop pages & Categorie Pages before "
+"Pagination shows up (Default: 12)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1218
+msgctxt "backend"
+msgid "Shop Sort"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1219
+msgctxt "backend"
+msgid "(Enable / Disable sort-by function on Shop Pages)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1230
+msgctxt "backend"
+msgid "Shop Result Count"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1231
+msgctxt "backend"
+msgid "(Enable / Disable Result Count on Shop Pages)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1242
+msgctxt "backend"
+msgid "Add to Cart Button"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1243
+msgctxt "backend"
+msgid "(Enable / Disable \"Add to Cart\"-Button on Shop Pages)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1254
+msgctxt "backend"
+msgid "Upsells Products"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1255
+msgctxt "backend"
+msgid "(Enable / Disable to show upsells Products on Product Item Details)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1265
+msgctxt "backend"
+msgid "Related Products"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1266
+msgctxt "backend"
+msgid "(Enable / Disable to show related Products on Product Item Details)"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1276 inc/vc/vc.portfolio.php:18
+msgctxt "backend"
+msgid "Portfolio"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1281
+msgctxt "backend"
+msgid "portfolio-item"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1285
+msgctxt "backend"
+msgid "Portfolio Slug: "
+msgstr ""
+
+#: customizer/class-customizer-base.php:1295
+msgctxt "backend"
+msgid "Show Comment"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1310
+msgctxt "backend"
+msgid "Show Navigation"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1329
+#: customizer/class-customizer-base.php:1353
+msgctxt "backend"
+msgid "Language Switcher"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1333
+#: customizer/class-customizer-base.php:1357
+msgctxt "backend"
+msgid "Tagline"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1337
+#: customizer/class-customizer-base.php:1361 functions.php:109
+msgctxt "backend"
+msgid "Toolbar Menu"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1340
+#: customizer/class-customizer-base.php:1364 inc/vc/vc.teamMember.php:104
+#: inc/vc/vc.teamMember.php:111 inc/vc/vc.teamMember.php:118
+#: inc/vc/vc.teamMember.php:125 inc/vc/vc.teamMember.php:132
+#: inc/vc/vc.teamMember.php:139
+msgctxt "backend"
+msgid "Social Share"
+msgstr ""
+
+#: customizer/class-customizer-base.php:1342
+#: customizer/class-customizer-base.php:1366
+msgctxt "backend"
+msgid "Custom Text"
+msgstr ""
+
+#: customizer/class-customizer-control.php:45
+msgid "Default"
+msgstr ""
+
+#: demo-import/import.php:7
+msgctxt "backend"
+msgid "Demo Import"
+msgstr ""
+
+#: demo-import/import.php:19
+msgctxt "backend"
+msgid "Importing Demo Content..."
+msgstr ""
+
+#: demo-import/import.php:20
+msgctxt "backend"
+msgid ""
+"Please be patient and <strong>do not navigate away</strong> from this page "
+"while the import is in progress. This may take up to several minutes "
+"(according to your server speed). <br>You will get a notification on this "
+"page when the import is completed."
+msgstr ""
+
+#: demo-import/import.php:28
+#, php-format
+msgctxt "backend"
+msgid ""
+"The Megastar dummy data, slider, widgets etc imported successfully in your "
+"site. View <a href=\"%1$s\" target=\"_blank\">your website</a><br>or start "
+"to customize it with <a href=\"%2$s\">WordPress Customizer</a>."
+msgstr ""
+
+#: demo-import/import.php:35
+msgctxt "backend"
+msgid "One-Click Installer"
+msgstr ""
+
+#: demo-import/import.php:36
+msgctxt "backend"
+msgid ""
+"Select from the options below which type of data you want to import in your "
+"site. The standard content gets always imported (including pages, images, "
+"navigation). <strong>If you want to import the demo content for plugins "
+"(WooCommerce, Contactform 7, Slider Revolution), make sure to install them "
+"before click on the Import button!</strong>."
+msgstr ""
+
+#: demo-import/import.php:41
+msgctxt "backend"
+msgid "Import Slider Revolution Data"
+msgstr ""
+
+#: demo-import/import.php:45
+msgctxt "backend"
+msgid ""
+"<strong>Slider Revolution</strong> plugin is not active. Please activate it "
+"if you want Sliders to be imported."
+msgstr ""
+
+#: demo-import/import.php:48
+msgctxt "backend"
+msgid "Important Notes:"
+msgstr ""
+
+#: demo-import/import.php:50
+msgctxt "backend"
+msgid "We recommend to run the Demo Import on a clean WordPress installation."
+msgstr ""
+
+#: demo-import/import.php:53
+#, php-format
+msgctxt "backend"
+msgid ""
+"To reset your installation (if the import fails) we recommend <a href=\"%s\" "
+"target=\"_blank\">Wordpress Reset Plugin</a>."
+msgstr ""
+
+#: demo-import/import.php:54
+msgctxt "backend"
+msgid ""
+"The Demo Import will not import the images we have used in our live demo, "
+"due to copyright / license reasons."
+msgstr ""
+
+#: demo-import/import.php:55
+msgctxt "backend"
+msgid ""
+"Do not run the Demo Import multiple times, it will result in duplicated "
+"content."
+msgstr ""
+
+#: demo-import/import.php:60
+msgctxt "backend"
+msgid "Import Data"
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:35
+msgctxt "backend"
+msgid "You must upload a <b>.wie</b> file generated by this plugin."
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:83
+msgctxt "backend"
+msgid "Import file could not be found. Please try again."
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:120
+msgctxt "backend"
+msgid "Import data could not be read. Please try a different file."
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:162
+msgctxt "backend"
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:184
+msgctxt "backend"
+msgid "Site does not support widget"
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:220
+msgctxt "backend"
+msgid "Widget already exists"
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:282
+msgctxt "backend"
+msgid "Imported"
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:285
+msgctxt "backend"
+msgid "Imported to Inactive"
+msgstr ""
+
+#: demo-import/widget-importer/widget-importer.php:292
+msgctxt "backend"
+msgid "No Title"
+msgstr ""
+
+#: demo-import/wordpress-importer/parsers.php:43
+#: demo-import/wordpress-importer/parsers.php:83
+#: demo-import/wordpress-importer/parsers.php:91
+msgctxt "backend"
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: demo-import/wordpress-importer/parsers.php:44
+msgctxt "backend"
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: demo-import/wordpress-importer/parsers.php:95
+#: demo-import/wordpress-importer/parsers.php:100
+#: demo-import/wordpress-importer/parsers.php:326
+#: demo-import/wordpress-importer/parsers.php:520
+msgctxt "backend"
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:132
+#: demo-import/wordpress-importer/wordpress-importer.php:141
+#: demo-import/wordpress-importer/wordpress-importer.php:192
+#: demo-import/wordpress-importer/wordpress-importer.php:196
+#: demo-import/wordpress-importer/wordpress-importer.php:205
+msgctxt "backend"
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:133
+msgctxt "backend"
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:176
+msgctxt "backend"
+msgid "All done."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:176
+msgctxt "backend"
+msgid "Have fun!"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:177
+msgctxt "backend"
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:197
+#, php-format
+msgctxt "backend"
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:213
+#, php-format
+msgctxt "backend"
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:238
+#, php-format
+msgctxt "backend"
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:264
+msgctxt "backend"
+msgid "Assign Authors"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:265
+msgctxt "backend"
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:267
+#, php-format
+msgctxt "backend"
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:277
+msgctxt "backend"
+msgid "Import Attachments"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:280
+msgctxt "backend"
+msgid "Download and import file attachments"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:284
+msgctxt "backend"
+msgid "Submit"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:297
+msgctxt "backend"
+msgid "Import author:"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:308
+msgctxt "backend"
+msgid "or create new user with login name:"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:311
+msgctxt "backend"
+msgid "as a new user:"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:319
+msgctxt "backend"
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:321
+msgctxt "backend"
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:322
+msgctxt "backend"
+msgid "- Select -"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:372
+#, php-format
+msgctxt "backend"
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:424
+#, php-format
+msgctxt "backend"
+msgid "Failed to import category %s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:467
+#, php-format
+msgctxt "backend"
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:516
+#: demo-import/wordpress-importer/wordpress-importer.php:738
+#, php-format
+msgctxt "backend"
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:605
+#, php-format
+msgctxt "backend"
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:642
+#, php-format
+msgctxt "backend"
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:704
+#, php-format
+msgctxt "backend"
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:869
+msgctxt "backend"
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:876
+#, php-format
+msgctxt "backend"
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:939
+msgctxt "backend"
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:952
+msgctxt "backend"
+msgid "Invalid file type"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:996
+msgid "Remote server did not respond"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1001
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1008
+msgid "Could not save image contents"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1013
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1017
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1022
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1118
+msgctxt "backend"
+msgid "Import WordPress"
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1125
+#, php-format
+msgctxt "backend"
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1140
+msgctxt "backend"
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1141
+msgctxt "backend"
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: demo-import/wordpress-importer/wordpress-importer.php:1215
+msgctxt "backend"
+msgid ""
+"Import <strong>posts, pages, comments, custom fields, categories, and tags</"
+"strong> from a WordPress export file."
+msgstr ""
+
+#: footer.php:75
+msgid "Copyright"
+msgstr ""
+
+#: functions.php:110
+msgctxt "backend"
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:111
+msgctxt "backend"
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:112
+msgctxt "backend"
+msgid "Offcanvas Menu"
+msgstr ""
+
+#: functions.php:188
+msgid "Read more"
+msgstr ""
+
+#: inc/back-compat.php:30 inc/back-compat.php:42 inc/back-compat.php:57
+#, php-format
+msgid ""
+"Megastar requires at least WordPress version 4.4. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: inc/breadcrumbs.php:42
+msgid "Category"
+msgstr ""
+
+#: inc/breadcrumbs.php:45 searchform.php:6
+#: template-parts/offcanvas-search.php:13
+msgid "Search"
+msgstr ""
+
+#: inc/breadcrumbs.php:108
+msgid "Tag"
+msgstr ""
+
+#: inc/breadcrumbs.php:112
+msgid "Articles by"
+msgstr ""
+
+#: inc/breadcrumbs.php:114
+msgid "Error 404"
+msgstr ""
+
+#: inc/breadcrumbs.php:117 search.php:51
+msgid "Page"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:393
+#: inc/class-tgm-plugin-activation.php:912
+#: inc/class-tgm-plugin-activation.php:2618
+#: inc/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+#: inc/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+#: inc/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+#: inc/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1206
+#: inc/class-tgm-plugin-activation.php:3033
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2427
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2473
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2477
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2481
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2567
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/enqueue.php:11
+msgctxt "backend"
+msgid "Compiling Less..."
+msgstr ""
+
+#: inc/enqueue.php:11
+msgctxt "backend"
+msgid "An error while Compiling Less!!!"
+msgstr ""
+
+#: inc/extras.php:59
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+
+#: inc/extras.php:60
+msgid "Submit"
+msgstr ""
+
+#: inc/menu_options.php:172
+#: template-parts/post-format/portfolio/sidebyside.php:61
+#: template-parts/post-format/portfolio/wide-noslider.php:45
+#: template-parts/post-format/portfolio/wide.php:57
+msgid "URL"
+msgstr ""
+
+#: inc/menu_options.php:184
+msgid "Navigation Label"
+msgstr ""
+
+#: inc/menu_options.php:201
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: inc/menu_options.php:206
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: inc/menu_options.php:212
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: inc/menu_options.php:222
+msgid "UiKit Icon Class"
+msgstr ""
+
+#: inc/menu_options.php:227
+#, php-format
+msgid ""
+"Input uikit icon class to show this menu icon. You can see %s here. For "
+"example: uk-icon-home"
+msgstr ""
+
+#: inc/menu_options.php:233
+msgid "Dropdown Columns"
+msgstr ""
+
+#: inc/menu_options.php:242
+msgid "Dropdown Fullwidth"
+msgstr ""
+
+#: inc/menu_options.php:254
+msgid "Dropdown Menu Alignment"
+msgstr ""
+
+#: inc/menu_options.php:269
+msgid "Dropdown Classic"
+msgstr ""
+
+#: inc/menu_options.php:282
+msgid "Move"
+msgstr ""
+
+#: inc/menu_options.php:283
+msgid "Up one"
+msgstr ""
+
+#: inc/menu_options.php:284
+msgid "Down one"
+msgstr ""
+
+#: inc/menu_options.php:287
+msgid "To the top"
+msgstr ""
+
+#: inc/meta-box/inc/core.php:40
+msgid "https://metabox.io/docs/"
+msgstr ""
+
+#: inc/meta-box/inc/core.php:40
+msgid "Documentation"
+msgstr ""
+
+#: inc/meta-box/inc/core.php:41
+msgid "https://metabox.io/plugins/"
+msgstr ""
+
+#: inc/meta-box/inc/core.php:41
+msgid "Extensions"
+msgstr ""
+
+#: inc/meta-box/inc/field.php:192
+msgid "+ Add more"
+msgstr ""
+
+#: inc/meta-box/inc/fields/autocomplete.php:23
+#: inc/meta-box/inc/fields/autocomplete.php:87
+#: inc/meta-box/inc/fields/autocomplete.php:104
+msgid "Delete"
+msgstr ""
+
+#: inc/meta-box/inc/fields/button.php:29
+msgid "Click me"
+msgstr ""
+
+#: inc/meta-box/inc/fields/checkbox.php:82
+msgid "Yes"
+msgstr ""
+
+#: inc/meta-box/inc/fields/checkbox.php:82
+msgid "No"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file-input.php:25
+msgid "Select File"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file-input.php:49
+#: inc/meta-box/inc/fields/select.php:91
+msgid "Select"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file-input.php:51
+msgid "Remove"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:24
+#, php-format
+msgid "You may only upload maximum %d file"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:25
+#, php-format
+msgid "You may only upload maximum %d files"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:85
+msgid "Error: Cannot delete file"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:98
+msgctxt "file upload"
+msgid "Upload Files"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:99
+msgctxt "file upload"
+msgid "+ Add new file"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:162
+msgctxt "file upload"
+msgid "Delete"
+msgstr ""
+
+#: inc/meta-box/inc/fields/file.php:163
+msgctxt "file upload"
+msgid "Edit"
+msgstr ""
+
+#: inc/meta-box/inc/fields/key-value.php:20
+msgid "Key"
+msgstr ""
+
+#: inc/meta-box/inc/fields/key-value.php:26
+msgid "Value"
+msgstr ""
+
+#: inc/meta-box/inc/fields/map.php:49
+msgid "Find Address"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:24
+msgctxt "media"
+msgid "+ Add Media"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:25
+msgctxt "media"
+msgid " file"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:26
+msgctxt "media"
+msgid " files"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:27
+msgctxt "media"
+msgid "Remove"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:28
+msgctxt "media"
+msgid "Edit"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:29
+msgctxt "media"
+msgid "View"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:30
+msgctxt "media"
+msgid "No Title"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:33
+msgctxt "media"
+msgid "Select Files"
+msgstr ""
+
+#: inc/meta-box/inc/fields/media.php:34
+msgctxt "media"
+msgid "Drop files here to upload"
+msgstr ""
+
+#: inc/meta-box/inc/fields/oembed.php:65
+msgid "Embed HTML not available."
+msgstr ""
+
+#: inc/meta-box/inc/fields/oembed.php:81
+msgid "Preview"
+msgstr ""
+
+#: inc/meta-box/inc/fields/post.php:34
+msgid "Select a post"
+msgstr ""
+
+#: inc/meta-box/inc/fields/post.php:38 inc/meta-box/inc/fields/taxonomy.php:51
+#, php-format
+msgid "Select a %s"
+msgstr ""
+
+#: inc/meta-box/inc/fields/select-advanced.php:44
+msgid "Select an item"
+msgstr ""
+
+#: inc/meta-box/inc/fields/select.php:91
+msgid "All"
+msgstr ""
+
+#: inc/meta-box/inc/fields/select.php:91
+msgid "None"
+msgstr ""
+
+#: inc/meta-box/inc/fields/taxonomy.php:47
+msgid "Select a term"
+msgstr ""
+
+#: inc/meta-box/inc/fields/thickbox-image.php:53
+msgctxt "image upload"
+msgid "Upload Images"
+msgstr ""
+
+#: inc/meta-box/inc/fields/user.php:34
+msgid "Select an user"
+msgstr ""
+
+#: inc/meta-box/inc/validation.php:49
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+
+#: inc/meta-boxes.php:107
+msgctxt "backend"
+msgid "Page Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:117 inc/vc/vc.portfolio.php:41
+msgctxt "backend"
+msgid "Slider"
+msgstr ""
+
+#: inc/meta-boxes.php:120
+msgctxt "backend"
+msgid "Page Titlebar"
+msgstr ""
+
+#: inc/meta-boxes.php:147
+msgctxt "backend"
+msgid ""
+"<strong>Default:</strong> For usage normal Text Pages<br /> <strong>Full "
+"Width:</strong> For pages using Visual Composer Elements (commonly used)<br /"
+"> <strong>Sidebar Left:</strong> Sidebar Left Template<br /> <strong>Sidebar "
+"Right:</strong> Sidebar Right Template"
+msgstr ""
+
+#: inc/meta-boxes.php:152
+msgctxt "backend"
+msgid "Sidebar"
+msgstr ""
+
+#: inc/meta-boxes.php:158
+msgctxt "backend"
+msgid "Select the sidebar you wish to display on this page."
+msgstr ""
+
+#: inc/meta-boxes.php:168 inc/meta-boxes.php:184 inc/meta-boxes.php:201
+#: inc/meta-boxes.php:218 inc/meta-boxes.php:233
+msgctxt "backend"
+msgid "Default (as customizer)"
+msgstr ""
+
+#: inc/meta-boxes.php:169 inc/meta-boxes.php:202 inc/vc/vc.heading.php:39
+#: inc/vc/vc.note.php:16 inc/vc/vc.portfolio.php:29 inc/vc/vc.teamMember.php:26
+msgctxt "backend"
+msgid "Style 1"
+msgstr ""
+
+#: inc/meta-boxes.php:175
+msgctxt "backend"
+msgid "Override the header style for this page."
+msgstr ""
+
+#: inc/meta-boxes.php:185
+msgctxt "backend"
+msgid "No Sticky"
+msgstr ""
+
+#: inc/meta-boxes.php:192 inc/meta-boxes.php:209
+msgctxt "backend"
+msgid "Override the header type for this page."
+msgstr ""
+
+#: inc/meta-boxes.php:214
+msgctxt "backend"
+msgid "Show Search"
+msgstr ""
+
+#: inc/meta-boxes.php:224
+msgctxt "backend"
+msgid "Show / Hide search in header"
+msgstr ""
+
+#: inc/meta-boxes.php:239
+msgctxt "backend"
+msgid "Override the toolbar visiblity for this page."
+msgstr ""
+
+#: inc/meta-boxes.php:245
+msgctxt "backend"
+msgid "Show Slider"
+msgstr ""
+
+#: inc/meta-boxes.php:254
+msgctxt "backend"
+msgid "Select yes if you want to show slider in this page."
+msgstr ""
+
+#: inc/meta-boxes.php:258
+msgctxt "backend"
+msgid "Select Slider"
+msgstr ""
+
+#: inc/meta-boxes.php:263
+msgctxt "backend"
+msgid "Select which revolution slider you want to show this page."
+msgstr ""
+
+#: inc/meta-boxes.php:273 inc/meta-boxes.php:340 inc/meta-boxes.php:353
+msgctxt "backend"
+msgid "Enable"
+msgstr ""
+
+#: inc/meta-boxes.php:274 inc/meta-boxes.php:341 inc/meta-boxes.php:354
+msgctxt "backend"
+msgid "Disable"
+msgstr ""
+
+#: inc/meta-boxes.php:278
+msgctxt "backend"
+msgid "Enable or disable the Titlebar on this Page."
+msgstr ""
+
+#: inc/meta-boxes.php:286 inc/meta-boxes.php:398 inc/meta-boxes.php:595
+msgctxt "backend"
+msgid "Default (set in Theme Customizer)"
+msgstr ""
+
+#: inc/meta-boxes.php:293
+msgctxt "backend"
+msgid "Choose your Titlebar Layout for this Page"
+msgstr ""
+
+#: inc/meta-boxes.php:307 inc/meta-boxes.php:417 inc/meta-boxes.php:615
+msgctxt "backend"
+msgid "Select your titlebar style from here."
+msgstr ""
+
+#: inc/meta-boxes.php:316 inc/meta-boxes.php:424 inc/meta-boxes.php:623
+msgctxt "backend"
+msgid "Upload Titlebar Image for the Titlebar Style."
+msgstr ""
+
+#: inc/meta-boxes.php:321
+msgctxt "backend"
+msgid "Optional Element"
+msgstr ""
+
+#: inc/meta-boxes.php:331
+msgctxt "backend"
+msgid "Select what you want to show on right side of page header."
+msgstr ""
+
+#: inc/meta-boxes.php:336
+msgctxt "backend"
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/meta-boxes.php:345
+msgctxt "backend"
+msgid "Enable or disable the Footer Widgets on this Page."
+msgstr ""
+
+#: inc/meta-boxes.php:349
+msgctxt "backend"
+msgid "Footer Copyright"
+msgstr ""
+
+#: inc/meta-boxes.php:358
+msgctxt "backend"
+msgid "Enable or disable the Footer Copyright Section on this Page."
+msgstr ""
+
+#: inc/meta-boxes.php:362
+msgctxt "backend"
+msgid "Blog Categories"
+msgstr ""
+
+#: inc/meta-boxes.php:367
+msgctxt "backend"
+msgid ""
+"Blog category filter for only blog template. If nothing is selected, it will "
+"show Items from <strong>ALL</strong> categories."
+msgstr ""
+
+#: inc/meta-boxes.php:386
+msgctxt "backend"
+msgid "Blog Post Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:405 inc/meta-boxes.php:602
+msgctxt "backend"
+msgid "Choose your Titlebar Layout for this post"
+msgstr ""
+
+#: inc/meta-boxes.php:420 inc/meta-boxes.php:619
+msgctxt "backend"
+msgid "Titlebar Image"
+msgstr ""
+
+#: inc/meta-boxes.php:427
+msgctxt "backend"
+msgid "Hide Featured Image?"
+msgstr ""
+
+#: inc/meta-boxes.php:431
+msgctxt "backend"
+msgid ""
+"Check this if you want to hide the Featured Image / Gallery on the Blog "
+"Detail Page"
+msgstr ""
+
+#: inc/meta-boxes.php:439
+msgctxt "backend"
+msgid "Link Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:447 inc/vc/vc.iconListItem.php:210
+#: inc/vc/vc.inlineIcon.php:112 inc/vc/vc.teamMember.php:144
+msgctxt "backend"
+msgid "URL"
+msgstr ""
+
+#: inc/meta-boxes.php:449
+msgctxt "backend"
+msgid "Enter a URL for your link post format. (Don't forget the http://)"
+msgstr ""
+
+#: inc/meta-boxes.php:460
+msgctxt "backend"
+msgid "Quote Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:468
+msgctxt "backend"
+msgid "Quote"
+msgstr ""
+
+#: inc/meta-boxes.php:470
+msgctxt "backend"
+msgid "Please enter the text for your quote here."
+msgstr ""
+
+#: inc/meta-boxes.php:476
+msgctxt "backend"
+msgid "Quote Source"
+msgstr ""
+
+#: inc/meta-boxes.php:478
+msgctxt "backend"
+msgid "Please enter the Source of the Quote here."
+msgstr ""
+
+#: inc/meta-boxes.php:489
+msgctxt "backend"
+msgid "Video Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:497 inc/meta-boxes.php:717
+msgctxt "backend"
+msgid "Video Source"
+msgstr ""
+
+#: inc/meta-boxes.php:501 inc/meta-boxes.php:721
+msgctxt "backend"
+msgid "Video URL"
+msgstr ""
+
+#: inc/meta-boxes.php:502 inc/meta-boxes.php:722
+msgctxt "backend"
+msgid "Embed Code"
+msgstr ""
+
+#: inc/meta-boxes.php:508
+msgctxt "backend"
+msgid "Video URL/Embed Code"
+msgstr ""
+
+#: inc/meta-boxes.php:510
+msgctxt "backend"
+msgid ""
+"If you choose Video URL you can just insert the URL of the <a href=\"http://"
+"codex.wordpress.org/Embeds#Okay.2C_So_What_Sites_Can_I_Embed_From.3F\" "
+"target=\"_blank\">Supported Video Site</a>. Otherwise insert the full embed "
+"code."
+msgstr ""
+
+#: inc/meta-boxes.php:521
+msgctxt "backend"
+msgid "Audio Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:529
+msgctxt "backend"
+msgid "Audio Embed Code"
+msgstr ""
+
+#: inc/meta-boxes.php:531
+msgctxt "backend"
+msgid "Please enter the Audio Embed Code here."
+msgstr ""
+
+#: inc/meta-boxes.php:542
+msgctxt "backend"
+msgid "Gallery Settings"
+msgstr ""
+
+#: inc/meta-boxes.php:550 inc/vc/vc.gallery.php:5
+msgctxt "backend"
+msgid "Gallery"
+msgstr ""
+
+#: inc/meta-boxes.php:551
+msgctxt "backend"
+msgid "You can upload up to 30 gallery images for a slideshow"
+msgstr ""
+
+#: inc/meta-boxes.php:566
+msgctxt "backend"
+msgid "Project Information"
+msgstr ""
+
+#: inc/meta-boxes.php:572
+msgctxt "backend"
+msgid "Portfolio Configuration"
+msgstr ""
+
+#: inc/meta-boxes.php:578
+msgctxt "backend"
+msgid "Portfolio Slides"
+msgstr ""
+
+#: inc/meta-boxes.php:581
+msgctxt "backend"
+msgid "Portfolio Video"
+msgstr ""
+
+#: inc/meta-boxes.php:628
+msgctxt "backend"
+msgid "Detail Layout"
+msgstr ""
+
+#: inc/meta-boxes.php:630
+msgctxt "backend"
+msgid ""
+"Choose your Layout for the Portfolio Detail Page.<br />If you choose the "
+"\"Custom Portfolio Page\" Layout, the Project Slides & Video fields below "
+"will be ignored. You will start with a blank canvas & use shortcodes to "
+"style your Page like a normal Page."
+msgstr ""
+
+#: inc/meta-boxes.php:633
+msgctxt "backend"
+msgid "Full Width (Slider)"
+msgstr ""
+
+#: inc/meta-boxes.php:634
+msgctxt "backend"
+msgid "Full Width (No Slider)"
+msgstr ""
+
+#: inc/meta-boxes.php:635
+msgctxt "backend"
+msgid "Side By Side (Slider)"
+msgstr ""
+
+#: inc/meta-boxes.php:636
+msgctxt "backend"
+msgid "Side By Side (No Slider)"
+msgstr ""
+
+#: inc/meta-boxes.php:637
+msgctxt "backend"
+msgid "Custom Portfolio Page (100% Section)"
+msgstr ""
+
+#: inc/meta-boxes.php:644
+msgctxt "backend"
+msgid "Subtitle"
+msgstr ""
+
+#: inc/meta-boxes.php:646
+msgctxt "backend"
+msgid ""
+"The Subtitle is shown on the Portfolio Overview Pages, Shortcodes & Related "
+"Projects. You can leave this empty to hide it."
+msgstr ""
+
+#: inc/meta-boxes.php:653
+msgctxt "backend"
+msgid "Client"
+msgstr ""
+
+#: inc/meta-boxes.php:655
+msgctxt "backend"
+msgid ""
+"The Client is shown on the Portfolio Detail Page. You can leave this empty "
+"to hide it."
+msgstr ""
+
+#: inc/meta-boxes.php:662
+msgctxt "backend"
+msgid "Project link"
+msgstr ""
+
+#: inc/meta-boxes.php:664
+msgctxt "backend"
+msgid ""
+"URL Link to your Project (Do not forget the http://). This will be shown on "
+"the Portfolio Detail Page. You can leave this empty to hide it."
+msgstr ""
+
+#: inc/meta-boxes.php:671
+msgctxt "backend"
+msgid "Show Project Details?"
+msgstr ""
+
+#: inc/meta-boxes.php:678
+msgctxt "backend"
+msgid "Show Related Projects?"
+msgstr ""
+
+#: inc/meta-boxes.php:686
+msgctxt "backend"
+msgid "Masonry Size"
+msgstr ""
+
+#: inc/meta-boxes.php:688
+msgctxt "backend"
+msgid "Only relevant when the portfolio is displayed in masonry format."
+msgstr ""
+
+#: inc/meta-boxes.php:691
+msgctxt "backend"
+msgid "Regular"
+msgstr ""
+
+#: inc/meta-boxes.php:692
+msgctxt "backend"
+msgid "Wide"
+msgstr ""
+
+#: inc/meta-boxes.php:693
+msgctxt "backend"
+msgid "Tall"
+msgstr ""
+
+#: inc/meta-boxes.php:694
+msgctxt "backend"
+msgid "Wide & Tall"
+msgstr ""
+
+#: inc/meta-boxes.php:701
+msgctxt "backend"
+msgid "Link to Lightbox"
+msgstr ""
+
+#: inc/meta-boxes.php:704
+msgctxt "backend"
+msgid ""
+"Open the Preview Image in a Lightbox (on Portfolio Overview, Shortcodes & "
+"Related Posts)"
+msgstr ""
+
+#: inc/meta-boxes.php:709
+msgctxt "backend"
+msgid "Project Slider Images"
+msgstr ""
+
+#: inc/meta-boxes.php:710
+msgctxt "backend"
+msgid ""
+"You can upload up to 50 project images for a slideshow, or only one image to "
+"display a single image. <br /><strong>Notice:</strong> The Preview Image (on "
+"Overview, Shortcodes & Related Projects) will be the Image set as Featured "
+"Image."
+msgstr ""
+
+#: inc/meta-boxes.php:729
+msgctxt "backend"
+msgid "Video URL or own Embed Code"
+msgstr ""
+
+#: inc/meta-boxes.php:731
+msgctxt "backend"
+msgid ""
+"If you choose Video URL you can just insert the URL of the <a href=\"http://"
+"codex.wordpress.org/Embeds#Okay.2C_So_What_Sites_Can_I_Embed_From.3F\" "
+"target=\"_blank\">Supported Video Site</a>. You can also insert your own "
+"Embed Code. If you fill out this field, it will be shown <strong>instead</"
+"strong> of the Slider.<br /><br /><strong>Notice:</strong> The Preview Image "
+"will be the Image set as Featured Image."
+msgstr ""
+
+#: inc/meta-boxes.php:750
+msgctxt "backend"
+msgid "FAQ Additional"
+msgstr ""
+
+#: inc/meta-boxes.php:756
+msgctxt "backend"
+msgid "FAQ Icon"
+msgstr ""
+
+#: inc/meta-boxes.php:758
+msgctxt "backend"
+msgid ""
+"Please type a fontawesome icon name for your FAQ. for example: fa fa-home"
+msgstr ""
+
+#: inc/meta-boxes.php:789
+msgctxt "backend"
+msgid "Background Styling Options"
+msgstr ""
+
+#: inc/meta-boxes.php:797
+msgctxt "backend"
+msgid "Background Image URL"
+msgstr ""
+
+#: inc/meta-boxes.php:806 inc/vc/vc.blogList.php:39 inc/vc/vc.counter.php:130
+#: inc/vc/vc.counter.php:138 inc/vc/vc.counter.php:146
+#: inc/vc/vc.counter.php:154 inc/vc/vc.counter.php:162
+#: inc/vc/vc.counter.php:170 inc/vc/vc.counter.php:178
+#: inc/vc/vc.customCarousel.php:29 inc/vc/vc.eventCarousel.php:29
+#: inc/vc/vc.featuredDonation.php:25 inc/vc/vc.featuredDonation.php:33
+#: inc/vc/vc.iconListItem.php:83 inc/vc/vc.iconListItem.php:91
+#: inc/vc/vc.iconListItem.php:122 inc/vc/vc.inlineIcon.php:59
+#: inc/vc/vc.inlineIcon.php:67 inc/vc/vc.inlineIcon.php:75
+#: inc/vc/vc.inlineIcon.php:83 inc/vc/vc.inlineIcon.php:91
+#: inc/vc/vc.inlineIcon.php:99 inc/vc/vc.inlineIcon.php:107
+#: inc/vc/vc.note.php:13 inc/vc/vc.partnerLogo.php:30
+#: inc/vc/vc.portfolio.php:26 inc/vc/vc.postCarousel.php:44
+#: inc/vc/vc.teamMember.php:22 inc/vc/vc.teamMember.php:31
+#: inc/vc/vc.teamMember.php:39 inc/vc/vc.teamMember.php:47
+#: inc/vc/vc.teamMember.php:55 inc/vc/vc.teamMember.php:62
+#: inc/vc/vc.teamMember.php:69 inc/vc/vc.teamMember.php:82
+#: inc/vc/vc.testimonial.php:28 inc/vc/vc.testimonial.php:73
+#: inc/vc/vc.testimonial.php:80
+msgctxt "backend"
+msgid "Style"
+msgstr ""
+
+#: inc/meta-boxes.php:810
+msgctxt "backend"
+msgid "Stretch Image"
+msgstr ""
+
+#: inc/meta-boxes.php:811
+msgctxt "backend"
+msgid "Repeat"
+msgstr ""
+
+#: inc/meta-boxes.php:812
+msgctxt "backend"
+msgid "No-Repeat"
+msgstr ""
+
+#: inc/meta-boxes.php:813
+msgctxt "backend"
+msgid "Repeat-X"
+msgstr ""
+
+#: inc/meta-boxes.php:814
+msgctxt "backend"
+msgid "Repeat-Y"
+msgstr ""
+
+#: inc/meta-boxes.php:820
+msgctxt "backend"
+msgid "Background Color"
+msgstr ""
+
+#: inc/plugin-activation.php:31
+msgctxt "backend"
+msgid "BdThemes Core"
+msgstr ""
+
+#: inc/plugin-activation.php:49
+msgctxt "backend"
+msgid "Slider Revolution"
+msgstr ""
+
+#: inc/plugin-activation.php:55
+msgctxt "backend"
+msgid "WPBakery Visual Composer"
+msgstr ""
+
+#: inc/plugin-activation.php:61
+msgctxt "backend"
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/plugin-activation.php:76
+msgctxt "backend"
+msgid "WordPress SEO by Yoast"
+msgstr ""
+
+#: inc/sidebar-generator.php:100 inc/sidebar-generator.php:106
+#: inc/sidebar-generator.php:209
+msgctxt "backend"
+msgid "Please give a suitable name for sidebar."
+msgstr ""
+
+#: inc/sidebar-generator.php:109
+msgctxt "backend"
+msgid "Sidebar already exists, please use a different name."
+msgstr ""
+
+#: inc/sidebar-generator.php:154
+msgctxt "backend"
+msgid "Sidebar does not exist."
+msgstr ""
+
+#: inc/sidebar-generator.php:170 inc/sidebar-generator.php:249
+msgctxt "backend"
+msgid "No custom sidebars generated"
+msgstr ""
+
+#: inc/sidebar-generator.php:180
+msgctxt "backend"
+msgid "Sidebars"
+msgstr ""
+
+#: inc/sidebar-generator.php:180 inc/sidebar-generator.php:216
+msgctxt "backend"
+msgid "Sidebar Generator"
+msgstr ""
+
+#: inc/sidebar-generator.php:192
+msgctxt "backend"
+msgid "Are you sure you want to remove"
+msgstr ""
+
+#: inc/sidebar-generator.php:192
+msgctxt "backend"
+msgid "This will remove any widgets you have assigned to this sidebar."
+msgstr ""
+
+#: inc/sidebar-generator.php:201
+msgctxt "backend"
+msgid "Sidebar Name:"
+msgstr ""
+
+#: inc/sidebar-generator.php:216
+msgctxt "backend"
+msgid "Add a sidebar"
+msgstr ""
+
+#: inc/sidebar-generator.php:216
+msgctxt "backend"
+msgid "Add Sidebar"
+msgstr ""
+
+#: inc/sidebar-generator.php:218
+msgctxt "backend"
+msgid ""
+"The sidebar name is for your use only. It will not be visible to any of your "
+"visitors. \n"
+"\t\t\t\tA CSS class is assigned to each of your sidebar, use this styling to "
+"customize the sidebars."
+msgstr ""
+
+#: inc/sidebar-generator.php:225 inc/vc/vc.faq.php:32
+#: inc/vc/vc.pricingPlan.php:14 inc/vc/vc.teamMember.php:87
+#: inc/vc/vc.testimonial.php:14 inc/vc/vc.timeline.php:31
+msgctxt "backend"
+msgid "Name"
+msgstr ""
+
+#: inc/sidebar-generator.php:226
+msgctxt "backend"
+msgid "CSS class"
+msgstr ""
+
+#: inc/sidebar-generator.php:227
+msgctxt "backend"
+msgid "Remove"
+msgstr ""
+
+#: inc/sidebar-generator.php:242
+msgctxt "backend"
+msgid "Remove this sidebar"
+msgstr ""
+
+#: inc/sidebar-generator.php:242
+msgctxt "backend"
+msgid "remove"
+msgstr ""
+
+#: inc/sidebars.php:6
+msgid "Blog Widgets"
+msgstr ""
+
+#: inc/sidebars.php:6
+msgid "These are widgets for the Blog sidebar."
+msgstr ""
+
+#: inc/sidebars.php:9
+msgid "Search Results Widgets"
+msgstr ""
+
+#: inc/sidebars.php:9
+msgid ""
+"These are widgets for the Search Results sidebar. These sidebar widgets show "
+"on right side."
+msgstr ""
+
+#: inc/sidebars.php:14
+msgid "Footer Widgets 1"
+msgstr ""
+
+#: inc/sidebars.php:14 inc/sidebars.php:17 inc/sidebars.php:20
+#: inc/sidebars.php:23
+msgid ""
+"These are widgets for the Footer. You can control them from Appearance "
+"&rarr; Customize &rarr; Footer &rarr; Footer Columns."
+msgstr ""
+
+#: inc/sidebars.php:17
+msgid "Footer Widgets 2"
+msgstr ""
+
+#: inc/sidebars.php:20
+msgid "Footer Widgets 3"
+msgstr ""
+
+#: inc/sidebars.php:23
+msgid "Footer Widgets 4"
+msgstr ""
+
+#: inc/sidebars.php:26
+msgid "Header Bar"
+msgstr ""
+
+#: inc/sidebars.php:26
+msgid ""
+"These are widgets for showing widgets (such as countdown, search small ads "
+"etc) on header top right corner, but only for header style 2."
+msgstr ""
+
+#: inc/sidebars.php:28
+msgid "Off-canvas"
+msgstr ""
+
+#: inc/sidebars.php:28
+msgid ""
+"These are widgets for off-canvas bar (it's only show in small device mode) "
+"and it's show under off-canvas menu."
+msgstr ""
+
+#: inc/sidebars.php:30
+msgid "Drawer"
+msgstr ""
+
+#: inc/sidebars.php:30
+msgid "These are widgets for show widgets like as drawer on top of the page."
+msgstr ""
+
+#: inc/sidebars.php:32
+msgid "Fixed Left"
+msgstr ""
+
+#: inc/sidebars.php:32
+msgid "These are widgets for show widgets in fixed left position of the page."
+msgstr ""
+
+#: inc/sidebars.php:34
+msgid "Fixed Right"
+msgstr ""
+
+#: inc/sidebars.php:34
+msgid "These are widgets for show widgets in fixed right position of the page."
+msgstr ""
+
+#: inc/sidebars.php:39
+msgid "The Events Calender Widgets"
+msgstr ""
+
+#: inc/sidebars.php:39
+msgid "These are widgets for the events calender sidebar."
+msgstr ""
+
+#: inc/sidebars.php:44
+msgid "Shop Widgets"
+msgstr ""
+
+#: inc/sidebars.php:44
+msgid "These are widgets for the Shop sidebar."
+msgstr ""
+
+#: inc/sidebars.php:49
+msgid "Forum Widgets"
+msgstr ""
+
+#: inc/sidebars.php:49
+msgid "These are widgets for the Forum sidebar."
+msgstr ""
+
+#: inc/sidebars.php:78
+msgctxt "backend"
+msgid "Set visiblity setting from here."
+msgstr ""
+
+#: inc/sidebars.php:83 inc/vc/vc.customCarousel.php:20
+#: inc/vc/vc.eventCarousel.php:65 inc/vc/vc.gallery.php:30
+#: inc/vc/vc.partnerLogo.php:21 inc/vc/vc.postCarousel.php:58
+msgctxt "backend"
+msgid "Large"
+msgstr ""
+
+#: inc/sidebars.php:90 inc/vc/vc.customCarousel.php:21
+#: inc/vc/vc.eventCarousel.php:66 inc/vc/vc.gallery.php:29
+#: inc/vc/vc.partnerLogo.php:22 inc/vc/vc.postCarousel.php:59
+msgctxt "backend"
+msgid "Medium"
+msgstr ""
+
+#: inc/sidebars.php:98 inc/vc/vc.customCarousel.php:22
+#: inc/vc/vc.eventCarousel.php:67 inc/vc/vc.partnerLogo.php:23
+#: inc/vc/vc.postCarousel.php:60
+msgctxt "backend"
+msgid "Small"
+msgstr ""
+
+#: inc/template-tags.php:28
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:33
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:50 inc/template-tags.php:56
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:52
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:58
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:65
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:72 template-parts/content-page.php:34
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:15
+msgctxt "backend"
+msgid "Blog List"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:16
+msgctxt "backend"
+msgid "Show blog post in list layout"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:23
+msgctxt "backend"
+msgid "Post(s)"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:27
+msgctxt "backend"
+msgid "Number of post you want to show."
+msgstr ""
+
+#: inc/vc/vc.blogList.php:32 inc/vc/vc.portfolio.php:76
+#: inc/vc/vc.postGrid.php:33
+msgctxt "backend"
+msgid "Only Specific Filters?"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:35
+msgctxt "backend"
+msgid ""
+"If nothing is selected, it will show Items from <strong>ALL</strong> "
+"categories."
+msgstr ""
+
+#: inc/vc/vc.blogList.php:42 inc/vc/vc.customCarousel.php:32
+#: inc/vc/vc.partnerLogo.php:33
+msgctxt "backend"
+msgid "Dark"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:43 inc/vc/vc.customCarousel.php:33
+#: inc/vc/vc.partnerLogo.php:34
+msgctxt "backend"
+msgid "Light"
+msgstr ""
+
+#: inc/vc/vc.blogList.php:45
+msgctxt "backend"
+msgid "Select background style."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:6
+msgctxt "backend"
+msgid "Call to Action"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:7
+msgctxt "backend"
+msgid "Make your call to action easily."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:14 inc/vc/vc.contentSlider.php:87
+#: inc/vc/vc.featuredDonation.php:14 inc/vc/vc.iconListItem.php:14
+#: inc/vc/vc.iconListItem.php:182 inc/vc/vc.testimonial.php:33
+#: inc/vc/vc.timeline.php:108
+msgctxt "backend"
+msgid "Title"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:17
+msgctxt "backend"
+msgid "Title of the call to aciton."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:21 inc/vc/vc.contentSlider.php:94
+#: inc/vc/vc.mailChimp.php:54 inc/vc/vc.pricingPlan.php:69
+msgctxt "backend"
+msgid "Button Text"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:23
+msgctxt "backend"
+msgid "Button text of the call to aciton."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:27
+msgctxt "backend"
+msgid "Calltoaction Content"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:33 inc/vc/vc.jointButton.php:79
+#: inc/vc/vc.teamMember.php:75
+msgctxt "backend"
+msgid "Align"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:36 inc/vc/vc.counter.php:91
+#: inc/vc/vc.heading.php:85 inc/vc/vc.iconListItem.php:179
+#: inc/vc/vc.jointButton.php:83 inc/vc/vc.portfolio.php:87
+#: inc/vc/vc.postGrid.php:45 inc/vc/vc.teamMember.php:79
+msgctxt "backend"
+msgid "Left"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:37 inc/vc/vc.counter.php:92
+#: inc/vc/vc.heading.php:86 inc/vc/vc.iconListItem.php:180
+#: inc/vc/vc.jointButton.php:84 inc/vc/vc.portfolio.php:88
+#: inc/vc/vc.postGrid.php:46 inc/vc/vc.teamMember.php:80
+msgctxt "backend"
+msgid "Right"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:38 inc/vc/vc.heading.php:84
+#: inc/vc/vc.jointButton.php:82 inc/vc/vc.portfolio.php:89
+#: inc/vc/vc.postGrid.php:44 inc/vc/vc.teamMember.php:78
+msgctxt "backend"
+msgid "Center"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:40
+msgctxt "backend"
+msgid "Select alignment of the calltoaction."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:44
+msgctxt "backend"
+msgid "Button Link"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:47
+msgctxt "backend"
+msgid "You can type here any hyperlink to make link in button."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:51 inc/vc/vc.testimonial.php:57
+msgctxt "backend"
+msgid "Target"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:54 inc/vc/vc.pricingPlan.php:86
+msgctxt "backend"
+msgid "Self"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:55 inc/vc/vc.pricingPlan.php:87
+msgctxt "backend"
+msgid "Blank"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:57
+msgctxt "backend"
+msgid "Set link target self or blank."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:61 inc/vc/vc.counter.php:159
+#: inc/vc/vc.divider.php:100 inc/vc/vc.teamMember.php:36
+msgctxt "backend"
+msgid "Background"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:63
+msgctxt "backend"
+msgid "Select your content background color."
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:64 inc/vc/vc.countdown.php:42
+#: inc/vc/vc.countdown.php:53 inc/vc/vc.countdown.php:66
+#: inc/vc/vc.countdown.php:85 inc/vc/vc.countdown.php:99
+#: inc/vc/vc.countdown.php:108 inc/vc/vc.countdown.php:119
+#: inc/vc/vc.divider.php:59 inc/vc/vc.divider.php:67 inc/vc/vc.divider.php:77
+#: inc/vc/vc.divider.php:88 inc/vc/vc.divider.php:104 inc/vc/vc.divider.php:116
+#: inc/vc/vc.divider.php:128 inc/vc/vc.divider.php:140
+#: inc/vc/vc.divider.php:148 inc/vc/vc.divider.php:156 inc/vc/vc.heading.php:77
+#: inc/vc/vc.heading.php:95 inc/vc/vc.heading.php:102 inc/vc/vc.heading.php:110
+#: inc/vc/vc.heading.php:117 inc/vc/vc.progressBar.php:91
+#: inc/vc/vc.progressBar.php:101 inc/vc/vc.progressBar.php:108
+#: inc/vc/vc.progressBar.php:115 inc/vc/vc.progressBar.php:122
+#: inc/vc/vc.progressBar.php:130 inc/vc/vc.progressPie.php:56
+#: inc/vc/vc.progressPie.php:64 inc/vc/vc.progressPie.php:72
+#: inc/vc/vc.progressPie.php:80 inc/vc/vc.progressPie.php:88
+#: inc/vc/vc.progressPie.php:122
+msgctxt "backend"
+msgid "Styles"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:68
+msgctxt "backend"
+msgid "Button Radius"
+msgstr ""
+
+#: inc/vc/vc.calltoaction.php:70
+msgctxt "backend"
+msgid "You can set button border radius from here."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:6
+msgctxt "backend"
+msgid "Content Slider"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:10
+msgctxt "backend"
+msgid "Describe your content as a slider."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:16 inc/vc/vc.progressBar.php:36
+#: inc/vc/vc.progressBar.php:98
+msgctxt "backend"
+msgid "Animation"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:19
+msgctxt "backend"
+msgid "Fade"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:20
+msgctxt "backend"
+msgid "Scroll"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:21
+msgctxt "backend"
+msgid "Scale"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:22
+msgctxt "backend"
+msgid "Swipe"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:25
+msgctxt "backend"
+msgid "Select animation from here."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:29 inc/vc/vc.customCarousel.php:65
+#: inc/vc/vc.deviceSlider.php:106 inc/vc/vc.eventCarousel.php:98
+#: inc/vc/vc.partnerLogo.php:66 inc/vc/vc.postCarousel.php:91
+#: inc/vc/vc.progressBar.php:84 inc/vc/vc.progressPie.php:100
+msgctxt "backend"
+msgid "Delay"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:32 inc/vc/vc.customCarousel.php:69
+#: inc/vc/vc.eventCarousel.php:102 inc/vc/vc.postCarousel.php:95
+msgctxt "backend"
+msgid "Delay of the event carousel. It's set <strong>ms</strong> value."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:36 inc/vc/vc.progressBar.php:77
+#: inc/vc/vc.progressPie.php:93
+msgctxt "backend"
+msgid "Duration"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:39
+msgctxt "backend"
+msgid "Duration of the slide animation."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:43 inc/vc/vc.customCarousel.php:81
+#: inc/vc/vc.eventCarousel.php:114 inc/vc/vc.partnerLogo.php:82
+#: inc/vc/vc.postCarousel.php:107
+msgctxt "backend"
+msgid "Auto Play"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:48 inc/vc/vc.customCarousel.php:87
+#: inc/vc/vc.eventCarousel.php:120 inc/vc/vc.partnerLogo.php:88
+#: inc/vc/vc.postCarousel.php:113
+msgctxt "backend"
+msgid "Show or hide auto play from here."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:52 inc/vc/vc.customCarousel.php:93
+#: inc/vc/vc.eventCarousel.php:126 inc/vc/vc.partnerLogo.php:94
+#: inc/vc/vc.postCarousel.php:119
+msgctxt "backend"
+msgid "Hover Pause"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:57 inc/vc/vc.customCarousel.php:99
+#: inc/vc/vc.eventCarousel.php:132 inc/vc/vc.partnerLogo.php:100
+#: inc/vc/vc.postCarousel.php:125
+msgctxt "backend"
+msgid "Set yes or no hover pause from here."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:78
+msgctxt "backend"
+msgid "Content Slide"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:82
+msgctxt "backend"
+msgid "Describe your content as a slide."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:90
+msgctxt "backend"
+msgid "Type content slide title."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:96
+msgctxt "backend"
+msgid "Type button text here."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:100 inc/vc/vc.pricingPlan.php:76
+msgctxt "backend"
+msgid "Button URL"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:103
+msgctxt "backend"
+msgid "Type button url here."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:107 inc/vc/vc.iconListItem.php:26
+#: inc/vc/vc.iconListItem.php:65
+msgctxt "backend"
+msgid "Image"
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:110 inc/vc/vc.featuredDonation.php:41
+#: inc/vc/vc.iconListItem.php:68 inc/vc/vc.teamMember.php:18
+#: inc/vc/vc.testimonial.php:41
+msgctxt "backend"
+msgid "Select image from media library."
+msgstr ""
+
+#: inc/vc/vc.contentSlider.php:114 inc/vc/vc.counter.php:184
+#: inc/vc/vc.iconListItem.php:228 inc/vc/vc.pricingPlan.php:129
+msgctxt "backend"
+msgid "Description"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:6
+msgctxt "backend"
+msgid "Countdown"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:10
+msgctxt "backend"
+msgid "Countdown Timer."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:16
+msgctxt "backend"
+msgid "Target Time For Countdown"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:19
+msgctxt "backend"
+msgid "Date and time format (yyyy/mm/dd hh:mm:ss)."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:24
+msgctxt "backend"
+msgid "Select Time Units To Display In Countdown Timer"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:27
+msgctxt "backend"
+msgid "Years"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:28
+msgctxt "backend"
+msgid "Months"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:29
+msgctxt "backend"
+msgid "Weeks"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:30
+msgctxt "backend"
+msgid "Days"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:31
+msgctxt "backend"
+msgid "Hours"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:32
+msgctxt "backend"
+msgid "Minutes"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:33
+msgctxt "backend"
+msgid "Seconds"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:39
+msgctxt "backend"
+msgid "Timer Digit Text Color"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:47
+msgctxt "backend"
+msgid "Count Size"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:52
+msgctxt "backend"
+msgid "Font size of digit text example: 16px"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:58
+msgctxt "backend"
+msgid "Count Text Style"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:61 inc/vc/vc.countdown.php:93
+msgctxt "backend"
+msgid "Normal"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:62 inc/vc/vc.countdown.php:94
+msgctxt "backend"
+msgid "Bold"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:63 inc/vc/vc.countdown.php:95
+#: inc/vc/vc.testimonial.php:68
+msgctxt "backend"
+msgid "Italic"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:64 inc/vc/vc.countdown.php:96
+msgctxt "backend"
+msgid "Bold & Italic"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:71
+msgctxt "backend"
+msgid "Timer Unit Text Color"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:74 inc/vc/vc.counter.php:106
+#: inc/vc/vc.counter.php:131 inc/vc/vc.counter.php:147
+msgctxt "backend"
+msgid "Text color for time ticks Period."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:79
+msgctxt "backend"
+msgid "Count Text Size"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:84
+msgctxt "backend"
+msgid "Font size of tick text Period."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:90
+msgctxt "backend"
+msgid "Timer Unit Text Style"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:98
+msgctxt "backend"
+msgid "Font size of tick text."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:104
+msgctxt "backend"
+msgid "Timer Digit Background Color"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:107
+msgctxt "backend"
+msgid "Background-Color."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:113
+msgctxt "backend"
+msgid "Timer Digit Background Size"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:118
+msgctxt "backend"
+msgid "Border-Timer Space."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:123 inc/vc/vc.counter.php:37
+msgctxt "backend"
+msgid "Prefix Text"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:126 inc/vc/vc.countdown.php:133
+msgctxt "backend"
+msgid "You can add text before the countdown"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:130 inc/vc/vc.counter.php:44
+msgctxt "backend"
+msgid "Suffix Text"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:138
+msgctxt "backend"
+msgid "Day (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:141
+msgctxt "backend"
+msgid "Enter your string for day."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:142 inc/vc/vc.countdown.php:151
+#: inc/vc/vc.countdown.php:160 inc/vc/vc.countdown.php:169
+#: inc/vc/vc.countdown.php:178 inc/vc/vc.countdown.php:187
+#: inc/vc/vc.countdown.php:196 inc/vc/vc.countdown.php:205
+#: inc/vc/vc.countdown.php:214 inc/vc/vc.countdown.php:223
+#: inc/vc/vc.countdown.php:232 inc/vc/vc.countdown.php:241
+#: inc/vc/vc.countdown.php:250 inc/vc/vc.countdown.php:259
+msgctxt "backend"
+msgid "Strings Translation"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:147
+msgctxt "backend"
+msgid "Days (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:150
+msgctxt "backend"
+msgid "Enter your string for days."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:156
+msgctxt "backend"
+msgid "Week (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:159
+msgctxt "backend"
+msgid "Enter your string for Week."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:165
+msgctxt "backend"
+msgid "Weeks (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:168
+msgctxt "backend"
+msgid "Enter your string for Weeks."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:174
+msgctxt "backend"
+msgid "Month (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:177
+msgctxt "backend"
+msgid "Enter your string for Month."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:183
+msgctxt "backend"
+msgid "Months (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:186
+msgctxt "backend"
+msgid "Enter your string for Months."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:192
+msgctxt "backend"
+msgid "Year (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:195
+msgctxt "backend"
+msgid "Enter your string for Year."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:201
+msgctxt "backend"
+msgid "Years (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:204
+msgctxt "backend"
+msgid "Enter your string for Years."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:210
+msgctxt "backend"
+msgid "Hour (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:213
+msgctxt "backend"
+msgid "Enter your string for Hour."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:219
+msgctxt "backend"
+msgid "Hours (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:222
+msgctxt "backend"
+msgid "Enter your string for Hours."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:228
+msgctxt "backend"
+msgid "Minute (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:231
+msgctxt "backend"
+msgid "Enter your string for Minute."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:237
+msgctxt "backend"
+msgid "Minutes (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:240
+msgctxt "backend"
+msgid "Enter your string for Minutes."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:246
+msgctxt "backend"
+msgid "Second (Singular)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:249
+msgctxt "backend"
+msgid "Enter your string for Second."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:255
+msgctxt "backend"
+msgid "Seconds (Plural)"
+msgstr ""
+
+#: inc/vc/vc.countdown.php:258
+msgctxt "backend"
+msgid "Enter your string for Seconds."
+msgstr ""
+
+#: inc/vc/vc.countdown.php:263
+msgctxt "backend"
+msgid "Watch Video Tutorial"
+msgstr ""
+
+#: inc/vc/vc.counter.php:7
+msgctxt "backend"
+msgid "Counter"
+msgstr ""
+
+#: inc/vc/vc.counter.php:12
+msgctxt "backend"
+msgid "Add animated counting number"
+msgstr ""
+
+#: inc/vc/vc.counter.php:16
+msgctxt "backend"
+msgid "Count Start"
+msgstr ""
+
+#: inc/vc/vc.counter.php:19
+msgctxt "backend"
+msgid ""
+"Enter the number that is minimum number of the counter where from counter "
+"will start counting"
+msgstr ""
+
+#: inc/vc/vc.counter.php:23
+msgctxt "backend"
+msgid "Count End"
+msgstr ""
+
+#: inc/vc/vc.counter.php:26
+msgctxt "backend"
+msgid ""
+"Enter the number that is maximum number of the counter where to counter will "
+"finish counting"
+msgstr ""
+
+#: inc/vc/vc.counter.php:30
+msgctxt "backend"
+msgid "Count Speed"
+msgstr ""
+
+#: inc/vc/vc.counter.php:33
+msgctxt "backend"
+msgid "Counting will finish in specified time (in second)"
+msgstr ""
+
+#: inc/vc/vc.counter.php:40
+msgctxt "backend"
+msgid "You can add text before the count number. For example: $ sign"
+msgstr ""
+
+#: inc/vc/vc.counter.php:47
+msgctxt "backend"
+msgid "You can add text after the count number. For example: /-"
+msgstr ""
+
+#: inc/vc/vc.counter.php:52
+msgctxt "backend"
+msgid "Separator"
+msgstr ""
+
+#: inc/vc/vc.counter.php:57
+msgctxt "backend"
+msgid ""
+"You can separate count text by comma(,) if you select yes.For example: 1,500"
+msgstr ""
+
+#: inc/vc/vc.counter.php:62
+msgctxt "backend"
+msgid "Add Icon"
+msgstr ""
+
+#: inc/vc/vc.counter.php:67
+msgctxt "backend"
+msgid "If you want to add icon with counter, just check it."
+msgstr ""
+
+#: inc/vc/vc.counter.php:71 inc/vc/vc.counter.php:78 inc/vc/vc.counter.php:94
+#: inc/vc/vc.counter.php:107 inc/vc/vc.counter.php:119
+#: inc/vc/vc.iconListItem.php:34 inc/vc/vc.iconListItem.php:49
+#: inc/vc/vc.iconListItem.php:99 inc/vc/vc.iconListItem.php:114
+#: inc/vc/vc.iconListItem.php:130 inc/vc/vc.iconListItem.php:138
+#: inc/vc/vc.iconListItem.php:146 inc/vc/vc.iconListItem.php:154
+#: inc/vc/vc.iconListItem.php:162 inc/vc/vc.iconListItem.php:170
+#: inc/vc/vc.iconListItem.php:186 inc/vc/vc.iconListItem.php:194
+#: inc/vc/vc.inlineIcon.php:25 inc/vc/vc.inlineIcon.php:40
+#: inc/vc/vc.note.php:39 inc/vc/vc.pricingPlan.php:59
+msgctxt "backend"
+msgid "Icon"
+msgstr ""
+
+#: inc/vc/vc.counter.php:79 inc/vc/vc.iconListItem.php:45
+#: inc/vc/vc.iconListItem.php:61 inc/vc/vc.inlineIcon.php:36
+#: inc/vc/vc.inlineIcon.php:52
+msgctxt "backend"
+msgid "Select icon from library."
+msgstr ""
+
+#: inc/vc/vc.counter.php:87 inc/vc/vc.divider.php:24
+msgctxt "backend"
+msgid "Icon Align"
+msgstr ""
+
+#: inc/vc/vc.counter.php:90 inc/vc/vc.iconListItem.php:181
+msgctxt "backend"
+msgid "Top"
+msgstr ""
+
+#: inc/vc/vc.counter.php:95 inc/vc/vc.iconListItem.php:187
+#: inc/vc/vc.teamMember.php:83
+msgctxt "backend"
+msgid "You can set alignment from here."
+msgstr ""
+
+#: inc/vc/vc.counter.php:103 inc/vc/vc.divider.php:112
+msgctxt "backend"
+msgid "Icon Color"
+msgstr ""
+
+#: inc/vc/vc.counter.php:115 inc/vc/vc.iconListItem.php:96
+msgctxt "backend"
+msgid "Icon  Size"
+msgstr ""
+
+#: inc/vc/vc.counter.php:118 inc/vc/vc.counter.php:139
+#: inc/vc/vc.counter.php:155 inc/vc/vc.iconListItem.php:100
+msgctxt "backend"
+msgid "Select your object size. Its will be set in pixel value"
+msgstr ""
+
+#: inc/vc/vc.counter.php:127
+msgctxt "backend"
+msgid "Count Color"
+msgstr ""
+
+#: inc/vc/vc.counter.php:135
+msgctxt "backend"
+msgid "Count  Size"
+msgstr ""
+
+#: inc/vc/vc.counter.php:143 inc/vc/vc.iconListItem.php:119
+#: inc/vc/vc.progressBar.php:105 inc/vc/vc.progressPie.php:53
+msgctxt "backend"
+msgid "Text Color"
+msgstr ""
+
+#: inc/vc/vc.counter.php:151
+msgctxt "backend"
+msgid "Text  Size"
+msgstr ""
+
+#: inc/vc/vc.counter.php:163
+msgctxt "backend"
+msgid "Select background color."
+msgstr ""
+
+#: inc/vc/vc.counter.php:167 inc/vc/vc.progressPie.php:85
+msgctxt "backend"
+msgid "Padding"
+msgstr ""
+
+#: inc/vc/vc.counter.php:171
+msgctxt "backend"
+msgid ""
+"Select counter padding from here. support <strong>px, em</strong> value."
+msgstr ""
+
+#: inc/vc/vc.counter.php:175 inc/vc/vc.divider.php:101
+#: inc/vc/vc.progressPie.php:77 inc/vc/vc.teamMember.php:52
+msgctxt "backend"
+msgid "Border"
+msgstr ""
+
+#: inc/vc/vc.counter.php:179 inc/vc/vc.iconListItem.php:147
+#: inc/vc/vc.inlineIcon.php:84 inc/vc/vc.teamMember.php:56
+msgctxt "backend"
+msgid "You can set content border from here."
+msgstr ""
+
+#: inc/vc/vc.counter.php:187 inc/vc/vc.iconListItem.php:231
+#: inc/vc/vc.pricingPlan.php:139
+msgctxt "backend"
+msgid "Provide the description for this icon box."
+msgstr ""
+
+#: inc/vc/vc.counter.php:191 inc/vc/vc.deviceSlider.php:122
+#: inc/vc/vc.featuredDonation.php:77 inc/vc/vc.teamMember.php:150
+msgctxt "backend"
+msgid "Extra class name"
+msgstr ""
+
+#: inc/vc/vc.counter.php:193 inc/vc/vc.deviceSlider.php:124
+#: inc/vc/vc.featuredDonation.php:79 inc/vc/vc.teamMember.php:152
+msgctxt "backend"
+msgid ""
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:6
+msgctxt "backend"
+msgid "Custom Carousel"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:10
+msgctxt "backend"
+msgid "Describe your content as a carousel."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:16 inc/vc/vc.eventCarousel.php:61
+#: inc/vc/vc.gallery.php:63 inc/vc/vc.partnerLogo.php:17
+#: inc/vc/vc.postCarousel.php:54
+msgctxt "backend"
+msgid "Gutter"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:19 inc/vc/vc.eventCarousel.php:64
+#: inc/vc/vc.partnerLogo.php:20 inc/vc/vc.postCarousel.php:57
+msgctxt "backend"
+msgid "Collapse"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:25 inc/vc/vc.eventCarousel.php:70
+#: inc/vc/vc.postCarousel.php:63
+msgctxt "backend"
+msgid "Gutter of the event carousel."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:36
+msgctxt "backend"
+msgid "Style of the event carousel."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:37 inc/vc/vc.customCarousel.php:49
+#: inc/vc/vc.customCarousel.php:61 inc/vc/vc.customCarousel.php:68
+#: inc/vc/vc.customCarousel.php:76 inc/vc/vc.customCarousel.php:89
+#: inc/vc/vc.customCarousel.php:101 inc/vc/vc.customCarousel.php:113
+#: inc/vc/vc.deviceSlider.php:52 inc/vc/vc.deviceSlider.php:61
+#: inc/vc/vc.deviceSlider.php:71 inc/vc/vc.deviceSlider.php:81
+#: inc/vc/vc.deviceSlider.php:91 inc/vc/vc.deviceSlider.php:102
+#: inc/vc/vc.deviceSlider.php:109 inc/vc/vc.deviceSlider.php:117
+#: inc/vc/vc.eventCarousel.php:82 inc/vc/vc.eventCarousel.php:94
+#: inc/vc/vc.eventCarousel.php:101 inc/vc/vc.eventCarousel.php:109
+#: inc/vc/vc.eventCarousel.php:122 inc/vc/vc.eventCarousel.php:134
+#: inc/vc/vc.eventCarousel.php:146 inc/vc/vc.partnerLogo.php:38
+#: inc/vc/vc.partnerLogo.php:50 inc/vc/vc.partnerLogo.php:62
+#: inc/vc/vc.partnerLogo.php:69 inc/vc/vc.partnerLogo.php:77
+#: inc/vc/vc.partnerLogo.php:90 inc/vc/vc.partnerLogo.php:102
+#: inc/vc/vc.partnerLogo.php:114 inc/vc/vc.postCarousel.php:75
+#: inc/vc/vc.postCarousel.php:87 inc/vc/vc.postCarousel.php:94
+#: inc/vc/vc.postCarousel.php:102 inc/vc/vc.postCarousel.php:115
+#: inc/vc/vc.postCarousel.php:127 inc/vc/vc.postCarousel.php:139
+msgctxt "backend"
+msgid "Carousel Settings"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:41 inc/vc/vc.eventCarousel.php:74
+#: inc/vc/vc.partnerLogo.php:42 inc/vc/vc.postCarousel.php:67
+msgctxt "backend"
+msgid "Navigation"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:44 inc/vc/vc.customCarousel.php:56
+#: inc/vc/vc.eventCarousel.php:42 inc/vc/vc.eventCarousel.php:53
+#: inc/vc/vc.eventCarousel.php:77 inc/vc/vc.eventCarousel.php:89
+#: inc/vc/vc.faq.php:65 inc/vc/vc.faq.php:104 inc/vc/vc.partnerLogo.php:45
+#: inc/vc/vc.partnerLogo.php:57 inc/vc/vc.portfolio.php:66
+#: inc/vc/vc.portfolio.php:157 inc/vc/vc.portfolio.php:167
+#: inc/vc/vc.postCarousel.php:70 inc/vc/vc.postCarousel.php:82
+#: inc/vc/vc.postGrid.php:116 inc/vc/vc.postGrid.php:126
+#: inc/vc/vc.postGrid.php:136
+msgctxt "backend"
+msgid "Show"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:45 inc/vc/vc.customCarousel.php:57
+#: inc/vc/vc.eventCarousel.php:43 inc/vc/vc.eventCarousel.php:54
+#: inc/vc/vc.eventCarousel.php:78 inc/vc/vc.eventCarousel.php:90
+#: inc/vc/vc.partnerLogo.php:46 inc/vc/vc.partnerLogo.php:58
+#: inc/vc/vc.portfolio.php:67 inc/vc/vc.portfolio.php:158
+#: inc/vc/vc.portfolio.php:168 inc/vc/vc.postCarousel.php:71
+#: inc/vc/vc.postCarousel.php:83 inc/vc/vc.postGrid.php:117
+#: inc/vc/vc.postGrid.php:127 inc/vc/vc.postGrid.php:137
+msgctxt "backend"
+msgid "Hide"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:47 inc/vc/vc.eventCarousel.php:80
+#: inc/vc/vc.partnerLogo.php:48 inc/vc/vc.postCarousel.php:73
+msgctxt "backend"
+msgid "Show or hide navigation from here."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:53 inc/vc/vc.deviceSlider.php:66
+#: inc/vc/vc.eventCarousel.php:86 inc/vc/vc.partnerLogo.php:54
+#: inc/vc/vc.postCarousel.php:79
+msgctxt "backend"
+msgid "Pagination"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:59 inc/vc/vc.eventCarousel.php:92
+#: inc/vc/vc.partnerLogo.php:60 inc/vc/vc.postCarousel.php:85
+msgctxt "backend"
+msgid "Show or hide pagination from here."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:73 inc/vc/vc.deviceSlider.php:114
+#: inc/vc/vc.eventCarousel.php:106 inc/vc/vc.partnerLogo.php:74
+#: inc/vc/vc.postCarousel.php:99
+msgctxt "backend"
+msgid "Speed"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:77 inc/vc/vc.eventCarousel.php:110
+#: inc/vc/vc.postCarousel.php:103
+msgctxt "backend"
+msgid "Speed of the event carousel. It's set <strong>ms</strong> value."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:105 inc/vc/vc.deviceSlider.php:96
+#: inc/vc/vc.eventCarousel.php:138 inc/vc/vc.partnerLogo.php:106
+#: inc/vc/vc.postCarousel.php:131
+msgctxt "backend"
+msgid "Loop"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:111 inc/vc/vc.deviceSlider.php:101
+#: inc/vc/vc.eventCarousel.php:144 inc/vc/vc.partnerLogo.php:112
+#: inc/vc/vc.postCarousel.php:137
+msgctxt "backend"
+msgid "Set yes or no loop from here."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:117 inc/vc/vc.eventCarousel.php:150
+#: inc/vc/vc.partnerLogo.php:118 inc/vc/vc.portfolio.php:174
+#: inc/vc/vc.postCarousel.php:143 inc/vc/vc.postGrid.php:143
+msgctxt "backend"
+msgid "Large View"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:120 inc/vc/vc.customCarousel.php:136
+#: inc/vc/vc.customCarousel.php:150 inc/vc/vc.eventCarousel.php:153
+#: inc/vc/vc.eventCarousel.php:169 inc/vc/vc.eventCarousel.php:183
+#: inc/vc/vc.gallery.php:52 inc/vc/vc.partnerLogo.php:121
+#: inc/vc/vc.partnerLogo.php:137 inc/vc/vc.partnerLogo.php:151
+#: inc/vc/vc.portfolio.php:177 inc/vc/vc.portfolio.php:193
+#: inc/vc/vc.portfolio.php:207 inc/vc/vc.postCarousel.php:146
+#: inc/vc/vc.postCarousel.php:162 inc/vc/vc.postCarousel.php:176
+#: inc/vc/vc.postGrid.php:146 inc/vc/vc.postGrid.php:162
+#: inc/vc/vc.postGrid.php:176
+msgctxt "backend"
+msgid "1"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:121 inc/vc/vc.customCarousel.php:137
+#: inc/vc/vc.customCarousel.php:151 inc/vc/vc.eventCarousel.php:154
+#: inc/vc/vc.eventCarousel.php:170 inc/vc/vc.eventCarousel.php:184
+#: inc/vc/vc.gallery.php:53 inc/vc/vc.partnerLogo.php:122
+#: inc/vc/vc.partnerLogo.php:138 inc/vc/vc.partnerLogo.php:152
+#: inc/vc/vc.portfolio.php:178 inc/vc/vc.portfolio.php:194
+#: inc/vc/vc.portfolio.php:208 inc/vc/vc.postCarousel.php:147
+#: inc/vc/vc.postCarousel.php:163 inc/vc/vc.postCarousel.php:177
+#: inc/vc/vc.postGrid.php:147 inc/vc/vc.postGrid.php:163
+#: inc/vc/vc.postGrid.php:177
+msgctxt "backend"
+msgid "2"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:122 inc/vc/vc.customCarousel.php:138
+#: inc/vc/vc.customCarousel.php:152 inc/vc/vc.eventCarousel.php:155
+#: inc/vc/vc.eventCarousel.php:171 inc/vc/vc.eventCarousel.php:185
+#: inc/vc/vc.gallery.php:54 inc/vc/vc.partnerLogo.php:123
+#: inc/vc/vc.partnerLogo.php:139 inc/vc/vc.partnerLogo.php:153
+#: inc/vc/vc.portfolio.php:179 inc/vc/vc.portfolio.php:195
+#: inc/vc/vc.portfolio.php:209 inc/vc/vc.postCarousel.php:148
+#: inc/vc/vc.postCarousel.php:164 inc/vc/vc.postCarousel.php:178
+#: inc/vc/vc.postGrid.php:148 inc/vc/vc.postGrid.php:164
+#: inc/vc/vc.postGrid.php:178
+msgctxt "backend"
+msgid "3"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:123 inc/vc/vc.customCarousel.php:139
+#: inc/vc/vc.eventCarousel.php:156 inc/vc/vc.eventCarousel.php:172
+#: inc/vc/vc.gallery.php:55 inc/vc/vc.partnerLogo.php:124
+#: inc/vc/vc.partnerLogo.php:140 inc/vc/vc.portfolio.php:180
+#: inc/vc/vc.portfolio.php:196 inc/vc/vc.postCarousel.php:149
+#: inc/vc/vc.postCarousel.php:165 inc/vc/vc.postGrid.php:149
+#: inc/vc/vc.postGrid.php:165
+msgctxt "backend"
+msgid "4"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:124 inc/vc/vc.eventCarousel.php:157
+#: inc/vc/vc.gallery.php:56 inc/vc/vc.gallery.php:67
+#: inc/vc/vc.partnerLogo.php:125 inc/vc/vc.portfolio.php:181
+#: inc/vc/vc.postCarousel.php:150 inc/vc/vc.postGrid.php:150
+msgctxt "backend"
+msgid "5"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:125 inc/vc/vc.eventCarousel.php:158
+#: inc/vc/vc.gallery.php:57 inc/vc/vc.partnerLogo.php:126
+#: inc/vc/vc.portfolio.php:182 inc/vc/vc.postCarousel.php:151
+#: inc/vc/vc.postGrid.php:151
+msgctxt "backend"
+msgid "6"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:128 inc/vc/vc.customCarousel.php:142
+#: inc/vc/vc.customCarousel.php:155 inc/vc/vc.eventCarousel.php:161
+#: inc/vc/vc.eventCarousel.php:175 inc/vc/vc.eventCarousel.php:188
+#: inc/vc/vc.partnerLogo.php:129 inc/vc/vc.partnerLogo.php:143
+#: inc/vc/vc.partnerLogo.php:156 inc/vc/vc.portfolio.php:185
+#: inc/vc/vc.portfolio.php:199 inc/vc/vc.portfolio.php:212
+#: inc/vc/vc.postCarousel.php:154 inc/vc/vc.postCarousel.php:168
+#: inc/vc/vc.postCarousel.php:181 inc/vc/vc.postGrid.php:154
+#: inc/vc/vc.postGrid.php:168 inc/vc/vc.postGrid.php:181
+msgctxt "backend"
+msgid "Responsive"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:129 inc/vc/vc.eventCarousel.php:162
+#: inc/vc/vc.postCarousel.php:155
+msgctxt "backend"
+msgid "Large view item of the event carousel."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:133 inc/vc/vc.eventCarousel.php:166
+#: inc/vc/vc.partnerLogo.php:134 inc/vc/vc.portfolio.php:190
+#: inc/vc/vc.postCarousel.php:159 inc/vc/vc.postGrid.php:159
+msgctxt "backend"
+msgid "Medium View"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:143 inc/vc/vc.eventCarousel.php:176
+#: inc/vc/vc.postCarousel.php:169
+msgctxt "backend"
+msgid "Medium view item of the event carousel."
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:147 inc/vc/vc.eventCarousel.php:180
+#: inc/vc/vc.partnerLogo.php:148 inc/vc/vc.portfolio.php:204
+#: inc/vc/vc.postCarousel.php:173 inc/vc/vc.postGrid.php:173
+msgctxt "backend"
+msgid "Small View"
+msgstr ""
+
+#: inc/vc/vc.customCarousel.php:156 inc/vc/vc.eventCarousel.php:189
+#: inc/vc/vc.postCarousel.php:182
+msgctxt "backend"
+msgid "Small view item of the event carousel."
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:5
+msgctxt "backend"
+msgid "Device Slider"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:6
+msgctxt "backend"
+msgid "Add device slider"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:15
+msgctxt "backend"
+msgid "Slider Images"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:18 inc/vc/vc.gallery.php:18
+msgctxt "backend"
+msgid "Upload your Images here."
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:24 inc/vc/vc.faq.php:21 inc/vc/vc.flickr.php:21
+#: inc/vc/vc.portfolio.php:47 inc/vc/vc.postGrid.php:23
+msgctxt "backend"
+msgid "Limit"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:27
+msgctxt "backend"
+msgid "Maximum number of item that you want to display"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:31
+msgctxt "backend"
+msgid "Device"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:35
+msgctxt "backend"
+msgid "Mac Desktop"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:36
+msgctxt "backend"
+msgid "IPad"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:37
+msgctxt "backend"
+msgid "IPhone"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:38
+msgctxt "backend"
+msgid "MacBook"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:39
+msgctxt "backend"
+msgid "Galaxy S6"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:41
+msgctxt "backend"
+msgid ""
+"Select your device which you want to show as slider. Note: Use Image Size:\n"
+"        for Mac Desktop or IPad: 944x590, for IPhone: 596x771 and for "
+"MacBook or Galaxy S6: 447x762"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:46 inc/vc/vc.flickr.php:28
+msgctxt "backend"
+msgid "Lightbox"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:51 inc/vc/vc.deviceSlider.php:62
+msgctxt "backend"
+msgid "You want to show your content in lightbox window"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:56
+msgctxt "backend"
+msgid "Arrows"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:72
+msgctxt "backend"
+msgid "If you select Yes pagination will be appeard."
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:76
+msgctxt "backend"
+msgid "Autoplay"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:82
+msgctxt "backend"
+msgid "Set yes if you need to set auto play"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:86
+msgctxt "backend"
+msgid "Hover On Pause"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:92
+msgctxt "backend"
+msgid ""
+"If you select Yes then when you hover on the slide then it will be paused"
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:110
+msgctxt "backend"
+msgid "Delay of the event carousel. It's set <strong>second</strong> value."
+msgstr ""
+
+#: inc/vc/vc.deviceSlider.php:118
+msgctxt "backend"
+msgid "Speed of the event carousel. It's set <strong>second</strong> value."
+msgstr ""
+
+#: inc/vc/vc.divider.php:5
+msgctxt "backend"
+msgid "Divider"
+msgstr ""
+
+#: inc/vc/vc.divider.php:6
+msgctxt "backend"
+msgid "Setting of Yes can cause for show divider"
+msgstr ""
+
+#: inc/vc/vc.divider.php:13
+msgctxt "backend"
+msgid "Divider Align"
+msgstr ""
+
+#: inc/vc/vc.divider.php:16 inc/vc/vc.divider.php:27
+msgctxt "backend"
+msgid "center"
+msgstr ""
+
+#: inc/vc/vc.divider.php:17 inc/vc/vc.divider.php:28
+msgctxt "backend"
+msgid "left"
+msgstr ""
+
+#: inc/vc/vc.divider.php:18 inc/vc/vc.divider.php:29
+msgctxt "backend"
+msgid "right"
+msgstr ""
+
+#: inc/vc/vc.divider.php:20
+msgctxt "backend"
+msgid "Select divider alignment here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:31
+msgctxt "backend"
+msgid "You can set icon alignment from here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:35
+msgctxt "backend"
+msgid "Show Top Link"
+msgstr ""
+
+#: inc/vc/vc.divider.php:37
+msgctxt "backend"
+msgid "Set show or hide top link here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:41
+msgctxt "backend"
+msgid "Force Fullwidth"
+msgstr ""
+
+#: inc/vc/vc.divider.php:43
+msgctxt "backend"
+msgid "Force fullwidht of the divider."
+msgstr ""
+
+#: inc/vc/vc.divider.php:47
+msgctxt "backend"
+msgid "Divider Style"
+msgstr ""
+
+#: inc/vc/vc.divider.php:50
+msgctxt "backend"
+msgid "Single Line"
+msgstr ""
+
+#: inc/vc/vc.divider.php:51
+msgctxt "backend"
+msgid "Double Line"
+msgstr ""
+
+#: inc/vc/vc.divider.php:52
+msgctxt "backend"
+msgid "Single Dashed"
+msgstr ""
+
+#: inc/vc/vc.divider.php:53
+msgctxt "backend"
+msgid "Double Dashed"
+msgstr ""
+
+#: inc/vc/vc.divider.php:54
+msgctxt "backend"
+msgid "Single Dotted"
+msgstr ""
+
+#: inc/vc/vc.divider.php:55
+msgctxt "backend"
+msgid "Double Dotted"
+msgstr ""
+
+#: inc/vc/vc.divider.php:56 inc/vc/vc.progressBar.php:97
+msgctxt "backend"
+msgid "Striped"
+msgstr ""
+
+#: inc/vc/vc.divider.php:58
+msgctxt "backend"
+msgid "Select divider style from here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:63
+msgctxt "backend"
+msgid "Style Color"
+msgstr ""
+
+#: inc/vc/vc.divider.php:66
+msgctxt "backend"
+msgid "Set divider style color."
+msgstr ""
+
+#: inc/vc/vc.divider.php:72
+msgctxt "backend"
+msgid "Add Divider Icon"
+msgstr ""
+
+#: inc/vc/vc.divider.php:78
+msgctxt "backend"
+msgid "Add icon of the divider, just check it."
+msgstr ""
+
+#: inc/vc/vc.divider.php:82
+msgctxt "backend"
+msgid "Divider Icon"
+msgstr ""
+
+#: inc/vc/vc.divider.php:87
+msgctxt "backend"
+msgid "Click on the icon picker to pick an icons for this shortcode."
+msgstr ""
+
+#: inc/vc/vc.divider.php:96
+msgctxt "backend"
+msgid "Icon Style"
+msgstr ""
+
+#: inc/vc/vc.divider.php:103
+msgctxt "backend"
+msgid "Set icon style from here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:115
+msgctxt "backend"
+msgid "Set icon color from here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:124 inc/vc/vc.inlineIcon.php:72
+msgctxt "backend"
+msgid "Icon Size"
+msgstr ""
+
+#: inc/vc/vc.divider.php:127
+msgctxt "backend"
+msgid "Select your icon size. It will be set in pixel value"
+msgstr ""
+
+#: inc/vc/vc.divider.php:136
+msgctxt "backend"
+msgid "Divider Width"
+msgstr ""
+
+#: inc/vc/vc.divider.php:139
+msgctxt "backend"
+msgid "Set divider width from here."
+msgstr ""
+
+#: inc/vc/vc.divider.php:144
+msgctxt "backend"
+msgid "Margin Top"
+msgstr ""
+
+#: inc/vc/vc.divider.php:147
+msgctxt "backend"
+msgid "Top margin of the divider"
+msgstr ""
+
+#: inc/vc/vc.divider.php:152 inc/vc/vc.heading.php:114
+msgctxt "backend"
+msgid "Margin Bottom"
+msgstr ""
+
+#: inc/vc/vc.divider.php:155
+msgctxt "backend"
+msgid "Bottom margin of the divider"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:5
+msgctxt "backend"
+msgid "Event Carousel"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:6
+msgctxt "backend"
+msgid "Add event in your carousel"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:13
+msgctxt "backend"
+msgid "Number Of Event"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:17
+msgctxt "backend"
+msgid "Limit of the event caraousel."
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:21 inc/vc/vc.postCarousel.php:24
+msgctxt "backend"
+msgid "Categories"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:25 inc/vc/vc.postCarousel.php:27
+#: inc/vc/vc.timeline.php:16
+msgctxt "backend"
+msgid "Category Slugs - For example: sports, business, all"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:33 inc/vc/vc.postCarousel.php:47
+msgctxt "backend"
+msgid "White"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:34 inc/vc/vc.postCarousel.php:48
+msgctxt "backend"
+msgid "Lightgrey"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:39
+msgctxt "backend"
+msgid "Event Details"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:45
+msgctxt "backend"
+msgid "Show or hide event details."
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:50
+msgctxt "backend"
+msgid "Event Image"
+msgstr ""
+
+#: inc/vc/vc.eventCarousel.php:56
+msgctxt "backend"
+msgid "Show or hide event image."
+msgstr ""
+
+#: inc/vc/vc.faq.php:5
+msgctxt "backend"
+msgid "FAQ"
+msgstr ""
+
+#: inc/vc/vc.faq.php:6
+msgctxt "backend"
+msgid "Insert frequently asked question with filter system"
+msgstr ""
+
+#: inc/vc/vc.faq.php:13
+msgctxt "backend"
+msgid "Category"
+msgstr ""
+
+#: inc/vc/vc.faq.php:17
+msgctxt "backend"
+msgid "Category Slugs or ID - For example: buying,author,account,community"
+msgstr ""
+
+#: inc/vc/vc.faq.php:24
+msgctxt "backend"
+msgid "How many item you want to display"
+msgstr ""
+
+#: inc/vc/vc.faq.php:28 inc/vc/vc.timeline.php:27
+msgctxt "backend"
+msgid "Order By"
+msgstr ""
+
+#: inc/vc/vc.faq.php:33 inc/vc/vc.timeline.php:32 inc/vc/vc.timeline.php:90
+msgctxt "backend"
+msgid "Date"
+msgstr ""
+
+#: inc/vc/vc.faq.php:35 inc/vc/vc.timeline.php:34
+msgctxt "backend"
+msgid "You can sort your item by this order"
+msgstr ""
+
+#: inc/vc/vc.faq.php:39 inc/vc/vc.timeline.php:38
+msgctxt "backend"
+msgid "Order"
+msgstr ""
+
+#: inc/vc/vc.faq.php:42 inc/vc/vc.timeline.php:41
+msgctxt "backend"
+msgid "Ascending"
+msgstr ""
+
+#: inc/vc/vc.faq.php:43 inc/vc/vc.timeline.php:42
+msgctxt "backend"
+msgid "Decending"
+msgstr ""
+
+#: inc/vc/vc.faq.php:45 inc/vc/vc.timeline.php:44
+msgctxt "backend"
+msgid ""
+"You can select your post order method(as assending ro descending order) from "
+"here"
+msgstr ""
+
+#: inc/vc/vc.faq.php:49 inc/vc/vc.portfolio.php:95 inc/vc/vc.postGrid.php:52
+msgctxt "backend"
+msgid "Loading Animation"
+msgstr ""
+
+#: inc/vc/vc.faq.php:53 inc/vc/vc.portfolio.php:100 inc/vc/vc.postGrid.php:57
+msgctxt "backend"
+msgid "LazyLoading"
+msgstr ""
+
+#: inc/vc/vc.faq.php:54 inc/vc/vc.portfolio.php:101 inc/vc/vc.postGrid.php:58
+msgctxt "backend"
+msgid "Fade In To Top"
+msgstr ""
+
+#: inc/vc/vc.faq.php:55 inc/vc/vc.faq.php:82 inc/vc/vc.portfolio.php:102
+#: inc/vc/vc.portfolio.php:121 inc/vc/vc.postGrid.php:59
+#: inc/vc/vc.postGrid.php:78
+msgctxt "backend"
+msgid "Sequentially"
+msgstr ""
+
+#: inc/vc/vc.faq.php:56 inc/vc/vc.portfolio.php:103 inc/vc/vc.postGrid.php:60
+msgctxt "backend"
+msgid "Bottom To Top"
+msgstr ""
+
+#: inc/vc/vc.faq.php:58
+msgctxt "backend"
+msgid "Select loading animation"
+msgstr ""
+
+#: inc/vc/vc.faq.php:62 inc/vc/vc.portfolio.php:63 inc/vc/vc.postGrid.php:113
+msgctxt "backend"
+msgid "Filter"
+msgstr ""
+
+#: inc/vc/vc.faq.php:70 inc/vc/vc.portfolio.php:109 inc/vc/vc.postGrid.php:66
+msgctxt "backend"
+msgid "Filter Animation"
+msgstr ""
+
+#: inc/vc/vc.faq.php:73 inc/vc/vc.portfolio.php:112 inc/vc/vc.postGrid.php:69
+msgctxt "backend"
+msgid "Fade Out"
+msgstr ""
+
+#: inc/vc/vc.faq.php:74 inc/vc/vc.portfolio.php:113 inc/vc/vc.postGrid.php:70
+msgctxt "backend"
+msgid "Quicksand"
+msgstr ""
+
+#: inc/vc/vc.faq.php:75 inc/vc/vc.portfolio.php:114 inc/vc/vc.postGrid.php:71
+msgctxt "backend"
+msgid "Box Shadow"
+msgstr ""
+
+#: inc/vc/vc.faq.php:76 inc/vc/vc.portfolio.php:115 inc/vc/vc.postGrid.php:72
+msgctxt "backend"
+msgid "Bounce Left"
+msgstr ""
+
+#: inc/vc/vc.faq.php:77 inc/vc/vc.portfolio.php:116 inc/vc/vc.postGrid.php:73
+msgctxt "backend"
+msgid "Bounce Top"
+msgstr ""
+
+#: inc/vc/vc.faq.php:78 inc/vc/vc.portfolio.php:117 inc/vc/vc.postGrid.php:74
+msgctxt "backend"
+msgid "Bounce Bottom"
+msgstr ""
+
+#: inc/vc/vc.faq.php:79 inc/vc/vc.portfolio.php:118 inc/vc/vc.postGrid.php:75
+msgctxt "backend"
+msgid "Move Left"
+msgstr ""
+
+#: inc/vc/vc.faq.php:80 inc/vc/vc.portfolio.php:119 inc/vc/vc.postGrid.php:76
+msgctxt "backend"
+msgid "Slide Left"
+msgstr ""
+
+#: inc/vc/vc.faq.php:81 inc/vc/vc.portfolio.php:120 inc/vc/vc.postGrid.php:77
+msgctxt "backend"
+msgid "Fade Out Top"
+msgstr ""
+
+#: inc/vc/vc.faq.php:83 inc/vc/vc.portfolio.php:122 inc/vc/vc.postGrid.php:79
+msgctxt "backend"
+msgid "Skew"
+msgstr ""
+
+#: inc/vc/vc.faq.php:84 inc/vc/vc.portfolio.php:123 inc/vc/vc.postGrid.php:80
+msgctxt "backend"
+msgid "Slide Delay"
+msgstr ""
+
+#: inc/vc/vc.faq.php:85 inc/vc/vc.portfolio.php:124 inc/vc/vc.postGrid.php:81
+msgctxt "backend"
+msgid "3d Flip"
+msgstr ""
+
+#: inc/vc/vc.faq.php:86 inc/vc/vc.portfolio.php:125 inc/vc/vc.postGrid.php:82
+msgctxt "backend"
+msgid "Rotate Sides"
+msgstr ""
+
+#: inc/vc/vc.faq.php:87 inc/vc/vc.portfolio.php:126 inc/vc/vc.postGrid.php:83
+msgctxt "backend"
+msgid "Flip Out Delay"
+msgstr ""
+
+#: inc/vc/vc.faq.php:88 inc/vc/vc.portfolio.php:127 inc/vc/vc.postGrid.php:84
+msgctxt "backend"
+msgid "Flip Out"
+msgstr ""
+
+#: inc/vc/vc.faq.php:89 inc/vc/vc.portfolio.php:128 inc/vc/vc.postGrid.php:85
+msgctxt "backend"
+msgid "Unfold"
+msgstr ""
+
+#: inc/vc/vc.faq.php:90 inc/vc/vc.portfolio.php:129 inc/vc/vc.postGrid.php:86
+msgctxt "backend"
+msgid "Fold Left"
+msgstr ""
+
+#: inc/vc/vc.faq.php:91 inc/vc/vc.portfolio.php:130 inc/vc/vc.postGrid.php:87
+msgctxt "backend"
+msgid "Scale Down"
+msgstr ""
+
+#: inc/vc/vc.faq.php:92 inc/vc/vc.portfolio.php:131 inc/vc/vc.postGrid.php:88
+msgctxt "backend"
+msgid "Scale Sides"
+msgstr ""
+
+#: inc/vc/vc.faq.php:93 inc/vc/vc.portfolio.php:132 inc/vc/vc.postGrid.php:89
+msgctxt "backend"
+msgid "Front Row"
+msgstr ""
+
+#: inc/vc/vc.faq.php:94 inc/vc/vc.portfolio.php:133 inc/vc/vc.postGrid.php:90
+msgctxt "backend"
+msgid "Flip Bottom"
+msgstr ""
+
+#: inc/vc/vc.faq.php:95 inc/vc/vc.portfolio.php:134 inc/vc/vc.postGrid.php:91
+msgctxt "backend"
+msgid "Rotate Room"
+msgstr ""
+
+#: inc/vc/vc.faq.php:97
+msgctxt "backend"
+msgid "Select filter animation"
+msgstr ""
+
+#: inc/vc/vc.faq.php:101 inc/vc/vc.timeline.php:72
+msgctxt "backend"
+msgid "Read More"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:6
+msgctxt "backend"
+msgid "Featured Donation"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:10
+msgctxt "backend"
+msgid "Highlights your featured donation."
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:18
+msgctxt "backend"
+msgid "Type here that you want to show for title"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:22 inc/vc/vc.iconListItem.php:80
+msgctxt "backend"
+msgid "Title Color"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:26
+msgctxt "backend"
+msgid "Choose a color for title"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:30
+msgctxt "backend"
+msgid "Title Size"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:34
+msgctxt "backend"
+msgid "Enter pixel value for title size"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:38 inc/vc/vc.teamMember.php:15
+#: inc/vc/vc.testimonial.php:38
+msgctxt "backend"
+msgid "Photo"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:45
+msgctxt "backend"
+msgid "Goal Value"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:48 inc/vc/vc.featuredDonation.php:56
+#: inc/vc/vc.featuredDonation.php:64 inc/vc/vc.featuredDonation.php:72
+msgctxt "backend"
+msgid "Progress"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:49
+msgctxt "backend"
+msgid "Enter numeric goal value."
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:53
+msgctxt "backend"
+msgid "Achieve Value"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:57
+msgctxt "backend"
+msgid "Enter numeric achieve value."
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:61 inc/vc/vc.progressBar.php:112
+msgctxt "backend"
+msgid "Bar Color"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:65
+msgctxt "backend"
+msgid "Choose a color for progress bar"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:69 inc/vc/vc.progressBar.php:119
+#: inc/vc/vc.progressPie.php:61
+msgctxt "backend"
+msgid "Fill Color"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:73
+msgctxt "backend"
+msgid "Choose progress bar fill color"
+msgstr ""
+
+#: inc/vc/vc.featuredDonation.php:83
+msgctxt "backend"
+msgid "Content Text"
+msgstr ""
+
+#: inc/vc/vc.flickr.php:6
+msgctxt "backend"
+msgid "Flickr"
+msgstr ""
+
+#: inc/vc/vc.flickr.php:10
+msgctxt "backend"
+msgid "Flickr is for make flickr feed ."
+msgstr ""
+
+#: inc/vc/vc.flickr.php:14
+msgctxt "backend"
+msgid "Flickr ID"
+msgstr ""
+
+#: inc/vc/vc.flickr.php:17
+msgctxt "backend"
+msgid ""
+"Enter your flickr ID, To find your flickID visit <a href='http://idgettr."
+"com/' target='_blank'>idGettr</a>"
+msgstr ""
+
+#: inc/vc/vc.flickr.php:24
+msgctxt "backend"
+msgid "Select number of photos to display."
+msgstr ""
+
+#: inc/vc/vc.flickr.php:30
+msgctxt "backend"
+msgid "If checked row will be set to full height."
+msgstr ""
+
+#: inc/vc/vc.flickr.php:37 inc/vc/vc.jointButton.php:72 inc/vc/vc.note.php:48
+#: inc/vc/vc.testimonial.php:78
+msgctxt "backend"
+msgid "Radius"
+msgstr ""
+
+#: inc/vc/vc.flickr.php:40
+msgctxt "backend"
+msgid "You can set border radius from here."
+msgstr ""
+
+#: inc/vc/vc.gallery.php:6
+msgctxt "backend"
+msgid "Show Photo Gallery"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:15
+msgctxt "backend"
+msgid "Gallery Images"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:25
+msgctxt "backend"
+msgid "Thumbnail Size"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:28
+msgctxt "backend"
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:31
+msgctxt "backend"
+msgid "Full"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:38
+msgctxt "backend"
+msgid "Link To"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:41
+msgctxt "backend"
+msgid "Lightbox Image"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:42
+msgctxt "backend"
+msgid "None"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:49
+msgctxt "backend"
+msgid "Columns"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:66
+msgctxt "backend"
+msgid "No Gutter"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:68
+msgctxt "backend"
+msgid "10"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:69
+msgctxt "backend"
+msgid "15"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:70
+msgctxt "backend"
+msgid "20"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:71
+msgctxt "backend"
+msgid "25"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:72
+msgctxt "backend"
+msgid "35"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:73
+msgctxt "backend"
+msgid "45"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:74
+msgctxt "backend"
+msgid "50"
+msgstr ""
+
+#: inc/vc/vc.gallery.php:77
+msgctxt "backend"
+msgid "Select gutter of the gallery item."
+msgstr ""
+
+#: inc/vc/vc.heading.php:5
+msgctxt "backend"
+msgid "Heading"
+msgstr ""
+
+#: inc/vc/vc.heading.php:6
+msgctxt "backend"
+msgid "Huge heading collection."
+msgstr ""
+
+#: inc/vc/vc.heading.php:13
+msgctxt "backend"
+msgid "Heading Text"
+msgstr ""
+
+#: inc/vc/vc.heading.php:17
+msgctxt "backend"
+msgid "Type your heading text here."
+msgstr ""
+
+#: inc/vc/vc.heading.php:21
+msgctxt "backend"
+msgid "Heading Tag"
+msgstr ""
+
+#: inc/vc/vc.heading.php:24
+msgctxt "backend"
+msgid "H1"
+msgstr ""
+
+#: inc/vc/vc.heading.php:25
+msgctxt "backend"
+msgid "H2"
+msgstr ""
+
+#: inc/vc/vc.heading.php:26
+msgctxt "backend"
+msgid "H3"
+msgstr ""
+
+#: inc/vc/vc.heading.php:27
+msgctxt "backend"
+msgid "H4"
+msgstr ""
+
+#: inc/vc/vc.heading.php:28
+msgctxt "backend"
+msgid "H5"
+msgstr ""
+
+#: inc/vc/vc.heading.php:29
+msgctxt "backend"
+msgid "H6"
+msgstr ""
+
+#: inc/vc/vc.heading.php:31
+msgctxt "backend"
+msgid "Select heading tag from here."
+msgstr ""
+
+#: inc/vc/vc.heading.php:35
+msgctxt "backend"
+msgid "Heading Style"
+msgstr ""
+
+#: inc/vc/vc.heading.php:43 inc/vc/vc.note.php:20
+msgctxt "backend"
+msgid "Style 5"
+msgstr ""
+
+#: inc/vc/vc.heading.php:44 inc/vc/vc.note.php:21
+msgctxt "backend"
+msgid "Style 6"
+msgstr ""
+
+#: inc/vc/vc.heading.php:45
+msgctxt "backend"
+msgid "Style 7"
+msgstr ""
+
+#: inc/vc/vc.heading.php:46
+msgctxt "backend"
+msgid "Style 8"
+msgstr ""
+
+#: inc/vc/vc.heading.php:47
+msgctxt "backend"
+msgid "Style 9"
+msgstr ""
+
+#: inc/vc/vc.heading.php:48
+msgctxt "backend"
+msgid "Style 10"
+msgstr ""
+
+#: inc/vc/vc.heading.php:49
+msgctxt "backend"
+msgid "Modern 1 Dark"
+msgstr ""
+
+#: inc/vc/vc.heading.php:50
+msgctxt "backend"
+msgid "Modern 1 Light"
+msgstr ""
+
+#: inc/vc/vc.heading.php:51
+msgctxt "backend"
+msgid "Modern 1 Blue"
+msgstr ""
+
+#: inc/vc/vc.heading.php:52
+msgctxt "backend"
+msgid "Modern 1 Orange"
+msgstr ""
+
+#: inc/vc/vc.heading.php:53
+msgctxt "backend"
+msgid "Modern 1 Violet"
+msgstr ""
+
+#: inc/vc/vc.heading.php:54
+msgctxt "backend"
+msgid "Modern 2 Dark"
+msgstr ""
+
+#: inc/vc/vc.heading.php:55
+msgctxt "backend"
+msgid "Modern 2 Light"
+msgstr ""
+
+#: inc/vc/vc.heading.php:56
+msgctxt "backend"
+msgid "Modern 2 Blue"
+msgstr ""
+
+#: inc/vc/vc.heading.php:57
+msgctxt "backend"
+msgid "Modern 2 Orange"
+msgstr ""
+
+#: inc/vc/vc.heading.php:58
+msgctxt "backend"
+msgid "Modern 2 Violet"
+msgstr ""
+
+#: inc/vc/vc.heading.php:59
+msgctxt "backend"
+msgid "Line Dark"
+msgstr ""
+
+#: inc/vc/vc.heading.php:60
+msgctxt "backend"
+msgid "Line Light"
+msgstr ""
+
+#: inc/vc/vc.heading.php:61
+msgctxt "backend"
+msgid "Line Blue"
+msgstr ""
+
+#: inc/vc/vc.heading.php:62
+msgctxt "backend"
+msgid "Line Orange"
+msgstr ""
+
+#: inc/vc/vc.heading.php:63
+msgctxt "backend"
+msgid "Line Violet"
+msgstr ""
+
+#: inc/vc/vc.heading.php:64
+msgctxt "backend"
+msgid "Dotted Line Dark"
+msgstr ""
+
+#: inc/vc/vc.heading.php:65
+msgctxt "backend"
+msgid "Dotted Line Light"
+msgstr ""
+
+#: inc/vc/vc.heading.php:66
+msgctxt "backend"
+msgid "Dotted Line Blue"
+msgstr ""
+
+#: inc/vc/vc.heading.php:67
+msgctxt "backend"
+msgid "Dotted Line Orange"
+msgstr ""
+
+#: inc/vc/vc.heading.php:68
+msgctxt "backend"
+msgid "Dotted Line Violet"
+msgstr ""
+
+#: inc/vc/vc.heading.php:69
+msgctxt "backend"
+msgid "Flat Dark"
+msgstr ""
+
+#: inc/vc/vc.heading.php:70
+msgctxt "backend"
+msgid "Flat Light"
+msgstr ""
+
+#: inc/vc/vc.heading.php:71
+msgctxt "backend"
+msgid "Flat Blue"
+msgstr ""
+
+#: inc/vc/vc.heading.php:72
+msgctxt "backend"
+msgid "Flat Green"
+msgstr ""
+
+#: inc/vc/vc.heading.php:73
+msgctxt "backend"
+msgid "Small Line"
+msgstr ""
+
+#: inc/vc/vc.heading.php:74 inc/vc/vc.progressBar.php:95
+msgctxt "backend"
+msgid "Fancy"
+msgstr ""
+
+#: inc/vc/vc.heading.php:76
+msgctxt "backend"
+msgid "Select heading style from here."
+msgstr ""
+
+#: inc/vc/vc.heading.php:81
+msgctxt "backend"
+msgid "Heading Align"
+msgstr ""
+
+#: inc/vc/vc.heading.php:88
+msgctxt "backend"
+msgid "Select heading align from here."
+msgstr ""
+
+#: inc/vc/vc.heading.php:92
+msgctxt "backend"
+msgid "Heading Color"
+msgstr ""
+
+#: inc/vc/vc.heading.php:94
+msgctxt "backend"
+msgid "Color of the heading text."
+msgstr ""
+
+#: inc/vc/vc.heading.php:99
+msgctxt "backend"
+msgid "Heading Width"
+msgstr ""
+
+#: inc/vc/vc.heading.php:101
+msgctxt "backend"
+msgid "Set heading width from here."
+msgstr ""
+
+#: inc/vc/vc.heading.php:106
+msgctxt "backend"
+msgid "Heading Size"
+msgstr ""
+
+#: inc/vc/vc.heading.php:109
+msgctxt "backend"
+msgid "Set heading size from here."
+msgstr ""
+
+#: inc/vc/vc.heading.php:116
+msgctxt "backend"
+msgid "Margin bottom of the hading."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:6
+msgctxt "backend"
+msgid "Icon List Item"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:10 inc/vc/vc.inlineIcon.php:10
+msgctxt "backend"
+msgid "Adds icon box with custom font icon"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:18
+msgctxt "backend"
+msgid "Enter text here that you want to show for title"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:22 inc/vc/vc.inlineIcon.php:14
+msgctxt "backend"
+msgid "Icon library"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:24 inc/vc/vc.inlineIcon.php:16
+msgctxt "backend"
+msgid "Font Awesome"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:25 inc/vc/vc.inlineIcon.php:17
+msgctxt "backend"
+msgid "Line Icon"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:30 inc/vc/vc.inlineIcon.php:21
+msgctxt "backend"
+msgid "Select icon library."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:84
+msgctxt "backend"
+msgid "You can select title color from here."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:88
+msgctxt "backend"
+msgid "Title  Size"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:92
+msgctxt "backend"
+msgid "You can change title size from here."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:104
+msgctxt "backend"
+msgid "Icon Animation"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:107
+msgctxt "backend"
+msgid "No Animation"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:108
+msgctxt "backend"
+msgid "Animation 1"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:109
+msgctxt "backend"
+msgid "Animation 2"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:110
+msgctxt "backend"
+msgid "Animation 3"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:111
+msgctxt "backend"
+msgid "Animation 4"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:112
+msgctxt "backend"
+msgid "Animation 5"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:115
+msgctxt "backend"
+msgid "Select your icon list icon hover animation"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:123 inc/vc/vc.iconListItem.php:131
+msgctxt "backend"
+msgid "Select custom icon color."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:127 inc/vc/vc.inlineIcon.php:56
+msgctxt "backend"
+msgid "Icon color"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:135 inc/vc/vc.inlineIcon.php:64
+msgctxt "backend"
+msgid "Icon Background"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:139 inc/vc/vc.inlineIcon.php:68
+msgctxt "backend"
+msgid "Select icon background color."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:143 inc/vc/vc.inlineIcon.php:80
+msgctxt "backend"
+msgid "Icon Border"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:151
+msgctxt "backend"
+msgid "Icon  Radius"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:155 inc/vc/vc.inlineIcon.php:92
+#, php-format
+msgctxt "backend"
+msgid ""
+"You can set border radius from here, for example: <b class='su-generator-set-"
+"value' title='Click to set this value'>3px</b> <b class='su-generator-set-"
+"value' title='Click to set this value'>10px</b> <b class='su-generator-set-"
+"value' title='Click to set this value'>25px</b> also you can set value as "
+"em, % etc if you need"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:159
+msgctxt "backend"
+msgid "Icon Shadow"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:163
+msgctxt "backend"
+msgid "You can set object shadow from here"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:167 inc/vc/vc.inlineIcon.php:104
+msgctxt "backend"
+msgid "Icon Padding"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:171 inc/vc/vc.inlineIcon.php:108
+#, php-format
+msgctxt "backend"
+msgid ""
+"You can set padding from here, for example: <b class='su-generator-set-"
+"value' title='Click to set this value'>5px</b> <b class='su-generator-set-"
+"value' title='Click to set this value'>10px</b> <b class='su-generator-set-"
+"value' title='Click to set this value'>25px</b> also you can set value as "
+"em, % etc if you need"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:176
+msgctxt "backend"
+msgid "Icon Alignment"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:183
+msgctxt "backend"
+msgid "Top Left"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:184
+msgctxt "backend"
+msgid "Top Right"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:191
+msgctxt "backend"
+msgid "Icon gap"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:195
+msgctxt "backend"
+msgid "You can integer value in icon gap as px from here."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:200
+msgctxt "backend"
+msgid "Icon to Icon Connector"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:206
+msgctxt "backend"
+msgid "If you select yes icon connector will appear"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:212
+msgctxt "backend"
+msgid "URL/Link of the icon. Leave empty to disable link."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:216 inc/vc/vc.inlineIcon.php:118
+msgctxt "backend"
+msgid "Link Target"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:218 inc/vc/vc.inlineIcon.php:120
+msgctxt "backend"
+msgid "Select where to open  custom links."
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:220 inc/vc/vc.inlineIcon.php:122
+#: inc/vc/vc.testimonial.php:60
+msgctxt "backend"
+msgid "Same window"
+msgstr ""
+
+#: inc/vc/vc.iconListItem.php:221 inc/vc/vc.inlineIcon.php:123
+#: inc/vc/vc.testimonial.php:61
+msgctxt "backend"
+msgid "New window"
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:6
+msgctxt "backend"
+msgid "Inline Icon"
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:60
+msgctxt "backend"
+msgid "This color will be applied to the selected icon."
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:76
+msgctxt "backend"
+msgid "You can set icon size from here. Icon size set only pixel value."
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:88
+msgctxt "backend"
+msgid "Border  Radius"
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:96
+msgctxt "backend"
+msgid "Icon Margin"
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:100
+msgctxt "backend"
+msgid "You can set margin from here."
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:114
+msgctxt "backend"
+msgid "URL/Link of the author. Leave empty to disable link."
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:128
+msgctxt "backend"
+msgid "Inline Text"
+msgstr ""
+
+#: inc/vc/vc.inlineIcon.php:130
+msgctxt "backend"
+msgid "(optional) if you want show text with icon"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:6
+msgctxt "backend"
+msgid "Joint Button"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:10
+msgctxt "backend"
+msgid "Make Two Adjust Button."
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:14
+msgctxt "backend"
+msgid "Left Button Text"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:18 inc/vc/vc.jointButton.php:40
+#: inc/vc/vc.jointButton.php:47
+msgctxt "backend"
+msgid "Type text here"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:22
+msgctxt "backend"
+msgid "Left Button URL"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:25 inc/vc/vc.jointButton.php:54
+msgctxt "backend"
+msgid "Type url here"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:29
+msgctxt "backend"
+msgid "Left Button Icon"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:32 inc/vc/vc.jointButton.php:61
+msgctxt "backend"
+msgid "Select an icon"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:36
+msgctxt "backend"
+msgid "Right Button Text"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:44 inc/vc/vc.progressPie.php:27
+msgctxt "backend"
+msgid "Middle Text"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:51
+msgctxt "backend"
+msgid "Right Button URL"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:58
+msgctxt "backend"
+msgid "Right Button Icon"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:65
+msgctxt "backend"
+msgid "Width"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:68
+msgctxt "backend"
+msgid "Type pixel value such as: 250px, 200px etc"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:75
+#, php-format
+msgctxt "backend"
+msgid "You can set value as px, em, % etc if you need"
+msgstr ""
+
+#: inc/vc/vc.jointButton.php:86
+msgctxt "backend"
+msgid "Set button alignment from here"
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:27
+msgctxt "backend"
+msgid "Mailchimp"
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:28
+msgctxt "backend"
+msgid "Make easily simple newsletter"
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:35
+msgctxt "backend"
+msgid "Email List"
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:37
+msgctxt "backend"
+msgid "Email list of the newsletter."
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:42 inc/vc/vc.progressPie.php:21
+#: inc/vc/vc.timeline.php:126
+msgctxt "backend"
+msgid "Before Text"
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:44
+msgctxt "backend"
+msgid "Before text of the newsletter."
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:48 inc/vc/vc.progressPie.php:33
+#: inc/vc/vc.timeline.php:132
+msgctxt "backend"
+msgid "After Text"
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:50
+msgctxt "backend"
+msgid "After text of the newsletter."
+msgstr ""
+
+#: inc/vc/vc.mailChimp.php:56
+msgctxt "backend"
+msgid "Button text of the newsletter."
+msgstr ""
+
+#: inc/vc/vc.note.php:5
+msgctxt "backend"
+msgid "Note"
+msgstr ""
+
+#: inc/vc/vc.note.php:6
+msgctxt "backend"
+msgid "Superb! various note style"
+msgstr ""
+
+#: inc/vc/vc.note.php:23
+msgctxt "backend"
+msgid ""
+"You can set four attractive note style. You can set any style with any type"
+msgstr ""
+
+#: inc/vc/vc.note.php:27
+msgctxt "backend"
+msgid "Type"
+msgstr ""
+
+#: inc/vc/vc.note.php:30
+msgctxt "backend"
+msgid "Info"
+msgstr ""
+
+#: inc/vc/vc.note.php:31
+msgctxt "backend"
+msgid "Success"
+msgstr ""
+
+#: inc/vc/vc.note.php:32
+msgctxt "backend"
+msgid "Warning"
+msgstr ""
+
+#: inc/vc/vc.note.php:33
+msgctxt "backend"
+msgid "Danger"
+msgstr ""
+
+#: inc/vc/vc.note.php:35
+msgctxt "backend"
+msgid ""
+"You can set any note type into four note type. Please! select as you need."
+msgstr ""
+
+#: inc/vc/vc.note.php:44
+msgctxt "backend"
+msgid ""
+"If you want to show note icon then please select yes. default value is no"
+msgstr ""
+
+#: inc/vc/vc.note.php:51
+#, php-format
+msgctxt "backend"
+msgid ""
+"You can set border radius from here, for example: 3px 10px 25px also you can "
+"set value as em, % etc if you need"
+msgstr ""
+
+#: inc/vc/vc.note.php:56 inc/vc/vc.teamMember.php:157
+#: inc/vc/vc.testimonial.php:86
+msgctxt "backend"
+msgid "Text"
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:6
+msgctxt "backend"
+msgid "Partner Logo"
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:10
+msgctxt "backend"
+msgid "Describe your partner logo."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:26
+msgctxt "backend"
+msgid "Gutter of the carousel."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:37
+msgctxt "backend"
+msgid "Style of the carousel."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:70
+msgctxt "backend"
+msgid "Delay of the carousel. It's set <strong>ms</strong> value."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:78
+msgctxt "backend"
+msgid "Speed of the carousel. It's set <strong>ms</strong> value."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:130
+msgctxt "backend"
+msgid "Large view item of the carousel."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:144
+msgctxt "backend"
+msgid "Medium view item of the carousel."
+msgstr ""
+
+#: inc/vc/vc.partnerLogo.php:157
+msgctxt "backend"
+msgid "Small view item of the carousel."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:19
+msgctxt "backend"
+msgid "Show your Portfolio Items"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:32
+msgctxt "backend"
+msgid "Style of the portfolio."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:39
+msgctxt "backend"
+msgid "Grid"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:40
+msgctxt "backend"
+msgid "Masonry"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:43
+msgctxt "backend"
+msgid "Select your portfolio layout from here."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:50 inc/vc/vc.postGrid.php:27
+msgctxt "backend"
+msgid "Number of item you want to show."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:54
+msgctxt "backend"
+msgid "Pagination?"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:57
+msgctxt "backend"
+msgid "Disable Pagination"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:58
+msgctxt "backend"
+msgid "Enable Pagination"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:70 inc/vc/vc.postGrid.php:119
+msgctxt "backend"
+msgid "Show or hide filter from here."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:79
+msgctxt "backend"
+msgid "If nothing is selected, it will show Items from ALL filters."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:84 inc/vc/vc.postGrid.php:41
+msgctxt "backend"
+msgid "Filter Align"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:91
+msgctxt "backend"
+msgid "Filter align of the portfolio."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:99 inc/vc/vc.postGrid.php:56
+msgctxt "backend"
+msgid "Fade In"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:105
+msgctxt "backend"
+msgid "Loading animation of the portfolio."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:136
+msgctxt "backend"
+msgid "Filter animation of the portfolio."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:140 inc/vc/vc.postGrid.php:97
+msgctxt "backend"
+msgid "Horizontal Gap"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:143
+msgctxt "backend"
+msgid "Horizontal Gap of the portfolio."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:147 inc/vc/vc.postGrid.php:105
+msgctxt "backend"
+msgid "vertical Gap"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:150
+msgctxt "backend"
+msgid "vertical Gap of the portfolio."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:154 inc/vc/vc.postGrid.php:123
+msgctxt "backend"
+msgid "Show Link"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:160 inc/vc/vc.postGrid.php:129
+msgctxt "backend"
+msgid "Show or hide link from here."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:164 inc/vc/vc.postGrid.php:133
+msgctxt "backend"
+msgid "Show Zoom"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:170 inc/vc/vc.postGrid.php:139
+msgctxt "backend"
+msgid "Show or hide zoom from here."
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:186
+msgctxt "backend"
+msgid "Large view item of the portfolio"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:200
+msgctxt "backend"
+msgid "Medium view item of the portfolio"
+msgstr ""
+
+#: inc/vc/vc.portfolio.php:213
+msgctxt "backend"
+msgid "Small view item of the portfolio"
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:5
+msgctxt "backend"
+msgid "Posts Carousel"
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:6
+msgctxt "backend"
+msgid "Add recent post in your carousel"
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:15
+msgctxt "backend"
+msgid "Number of Posts"
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:18
+msgctxt "backend"
+msgid "Number of Posts."
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:31
+msgctxt "backend"
+msgid "Show Thumbnail"
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:37
+msgctxt "backend"
+msgid "Show or hide your post carousel thumbnail."
+msgstr ""
+
+#: inc/vc/vc.postCarousel.php:49
+msgctxt "backend"
+msgid "Transparent"
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:15
+msgctxt "backend"
+msgid "Post Grid"
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:16
+msgctxt "backend"
+msgid "Show your Post Grid Items"
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:36
+msgctxt "backend"
+msgid ""
+"If nothing is selected, it will show Items from <strong>ALL</strong> filters."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:48
+msgctxt "backend"
+msgid "Filter align of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:62
+msgctxt "backend"
+msgid "Loading animation of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:93
+msgctxt "backend"
+msgid "Filter animation of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:101
+msgctxt "backend"
+msgid "Horizontal Gap of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:109
+msgctxt "backend"
+msgid "vertical Gap of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:155
+msgctxt "backend"
+msgid "Large view item of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:169
+msgctxt "backend"
+msgid "Medium view item of the post grid."
+msgstr ""
+
+#: inc/vc/vc.postGrid.php:182
+msgctxt "backend"
+msgid "Small view item of the post grid."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:6
+msgctxt "backend"
+msgid "Pricing Plan"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:10
+msgctxt "backend"
+msgid "Add your pricing table in your site"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:18
+msgctxt "backend"
+msgid "Enter text here for your pricing plan"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:22
+msgctxt "backend"
+msgid "Price"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:25
+msgctxt "backend"
+msgid "Specify the price for this object."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:29
+msgctxt "backend"
+msgid "Before Price"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:32
+msgctxt "backend"
+msgid "This price will be shown as before price."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:36
+msgctxt "backend"
+msgid "After Price"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:38
+msgctxt "backend"
+msgid "This price will be shown as after price."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:42
+msgctxt "backend"
+msgid "Period"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:45
+msgctxt "backend"
+msgid "Specify period. Leave this field empty to hide this text."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:49
+msgctxt "backend"
+msgid "Featured"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:55
+msgctxt "backend"
+msgid "Show this plan as featured."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:65
+msgctxt "backend"
+msgid "Set icon of the pricing plan."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:72
+msgctxt "backend"
+msgid "Button text of the pricing plan."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:79
+msgctxt "backend"
+msgid "Button url of the pricing plan."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:83
+msgctxt "backend"
+msgid "Button Target"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:89
+msgctxt "backend"
+msgid "Button target of the pricing plan."
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:94
+msgctxt "backend"
+msgid "Button Background"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:97
+msgctxt "backend"
+msgid "Select button background color"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:101
+msgctxt "backend"
+msgid "Button Color"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:104
+msgctxt "backend"
+msgid "Select button color"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:108
+msgctxt "backend"
+msgid "Badge"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:110
+msgctxt "backend"
+msgid "Type your plan badge from here. Example: <strong>Populer</strong>"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:114
+msgctxt "backend"
+msgid "Badge Background"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:117
+msgctxt "backend"
+msgid "Select badge background color"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:121
+msgctxt "backend"
+msgid "Plan Background"
+msgstr ""
+
+#: inc/vc/vc.pricingPlan.php:124
+msgctxt "backend"
+msgid "Select plan background color"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:5
+msgctxt "backend"
+msgid "Progress Bar"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:6
+msgctxt "backend"
+msgid "Show performence in bar chart"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:13
+msgctxt "backend"
+msgid "Progress Bar Text"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:16
+msgctxt "backend"
+msgid "Type your progress bar text to this input box."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:20 inc/vc/vc.progressPie.php:13
+msgctxt "backend"
+msgid "Percent"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:23
+msgctxt "backend"
+msgid "Percentage of the progress bar."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:27
+msgctxt "backend"
+msgid "Show Percent"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:32
+msgctxt "backend"
+msgid "You can show or hide percent from here."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:39
+msgctxt "backend"
+msgid "linear"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:40
+msgctxt "backend"
+msgid "swing"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:41
+msgctxt "backend"
+msgid "jswing"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:42
+msgctxt "backend"
+msgid "easeInQuad"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:43
+msgctxt "backend"
+msgid "easeInCubic"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:44
+msgctxt "backend"
+msgid "easeInQuart"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:45
+msgctxt "backend"
+msgid "easeInQuint"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:46
+msgctxt "backend"
+msgid "easeInSine"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:47
+msgctxt "backend"
+msgid "easeInExpo"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:48
+msgctxt "backend"
+msgid "easeInCirc"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:49
+msgctxt "backend"
+msgid "easeInElastic"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:50
+msgctxt "backend"
+msgid "easeInBack"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:51
+msgctxt "backend"
+msgid "easeInBounce"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:52
+msgctxt "backend"
+msgid "easeOutQuad"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:53
+msgctxt "backend"
+msgid "easeOutCubic"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:54
+msgctxt "backend"
+msgid "easeOutQuart"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:55
+msgctxt "backend"
+msgid "easeOutQuint"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:56
+msgctxt "backend"
+msgid "easeOutSine"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:57
+msgctxt "backend"
+msgid "easeOutExpo"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:58
+msgctxt "backend"
+msgid "easeOutCirc"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:59
+msgctxt "backend"
+msgid "easeOutElastic"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:60
+msgctxt "backend"
+msgid "easeOutBack"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:61
+msgctxt "backend"
+msgid "easeOutBounce"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:62
+msgctxt "backend"
+msgid "easeInOutQuad"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:63
+msgctxt "backend"
+msgid "easeInOutCubic"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:64
+msgctxt "backend"
+msgid "easeInOutQuart"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:65
+msgctxt "backend"
+msgid "easeInOutQuint"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:66
+msgctxt "backend"
+msgid "easeInOutSine"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:67
+msgctxt "backend"
+msgid "easeInOutExpo"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:68
+msgctxt "backend"
+msgid "easeInOutCirc"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:69
+msgctxt "backend"
+msgid "easeInOutElastic"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:70
+msgctxt "backend"
+msgid "easeInOutBack"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:71
+msgctxt "backend"
+msgid "easeInOutBounce"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:73
+msgctxt "backend"
+msgid "Select animation of the progress bar."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:80 inc/vc/vc.progressPie.php:96
+msgctxt "backend"
+msgid "You can set animation duration as (seconds) units from here."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:87 inc/vc/vc.progressPie.php:103
+msgctxt "backend"
+msgid "After mentioned time (in second) animation will start."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:96
+msgctxt "backend"
+msgid "Thin"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:100
+msgctxt "backend"
+msgid "Select style of the progress bar."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:107
+msgctxt "backend"
+msgid "This color will be applied to the text."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:114
+msgctxt "backend"
+msgid "You can set progress bar background color from here."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:121
+msgctxt "backend"
+msgid "Select progress bar fill color, if you need it transparent color."
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:126
+msgctxt "backend"
+msgid "Progress Bar Margin"
+msgstr ""
+
+#: inc/vc/vc.progressBar.php:129
+msgctxt "backend"
+msgid "This value will be apply on progress bar bottom margin."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:5
+msgctxt "backend"
+msgid "Progress Pie"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:6
+msgctxt "backend"
+msgid "Customizable progress pie"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:17
+msgctxt "backend"
+msgid "Specify percentage value."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:23
+msgctxt "backend"
+msgid "This content will be shown before the percent."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:29
+msgctxt "backend"
+msgid ""
+"You can show custom text. Leave this field empty to show the percentage "
+"value."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:35
+msgctxt "backend"
+msgid "This content will be shown after the percent."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:39
+msgctxt "backend"
+msgid "Progress Pie Title"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:43
+msgctxt "backend"
+msgid "This content will be shown as progress pie title."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:47
+msgctxt "backend"
+msgid "Text Size"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:49
+msgctxt "backend"
+msgid "Select your text size (pixel)"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:57
+msgctxt "backend"
+msgid "You can select text color from here."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:65
+msgctxt "backend"
+msgid "You can select fill color from here."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:69
+msgctxt "backend"
+msgid "Pie Color"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:73
+msgctxt "backend"
+msgid "You can select pie color from here."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:81
+msgctxt "backend"
+msgid "Enter border value for progress pie"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:89
+msgctxt "backend"
+msgid "Enter padding value for progress pie"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:107
+msgctxt "backend"
+msgid "Line Width"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:110
+msgctxt "backend"
+msgid "Set your pie width from here."
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:114
+msgctxt "backend"
+msgid "Line Cap"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:117
+msgctxt "backend"
+msgid "Round"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:118
+msgctxt "backend"
+msgid "Square"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:119
+msgctxt "backend"
+msgid "Butt"
+msgstr ""
+
+#: inc/vc/vc.progressPie.php:121
+msgctxt "backend"
+msgid "Set your line edge cap style from here."
+msgstr ""
+
+#: inc/vc/vc.spacer.php:6
+msgctxt "backend"
+msgid "Spacer"
+msgstr ""
+
+#: inc/vc/vc.spacer.php:7
+msgctxt "backend"
+msgid "Empty space with adjust table height"
+msgstr ""
+
+#: inc/vc/vc.spacer.php:14
+msgctxt "backend"
+msgid "Spacer Size"
+msgstr ""
+
+#: inc/vc/vc.spacer.php:18
+msgctxt "backend"
+msgid "Set your spacer height. it's set px value"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:6
+msgctxt "backend"
+msgid "Team Member"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:10
+msgctxt "backend"
+msgid "Team Member."
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:32
+msgctxt "backend"
+msgid "Select style for Team Member."
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:40
+msgctxt "backend"
+msgid "Select custom background color."
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:44
+msgctxt "backend"
+msgid "Color"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:48
+msgctxt "backend"
+msgid "Select custom color."
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:60
+msgctxt "backend"
+msgid "Border Radius"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:63
+msgctxt "backend"
+msgid ""
+"You can set member border radius from here. This radius value will be only "
+"pixel (px) units."
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:67
+msgctxt "backend"
+msgid "Shadow"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:70
+msgctxt "backend"
+msgid "You can set member box-shadow radius from here."
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:89
+msgctxt "backend"
+msgid "John Due"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:91 inc/vc/vc.testimonial.php:17
+msgctxt "backend"
+msgid "Type name here that you want to show for title"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:95
+msgctxt "backend"
+msgid "Role"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:98
+msgctxt "backend"
+msgid "Member role"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:102
+msgctxt "backend"
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:105 inc/vc/vc.teamMember.php:112
+#: inc/vc/vc.teamMember.php:119 inc/vc/vc.teamMember.php:126
+#: inc/vc/vc.teamMember.php:133 inc/vc/vc.teamMember.php:140
+#: inc/vc/vc.teamMember.php:146
+msgctxt "backend"
+msgid "URL/Link of the author. Leave empty to disable link"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:109
+msgctxt "backend"
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:116
+msgctxt "backend"
+msgid "Google-Plus URL"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:123
+msgctxt "backend"
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:130
+msgctxt "backend"
+msgid "Github URL"
+msgstr ""
+
+#: inc/vc/vc.teamMember.php:137
+msgctxt "backend"
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:6
+msgctxt "backend"
+msgid "Testimonial"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:10
+msgctxt "backend"
+msgid "Testimonial."
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:21
+msgctxt "backend"
+msgid "Testimonial Style"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:24
+msgctxt "backend"
+msgid "Style1"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:25
+msgctxt "backend"
+msgid "Style2"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:26
+msgctxt "backend"
+msgid "Style3"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:29
+msgctxt "backend"
+msgid "Select style for Testimonial."
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:45
+msgctxt "backend"
+msgid "Company"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:47
+msgctxt "backend"
+msgid "Type here a company name. Leave this field empty to hide company name"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:51
+msgctxt "backend"
+msgid "Website URL"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:53
+msgctxt "backend"
+msgid "Enter the client company website url. Leave empty to disable link"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:63
+msgctxt "backend"
+msgid "Set link target self or blank"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:74
+msgctxt "backend"
+msgid "If you want show content italic, so tick"
+msgstr ""
+
+#: inc/vc/vc.testimonial.php:81
+#, php-format
+msgctxt "backend"
+msgid ""
+"You can set border radius from here, for example: 3px, 10px, 25px also you "
+"can set value as em, % etc if you need"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:5
+msgctxt "backend"
+msgid "Timeline"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:6
+msgctxt "backend"
+msgid "Superb! various timeline style"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:13
+msgctxt "backend"
+msgid "Post Category Source"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:20
+msgctxt "backend"
+msgid "Post Limit"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:23
+msgctxt "backend"
+msgid "How many item you want to display by clicking show more button?"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:48
+msgctxt "backend"
+msgid "Icon Background Color"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:50
+msgctxt "backend"
+msgid "You can set icon background color from here."
+msgstr ""
+
+#: inc/vc/vc.timeline.php:54
+msgctxt "backend"
+msgid "Image Show"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:59
+msgctxt "backend"
+msgid "Setting of Yes will be cause for background image show"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:63
+msgctxt "backend"
+msgid "Highlight Year"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:68
+msgctxt "backend"
+msgid "if you select yes then show Year in your time line"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:77
+msgctxt "backend"
+msgid "You can set read more from here"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:81
+msgctxt "backend"
+msgid "Intro Text"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:86
+msgctxt "backend"
+msgid "If you check, then show intro text"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:95
+msgctxt "backend"
+msgid "If you check yes then appear date"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:99
+msgctxt "backend"
+msgid "Time"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:104
+msgctxt "backend"
+msgid "If you check yes then appear time"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:113
+msgctxt "backend"
+msgid "If you check yes then appear title"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:117
+msgctxt "backend"
+msgid "Linked Title"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:122
+msgctxt "backend"
+msgid "If you check yes then title appear as link"
+msgstr ""
+
+#: inc/vc/vc.timeline.php:128
+msgctxt "backend"
+msgid "You can set description before the post."
+msgstr ""
+
+#: inc/vc/vc.timeline.php:134
+msgctxt "backend"
+msgid "You can set description after the post."
+msgstr ""
+
+#: inc/woocommerce.php:91 template-parts/woocommerce-cart.php:10
+msgid "View Cart"
+msgstr ""
+
+#: inc/woocommerce.php:105 template-parts/woocommerce-cart.php:23
+msgid "Cart is Empty"
+msgstr ""
+
+#: inc/woocommerce.php:107 template-parts/woocommerce-cart.php:25
+#, php-format
+msgid "%s Item in cart"
+msgid_plural "%s Items in cart"
+msgstr[0] ""
+msgstr[1] ""
+
+#: search.php:25
+msgid "New Search"
+msgstr ""
+
+#: search.php:27
+msgid "If you are not happy with the results below please do another search"
+msgstr ""
+
+#: search.php:44 template-parts/post-format/entry-quote.php:9
+#: template-parts/post-format/post-grid/entry-quote.php:9
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: search.php:49
+msgid "Blog Post"
+msgstr ""
+
+#: search.php:53
+msgid "Product"
+msgstr ""
+
+#: search.php:71 template-parts/search-header.php:11
+msgid "No results found"
+msgstr ""
+
+#: searchform.php:4
+msgid "To search type and hit enter"
+msgstr ""
+
+#: single-portfolio.php:41
+msgid "Related Projects"
+msgstr ""
+
+#: single.php:35
+msgid "About The Author"
+msgstr ""
+
+#: single.php:51
+msgid "Related Posts"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:22 template-parts/content.php:38
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:33
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/offcanvas-search.php:11
+msgid "Search..."
+msgstr ""
+
+#: template-parts/post-format/entry-audio.php:31
+#: template-parts/post-format/entry-gallery.php:51
+#: template-parts/post-format/entry-video.php:32
+#: template-parts/post-format/entry.php:35
+#: template-parts/post-format/post-grid/entry-audio.php:16
+#: template-parts/post-format/post-grid/entry-gallery.php:33
+#: template-parts/post-format/post-grid/entry-video.php:17
+#: template-parts/post-format/post-grid/entry.php:20
+msgid "Featured"
+msgstr ""
+
+#: template-parts/post-format/entry-link.php:9
+#: template-parts/post-format/post-grid/entry-link.php:9
+#, php-format
+msgid "Link to %s"
+msgstr ""
+
+#: template-parts/post-format/meta.php:16
+#, php-format
+msgid "Written by %s."
+msgstr ""
+
+#: template-parts/post-format/meta.php:25
+#, php-format
+msgid "Posted in %s"
+msgstr ""
+
+#: template-parts/post-format/meta.php:32
+msgid "No Comments"
+msgstr ""
+
+#: template-parts/post-format/meta.php:36
+msgid "Edit this post"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside-noslider.php:42
+msgid "Client:"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside-noslider.php:44
+#: tribe-events/modules/meta/details.php:81
+#: tribe-events/modules/meta/details.php:106
+msgid "Date:"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside-noslider.php:45
+msgid "Tags:"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside-noslider.php:47
+msgid "URL:"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside-noslider.php:47
+msgid "View Project:"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside.php:56
+#: template-parts/post-format/portfolio/wide-noslider.php:40
+#: template-parts/post-format/portfolio/wide.php:52
+msgid "Client"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside.php:58
+#: template-parts/post-format/portfolio/wide-noslider.php:42
+#: template-parts/post-format/portfolio/wide.php:54
+msgid "Date"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside.php:59
+#: template-parts/post-format/portfolio/wide-noslider.php:43
+#: template-parts/post-format/portfolio/wide.php:55
+msgid "Tags"
+msgstr ""
+
+#: template-parts/post-format/portfolio/sidebyside.php:61
+#: template-parts/post-format/portfolio/wide-noslider.php:45
+#: template-parts/post-format/portfolio/wide.php:57
+msgid "View Project"
+msgstr ""
+
+#: template-parts/search-header.php:11
+msgid "Search Results"
+msgstr ""
+
+#: template-parts/search-header.php:11
+msgid "More Results"
+msgstr ""
+
+#: template-parts/search-header.php:12
+msgid "search..."
+msgstr ""
+
+#: template-parts/titlebar.php:62 template-parts/titlebar.php:83
+#: template-parts/titlebar.php:146 template-parts/titlebar.php:164
+#: template-parts/titlebar.php:225 template-parts/titlebar.php:243
+msgid "Back"
+msgstr ""
+
+#: template-parts/titlebar.php:109 template-parts/titlebar.php:188
+msgid "Search results for:"
+msgstr ""
+
+#: template-parts/titlebar.php:115 template-parts/titlebar.php:194
+msgid "Posts Tagged:"
+msgstr ""
+
+#: template-parts/titlebar.php:116 template-parts/titlebar.php:117
+#: template-parts/titlebar.php:118 template-parts/titlebar.php:195
+#: template-parts/titlebar.php:196 template-parts/titlebar.php:197
+msgid "Archive for"
+msgstr ""
+
+#: template-parts/titlebar.php:119 template-parts/titlebar.php:198
+msgid "Author Archive for"
+msgstr ""
+
+#: template-parts/titlebar.php:120 template-parts/titlebar.php:199
+msgid "Blog Archives"
+msgstr ""
+
+#: template-parts/titlebar.php:129 template-parts/titlebar.php:208
+msgid "Oops, this Page could not be found."
+msgstr ""
+
+#: tribe-events/functions/template-tags/loop.php:131
+#, php-format
+msgid "Upcoming %s"
+msgstr ""
+
+#: tribe-events/functions/template-tags/loop.php:145
+#, php-format
+msgid "%1$s for %2$s - %3$s"
+msgstr ""
+
+#: tribe-events/functions/template-tags/loop.php:147
+#, php-format
+msgid "Past %s"
+msgstr ""
+
+#: tribe-events/functions/template-tags/loop.php:152
+#: tribe-events/functions/template-tags/loop.php:161
+#, php-format
+msgid "%1$s for %2$s"
+msgstr ""
+
+#: tribe-events/list/nav.php:19
+#, php-format
+msgid "%s List Navigation"
+msgstr ""
+
+#: tribe-events/list/nav.php:25
+#, php-format
+msgid "Previous %s"
+msgstr ""
+
+#: tribe-events/list/nav.php:32
+#, php-format
+msgid "Next %s"
+msgstr ""
+
+#: tribe-events/list/single-event.php:70
+msgid "Find out more"
+msgstr ""
+
+#: tribe-events/modules/address.php:46 tribe-events/modules/meta/details.php:68
+#: tribe-events/modules/meta/details.php:73
+#: tribe-events/modules/meta/details.php:83
+#: tribe-events/modules/meta/details.php:93
+#: tribe-events/modules/meta/details.php:98
+#: tribe-events/modules/meta/details.php:108
+#: tribe-events/modules/meta/details.php:113
+#: tribe-events/modules/meta/details.php:125
+#: tribe-events/modules/meta/venue.php:21
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:48
+msgid "Time:"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:56
+msgid "Details"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:66
+#: tribe-events/modules/meta/details.php:91
+msgid "Start:"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:71
+#: tribe-events/modules/meta/details.php:96
+msgid "End:"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:124
+msgid "Cost:"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:143
+#, php-format
+msgid "%s Tags:"
+msgstr ""
+
+#: tribe-events/modules/meta/details.php:149
+#: tribe-events/modules/meta/organizer.php:65
+#: tribe-events/modules/meta/venue.php:45
+msgid "Website:"
+msgstr ""
+
+#: tribe-events/modules/meta/organizer.php:43
+#: tribe-events/modules/meta/venue.php:40
+msgid "Phone:"
+msgstr ""
+
+#: tribe-events/modules/meta/organizer.php:54
+msgid "Email:"
+msgstr ""
+
+#: tribe-events/single-event.php:45
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: tribe-events/single-event.php:62 tribe-events/single-event.php:95
+#, php-format
+msgid "%s Navigation"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Megastar"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://themeforest.net/item/megastar-business-wordpress-theme/16954448"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Megastar Theme designed by BdThemes Ltd. For online documentation look at "
+"our documentation site. For get support please go to our support system."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "BdThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://bdthemes.com"
+msgstr ""
