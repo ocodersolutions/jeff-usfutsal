@@ -11536,7 +11536,7 @@ html {
   padding-top: 260px;
 }
 .tm-headerbar {
-  background-color: #ff1919;
+  background-color: #ffffff;
 }
 .tm-headerbar .uk-panel {
   max-width: 300px;
@@ -11993,7 +11993,7 @@ body:not(.page-template-page-homepage) .mainbody-wrapper .uk-container-center {
 .footer-wrapper {
   background-color: #222222;
   background-position: bottom center;
-  background-image: url("http://localhost/wordpress/megastar/wp-content/themes/megastar/images/footer-bg.png");
+  background-image: url("http://usfutsal.local/wp-content/themes/megastar/images/footer-bg.png");
   color: #a5a5a5;
 }
 .footer-wrapper.tm-padding-large .uk-container .uk-panel {
