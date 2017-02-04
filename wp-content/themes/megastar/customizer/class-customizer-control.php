@@ -209,6 +209,7 @@ function megastar_customize_register( $wp_customize ) {
         // Whitelist content parameter
         public $type = 'select-color';
         public $colors_box = '';
+
         /**
          * Render the control's content.
          *
@@ -217,30 +218,34 @@ function megastar_customize_register( $wp_customize ) {
          * @since   1.0.0
          * @return  void
          */
-
         public function enqueue() {
             //wp_enqueue_script( 'spiffing-customize-controls', get_template_directory_uri() . '/js/customize-controls.js', array( 'jquery' ) );
-            wp_enqueue_style(  'main-colors-customize-controls', get_stylesheet_directory_uri() . '/admin/css/ad_control.css');
+            wp_enqueue_style('main-colors-customize-controls', get_stylesheet_directory_uri() . '/admin/css/ad_control.css');
         }
 
         public function render_content() {
-            $html = "";
-            if (isset($this->colors_box) && (is_array($this->colors_box))){
-                
+             if (isset($this->colors_box) && (is_array($this->colors_box))) {
+                ?>
+                <label><span class="customize-control-title"><?php echo $this->label ?></span>
+                    <div class="radio-select-color">
+                <?php
                 foreach ($this->colors_box as $color => $value) {
-                    $html .= '<input type="radio" id="'.$color.'" name="radios" value="'.$value.'"><label for="'.$color.'" class="'.$value.'"></label>';
+                    $name = $this->id;
+                    ?>
+                            <input type="radio" name="<?php echo esc_attr($name); ?>" id="<?php echo esc_attr($this->id); ?>[<?php echo esc_attr($value); ?>]" value="<?php echo esc_attr($value); ?>" <?php $this->link();
+                    checked($this->value(), $value); ?> />
+
+                            <label for="<?php echo esc_attr($this->id); ?>[<?php echo esc_attr($value); ?>]" class="<?php echo $value ?>"></label>
+                <?php
                 }
             }
-
-            if ( isset( $this->type ) && ($this->type =='select-color')) {
-                echo '<label><span class="customize-control-title">';echo $this->label;echo '</span>';
-                echo '<div class="radio-select-color">' ;
-                echo $html;   
-                echo '</div>';
-                echo '</label>';
-            }
+            ?>
+                </div>
+            </label>
+            <?php
         }
-    }
+
+    }   
 }
 add_action( 'customize_register', 'megastar_customize_register' );
 /* custom select color*/
