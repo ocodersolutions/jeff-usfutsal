@@ -632,7 +632,7 @@ class megastar_Customizer_Base {
  		// Add main color setting and control.
                 $this->wp_customize->add_setting(new megastar_Customizer_Dynamic_CSS($this->wp_customize, 'main_themes_color', array(
                     'default' => '',
-                    'transport' => 'postMessage',
+                    'transport' => 'refresh',
                     'active_callback' => 'choice_color_callback',
                         // 'css_map' => array(
                         // 	'background-color' => array(
