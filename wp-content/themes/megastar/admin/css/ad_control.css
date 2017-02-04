@@ -1,0 +1,47 @@
+/*   custom style */
+.radio-select-color input[type="radio"] {
+    display:none;
+}
+.radio-select-color label {
+    display:inline-block;
+    width: 45px;
+    height: 45px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.radio-select-color label.blue{
+	background-color: #735CB0;
+}
+.radio-select-color label.blue-gary{
+	background-color: #546E7A;
+}
+.radio-select-color label.brown{
+	background-color: #8D6E63;
+}
+.radio-select-color label.gray{
+	background-color: #757575;
+}
+.radio-select-color label.green{
+	background-color: #72A230;
+}
+.radio-select-color label.lemon{
+	background-color: #abc502;
+}
+.radio-select-color label.orange{
+	background-color: #FF5722;
+}
+.radio-select-color label.red{
+	background-color: #EE163B;
+}
+.radio-select-color label.sky-blue{
+	background-color: #00A4EF;
+}
+.radio-select-color label.yellow{
+	background-color: #FFAB00;
+}
+.radio-select-color input[type="radio"]:checked + label {
+    border: 1px solid #000;
+    padding: 1px;
+    box-sizing: border-box;
+
+}

@@ -628,7 +628,42 @@ class megastar_Customizer_Base {
 			'active_callback' => 'megastar_drawer_widget_check',
 		)));
 
- 
+ 		
+ 		// Add main color setting and control.
+		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'main_themes_color', array(
+			'default'           => '#ffffff',
+			'transport'=>'postMessage',
+			'active_callback' => 'choice_color_callback',
+			// 'css_map' => array(
+			// 	'background-color' => array(
+			// 		'.tm-headerbar'
+			// 	),
+			// 	'border-top-color|darken(5)' => array(
+			// 		'.header-style2 .menu-wrapper'
+			// 	)
+			// )
+		)));
+
+		$this->wp_customize->add_control(new megastar_Choice_Color_Control( $this->wp_customize, 'main_themes_color', array(
+			'label'       => esc_html_x('Main Themes Color', 'backend', 'megastar'),
+			'section'     => 'colors',
+			'type'        =>'select-color',
+			'colors_box'    => array(
+		        'blue' => 'blue',
+		        'blue-gary' => 'blue-gary',
+		        'brown' => 'brown',
+		        'gray' => 'gray',
+		        'green' => 'green',
+		        'lemon' => 'lemon',
+		        'orange' => 'orange',
+		        'red' => 'red',
+		        'sky-blue' => 'sky-blue',
+		        'yellow'=> 'yellow',
+		    ),
+        )));
+
+
+
 		// Add header background color setting and control.
 		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'header_background_color', array(
 			'default'           => '#ffffff',

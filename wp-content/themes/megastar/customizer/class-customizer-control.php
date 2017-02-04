@@ -146,6 +146,9 @@ function megastar_customize_register( $wp_customize ) {
         }
     }
 
+   
+
+
     /**
      * Google Fonts Control
      */
@@ -197,9 +200,61 @@ function megastar_customize_register( $wp_customize ) {
         </label>
         <?php }
     }
+    /**
+    * Select color customize control class by Hoang.
+    */
+       
+    class megastar_Choice_Color_Control extends WP_Customize_Control {
+
+        // Whitelist content parameter
+        public $type = 'select-color';
+        public $colors_box = '';
+        /**
+         * Render the control's content.
+         *
+         * Allows the content to be overriden without having to rewrite the wrapper.
+         *
+         * @since   1.0.0
+         * @return  void
+         */
+
+        public function enqueue() {
+            //wp_enqueue_script( 'spiffing-customize-controls', get_template_directory_uri() . '/js/customize-controls.js', array( 'jquery' ) );
+            wp_enqueue_style(  'main-colors-customize-controls', get_stylesheet_directory_uri() . '/admin/css/ad_control.css');
+        }
+
+        public function render_content() {
+            $html = "";
+            if (isset($this->colors_box) && (is_array($this->colors_box))){
+                
+                foreach ($this->colors_box as $color => $value) {
+                    $html .= '<input type="radio" id="'.$color.'" name="radios" value="'.$value.'"><label for="'.$color.'" class="'.$value.'"></label>';
+                }
+            }
+
+            if ( isset( $this->type ) && ($this->type =='select-color')) {
+                echo '<label><span class="customize-control-title">';echo $this->label;echo '</span>';
+                echo '<div class="radio-select-color">' ;
+                echo $html;   
+                echo '</div>';
+                echo '</label>';
+            }
+        }
+    }
 }
 add_action( 'customize_register', 'megastar_customize_register' );
-
+/* custom select color*/
+function choice_color_callback($input, $setting){
+    global $wp_customize;
+ 
+    $control = $wp_customize->get_control( $setting->id );
+ 
+    if ( array_key_exists( $input, $control->colors_box ) ) {
+        return $input;
+    } else {
+        return $setting->default;
+    }
+}
 
 /* custom sanitization */
 function megastar_sanitize_textarea($string) {
@@ -309,5 +364,6 @@ function megastar_header_type_check() {
         return false;
     }
 }
+
 
 
