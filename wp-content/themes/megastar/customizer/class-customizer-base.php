@@ -649,7 +649,7 @@ class megastar_Customizer_Base {
                     'priority' => 1,
                     'section' => 'colors',
                     'type' => 'select-color',
-                    'settings'    => 'megastar_blog_layout', 
+                    'settings'    => 'main_themes_color', 
                     'colors_box' => array(
                         'blue' => 'blue',
                         'blue-gary' => 'blue-gary',
