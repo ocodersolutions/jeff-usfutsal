@@ -17,7 +17,7 @@ $header_transparancy = (get_theme_mod('megastar_header_type', 'fixed') and get_t
 
 	<div class="tm-headerbar uk-clearfix" <?php echo megastar_sticky_header(); ?>>
 		<div class="<?php echo ($header_fullwidth) ? '' : 'uk-container '; ?>uk-container-center">
-			<nav id="tmMainMenu" class="tm-navbar-full">
+			<nav id="tmMainMenu" class="tm-navbar-full abc">
 				<div class="uk-navbar">
 
 					

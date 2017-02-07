@@ -315,4 +315,290 @@ function your_function() {
 }
 
 add_action('wp_footer', 'your_function');
+// enqueue script control select color
+function select_color_enqueue_js() {
+    wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/admin/js/select-min-color.js');
+}
+add_action('customize_preview_init', 'select_color_enqueue_js');
 
+/**
+ * Adds Tittle_Session_Widget widget.
+ */
+class Tittle_Session_Widget extends WP_Widget {
+
+    /**
+     * Register widget with WordPress.
+     */
+    function __construct() {
+        parent::__construct(
+            'Tittle_Session_Widget', // Base ID
+            esc_html__( 'Widget Title', 'text_domain' ), // Name
+            array( 'description' => esc_html__( 'A Tittle Session Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    /**
+     * Front-end display of widget.
+     *
+     * @see WP_Widget::widget()
+     *
+     * @param array $args     Widget arguments.
+     * @param array $instance Saved values from database.
+     */
+    public function widget( $args, $instance ) {
+
+        
+        //store the options in variables
+        $title_ft = $instance['title_ft'];
+        $title_bf = $instance['title_bf'];
+        $title_sd = $instance['title_sd'];
+        $title_ct = $instance['title_ct'];
+        // before widget (defined by theme)
+        echo $args['before_widget'];
+
+        if(!empty( $title_ft) && !empty( $title_bf)){
+            echo '<h2 class="title text-uppercase">'.$title_ft.' <span class="text-black font-weight-300">'.$title_bf.'</span></h2>';
+        }
+        if(!empty($title_sd)){
+            echo '<h6 class="letter-space-8 font-weight-400 text-uppercase">'.$title_sd.'</h6>';
+        }
+         if(!empty($title_ct)){
+            echo '<p class="text-uppercase letter-space-1">'.$title_ct.'</p>';
+        }
+        
+
+        // after widget (defined by theme)
+        echo $args['after_widget'];
+    }
+
+    /**
+     * Back-end widget form.
+     *
+     * @see WP_Widget::form()
+     *
+     * @param array $instance Previously saved values from database.
+     */
+    public function form( $instance ) {
+       
+        $title_ft = ! empty( $instance['title_ft'] ) ? $instance['title_ft'] : '';
+        $title_bf = ! empty( $instance['title_bf'] ) ? $instance['title_bf'] : '';
+        $title_sd = ! empty( $instance['title_sd'] ) ? $instance['title_sd'] : '';
+        $title_ct = ! empty( $instance['title_ct'] ) ? $instance['title_ct'] : '';
+        ?>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_ft' ) ); ?>"><?php esc_attr_e( 'Title First:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_ft' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_ft' ) ); ?>" type="text" value="<?php echo esc_attr( $title_ft ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_bf' ) ); ?>"><?php esc_attr_e( 'Title Second:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_bf' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_bf' ) ); ?>" type="text" value="<?php echo esc_attr( $title_bf ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_sd' ) ); ?>"><?php esc_attr_e( 'Excerpt title:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_sd' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_sd' ) ); ?>" type="text" value="<?php echo esc_attr( $title_sd ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_ct' ) ); ?>"><?php esc_attr_e( 'Content:', 'text_domain' ); ?></label> 
+        <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_ct' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_ct' ) ); ?>" type="textarea"  rows="5"> <?php echo esc_attr( $title_ct ); ?></textarea>
+        </p>
+      
+        <?php 
+    }
+
+    /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title_ft'] = $new_instance['title_ft'];
+        $instance['title_bf'] = $new_instance['title_bf'];
+        $instance['title_sd'] = $new_instance['title_sd'];
+        $instance['title_ct'] = $new_instance['title_ct'];
+        
+        return $instance;
+    }
+
+} // class Tittle_Session_Widget
+
+// register Foo_Widget widget
+function register_Tittle_Session_Widget() {
+    register_widget( 'Tittle_Session_Widget' );
+}
+add_action( 'widgets_init', 'register_Tittle_Session_Widget' );
+
+
+/**
+ * Adds Feature_Box_Widget widget.
+ */
+class Feature_Box_Widget extends WP_Widget {
+
+    /**
+     * Register widget with WordPress.
+     */
+    function __construct() {
+        parent::__construct(
+            'Feature_Box_Widget', // Base ID
+            esc_html__( 'Feature Box Widget', 'text_domain' ), // Name
+            array( 'description' => esc_html__( 'A Feature Box Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    public function widget( $args, $instance ) {
+
+        $title = $instance['title'];
+        $icons_tag = $instance['icons_tag'];
+        $content = $instance['content'];
+
+        // before widget (defined by theme)
+        echo $args['before_widget'];?>
+        <div class="icon-box text-center">
+            <?php
+
+            if(!empty($icons_tag)){
+                echo '<a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#">'.$icons_tag.'</a>';
+            }
+
+            if(!empty( $title)){
+                echo '<h4 class="Personal trainer text-uppercase"><strong>'.$title.'</strong></h4>';
+            }
+            
+             if(!empty($content)){
+                echo '<p>'.$content.'</p>';
+            }?>
+            
+        </div>
+        <?php
+        // after widget (defined by theme)
+        echo $args['after_widget'];
+    }
+
+    /**
+     * Back-end widget form.
+     *
+     * @see WP_Widget::form()
+     *
+     * @param array $instance Previously saved values from database.
+     */
+    public function form( $instance ) {
+       
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : '';
+        $icons_tag = ! empty( $instance['icons_tag'] ) ? $instance['icons_tag'] : '';
+        $content = ! empty( $instance['content'] ) ? $instance['content'] : '';
+        ?>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_ft' ) ); ?>"><?php esc_attr_e( 'Title:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'icons_tag' ) ); ?>"><?php esc_attr_e( 'Icons Tag:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'icons_tag' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'icons_tag' ) ); ?>" type="text" value="<?php echo esc_attr( $icons_tag ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>"><?php esc_attr_e( 'Content:', 'text_domain' ); ?></label> 
+        <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content' ) ); ?>" type="textarea"  rows="5"> <?php echo esc_attr( $content ); ?></textarea>
+        </p>
+      
+        <?php 
+    }
+
+    /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = $new_instance['title'];
+        $instance['icons_tag'] = $new_instance['icons_tag'];
+        $instance['content'] = $new_instance['content'];
+        
+        return $instance;
+    }
+
+} 
+
+// register Foo_Widget widget
+function register_Feature_Box_Widget() {
+    register_widget( 'Feature_Box_Widget' );
+}
+add_action( 'widgets_init', 'register_Feature_Box_Widget' ); 
+
+
+
+// register sidebar 1
+for($i=1;$i<7;$i++){
+    register_sidebar(array(
+    'name' => 'Block Tittle '.$i,
+    'id' => 'block-tittle-'.$i,
+    'description' => 'Location Sidebar show Tittle Block',
+    'before_widget' => '<div class="col-md-8 col-md-offset-2">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => ''
+));
+}
+//register our fiture widget area
+register_sidebar(array(
+    'name' => 'Feautre Box Area Widget',
+    'id' => 'feature_box',
+    'description' => 'Location Sidebar show Feautre Box',
+    'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => ''
+));
+// latest news
+
+function latest_news_sc(){
+    $lt_new_Qr = new WP_Query(array(
+                'posts_per_page' => 5,
+                'orderby'        => 'post_date',
+                'order'          => 'ASC',
+                'category'       => 'news'
+        ));
+    ob_start();
+        if ( $lt_new_Qr->have_posts() ) :
+
+                while ( $lt_new_Qr->have_posts() ) :
+                        $lt_new_Qr->the_post();?>
+                            <div class="items">
+                                <div class="schedule-box maxwidth500 mb-30 bg-lighter">
+                                    <div class="thumb"> <img class="img-fullwidth" alt="" src="<?php the_post_thumbnail_url(array(350,233));?>">
+                                      <div class="overlay"> <a href="<?php the_permalink(); ?>"><i class="fa fa-search mr-5 bg-theme-colored"></i></a> </div>
+                                    </div>
+                                    <div class="schedule-details clearfix p-20 pt-10">
+                                      <h5 class="font-16 title text-uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                      <p>with <a href="#">Corks</a> &amp; <a href="#">Camelia</a></p>
+                                      <ul class="list-inline font-10 mt-15 mb-20 text-gray-silver">
+                                        <li><i class="fa fa-calendar mr-5"></i> <?php the_date( 'M  d/Y');?></li>
+                                        <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
+                                      </ul>
+                                      <p><?php the_excerpt();?></p>
+                                      <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="<?php the_permalink(); ?>">Read More</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                <?php endwhile;
+                
+        endif;
+        $list_post = ob_get_contents(); //Lấy toàn bộ nội dung phía trên bỏ vào biến $list_post để return
+ 
+        ob_end_clean();
+ 
+        return $list_post;
+}
+add_shortcode( 'latest_news_shortcode', 'latest_news_sc' );
