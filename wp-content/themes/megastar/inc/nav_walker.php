@@ -5,137 +5,164 @@
 class megastar_menu_walker extends Walker_Nav_Menu {
     var $has_child = false;
     public function start_lvl(&$output, $depth = 0, $args = array()) {      
-        $output .= '<ul>';
+        $output .= '<ul class="dropdown">';
     }
 
     public function end_lvl(&$output, $depth = 0, $args = array()) {
         $output .= '</ul>';
-        if($this->has_child  && $depth == 0){
-            $this->has_child = FALSE;
-            $output .= '</div></div></div>';
-        }
+         
     }
+ /**
+	 * Start the element output.
+	 *
+	 * @see Walker::start_el()
+	 *
+	 * @since 3.0.0
+	 * @since 4.4.0 'nav_menu_item_args' filter was added.
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param object $item   Menu item data object.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   An array of arguments. @see wp_nav_menu()
+	 * @param int    $id     Current item ID.
+	 */
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        $data    = array();
-        $class   = '';
-        $classes = empty($item->classes) ? array() : (array) $item->classes;
-        if($classes)
-            $class = trim(preg_replace('/menu-item(.+)/', '', implode(' ', $classes)));
-        //new class
-        $classes = array();
-         $data['style'] = '';
-        if($depth == 0 && $args->walker->has_children){
-            $classes[] ='uk-parent';
-            $data['data-menu-columns'] = $item->columns ? $item->columns : 1;
-            $classes[] = 'has_columns';
-           if($item->dropdown_background){
-               $data['data-style'] = 'background-image: url(\''.$item->dropdown_background.'\')';
-           }
-        }
-       
-        if($item->current || $item->current_item_parent || $item->current_item_ancestor) {
-            $classes[] = 'uk-active';
-        }
-        if($item->dropdown_child && $depth > 0) {
-            $classes[] = 'sub-dropdown';
-        }
-        // set id
-        $data['data-id'] = $item->ID;
-
-        // is current item ?
-        if (in_array('current-menu-item', $classes) || in_array('current_page_item', $classes)) {
-            $data['data-menu-active'] = 2;
+//		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		$classes[] = 'menu-item-' . $item->ID;
+// is current item ?
+        if (in_array('current-menu-item', (array) $item->classes) || in_array('current-menu-ancestor', (array) $item->classes)) {
+            $classes[] = 'active';
 
         // home/fronpage item
-        } elseif (preg_replace('/#(.+)$/', '', $item->url) == 'index.php' && (is_home() || is_front_page())) {
-            $data['data-menu-active'] = 2;
-        }      
-         
-        if($args->walker->has_children && $depth == 0) {
-            $data_uk_dropdown = new stdClass();
-            $data_uk_dropdown->preventflip = 'y';
-            
-            if($item->full_width && isset($args->parent_id)) {
-                $data_uk_dropdown->justify = '#'.$args->parent_id;
-            } elseif($item->style_position) {
-                if ($item->style_position == 'bottom-left') {
-                    $data_uk_dropdown->pos = (is_rtl()) ? 'bottom-right' : 'bottom-left';  
-                } elseif ($item->style_position == 'bottom-right') {
-                    $data_uk_dropdown->pos = (is_rtl()) ? 'bottom-left' : 'bottom-right';  
-                } else {
-                    $data_uk_dropdown->pos = $item->style_position;
-                }
-            }
-            $data['data-uk-dropdown'] = json_encode($data_uk_dropdown);     
-        }
-        // set item attributes
-        $attributes = '';
-        foreach ($data as $name => $value) {      
-            $attributes .= sprintf(' %s="%s"', $name, esc_attr($value));
-        }
-        
-        // create item output
-        $id = apply_filters('nav_menu_item_id', '', $item, $args);
-       
-        if($classes) {
-            $class .= implode(' ', $classes);                    
-        }
-        if($class) {
-           $class = ' class="'.$class.'"';
-        } else {
-            $class = '';
-        }  
+        } 
+		/**
+		 * Filter the arguments for a single nav menu item.
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param array  $args  An array of arguments.
+		 * @param object $item  Menu item data object.
+		 * @param int    $depth Depth of menu item. Used for padding.
+		 */
+		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
 
-        $output .= '<li'.(strlen($id) ? sprintf(' id="%s"', esc_attr($id)) : '').$attributes . $class.'>';
+		/**
+		 * Filter the CSS class(es) applied to a menu item's list item element.
+		 *
+		 * @since 3.0.0
+		 * @since 4.1.0 The `$depth` parameter was added.
+		 *
+		 * @param array  $classes The CSS classes that are applied to the menu item's `<li>` element.
+		 * @param object $item    The current menu item.
+		 * @param array  $args    An array of {@see wp_nav_menu()} arguments.
+		 * @param int    $depth   Depth of menu item. Used for padding.
+		 */
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-        // set link attributes
-        $attributes = '';
-        foreach (array('attr_title' => 'title', 'target' => 'target', 'xfn' => 'rel', 'url' => 'href') as $var => $attr) {
-            if (!empty($item->$var)) {
-                $attributes .= sprintf(' %s="%s"', $attr, esc_attr($item->$var));
-            }
-        }
+		/**
+		 * Filter the ID applied to a menu item's list item element.
+		 *
+		 * @since 3.0.1
+		 * @since 4.1.0 The `$depth` parameter was added.
+		 *
+		 * @param string $menu_id The ID that is applied to the menu item's `<li>` element.
+		 * @param object $item    The current menu item.
+		 * @param array  $args    An array of {@see wp_nav_menu()} arguments.
+		 * @param int    $depth   Depth of menu item. Used for padding.
+		 */
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
+		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-        // escape link title
-        $item->title = htmlspecialchars($item->title, ENT_COMPAT, "UTF-8");
-        $classes     = trim(preg_replace('/menu-item(.+)/', '', implode(' ', $classes)));
-        if($item->icon) {
-            $icon = '<i class="'.$item->icon.'"></i>';
-        } else {
-            $icon = '';
-        }
-        // is separator ?
-        if ($item->url == '#') {
-            $isline = preg_match("/^\s*\-+\s*$/", $item->title);
+		$output .= $indent . '<li' . $id . $class_names .'>';
 
-            $type = "header";
-            if ($isline) {
-                $type = 'separator-line';
-            } elseif ($item->hasChildren) {
-                $type = 'separator-text';
-            }
+		$atts = array();
+		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+		$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
 
-            $format     = '%s<a href="#" %s>%s</a>%s';
-            $classes    = ' seperator';
-            $attributes = ' class="'.$classes.'" data-type="'.$type.'"';
-        } else {
-            $format = '%s<a%s>%s</a>%s';
-        }
+		/**
+		 * Filter the HTML attributes applied to a menu item's anchor element.
+		 *
+		 * @since 3.6.0
+		 * @since 4.1.0 The `$depth` parameter was added.
+		 *
+		 * @param array $atts {
+		 *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
+		 *
+		 *     @type string $title  Title attribute.
+		 *     @type string $target Target attribute.
+		 *     @type string $rel    The rel attribute.
+		 *     @type string $href   The href attribute.
+		 * }
+		 * @param object $item  The current menu item.
+		 * @param array  $args  An array of {@see wp_nav_menu()} arguments.
+		 * @param int    $depth Depth of menu item. Used for padding.
+		 */
+		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
-        // create link output
-        $item_output = sprintf($format, $args->before, $attributes, $icon.$args->link_before.apply_filters('the_title', $item->title, $item->ID).$args->link_after, $args->after);
+		$attributes = '';
+		foreach ( $atts as $attr => $value ) {
+			if ( ! empty( $value ) ) {
+				$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+				$attributes .= ' ' . $attr . '="' . $value . '"';
+			}
+		}
 
-        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-    }
+		/** This filter is documented in wp-includes/post-template.php */
+		$title = apply_filters( 'the_title', $item->title, $item->ID );
 
-    public function end_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        $output .= '</li>';
-    }
+		/**
+		 * Filter a menu item's title.
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param string $title The menu item's title.
+		 * @param object $item  The current menu item.
+		 * @param array  $args  An array of {@see wp_nav_menu()} arguments.
+		 * @param int    $depth Depth of menu item. Used for padding.
+		 */
+		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
-    function display_element ($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
-        // attach to element so that it's available in start_el()
-        $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]);
-        return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
-    }
+		$item_output = $args->before;
+		$item_output .= '<a'. $attributes .'>';
+		$item_output .= $args->link_before . $title . $args->link_after;
+		$item_output .= '</a>';
+		$item_output .= $args->after;
+
+		/**
+		 * Filter a menu item's starting output.
+		 *
+		 * The menu item's starting output only includes `$args->before`, the opening `<a>`,
+		 * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
+		 * no filter for modifying the opening and closing `<li>` for a menu item.
+		 *
+		 * @since 3.0.0
+		 *
+		 * @param string $item_output The menu item's starting HTML output.
+		 * @param object $item        Menu item data object.
+		 * @param int    $depth       Depth of menu item. Used for padding.
+		 * @param array  $args        An array of {@see wp_nav_menu()} arguments.
+		 */
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	}
+
+	/**
+	 * Ends the element output, if needed.
+	 *
+	 * @see Walker::end_el()
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param object $item   Page data object. Not used.
+	 * @param int    $depth  Depth of page. Not Used.
+	 * @param array  $args   An array of arguments. @see wp_nav_menu()
+	 */
+	public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+		$output .= "</li>\n";
+	}
 }

@@ -27,24 +27,24 @@ function megastar_register_required_plugins() {
      */
     $plugins = array(
 
-        array(
-            'name'               => esc_html_x('BdThemes Core', 'backend', 'megastar'),
-            'slug'               => 'bdthemes-core',
-            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-core.zip?key=13fb823b8016d31411a7fe281f41044f',
-            'required'           => true
-        ),
-        array(
-            'name'               => esc_html_x('BdThemes Portfolio', 'backend', 'megastar'),
-            'slug'               => 'bdthemes-portfolio',
-            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-portfolio.zip?key=13fb823b8016d31411a7fe281f41044f',
-            'required'           => true
-        ),
-        array(
-            'name'               => esc_html_x('BdThemes FAQ', 'backend', 'megastar'),
-            'slug'               => 'bdthemes-faq',
-            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-faq.zip?key=13fb823b8016d31411a7fe281f41044f',
-            'required'           => true
-        ),
+//        array(
+//            'name'               => esc_html_x('BdThemes Core', 'backend', 'megastar'),
+//            'slug'               => 'bdthemes-core',
+//            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-core.zip?key=13fb823b8016d31411a7fe281f41044f',
+//            'required'           => true
+//        ),
+//        array(
+//            'name'               => esc_html_x('BdThemes Portfolio', 'backend', 'megastar'),
+//            'slug'               => 'bdthemes-portfolio',
+//            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-portfolio.zip?key=13fb823b8016d31411a7fe281f41044f',
+//            'required'           => true
+//        ),
+//        array(
+//            'name'               => esc_html_x('BdThemes FAQ', 'backend', 'megastar'),
+//            'slug'               => 'bdthemes-faq',
+//            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-faq.zip?key=13fb823b8016d31411a7fe281f41044f',
+//            'required'           => true
+//        ),
         array(
             'name'               => esc_html_x('Slider Revolution', 'backend', 'megastar'),
             'slug'               => 'revslider',
@@ -57,14 +57,14 @@ function megastar_register_required_plugins() {
             'source'             => 'https://bdthemes.com/secure/megastar/js_composer.zip?key=13fb823b8016d31411a7fe281f41044f',
             'required'           => true
         ),
-        array(
-            'name' => esc_html_x('Contact Form 7', 'backend', 'megastar'),
-            'slug' => 'contact-form-7',
-        ),
-        array(
-            'name' => esc_html_x('WooCommerce', 'backend', 'megastar'),
-            'slug' => 'woocommerce'
-        ),
+//        array(
+//            'name' => esc_html_x('Contact Form 7', 'backend', 'megastar'),
+//            'slug' => 'contact-form-7',
+//        ),
+//        array(
+//            'name' => esc_html_x('WooCommerce', 'backend', 'megastar'),
+//            'slug' => 'woocommerce'
+//        ),
 
         // This is an example of the use of 'is_callable' functionality. A user could - for instance -
         // have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.

@@ -21,7 +21,7 @@ require_once(get_template_directory() . '/demo-import/import.php');
 require_once(get_template_directory() . '/customizer/theme-customizer.php');
 
 require_once(get_template_directory() . '/inc/nav_walker.php');
-require_once(get_template_directory() . '/inc/menu_options.php');
+//require_once(get_template_directory() . '/inc/menu_options.php');
 
 
 //TGM Plugin Activation
