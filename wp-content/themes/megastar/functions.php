@@ -557,6 +557,395 @@ function register_Feature_Box_Widget() {
 add_action( 'widgets_init', 'register_Feature_Box_Widget' ); 
 
 
+/*
+* New Archives Widget
+*/
+
+class Template_Achievement_Widget extends WP_Widget {
+
+    function __construct() {
+        $widget_ops = array('classname' => 'widget template_achievement', 'description' => __( "The most recent posts on your site") );
+        parent::__construct('Template_Achievement', __('Template Achievement'), $widget_ops);
+        $this->alt_option_name = 'template_achievement';
+
+        add_action( 'save_post', array($this, 'flush_widget_cache') );
+        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
+        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+    }
+
+    function widget($args, $instance) {
+        $cache = wp_cache_get('widget_recent_posts', 'widget');
+
+        if ( !is_array($cache) )
+            $cache = array();
+
+        if ( ! isset( $args['widget_id'] ) )
+            $args['widget_id'] = $this->id;
+
+        if ( isset( $cache[ $args['widget_id'] ] ) ) {
+            echo $cache[ $args['widget_id'] ];
+            return;
+        }
+
+        ob_start();
+        extract($args);
+
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Achives' );
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
+        if ( ! $number )
+            $number = 10;
+        $show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+
+        $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true ) ) );
+        if ($r->have_posts()) :
+?>
+        <?php echo $before_widget; ?>
+        <?php if ( $title ) echo '<h5 class="widget-title line-bottom">' . $title . '</h5>'; ?>
+        <ul class="list-divider list-border list check">
+        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+            <li>
+                <a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?>"><?php if ( get_the_title() ) the_title(); else the_ID(); ?></a>
+            <?php if ( $show_date ) : ?>
+                <span class="post-date"><?php echo get_the_date(); ?></span>
+            <?php endif; ?>
+            </li>
+        <?php endwhile; ?>
+        </ul>
+        <?php echo $after_widget; ?>
+<?php
+        // Reset the global $the_post as this query will have stomped on it
+        wp_reset_postdata();
+
+        endif;
+
+        $cache[$args['widget_id']] = ob_get_flush();
+        wp_cache_set('widget_recent_posts', $cache, 'widget');
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['number'] = (int) $new_instance['number'];
+        $instance['show_date'] = (bool) $new_instance['show_date'];
+        $this->flush_widget_cache();
+
+        $alloptions = wp_cache_get( 'alloptions', 'options' );
+        if ( isset($alloptions['widget_recent_entries']) )
+            delete_option('widget_recent_entries');
+
+        return $instance;
+    }
+
+    function flush_widget_cache() {
+        wp_cache_delete('widget_recent_posts', 'widget');
+    }
+
+    function form( $instance ) {
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : 'Archives';
+        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
+?>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
+
+        <p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
+        <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
+<?php
+    }
+}
+
+// register Widget widget
+function register_Achievement_Widget() {
+    register_widget( 'Template_Achievement_Widget' );
+}
+add_action( 'widgets_init', 'register_Achievement_Widget' );
+
+
+/*
+* New Image gallery with text Widget
+*/
+
+class Image_Gallery_Text_Widget extends WP_Widget {
+
+    function __construct() {
+        $widget_ops = array('classname' => 'widget image_gallery', 'description' => __( "The Image Gallery With Text  on your site") );
+        parent::__construct('Image_Gallery_Text', __('Image Gallery With Text'), $widget_ops);
+        $this->alt_option_name = 'Image Gallery With Text';
+
+        add_action( 'save_post', array($this, 'flush_widget_cache') );
+        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
+        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+    }
+
+    function widget($args, $instance) {
+        $cache = wp_cache_get('widget_recent_posts', 'widget');
+
+        if ( !is_array($cache) )
+            $cache = array();
+
+        if ( ! isset( $args['widget_id'] ) )
+            $args['widget_id'] = $this->id;
+
+        if ( isset( $cache[ $args['widget_id'] ] ) ) {
+            echo $cache[ $args['widget_id'] ];
+            return;
+        }
+
+        ob_start();
+        extract($args);
+
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Image Gallery With Text' );
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
+        if ( ! $number )
+            $number = 10;
+
+        $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true ) ) );
+        if ($r->have_posts()) :
+?>
+        <?php echo $before_widget; ?>
+        <?php if ( $title ) echo '<h5 class="widget-title line-bottom">' . $title . '</h5>'; ?>
+        <div class="widget-image-carousel">
+        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+            <?php //var_dump($r);?>
+            <div class="item">
+                <img src="<?php the_post_thumbnail_url(array(365,230));?>" alt="">
+                <h4 class="title"><?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?></h4>
+                <p><?php the_excerpt();?></p>
+            </div>
+        <?php endwhile; ?>
+        </div>
+        <?php echo $after_widget; ?>
+<?php
+        // Reset the global $the_post as this query will have stomped on it
+        wp_reset_postdata();
+
+        endif;
+
+        $cache[$args['widget_id']] = ob_get_flush();
+        wp_cache_set('widget_recent_posts', $cache, 'widget');
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['number'] = (int) $new_instance['number'];
+        $this->flush_widget_cache();
+
+        $alloptions = wp_cache_get( 'alloptions', 'options' );
+        if ( isset($alloptions['widget_recent_entries']) )
+            delete_option('widget_recent_entries');
+
+        return $instance;
+    }
+
+    function flush_widget_cache() {
+        wp_cache_delete('widget_recent_posts', 'widget');
+    }
+
+    function form( $instance ) {
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+?>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
+        
+<?php
+    }
+}
+// register Widget widget
+function register_Image_Gallery_Text_Widget() {
+    register_widget( 'Image_Gallery_Text_Widget' );
+}
+add_action( 'widgets_init', 'register_Image_Gallery_Text_Widget' );
+
+
+/*
+* Customize Widget _Tag_Cloud
+*/
+class NewStyle_Tag extends WP_Widget {
+
+    /**
+     * Sets up a new Tag Cloud widget instance.
+     *
+     * @since 2.8.0
+     * @access public
+     */
+    public function __construct() {
+        $widget_ops = array(
+            'description' => __( 'A New Style Tag Display.' ),
+            'customize_selective_refresh' => true,
+        );
+        parent::__construct( 'Style_tags', __( 'Style Tags' ), $widget_ops );
+    }
+
+    /**
+     * Outputs the content for the current Tag Cloud widget instance.
+     *
+     * @since 2.8.0
+     * @access public
+     *
+     * @param array $args     Display arguments including 'before_title', 'after_title',
+     *                        'before_widget', and 'after_widget'.
+     * @param array $instance Settings for the current Tag Cloud widget instance.
+     */
+    public function widget( $args, $instance ) {
+        $current_taxonomy = $this->_get_current_taxonomy($instance);
+        if ( !empty($instance['title']) ) {
+            $title = $instance['title'];
+        } else {
+            if ( 'post_tag' == $current_taxonomy ) {
+                $title = __('Tags');
+            } else {
+                $tax = get_taxonomy($current_taxonomy);
+                $title = $tax->labels->name;
+            }
+        }
+
+        /**
+         * Filter the taxonomy used in the Tag Cloud widget.
+         *
+         * @since 2.8.0
+         * @since 3.0.0 Added taxonomy drop-down.
+         *
+         * @see wp_tag_cloud()
+         *
+         * @param array $current_taxonomy The taxonomy to use in the tag cloud. Default 'tags'.
+         */
+        $tag_cloud = wp_tag_cloud( apply_filters( 'widget_tag_cloud_args', array(
+            'taxonomy' => $current_taxonomy,
+            'echo' => false
+        ) ) );
+
+        if ( empty( $tag_cloud ) ) {
+            return;
+        }
+
+        /** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+
+        echo $args['before_widget'];
+        if ( $title ) {
+            echo '<h5 class="widget-title line-bottom">' . $title . '</h5>';
+        }
+
+        echo '<div class="tags new_st_tags">';
+
+        echo $tag_cloud;
+
+        echo "</div>\n";
+        echo $args['after_widget'];
+    }
+
+    /**
+     * Handles updating settings for the current Tag Cloud widget instance.
+     *
+     * @since 2.8.0
+     * @access public
+     *
+     * @param array $new_instance New settings for this instance as input by the user via
+     *                            WP_Widget::form().
+     * @param array $old_instance Old settings for this instance.
+     * @return array Settings to save or bool false to cancel saving.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = sanitize_text_field( $new_instance['title'] );
+        $instance['taxonomy'] = stripslashes($new_instance['taxonomy']);
+        return $instance;
+    }
+
+    /**
+     * Outputs the Tag Cloud widget settings form.
+     *
+     * @since 2.8.0
+     * @access public
+     *
+     * @param array $instance Current settings.
+     */
+    public function form( $instance ) {
+        $current_taxonomy = $this->_get_current_taxonomy($instance);
+        $title_id = $this->get_field_id( 'title' );
+        $instance['title'] = ! empty( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+
+        echo '<p><label for="' . $title_id .'">' . __( 'Title:' ) . '</label>
+            <input type="text" class="widefat" id="' . $title_id .'" name="' . $this->get_field_name( 'title' ) .'" value="' . $instance['title'] .'" />
+        </p>';
+
+        $taxonomies = get_taxonomies( array( 'show_tagcloud' => true ), 'object' );
+        $id = $this->get_field_id( 'taxonomy' );
+        $name = $this->get_field_name( 'taxonomy' );
+        $input = '<input type="hidden" id="' . $id . '" name="' . $name . '" value="%s" />';
+
+        switch ( count( $taxonomies ) ) {
+
+        // No tag cloud supporting taxonomies found, display error message
+        case 0:
+            echo '<p>' . __( 'The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget.' ) . '</p>';
+            printf( $input, '' );
+            break;
+
+        // Just a single tag cloud supporting taxonomy found, no need to display options
+        case 1:
+            $keys = array_keys( $taxonomies );
+            $taxonomy = reset( $keys );
+            printf( $input, esc_attr( $taxonomy ) );
+            break;
+
+        // More than one tag cloud supporting taxonomy found, display options
+        default:
+            printf(
+                '<p><label for="%1$s">%2$s</label>' .
+                '<select class="widefat" id="%1$s" name="%3$s">',
+                $id,
+                __( 'Taxonomy:' ),
+                $name
+            );
+
+            foreach ( $taxonomies as $taxonomy => $tax ) {
+                printf(
+                    '<option value="%s"%s>%s</option>',
+                    esc_attr( $taxonomy ),
+                    selected( $taxonomy, $current_taxonomy, false ),
+                    $tax->labels->name
+                );
+            }
+
+            echo '</select></p>';
+        }
+    }
+
+    /**
+     * Retrieves the taxonomy for the current Tag cloud widget instance.
+     *
+     * @since 4.4.0
+     * @access public
+     *
+     * @param array $instance Current settings.
+     * @return string Name of the current taxonomy if set, otherwise 'post_tag'.
+     */
+    public function _get_current_taxonomy($instance) {
+        if ( !empty($instance['taxonomy']) && taxonomy_exists($instance['taxonomy']) )
+            return $instance['taxonomy'];
+
+        return 'post_tag';
+    }
+}
+// register Widget widget
+function register_NewStyle_Tag() {
+    register_widget( 'NewStyle_Tag' );
+}
+add_action( 'widgets_init', 'register_NewStyle_Tag' );
+
+
+
 
 
 // register sidebar 1

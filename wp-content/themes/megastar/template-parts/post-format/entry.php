@@ -1,4 +1,4 @@
-<article id="item-<?php the_ID(); ?>" class="uk-article post-format-standard" data-permalink="<?php the_permalink(); ?>">
+<!-- <article id="item-<?php the_ID(); ?>" class="uk-article post-format-standard" data-permalink="<?php the_permalink(); ?>">
     
     <?php if (has_post_thumbnail()) : ?>
         <div class="entry-standard">
@@ -52,4 +52,38 @@
         <?php the_content(); ?>
     <?php } ?>
     
+</article> -->
+
+
+<article class="post mb-50 pb-30" id="item-<?php the_ID(); ?>" data-permalink="<?php the_permalink(); ?>">                  
+    <div class="entry-header">
+        <?php if (has_post_thumbnail()) : ?>
+            <?php if(is_single()) : ?>
+                <?php echo  the_post_thumbnail('megastar-blog', array('class' => ''));  ?>
+            <?php else : ?>
+            <div class="post-thumb">
+                <img alt="" src="<?php the_post_thumbnail_url();?>" class="img-fullwidth img-responsive"> 
+            </div>
+            <?php endif; ?>
+        <?php endif; ?>
+    <?php if(!is_single()) :?>
+        <h5 class="entry-title text-uppercase mt-30"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+    <?php endif; ?>
+      <ul class="list-inline font-12 mb-20 mt-10">
+        <?php if(get_the_date()) { ?>
+        <li><i class="fa fa-calendar mr-5"></i><?php echo get_the_date( 'd/m/Y');?> </li>
+        <?php } ?>
+        <?php if(comments_open() || get_comments_number()) : ?>
+        <li><i class="fa fa-comments-o ml-5 mr-5"></i><?php comments_popup_link(__('No Comments', 'megastar'), esc_html__('1 Comment', 'megastar'), esc_html__('% Comments', 'megastar'), "", ""); ?></li>
+        <?php endif; ?>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="entry-content">
+        <?php if(!is_single()) {?>
+        <p><?php echo wp_kses_post(megastar_custom_excerpt(299)); ?></p>
+        <?php }else{ ?>
+        <p><?php the_content()?></p>
+         <?php }?>
+      <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> </div>
 </article>

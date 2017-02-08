@@ -57,7 +57,7 @@ function megastar_pagination() {
 		$class = $paged == $link ? ' class="active"' : '';
 		
 		if ($paged == $link) {
-			printf( '<li%s><span>%s</span></li>' . "\n", $class, $link );
+			printf( '<li%s><a href="">%s</a></li>' . "\n", $class, $link );
 		} else {
 			printf( '<li><a href="%s">%s</a></li>' . "\n", esc_url( get_pagenum_link( $link ) ), $link );
 		}
@@ -67,7 +67,7 @@ function megastar_pagination() {
 	if ( ! in_array( $max, $links ) ) {
 		if ( ! in_array( $max - 1, $links ) )
 			echo '<li><span>...</span></li>' . "\n";
-		$class = $paged == $max ? ' class="uk-active"' : '';
+		$class = $paged == $max ? ' class="active"' : '';
 		if ($paged == $max) {
 			printf( '<li%s><span>%s</span></li>' . "\n", $class, $max );
 		} else {
@@ -85,8 +85,8 @@ function megastar_pagination() {
 
 ?>
 
-<div class="pagination-wrapper">
+
 	<?php megastar_pagination(); ?>
 	<p class="uk-hidden"><?php posts_nav_link(); ?></p>
-</div>
+
 

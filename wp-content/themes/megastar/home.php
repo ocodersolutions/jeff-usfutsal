@@ -53,14 +53,18 @@ else{
 			
 			<div class="<?php echo esc_attr($mainlayout); ?>">
 	            <div class="blog-posts">
-	              
+	              	<div class="col-md-12">
+                		<div class="row list-dashed">
 	                	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() ); ?>
-
+							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>
+							
 						<?php endwhile; endif; ?>
 						
-						<?php get_template_part( 'template-parts/pagination' ); ?>
+						
+						</div>
+            		</div>
+            		<?php get_template_part( 'template-parts/pagination' ); ?>
                 </div>
             </div>
 	              
