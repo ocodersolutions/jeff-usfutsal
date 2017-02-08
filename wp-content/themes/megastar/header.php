@@ -22,6 +22,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site layout-<?php echo get_theme_mod('megastar_global_layout', 'full'); ?>-wrapper">
 	
 	<?php get_template_part('template-parts/drawer');	?>	

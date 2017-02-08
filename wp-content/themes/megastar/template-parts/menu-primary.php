@@ -8,7 +8,7 @@ if ($megastar_main_menu) {
 			'theme_location' => 'primary',
 			'container'      => false,
 			'menu_id'        => 'nav',
-			'menu_class'     => 'uk-navbar-nav uk-hidden-small',
+			'menu_class'     => 'menuzord-menu menuzord-right menuzord-indented scrollable',
 			'echo'           => false,
 			'before'         => '',
 			'after'          => '',
@@ -19,8 +19,8 @@ if ($megastar_main_menu) {
 			)
 		);
 
-		$primary_menu = new megastar_nav_dom($navbar);
-		echo 	$primary_menu->proccess();
+//		$primary_menu = new megastar_nav_dom($navbar);
+		echo $navbar;
 	} else {
 		echo '<ul class="no-menu uk-hidden-small"><li><a href="'.admin_url('/nav-menus.php').'"><strong>NO MENU ASSIGNED</strong> <span>Go To Appearance > Menus and create a Menu</span></a></li></ul>';
 	} 

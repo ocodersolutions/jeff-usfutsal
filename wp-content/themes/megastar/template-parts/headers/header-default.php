@@ -1,59 +1,31 @@
 <?php
 /**
-* @package   megastar
-* @author    bdthemes http://www.bdthemes.com
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
-	
-$header_fullwidth    = get_theme_mod('megastar_header_fullwidth');
-$page_progress       = get_theme_mod('megastar_page_progress');
+ * @package   megastar
+ * @author    bdthemes http://www.bdthemes.com
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+$header_fullwidth = get_theme_mod('megastar_header_fullwidth');
+$page_progress = get_theme_mod('megastar_page_progress');
 $header_transparancy = (get_theme_mod('megastar_header_type', 'fixed') and get_theme_mod('megastar_header_transparent', 1) == 1) ? ' tm-header-transparent' : '';
-
 ?>
+<header id="header" class="header">
+<?php get_template_part('template-parts/toolbar'); ?>
 
-<div class="tm-header-wrapper<?php echo esc_attr($header_transparancy); ?>">
-	
-	<?php get_template_part( 'template-parts/toolbar' ); ?>
+    <div class="header-nav">
+        <div class="header-nav-wrapper bg-light navbar-scrolltofixed" style="z-index: auto; position: static; top: auto;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="menuzord-right" class="menuzord orange no-bg menuzord-responsive" style="">
+                            <?php get_template_part('template-parts/logo-default'); ?>
+                            <?php get_template_part('template-parts/menu-primary'); ?>
 
-	<div class="tm-headerbar uk-clearfix" <?php echo megastar_sticky_header(); ?>>
-		<div class="<?php echo ($header_fullwidth) ? '' : 'uk-container '; ?>uk-container-center">
-			<nav id="tmMainMenu" class="tm-navbar-full abc">
-				<div class="uk-navbar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</header>
 
-					
-					<?php get_template_part( 'template-parts/logo-default'); ?>
-
-					
-					<div class="tm-offcanvas uk-align-right uk-hidden-large">
-						<a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
-					</div>
-
-					<?php if (is_active_sidebar('modal')) : ?>
-					<div class="tm-modal uk-align-right uk-visible-large">
-						<a href="#tm-modal" class="uk-navbar-toggle" data-uk-modal></a>
-					</div>
-					<?php endif; ?>
-
-					<?php get_template_part('template-parts/search-header'); ?>
-					
-					<?php if (get_theme_mod( 'megastar_cart' ) == 'header') : ?>
-						<?php get_template_part('template-parts/woocommerce-cart'); ?>
-					<?php endif; ?>
-					
-					<div class="uk-align-right uk-margin-bottom-remove uk-visible-large">
-						<?php get_template_part( 'template-parts/menu-primary' ); ?>
-					</div>
-
-					<?php get_template_part( 'template-parts/logo-small' ); ?>
-
-				</div>
-			</nav>
-		</div>
-	</div>
-
-
-	<?php if ($page_progress) : ?>
-		<div id="tm-progress-bar"></div>
-	<?php endif; ?>
-
-</div>
+<?php // get_template_part( 'template-parts/toolbar' );  ?>

@@ -554,10 +554,9 @@
   </div>
   <!-- end main-content --> 
   
-  <!-- Footer -->
-  <?php get_footer(); ?>
+
   <!-- end .rev_slider_wrapper -->
-        <script>
+<!--        <script>
           jQuery(document).ready(function($) {
             var revapi = $(".rev_slider").revolution({
               sliderType:"standard",
@@ -668,4 +667,6 @@
 
           });
 
-        </script>
+        </script>-->
+  <!-- Footer -->
+  <?php get_footer(); ?>

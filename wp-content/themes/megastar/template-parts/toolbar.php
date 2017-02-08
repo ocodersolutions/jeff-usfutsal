@@ -1,34 +1,47 @@
-<?php 
-$megastar_mb_toolbar = (get_post_meta( get_the_ID(), 'megastar_toolbar', true ) != null) ? get_post_meta( get_the_ID(), 'megastar_toolbar', true ) : null;
-$megastar_tm_toolbar = (get_theme_mod( 'megastar_toolbar', 1)) ? 1 : 0;
-$megastar_toolbar    = ($megastar_mb_toolbar != null ) ? $megastar_mb_toolbar : $megastar_tm_toolbar;
-$toolbar_left        = get_theme_mod( 'megastar_toolbar_left' );
-$toolbar_right       = get_theme_mod( 'megastar_toolbar_right' );
-$toolbar_cart        = get_theme_mod( 'megastar_cart' );
-
+<?php
+$megastar_mb_toolbar = (get_post_meta(get_the_ID(), 'megastar_toolbar', true) != null) ? get_post_meta(get_the_ID(), 'megastar_toolbar', true) : null;
+$megastar_tm_toolbar = (get_theme_mod('megastar_toolbar', 1)) ? 1 : 0;
+$megastar_toolbar = ($megastar_mb_toolbar != null ) ? $megastar_mb_toolbar : $megastar_tm_toolbar;
+$toolbar_left = get_theme_mod('megastar_toolbar_left');
+$toolbar_right = get_theme_mod('megastar_toolbar_right');
 ?>
-
 <?php if ($megastar_toolbar) : ?>
-	<div class="toolbar-wrapper">
-		<div class="uk-container uk-container-center">
-			<div class="tm-toolbar uk-clearfix">
-				<?php if (!empty($toolbar_left)) : ?>
-				<div class="tm-toolbar-l uk-float-left"><?php get_template_part( 'template-parts/toolbars/'.$toolbar_left ); ?></div>
-				<?php endif; ?>
+    <div class="header-top sm-text-center bg-theme-colored">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <nav>
+                        <?php if (!empty($toolbar_left)) : ?>
+                            <?php get_template_part('template-parts/toolbars/' . $toolbar_left); ?> 
+                        <?php endif; ?>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <div class="widget m-0 mt-5 no-border">
+                        <ul class="list-inline text-right sm-text-center">
+                            <li class="pl-10 pr-10 mb-0 pb-0">
+                                <div class="header-widget text-white"><i class="fa fa-phone"></i> 123-456-789 </div>
+                            </li>
+                            <li class="pl-10 pr-10 mb-0 pb-0">
+                                <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> contact@yourdomain.com </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 text-right flip sm-text-center">
+                    <div class="widget m-0">
+                        <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm">
+                            <li class="mb-0 pb-0"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="mb-0 pb-0"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="mb-0 pb-0"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li class="mb-0 pb-0"><a href="#"><i class="fa fa-linkedin text-white"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<?php if (!empty($toolbar_right) or $toolbar_cart == 'toolbar') : ?>
-				<div class="tm-toolbar-r uk-float-right">
-					<?php if ($toolbar_cart == 'toolbar') : ?>
-						<div class="uk-hidden-small uk-display-inline-block">
-							<?php get_template_part( 'template-parts/toolbars/'.$toolbar_right ); ?>
-						</div>
-						<?php get_template_part('template-parts/woocommerce-cart'); ?>
-					<?php else: ?>
-						<?php get_template_part( 'template-parts/toolbars/'.$toolbar_right ); ?>
-					<?php endif; ?>		
-				</div>
-				<?php endif; ?>
-			</div>
-		</div>
-	</div>
+
+
 <?php endif; ?>

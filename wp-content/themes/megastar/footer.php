@@ -12,7 +12,6 @@
 $footer_active = get_theme_mod('megastar_footer_widgets', 1) && get_post_meta( get_the_ID(), 'megastar_footer_widgets', true ) != 'hide';
 $footer_padding = ($footer_active) ? ' tm-padding-small' : '';
 ?>
-	
 
 			</div>
 		</div>
@@ -105,10 +104,10 @@ $footer_padding = ($footer_active) ? ' tm-padding-small' : '';
 
 <?php $megastar_top_link = get_theme_mod('megastar_top_link');
 if(!$megastar_top_link): ?>
-	<a class="tm-totop-scroller totop-hidden" data-uk-smooth-scroll href="#"></a>
+	<a class="scrollToTop" href="#" style="display: block;"><i class="fa fa-angle-up"></i></a>
 <?php endif; ?>
 
-<?php get_template_part( 'template-parts/offcanvas' ); ?>
+<?php // get_template_part( 'template-parts/offcanvas' ); ?>
 
 <?php wp_footer(); ?>
 

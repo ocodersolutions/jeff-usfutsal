@@ -20,10 +20,7 @@ class megastar_nav_dom {
         $doc = clone (new megastar_dom_document());
         //$doc->loadHTML('<?xml encoding="UTF-8">' .$this->_menu);
         $doc->loadHTML(mb_convert_encoding('<?xml encoding="UTF-8">' .$this->_menu, 'HTML-ENTITIES', 'UTF-8'));
-        $lis = $doc->find('.has_columns');
-        foreach ($lis as $i => $li) {
-            $this->divide($li);
-        }
+            
         return @$doc->find('#nav')->item(0)->html();
     }
     
@@ -39,60 +36,43 @@ class megastar_nav_dom {
     **  divide menu
     **/
     $ul  =  $li->find('ul')->item(0);
-    
-        // get columns
-        $columns = (int) $li->attr('data-menu-columns');
-        if ($columns > 1) {
             
-            $i        = 0;
-            $column   = -1;
-            $children = $ul->children('li');
             
-            if ($children->length > $columns) {
-                $remainder = $children->length % $columns;
-                $colrows   = ($children->length - $remainder) / $columns;
-            } else {
-                $remainder = 0;
-                $colrows   = 1;
-            }
-            
-            foreach ($children as $child) {
-                
-                if ($i-- == 0) {
-                    $i = $remainder-- > 0 ? $colrows : $colrows - 1;
-                    $column++;
-                }
-                
-                if ($li->children('ul')->length == $column) {
-                    $li->append('<ul class="level2"></ul>');
-                }
-                
-                if ($column > 0) {
-                    $li->children('ul')->item($column)->append($child);
-                }
-            }
-            
-            $columns = $column + 1;
-        } else {
-            $columns = 1;
-        }
-        // get width
-        $width = (int) $li->attr('data-menu-columnwidth');
-        $style = $width > 0 ? sprintf('min-width: %spx; max-width: %spx; width:%spx;', $columns * $width, $columns * $width, $width) : null;
-        //background image
-        $bg =   $li->attr('data-style');
-        $style .= $bg;        
-        $style = $style ? ' style="'.$style.'"' : ' ';   
-        $li->attr('data-style','');
-        
-          // append dropdown divs
-        $li->append(sprintf('<div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-%d"%s><div class="uk-grid uk-dropdown-grid"></div></div>', $columns, $style));
-        $div = $li->first('div.uk-dropdown div.uk-grid');
-        foreach ($li->children('ul') as $i => $u) {
-            $u->addClass("uk-nav uk-nav-navbar");
-            $div->append(sprintf('<div class="uk-width-1-%d"></div>', $columns))->children('div')->item($i)->append($u);
-        }
     }
+    
+}
+
+/**
+ * megastar DOM helper class
+ */
+class megastar_nav_toolbar_dom {
+    var $_menu;
+    
+    /**
+     * 
+     * @param String $menu
+     */
+    public function __construct($menu) {
+        $this->_menu = $menu;
+    }
+    
+    public function proccess() {
+        if (strlen($this->_menu) < 0) {
+            return '';
+        }
+        $doc = clone (new megastar_dom_document());
+        //$doc->loadHTML('<?xml encoding="UTF-8">' .$this->_menu);
+        $doc->loadHTML(mb_convert_encoding('<?xml encoding="UTF-8">' .$this->_menu, 'HTML-ENTITIES', 'UTF-8'));
+        $lis = $doc->find('li');
+        foreach ($lis as $i => $li) {
+            $li->find('a')->item(0)->addClass("text-white");
+            if($i <= sizeof($lis))
+            $li->append('<li class="text-white">|</li>');
+        }
+        return @$doc->find('#toolbar_nav')->item(0)->html();
+    }
+    
+            
     
 }
 
