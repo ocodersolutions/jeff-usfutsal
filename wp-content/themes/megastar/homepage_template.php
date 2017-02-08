@@ -8,7 +8,7 @@
     <!-- Section: home -->
     <section id="home" class="divider">
       <div class="fullwidth-carousel">
-        <div class="carousel-item bg-img-cover" data-bg-img="http://placehold.it/1920x1280">
+        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg1.jpg">
           <div class="display-table">
             <div class="display-table-cell">
               <div class="container pt-200 pb-200">
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item bg-img-cover" data-bg-img="http://placehold.it/1920x1280">
+        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg2.jpg">
           <div class="display-table">
             <div class="display-table-cell">
               <div class="container pt-200 pb-200">
@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item bg-img-cover" data-bg-img="http://placehold.it/1920x1280">
+        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg3.jpg">
           <div class="display-table">
             <div class="display-table-cell">
               <div class="container pt-200 pb-200">
@@ -82,7 +82,7 @@
           <div class="row mt-50">
             <div class="col-sm-4">
               <div class="box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
+                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_template_directory_uri(); ?>/images/services/1.jpg" alt="..."></a> </div>
                 <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
                   <h3 class="text-uppercase letter-space-1 mt-0">Riding on <span class="text-theme-colored">Trainer</span></h3>
                    <p>Quam distinctio quis perspiciatis facere accusamus perferendis eligendi odit cum nemo fugit, tenetur sequi expedita earum nobis optio tempora id repellendus? Tempora illo ad, magni iusto quas, rerum debitis id et nisi eius quod dolor eos repudiandae perferendis, consequuntur illum alias. Molestiae provident voluptate corporis quae numquam eos earum porro quia officia, maiores magni accusantium iusto similique tempora.</p>
@@ -92,7 +92,7 @@
             </div>
             <div class="col-sm-4">
               <div class="box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
+                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_template_directory_uri(); ?>/images/services/2.jpg" alt="..."></a> </div>
                 <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
                   <h3 class="text-uppercase letter-space-1 mt-0">Start your <span class="text-theme-colored">training</span></h3>
                    <p>Quam distinctio quis perspiciatis facere accusamus perferendis eligendi odit cum nemo fugit, tenetur sequi expedita earum nobis optio tempora id repellendus? Tempora illo ad, magni iusto quas, rerum debitis id et nisi eius quod dolor eos repudiandae perferendis, consequuntur illum alias. Molestiae provident voluptate corporis quae numquam eos earum porro quia officia, maiores magni accusantium iusto similique tempora.</p>
@@ -107,21 +107,21 @@
               <h3 class="text-uppercase mt-0 letter-space-2">Events</h3>
               <div class="bxslider" data-count="3">
                 <div class="box-hover-effect effect1 mb-15">
-                  <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="http://placehold.it/300x115" alt="..."></a> </div>
+                  <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/1.jpg" alt="..."></a> </div>
                     <h5 class="text-uppercase letter-space-1 mb-0">Riding on Trainer</h5>
                     <ul>
                       <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
                     </ul>
                 </div>
                 <div class="box-hover-effect effect1 mb-15">
-                  <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="http://placehold.it/300x115" alt="..."></a> </div>
+                  <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/2.jpg." alt="..."></a> </div>
                     <h5 class="text-uppercase letter-space-1 mb-0">Start your training</h5>
                     <ul>
                       <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
                     </ul>
                 </div>
                 <div class="box-hover-effect effect1 mb-15">
-                    <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="http://placehold.it/300x115" alt="..."></a> </div>
+                    <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/3.jpg" alt="..."></a> </div>
                     <h5 class="text-uppercase letter-space-1 mb-0">Golf Fitness training</h5>
                     <ul>
                       <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
@@ -143,22 +143,23 @@
     </section>
 
     <!-- Section: Clients -->
-    <section class="divider parallax layer-overlay overlay-dark"  data-bg-img="http://placehold.it/1920x1280" >
+    <section class="divider parallax layer-overlay overlay-dark"  data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg7.jpg" >
       <div class="container">
-        <div class="section-content">
+       <?php dynamic_sidebar('carousel_client'); ?>
+        <!-- <div class="section-content">
           <div class="row">
             <div class="clients-logo carousel owl-carousel-6col">
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
-              <div class="item"> <a href="#"><img src="http://placehold.it/200x120" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/1.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/2.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/3.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/4.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/5.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/6.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/1.jpg" alt=""></a> </div>
+              <div class="item"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients/2.jpg" alt=""></a> </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     
@@ -168,10 +169,10 @@
         <div class="section-title">
           <div class="row">
             <?php dynamic_sidebar('block-tittle-2'); ?>
-            <div class="col-md-8 col-md-offset-2 text-center">
+            <<!-- div class="col-md-8 col-md-offset-2 text-center">
               <h2 class="text-uppercase title">Membership <span class="text-black font-weight-300"> Packages</span></h2>
               <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="section-content">
@@ -235,18 +236,18 @@
         <div class="section-title text-center">
           <div class="row">
           <?php dynamic_sidebar('block-tittle-3'); ?>
-            <div class="col-md-8 col-md-offset-2">
+            <!-- <div class="col-md-8 col-md-offset-2">
               <h2 class="title text-uppercase">Our Sports<span class="text-black font-weight-300"> Trainers</span></h2>
               <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="section-content">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="bg-img-box maxwidth400">
                 <div class="photo">
-                  <img class="img-fullwidth" src="http://placehold.it/450x450" alt="">
+                  <img class="img-fullwidth" src="<?php echo get_template_directory_uri(); ?>/images/team/1.jpg" alt="">
                 </div>
                 <div class="style3 bg-light border-right-5px border-theme-colored">
                   <h5 class="text-gray mt-0 mb-0">GYM Expart</h5>
@@ -258,7 +259,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="bg-img-box maxwidth400">
                 <div class="photo">
-                  <img class="img-fullwidth" src="http://placehold.it/450x450" alt="">
+                  <img class="img-fullwidth" src="<?php echo get_template_directory_uri(); ?>/images/team/2.jpg" alt="">
                 </div>
                 <div class="style3 bg-light border-right-5px border-theme-colored">
                   <h5 class="text-gray mt-0 mb-0">Race Expart</h5>
@@ -270,7 +271,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="bg-img-box maxwidth400">
                 <div class="photo">
-                  <img class="img-fullwidth" src="http://placehold.it/450x450" alt="">
+                  <img class="img-fullwidth" src="<?php echo get_template_directory_uri(); ?>/images/team/3.jpg" alt="">
                 </div>
                 <div class="style3 bg-light border-right-5px border-theme-colored">
                   <h5 class="text-gray mt-0 mb-0">Boxing Expart</h5>
@@ -284,7 +285,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="bg-img-box maxwidth400">
                 <div class="photo">
-                  <img class="img-fullwidth" src="http://placehold.it/450x450" alt="">
+                  <img class="img-fullwidth" src="<?php echo get_template_directory_uri(); ?>/images/team/4.jpg" alt="">
                 </div>
                 <div class="style3 bg-light border-right-5px border-theme-colored">
                   <h5 class="text-gray mt-0 mb-0">GYM Expart</h5>
@@ -296,7 +297,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="bg-img-box maxwidth400">
                 <div class="photo">
-                  <img class="img-fullwidth" src="http://placehold.it/450x450" alt="">
+                  <img class="img-fullwidth" src="<?php echo get_template_directory_uri(); ?>/images/team/5.jpg" alt="">
                 </div>
                 <div class="style3 bg-light border-right-5px border-theme-colored">
                   <h5 class="text-gray mt-0 mb-0">Race Expart</h5>
@@ -308,7 +309,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="bg-img-box maxwidth400">
                 <div class="photo">
-                  <img class="img-fullwidth" src="http://placehold.it/450x450" alt="">
+                  <img class="img-fullwidth" src="<?php echo get_template_directory_uri(); ?>/images/team/6.jpg" alt="">
                 </div>
                 <div class="style3 bg-light border-right-5px border-theme-colored">
                   <h5 class="text-gray mt-0 mb-0">Boxing Expart</h5>
@@ -322,45 +323,46 @@
       </div>
     </section>
 
-    <section id="achievements" class="divider parallax layer-overlay overlay-deep" data-bg-img="http://placehold.it/1920x1280">
+    <section id="achievements" class="divider parallax layer-overlay overlay-deep" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg2.jpg">
       <div class="container pt-60 pb-60">
         <div class="section-title text-center">
           <div class="row">
           <?php dynamic_sidebar('block-tittle-4'); ?>
-            <div class="col-md-8 col-md-offset-2">
+            <!-- <div class="col-md-8 col-md-offset-2">
               <h2 class="title text-uppercase">Our <span class="text-black font-weight-300">Achievements</span></h2>
               <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
-            </div>
+            </div> -->
           </div>
         </div>
-        <div class="section-content">
+        <?php dynamic_sidebar('carousel_archievement'); ?>
+        <!-- <div class="section-content">
           <div class="row">
             <div class="col-md-12">
               <div class="owl-carousel-4col text-center" data-nav="true">
                 <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="http://placehold.it/150x150" alt=""></a>
+                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
                   <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
                 </div>
                 <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="http://placehold.it/150x150" alt=""></a>
+                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
                   <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
                 </div>
                 <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="http://placehold.it/150x150" alt=""></a>
+                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
                   <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
                 </div>
                 <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="http://placehold.it/150x150" alt=""></a>
+                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
                   <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
                 </div>
                 <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="http://placehold.it/150x150" alt=""></a>
+                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
                   <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
                 </div>
               </div> 
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 

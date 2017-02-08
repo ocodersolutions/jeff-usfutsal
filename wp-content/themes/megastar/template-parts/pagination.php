@@ -32,7 +32,7 @@ function megastar_pagination() {
 		$links[] = $paged + 1;
 	}
 
-	echo '<div id="pagination" class="uk-clearfix"><ul class="uk-pagination">' . "\n";
+	echo '<div class="col-md-12"><nav><ul class="pagination theme-colored">' . "\n";
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
@@ -40,7 +40,7 @@ function megastar_pagination() {
 
 	/**	Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="uk-active"' : '';
+		$class = 1 == $paged ? ' class="active"' : '';
 		if (1 == $paged) {
 			printf( '<li%s><span>%s</span></li>' . "\n", $class, '1' );
 		} else {
@@ -54,7 +54,7 @@ function megastar_pagination() {
 	/**	Link to current page, plus 2 pages in either direction if necessary */
 	sort( $links );
 	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="uk-active"' : '';
+		$class = $paged == $link ? ' class="active"' : '';
 		
 		if ($paged == $link) {
 			printf( '<li%s><span>%s</span></li>' . "\n", $class, $link );
@@ -79,7 +79,7 @@ function megastar_pagination() {
 	if ( get_next_posts_link() )
 		printf( '<li class="pagination-next">%s</li>' . "\n", get_next_posts_link('<i class="uk-icon-angle-double-right"></i>') );
 
-	echo '</ul></div>' . "\n";
+	echo '</ul></nav></div>' . "\n";
 }
 
 

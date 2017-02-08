@@ -346,17 +346,18 @@ class Tittle_Session_Widget extends WP_Widget {
      */
     public function widget( $args, $instance ) {
 
-        
         //store the options in variables
         $title_ft = $instance['title_ft'];
         $title_bf = $instance['title_bf'];
+        $title_tag_e =  ! empty( $instance['title_tag_e'] ) ? $instance['title_tag_e'] : 'h2';
+        $title_class = ! empty( $instance['title_class'] ) ? $instance['title_class'] : 'title text-uppercase';
         $title_sd = $instance['title_sd'];
         $title_ct = $instance['title_ct'];
         // before widget (defined by theme)
         echo $args['before_widget'];
 
-        if(!empty( $title_ft) && !empty( $title_bf)){
-            echo '<h2 class="title text-uppercase">'.$title_ft.' <span class="text-black font-weight-300">'.$title_bf.'</span></h2>';
+        if(!empty( $title_ft) || !empty( $title_bf)){
+            echo '<'.$instance['title_tag_e'].' class="'.$title_class.'">'.$title_ft.' <span class="text-black font-weight-300">'.$title_bf.'</span></'.$instance['title_tag_e'].'>';
         }
         if(!empty($title_sd)){
             echo '<h6 class="letter-space-8 font-weight-400 text-uppercase">'.$title_sd.'</h6>';
@@ -381,6 +382,8 @@ class Tittle_Session_Widget extends WP_Widget {
        
         $title_ft = ! empty( $instance['title_ft'] ) ? $instance['title_ft'] : '';
         $title_bf = ! empty( $instance['title_bf'] ) ? $instance['title_bf'] : '';
+        $title_tag_e =  ! empty( $instance['title_tag_e'] ) ? $instance['title_tag_e'] : 'h2';
+        $title_class =  ! empty( $instance['title_class'] ) ? $instance['title_class'] : 'title text-uppercase';
         $title_sd = ! empty( $instance['title_sd'] ) ? $instance['title_sd'] : '';
         $title_ct = ! empty( $instance['title_ct'] ) ? $instance['title_ct'] : '';
         ?>
@@ -393,12 +396,28 @@ class Tittle_Session_Widget extends WP_Widget {
         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_bf' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_bf' ) ); ?>" type="text" value="<?php echo esc_attr( $title_bf ); ?>">
         </p>
         <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_tag_e' ) ); ?>"><?php esc_attr_e( 'Choice Title Tag:', 'text_domain' ); ?></label> 
+        <select name="<?php echo $this->get_field_name('title_tag_e'); ?>" id="<?php echo $this->get_field_id('title_tag_e'); ?>" class="widefat"> 
+            
+            <?php for($i=1;$i<=6;$i++){
+                $value = 'h'.$i; ?>
+                <option value="<?php echo $value ?>" <?php if($value == $instance['title_tag_e']): ?>selected="selected"<?php endif; ?>><?php echo $value ?></option>
+            <?php } ?>
+            </option> 
+            
+        </select>
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_class' ) ); ?>"><?php esc_attr_e( 'Add Class Title:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_class' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_class' ) ); ?>" type="text" value="<?php echo esc_attr( $title_class ); ?>">
+        </p>
+        <p>
         <label for="<?php echo esc_attr( $this->get_field_id( 'title_sd' ) ); ?>"><?php esc_attr_e( 'Excerpt title:', 'text_domain' ); ?></label> 
         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_sd' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_sd' ) ); ?>" type="text" value="<?php echo esc_attr( $title_sd ); ?>">
         </p>
         <p>
         <label for="<?php echo esc_attr( $this->get_field_id( 'title_ct' ) ); ?>"><?php esc_attr_e( 'Content:', 'text_domain' ); ?></label> 
-        <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_ct' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_ct' ) ); ?>" type="textarea"  rows="5"> <?php echo esc_attr( $title_ct ); ?></textarea>
+        <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_ct' ) );?>" name="<?php echo esc_attr( $this->get_field_name( 'title_ct' ) ); ?>" type="textarea"  rows="5"><?php echo esc_attr( $title_ct );?></textarea>
         </p>
       
         <?php 
@@ -418,6 +437,8 @@ class Tittle_Session_Widget extends WP_Widget {
         $instance = $old_instance;
         $instance['title_ft'] = $new_instance['title_ft'];
         $instance['title_bf'] = $new_instance['title_bf'];
+        $instance['title_tag_e'] = $new_instance['title_tag_e'];
+        $instance['title_class'] = $new_instance['title_class'];
         $instance['title_sd'] = $new_instance['title_sd'];
         $instance['title_ct'] = $new_instance['title_ct'];
         
@@ -537,6 +558,7 @@ add_action( 'widgets_init', 'register_Feature_Box_Widget' );
 
 
 
+
 // register sidebar 1
 for($i=1;$i<7;$i++){
     register_sidebar(array(
@@ -549,12 +571,35 @@ for($i=1;$i<7;$i++){
     'after_title' => ''
 ));
 }
-//register our fiture widget area
+
+//register our feature Sidebar area
 register_sidebar(array(
     'name' => 'Feautre Box Area Widget',
     'id' => 'feature_box',
     'description' => 'Location Sidebar show Feautre Box',
     'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => ''
+));
+
+//register carousel Client Sidebar area
+register_sidebar(array(
+    'name' => 'Carousel Client',
+    'id' => 'carousel_client',
+    'description' => 'Location Sidebar show Carousel Client Logo',
+    'before_widget' => '<div class="section-content">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => ''
+));
+
+//register carousel archievement Sidebar area
+register_sidebar(array(
+    'name' => 'Carousel Archievement',
+    'id' => 'carousel_archievement',
+    'description' => 'Carousel Archievement',
+    'before_widget' => '<div class="section-content">',
     'after_widget' => '</div>',
     'before_title' => '',
     'after_title' => ''
@@ -594,10 +639,21 @@ function latest_news_sc(){
                 <?php endwhile;
                 
         endif;
-        $list_post = ob_get_contents(); //Lấy toàn bộ nội dung phía trên bỏ vào biến $list_post để return
+        $list_post = ob_get_contents(); 
  
         ob_end_clean();
  
         return $list_post;
 }
 add_shortcode( 'latest_news_shortcode', 'latest_news_sc' );
+
+add_filter( 'widget_text', 'do_shortcode' ); 
+// Assign the tag for our shortcode and identify the function that will run. 
+add_shortcode( 'template_directory_uri', 'wpse61170_template_directory_uri' );
+
+// Define function 
+function wpse61170_template_directory_uri() {
+    return get_template_directory_uri();
+}
+
+/* widget Image Gallery with text*/
