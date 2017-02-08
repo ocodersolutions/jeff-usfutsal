@@ -1095,9 +1095,9 @@ register_sidebar(array(
     'name' => 'Widget Single Page Sidebar',
     'id' => 'widget_single_page',
     'description' => 'These a Widgets for the Single Page',
-    'before_widget' => '<div class="section-content">',
+    'before_widget' => '<div class="widget">',
     'after_widget' => '</div>',
-    'before_title' => '',
+    'before_title' => '<div class="section-content">',
     'after_title' => ''
 ));
 function latest_news_sc(){
@@ -1150,4 +1150,215 @@ function wpse61170_template_directory_uri() {
     return get_template_directory_uri();
 }
 
-/* widget Image Gallery with text*/
+
+
+/**
+ * Widget Widget_Categories class
+ *
+ */
+
+class Widget_Categories extends WP_Widget {
+
+    public function __construct() {
+        $widget_ops = array(
+            'classname' => 'wg_categories',
+            'description' => __( 'A list categories.' ),
+            'customize_selective_refresh' => true,
+        );
+        parent::__construct( 'categories', __( 'Categories' ), $widget_ops );
+    }
+
+    public function widget( $args, $instance ) {
+        static $first_dropdown = true;
+
+        /** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Categories' ) : $instance['title'], $instance, $this->id_base );
+
+        $c = ! empty( $instance['count'] ) ? '1' : '0';
+        $h = ! empty( $instance['hierarchical'] ) ? '1' : '0';
+        
+
+        echo $args['before_widget'];
+        if ( $title ) {
+            echo'<h5 class="widget-title line-bottom">'.$title.'</h5>';
+        }
+
+        $cat_args = array(
+            'orderby'      => 'name',
+            'show_count'   => $c,
+            'hierarchical' => $h
+        );
+
+        if ( $d ) {
+            $dropdown_id = ( $first_dropdown ) ? 'cat' : "{$this->id_base}-dropdown-{$this->number}";
+            $first_dropdown = false;
+
+            echo '<label class="screen-reader-text" for="' . esc_attr( $dropdown_id ) . '">' . $title . '</label>';
+
+            $cat_args['show_option_none'] = __( 'Select Category' );
+            $cat_args['id'] = $dropdown_id;
+
+            wp_dropdown_categories( apply_filters( 'widget_categories_dropdown_args', $cat_args ) );
+            ?>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+    var dropdown = document.getElementById( "<?php echo esc_js( $dropdown_id ); ?>" );
+    function onCatChange() {
+        if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+            location.href = "<?php echo home_url(); ?>/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+        }
+    }
+    dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+<?php
+        } else {
+?>
+        <ul class="list list-border angle-double-right">
+<?php
+        $cat_args['title_li'] = '';
+        $cat_args['hide_empty'] = false;
+
+        wp_list_categories( apply_filters( 'widget_categories_args', $cat_args ) );
+?>
+        </ul>
+        
+<?php
+        }
+
+        echo $args['after_widget'];
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = sanitize_text_field( $new_instance['title'] );
+        $instance['count'] = !empty($new_instance['count']) ? 1 : 0;
+        $instance['hierarchical'] = !empty($new_instance['hierarchical']) ? 1 : 0;
+
+        return $instance;
+    }
+
+    public function form( $instance ) {
+        //Defaults
+        $instance = wp_parse_args( (array) $instance, array( 'title' => '') );
+        $title = sanitize_text_field( $instance['title'] );
+        $count = isset($instance['count']) ? (bool) $instance['count'] :false;
+        $hierarchical = isset( $instance['hierarchical'] ) ? (bool) $instance['hierarchical'] : false;
+        ?>
+        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:' ); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
+
+        <p>
+        <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('count'); ?>" name="<?php echo $this->get_field_name('count'); ?>"<?php checked( $count ); ?> />
+        <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e( 'Show post counts' ); ?></label><br />
+
+        <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('hierarchical'); ?>" name="<?php echo $this->get_field_name('hierarchical'); ?>"<?php checked( $hierarchical ); ?> />
+        <label for="<?php echo $this->get_field_id('hierarchical'); ?>"><?php _e( 'Show hierarchy' ); ?></label></p>
+        <?php
+    }
+
+}
+// register and remove WP_Widget_Categories
+function register_Widget_Categories() {
+    register_widget( 'Widget_Categories' );
+    //unregister_widget('WP_Widget_Categories');
+}
+add_action( 'widgets_init', 'register_Widget_Categories' );
+
+/**
+ * Widget API: WP_Widget_Recent_Posts class
+ */
+
+class Widget_Latest_Post extends WP_Widget {
+
+    public function __construct() {
+        $widget_ops = array(
+            'classname' => 'widget_latest_entries',
+            'description' => __( 'Your site&#8217;s Latest News.' ),
+            'customize_selective_refresh' => true,
+        );
+        parent::__construct( 'latest-posts', __( 'Latest News' ), $widget_ops );
+        $this->alt_option_name = 'widget_latest_entries';
+    }
+
+    public function widget( $args, $instance ) {
+        if ( ! isset( $args['widget_id'] ) ) {
+            $args['widget_id'] = $this->id;
+        }
+
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest News' );
+
+        /** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
+        if ( ! $number )
+            $number = 5;
+        $show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+
+        $r = new WP_Query( apply_filters( 'widget_posts_args', array(
+            'posts_per_page'      => $number,
+            'no_found_rows'       => true,
+            'post_status'         => 'publish',
+            'ignore_sticky_posts' => true
+        ) ) );
+
+        if ($r->have_posts()) :
+        ?>
+        <?php echo $args['before_widget']; ?>
+        <?php if ( $title ) {
+            echo '<h5 class="widget-title line-bottom">'.$title.'</h5>';
+        } ?>
+        <ul>
+        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+            <li>
+                <a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a>
+            <?php if ( $show_date ) : ?>
+                <span class="post-date"><?php echo get_the_date(); ?></span>
+            <?php endif; ?>
+            </li>
+        <?php endwhile; ?>
+        </ul>
+        <?php echo $args['after_widget']; ?>
+        <?php
+        // Reset the global $the_post as this query will have stomped on it
+        wp_reset_postdata();
+
+        endif;
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = sanitize_text_field( $new_instance['title'] );
+        $instance['number'] = (int) $new_instance['number'];
+        $instance['show_date'] = isset( $new_instance['show_date'] ) ? (bool) $new_instance['show_date'] : false;
+        return $instance;
+    }
+
+    public function form( $instance ) {
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
+?>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+        <input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
+
+        <p><input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
+        <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
+<?php
+    }
+}
+
+// register and remove WP_Widget_Categories
+function register_Widget_Latest_Post() {
+    register_widget( 'Widget_Latest_Post' );
+    
+}
+add_action( 'widgets_init', 'register_Widget_Latest_Post' );
