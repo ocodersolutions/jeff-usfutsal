@@ -944,7 +944,93 @@ function register_NewStyle_Tag() {
 }
 add_action( 'widgets_init', 'register_NewStyle_Tag' );
 
+/**
+ * customize Widget Search Box
+ */
 
+class Widget_Search_Box extends WP_Widget {
+
+    /**
+     * Sets up a new Search widget instance.
+     *
+     * @since 2.8.0
+     * @access public
+     */
+    public function __construct() {
+        $widget_ops = array(
+            'classname' => 'widget widget_search_box',
+            'description' => __( 'A search form for your site.' ),
+            'customize_selective_refresh' => true,
+        );
+        parent::__construct( 'search box', _x( 'Search Box', 'Search Box widget' ), $widget_ops );
+    }
+
+    /**
+     * Outputs the content for the current Search widget instance.
+     *
+     * @since 2.8.0
+     * @access public
+     *
+     * @param array $args     Display arguments including 'before_title', 'after_title',
+     *                        'before_widget', and 'after_widget'.
+     * @param array $instance Settings for the current Search widget instance.
+     */
+    public function widget( $args, $instance ) {
+        //var_dump($instance);
+        /** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
+        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? 'Search Box' : $instance['title'], $instance, $this->id_base );
+
+        echo $args['before_widget'];
+        if ( $title ) {
+            echo '<h5 class="widget-title line-bottom">'.$title.'</h5>';
+        }
+
+        // Use current theme search form if it exists
+        get_search_form();
+
+        echo $args['after_widget'];
+    }
+
+    /**
+     * Outputs the settings form for the Search widget.
+     *
+     * @since 2.8.0
+     * @access public
+     *
+     * @param array $instance Current settings.
+     */
+    public function form( $instance ) {
+        $instance = wp_parse_args( (array) $instance, array( 'title' => '') );
+        $title = $instance['title'];
+        ?>
+        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+        <?php
+    }
+
+    /**
+     * Handles updating settings for the current Search widget instance.
+     *
+     * @since 2.8.0
+     * @access public
+     *
+     * @param array $new_instance New settings for this instance as input by the user via
+     *                            WP_Widget::form().
+     * @param array $old_instance Old settings for this instance.
+     * @return array Updated settings.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $new_instance = wp_parse_args((array) $new_instance, array( 'title' => ''));
+        $instance['title'] = sanitize_text_field( $new_instance['title'] );
+        return $instance;
+    }
+
+}
+function register_Search_Box_WG() {
+    register_widget( 'Widget_Search_Box' );
+    unregister_widget('WP_Widget_Search');
+}
+add_action( 'widgets_init', 'register_Search_Box_WG' );
 
 
 
@@ -993,8 +1079,16 @@ register_sidebar(array(
     'before_title' => '',
     'after_title' => ''
 ));
-// latest news
-
+// siderbar area single post page
+register_sidebar(array(
+    'name' => 'Widget Single Page Sidebar',
+    'id' => 'widget_single_page',
+    'description' => 'These a Widgets for the Single Page',
+    'before_widget' => '<div class="section-content">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => ''
+));
 function latest_news_sc(){
     $lt_new_Qr = new WP_Query(array(
                 'posts_per_page' => 5,

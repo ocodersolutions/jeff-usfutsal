@@ -101,7 +101,7 @@ else{
 
 	<?php if($sidebar == 'sidebar-left' || $sidebar == 'sidebar-right'){ ?>
 		<aside id="tm-sidebar" class="tm-sidebar <?php echo esc_attr($sidebar); ?> <?php echo esc_attr($sidebarlayout); ?>">
-			<?php get_sidebar(); ?>
+			<?php get_sidebar('single'); ?>
 		</aside> <!-- end aside -->
 	<?php } ?>
 
