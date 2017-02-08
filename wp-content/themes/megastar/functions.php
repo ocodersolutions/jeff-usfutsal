@@ -986,8 +986,19 @@ class Widget_Search_Box extends WP_Widget {
         }
 
         // Use current theme search form if it exists
-        get_search_form();
-
+        //get_search_form();
+        ?>
+        <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+            <div class="input-group">
+                <input type="text" placeholder="Click to Search" class="form-control search-input" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+            value="<?php echo get_search_query() ?>" name="s"
+            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+                <span class="input-group-btn">
+                <button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+        <?php
         echo $args['after_widget'];
     }
 
