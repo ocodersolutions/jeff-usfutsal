@@ -1313,16 +1313,21 @@ class Widget_Latest_Post extends WP_Widget {
         <?php if ( $title ) {
             echo '<h5 class="widget-title line-bottom">'.$title.'</h5>';
         } ?>
-        <ul>
+        
         <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-            <li>
-                <a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a>
-            <?php if ( $show_date ) : ?>
-                <span class="post-date"><?php echo get_the_date(); ?></span>
-            <?php endif; ?>
-            </li>
+            <article class="post media-post clearfix pb-0 mb-10">
+                <a class="post-thumb" href="<?php the_permalink(); ?>"><img src="https://placehold.it/75x75" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                <?php if ( $show_date ) : ?>
+                    <span class="post-date"><?php echo get_the_date(); ?></span>
+                <?php endif; ?>
+                </div>
+            </article>
+            
         <?php endwhile; ?>
-        </ul>
+       
         <?php echo $args['after_widget']; ?>
         <?php
         // Reset the global $the_post as this query will have stomped on it
