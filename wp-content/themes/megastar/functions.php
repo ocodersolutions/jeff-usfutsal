@@ -108,7 +108,7 @@ if (!function_exists('megastar_setup')) :
             'toolbar' => esc_html_x('Toolbar Menu', 'backend', 'megastar'),
             'primary' => esc_html_x('Primary Menu', 'backend', 'megastar'),
             'footer' => esc_html_x('Footer Menu', 'backend', 'megastar'),
-            'offcanvas' => esc_html_x('Offcanvas Menu', 'backend', 'megastar'),
+            'offcanvas' => esc_html_x('Footer Menu 2', 'backend', 'megastar'),
         ));
 
         /*

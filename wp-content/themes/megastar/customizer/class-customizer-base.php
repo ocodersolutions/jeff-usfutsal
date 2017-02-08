@@ -1014,10 +1014,10 @@ class megastar_Customizer_Base {
 
 
 		$this->wp_customize->add_setting(new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'footer_background_image', array(
-			'default' => get_template_directory_uri() . '/images/footer-bg.png',
+			'default' => 'http://placehold.it/1920x1280',//get_template_directory_uri() . '/images/footer-bg.png',
 			'css_map' => array(
 				'background-image|url' => array(
-					'.footer-wrapper',
+					'.footer',
 				),
 			)
 		)));

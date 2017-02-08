@@ -10,79 +10,16 @@
  */
 
 $footer_active = get_theme_mod('megastar_footer_widgets', 1) && get_post_meta( get_the_ID(), 'megastar_footer_widgets', true ) != 'hide';
-$footer_padding = ($footer_active) ? ' tm-padding-small' : '';
-?>
+$footer_background_image =  get_theme_mod('footer_background_image','http://placehold.it/1920x1280');
+$megastar_logo_upload = get_theme_mod('megastar_logo_upload');
+
+ ?>
 
 			</div>
 		</div>
 	</div><!-- #content -->
-
-
-	<div class="footer-wrapper<?php echo esc_attr($footer_padding); ?>" id="tmFooter">
-		<?php if($footer_active) { ?>
-			<?php 
-
-				$footer_columns = (get_theme_mod('megastar_footer_columns')) ? get_theme_mod('megastar_footer_columns') : '3';
-				
-			
-				if($footer_columns == '4'){
-					$footer_columns_class = 'uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-4';
-				} else if($footer_columns == '3'){
-					$footer_columns_class = 'uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-3';
-				} else if($footer_columns == '2'){
-					$footer_columns_class = 'uk-width-1-1 uk-width-medium-1-2';
-				} else {
-					$footer_columns_class = 'uk-width-1-1';
-				}
-			?>
-
-			<?php if (is_active_sidebar('footer-widgets') || is_active_sidebar('footer-widgets-2') || is_active_sidebar('footer-widgets-3') || is_active_sidebar('footer-widgets-4')) : ; ?>
-				<div class="uk-container uk-container-center">
-					<section class="tm-footer uk-grid uk-grid-divider" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin="">
-						<div class="<?php echo esc_attr($footer_columns_class); ?> columns"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 1')); ?></div>
-						<?php if($footer_columns == '2' || $footer_columns == '3' || $footer_columns == '4') { ?>
-						<div class="<?php echo esc_attr($footer_columns_class); ?> columns"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 2')); ?></div>
-						<?php } ?>
-						<?php if($footer_columns == '3' || $footer_columns == '4') { ?>
-						<div class="<?php echo esc_attr($footer_columns_class); ?> columns"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 3')); ?></div>
-						<?php } ?>
-						<?php if($footer_columns == '4') { ?>
-						<div class="<?php echo esc_attr($footer_columns_class); ?> columns"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 4')); ?></div>	
-						<?php } ?>
-					</section>
-				</div>
-			<?php endif; 
-	} ?>
-
-			<?php if (get_post_meta( get_the_ID(), 'megastar_footer_copyright', true ) != 'hide') : ?>
-				<div class="copyright-wrapper" id="tmCopyright">
-					<div class="uk-container uk-container-center">
-						<footer class="tm-copyright">
-								<div class="footer-l">
-										
-									<?php									 
-									if (has_nav_menu('footer')) {
-										echo wp_nav_menu( array( 'theme_location' => 'footer', 'container_class' => 'tm-copyright-menu', 'menu_class' => 'uk-subnav uk-subnav-line', 'depth' => 1 ) );  
-									}
-									
-									if(get_theme_mod('megastar_show_copyright_text')) : ?>
-										
-										<div class="copyright-txt"><?php echo wp_kses_post(get_theme_mod('megastar_custom_copyright_text')); ?></div>
-
-									<?php else : ?>								
-
-										<div class="copyright-txt">&copy; <?php esc_html_e('Copyright', 'megastar') ?> <?php echo esc_html(date("Y ")); ?> <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo( 'name' );?>"> <?php echo esc_html(bloginfo('name')); ?> </a></div>
-									
-									<?php endif; ?>
-								</div>
-						</footer>
-
-					</div>
-				</div>
-			<?php endif; ?>
-
-		</div>
-
+ 
+ 
 </div><!-- #page -->
 
 <?php if (is_active_sidebar('fixed-left')) : ?>
@@ -100,7 +37,100 @@ $footer_padding = ($footer_active) ? ' tm-padding-small' : '';
 	</div>
 </div>
 <?php endif; ?>
+<footer class="footer divider layer-overlay overlay-dark" data-bg-img="<?php echo $footer_background_image ?>">
+    <div class="container pt-100 pb-30">
+        <div class="row mb-50">
+        <?php if($footer_active) { ?>
+			<?php 
 
+				$footer_columns = (get_theme_mod('megastar_footer_columns')) ? get_theme_mod('megastar_footer_columns') : '3';			
+			$col_number = $footer_columns? 12/$footer_columns : 12;
+			$footer_columns_class = "col-sm-$col_number col-md-$col_number mb-sm-60";	 
+			?>
+
+			<?php if (is_active_sidebar('footer-widgets') || is_active_sidebar('footer-widgets-2') || is_active_sidebar('footer-widgets-3') || is_active_sidebar('footer-widgets-4')) : ; ?>
+                            <div class="<?php echo esc_attr($footer_columns_class); ?>"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 1')); ?></div>
+                            <?php if($footer_columns == '2' || $footer_columns == '3' || $footer_columns == '4') { ?>
+                            <div class="<?php echo esc_attr($footer_columns_class); ?>"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 2')); ?></div>
+                            <?php } ?>
+                            <?php if($footer_columns == '3' || $footer_columns == '4') { ?>
+                            <div class="<?php echo esc_attr($footer_columns_class); ?>"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 3')); ?></div>
+                            <?php } ?>
+                            <?php if($footer_columns == '4') { ?>
+                            <div class="<?php echo esc_attr($footer_columns_class); ?>"><?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets 4')); ?></div>	
+                            <?php } ?>
+					 
+			<?php endif; 
+	} ?>
+    </div>
+       
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark"> 
+            <img class="mt-10 mb-20" alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url($megastar_logo_upload); ?>">
+            <p class="font-12">Corporis dolor soluta officiis quam, repudiandae, culpa nostrum maiores dignissimos quod expedita, aliquid magnam tempore iste minima quaerat adipisci veniam.</p>
+            <ul class="styled-icons icon-bordered small square list-inline mt-10">
+              <li><a href="#"><i class="fa fa-facebook text-white"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter text-white"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype text-white"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube text-white"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Pages</h5>
+            <?php
+            if (has_nav_menu('footer')) {
+                    echo wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'list angle-double-right list-border', 'depth' => 1 ) );  
+            }
+            ?>             
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Quick Links</h5>
+            <?php
+            if (has_nav_menu('offcanvas')) {
+                    echo wp_nav_menu( array( 'theme_location' => 'offcanvas', 'container' => false, 'menu_class' => 'list angle-double-right list-border', 'depth' => 1 ) );  
+            }
+            ?>               
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Opening Hours</h5>
+            <ul class="opening-hours list-border">
+              <li><p><span class="text-white">Monday To Friday:</span> <br>
+                9:00 am to 9:00 pm</p>
+              </li>
+              <li><p><span class="text-white">Monday To Friday:</span> <br>
+                9:00 am to 9:00 pm</p>
+              </li>
+              <li><p><span class="text-white">Monday To Friday:</span> <br>
+                9:00 am to 9:00 pm</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid copy-right p-20">
+      <div class="row text-center">
+        <div class="col-md-12">
+            <?php  if(get_theme_mod('megastar_show_copyright_text')) : ?>
+										
+                    <div class="copyright-txt"><?php echo wp_kses_post(get_theme_mod('megastar_custom_copyright_text')); ?></div>
+
+            <?php else : ?>								
+
+                    <div class="copyright-txt">&copy; <?php esc_html_e('Copyright', 'megastar') ?> <?php echo esc_html(date("Y ")); ?> <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo( 'name' );?>"> <?php echo esc_html(bloginfo('name')); ?> </a></div>
+
+            <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 <?php $megastar_top_link = get_theme_mod('megastar_top_link');
 if(!$megastar_top_link): ?>
