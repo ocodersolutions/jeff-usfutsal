@@ -81,9 +81,9 @@
     <div class="clearfix"></div>
     <div class="entry-content">
         <?php if(!is_single()) {?>
-        <p><?php echo wp_kses_post(megastar_custom_excerpt(299)); ?></p>
+        <p><?php echo custom_content_lt(get_the_content(),160); ?></p>
         <?php }else{ ?>
-        <p><?php the_content()?></p>
+        <p><?php echo custom_content_lt(get_the_content(),150)?></p>
          <?php }?>
       <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> </div>
 </article>

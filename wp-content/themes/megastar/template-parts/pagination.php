@@ -36,7 +36,7 @@ function megastar_pagination() {
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
-		printf( '<li class="pagination-prev">%s</li>' . "\n", get_previous_posts_link('<i class="uk-icon-angle-double-left"></i>') );
+		printf( '<li class="pagination-prev">%s</li>' . "\n", get_previous_posts_link('<span aria-hidden="true">«</span>') );
 
 	/**	Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {
@@ -77,7 +77,7 @@ function megastar_pagination() {
 
 	/**	Next Post Link */
 	if ( get_next_posts_link() )
-		printf( '<li class="pagination-next">%s</li>' . "\n", get_next_posts_link('<i class="uk-icon-angle-double-right"></i>') );
+		printf( '<li class="pagination-next">%s</li>' . "\n", get_next_posts_link('<span aria-hidden="true">»</span>') );
 
 	echo '</ul></nav></div>' . "\n";
 }
@@ -87,6 +87,6 @@ function megastar_pagination() {
 
 
 	<?php megastar_pagination(); ?>
-	<p class="uk-hidden"><?php posts_nav_link(); ?></p>
+	<!-- <p class="uk-hidden"><?php posts_nav_link(); ?></p> -->
 
 

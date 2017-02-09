@@ -716,7 +716,7 @@ class Image_Gallery_Text_Widget extends WP_Widget {
             <div class="item">
                 <img src="<?php the_post_thumbnail_url(array(365,230));?>" alt="">
                 <h4 class="title"><?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?></h4>
-                <p><?php the_excerpt();?></p>
+                <p><?php echo custom_content_lt(get_the_excerpt(),140);?></p>
             </div>
         <?php endwhile; ?>
         </div>
