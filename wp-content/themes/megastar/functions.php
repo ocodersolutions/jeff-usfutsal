@@ -101,6 +101,7 @@ if (!function_exists('megastar_setup')) :
 
         if (function_exists('add_image_size')) {
             add_image_size('megastar-blog', 810, 350, true); // Standard Blog Image
+            add_image_size('megastar-single', 847, 565, false); // Standard Blog Image
         }
 
         // This theme uses wp_nav_menu() in one location.
@@ -1100,6 +1101,7 @@ register_sidebar(array(
     'before_title' => '<div class="section-content">',
     'after_title' => ''
 ));
+
 function latest_news_sc(){
     $lt_new_Qr = new WP_Query(array(
                 'posts_per_page' => 5,
@@ -1124,7 +1126,7 @@ function latest_news_sc(){
                                         <li><i class="fa fa-calendar mr-5"></i> <?php the_date( 'M  d/Y');?></li>
                                         <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
                                       </ul>
-                                      <p><?php the_excerpt();?></p>
+                                      <p><?php echo custom_content_lt(get_the_excerpt(),150);?></p>
                                       <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="<?php the_permalink(); ?>">Read More</a> </div>
                                     </div>
                                 </div>
@@ -1316,10 +1318,12 @@ class Widget_Latest_Post extends WP_Widget {
         
         <?php while ( $r->have_posts() ) : $r->the_post(); ?>
             <article class="post media-post clearfix pb-0 mb-10">
-                <a class="post-thumb" href="<?php the_permalink(); ?>"><img src="https://placehold.it/75x75" alt=""></a>
+                <?php if(has_post_thumbnail()){?>
+                <a class="post-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array(75,75) );?></a>
+                <?php }?>
                 <div class="post-right">
                   <h5 class="post-title mt-0"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h5>
-                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                  <p><?php echo custom_excerpt_lt(megastar_custom_excerpt(),40) ?></p>
                 <?php if ( $show_date ) : ?>
                     <span class="post-date"><?php echo get_the_date(); ?></span>
                 <?php endif; ?>
@@ -1367,3 +1371,30 @@ function register_Widget_Latest_Post() {
     
 }
 add_action( 'widgets_init', 'register_Widget_Latest_Post' );
+
+/* custom display form comment*/
+function wpb_move_comment_field_to_bottom( $fields ) {
+
+$comment_field = $fields['comment'];
+
+unset( $fields['comment'] );
+
+$fields['comment'] = $comment_field;
+
+return $fields;
+
+}
+ 
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+
+/* function custom the_excerpt with limit charracter*/
+function custom_excerpt_lt ($content,$limit){
+    $custom_excerpt =  mb_strimwidth($content, 0, $limit, '...');
+    return $custom_excerpt;
+}
+function custom_content_lt ($content,$limit){
+    
+    $custom_excerpt =  mb_strimwidth($content, 0, $limit, '.');
+    return $custom_excerpt;
+}

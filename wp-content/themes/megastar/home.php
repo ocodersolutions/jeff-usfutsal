@@ -12,7 +12,7 @@
  * @package megastar
  */
 
-get_header();
+get_header('sport');
 
 // Layout
 $megastar_layout = (get_post_meta( get_the_ID(), 'megastar_layout', true )) ? get_post_meta( get_the_ID(), 'megastar_layout', true ) : get_theme_mod('megastar_blog_layout', 'sidebar-right');

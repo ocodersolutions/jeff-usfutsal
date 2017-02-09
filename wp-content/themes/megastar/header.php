@@ -40,7 +40,7 @@
 	
 	<?php get_template_part('template-parts/slider');	?>	
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content fdfdfd">
 
 		<div class="mainbody-wrapper" id="tmMainBody">
 			<?php // Layout

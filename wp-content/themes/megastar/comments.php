@@ -1,9 +1,9 @@
 <?php 
 
 function megastar_comment( $comment, $args, $depth ) {
-   $GLOBALS['comment'] = $comment; ?>
+   $GLOBALS['comment'] = $comment;?>
 
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+	<!-- <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 
 		<article class="uk-comment" id="comment-<?php comment_ID(); ?>"> 
 		 
@@ -21,6 +21,19 @@ function megastar_comment( $comment, $args, $depth ) {
 			<?php endif; ?>
 
 		</article>
+	</li> -->
+	<li>
+        <div class="media comment-author">
+        	<a class="media-left" href="#"><?php echo get_avatar($comment, $size = '10','',$alt ='', array('class'=>'img-thumbnail')); ?></a>
+          <div class="media-body">
+            <h5 class="media-heading comment-heading"><?php if($comment->comment_author_url == '' || $comment->comment_author_url == 'http://Website'){ echo get_comment_author(); } else { echo get_comment_author(); } ?> says:</h5>
+            <div class="comment-date"><?php printf(esc_html__('%1$s', 'megastar'), get_comment_date('d/m/Y')) ?></div>
+            <?php comment_text() ?>
+            <a class="replay-icon pull-right text-theme-colored" href="#"> <i class="fa fa-commenting-o text-theme-colored"></i> Replay</a> 
+			
+            </div>
+        </div>
+      </li>	
 	<?php
 }
 
@@ -28,9 +41,9 @@ function megastar_comment( $comment, $args, $depth ) {
 
 <div class="uk-clearfix"></div>
 
-<hr class="uk-article-divider">
 
-<div id="comments">
+
+<div class="comments-area">
 
 	<?php
 		if ( post_password_required() ) { ?>
@@ -42,26 +55,26 @@ function megastar_comment( $comment, $args, $depth ) {
 	
 	<?php if ( have_comments() ) : ?>
 		
-		<div class="uk-margin itemComments">
-
-			<h3 class="uk-h3"><?php comments_number(esc_html__('Comments', 'megastar'), esc_html__('1 Comment', 'megastar'), esc_html__('% Comments', 'megastar') );?></h3>
-		
-			<div class="navigation">
-				<div class="next-posts"><?php previous_comments_link() ?></div>
-				<div class="prev-posts"><?php next_comments_link() ?></div>
-			</div>
-		
-			<ul class="uk-comment-list">
-				 <?php wp_list_comments(array( 'callback' => 'megastar_comment' )); ?>
-			</ul>
-		
-			<div class="navigation">
-				<div class="next-posts"><?php previous_comments_link() ?></div>
-				<div class="prev-posts"><?php next_comments_link() ?></div>
-			</div>
+		<div class="comments-area">
+    		<h5 class="comments-title">Comments</h5>
+				
+				<div class="navigation">
+					<div class="next-posts"><?php previous_comments_link() ?></div>
+					<div class="prev-posts"><?php next_comments_link() ?></div>
+				</div>
+			
+				<ul class="comment-list">
+					 <?php wp_list_comments(array( 'callback' => 'megastar_comment' )); ?>
+				</ul>
+			
+				<div class="navigation">
+					<div class="next-posts"><?php previous_comments_link() ?></div>
+					<div class="prev-posts"><?php next_comments_link() ?></div>
+				</div>
+			
 		</div>
 
-		<hr class="uk-article-divider">
+		
 		
 	 <?php else : // this is displayed if there are no comments so far ?>
 	
@@ -78,9 +91,8 @@ function megastar_comment( $comment, $args, $depth ) {
 		
 <?php if ( comments_open() ) : ?>
 
-	<div class="comments-reply">
-
-	<?php
+	<div class="comment-box">
+		<?php
 
 		// Load WP Comment Reply JS
 		wp_enqueue_script( 'comment-reply' );
@@ -90,29 +102,35 @@ function megastar_comment( $comment, $args, $depth ) {
 
 		//Custom Fields
 		$fields =  array(
-			'author' => '<div id="respond-inputs" class="uk-grid"><p class="uk-width-1-3"><input name="author" type="text" placeholder="' . esc_html__('Name (required)', 'megastar') . '" size="30"' . $aria_req . '  class="uk-width-1-1" /></p>',
+			'author' => '<div class="col-sm-6 pt-0 pb-0"><div class="form-group"><input name="author" type="text" placeholder="' . esc_html__('Enter Name', 'megastar') . '" size="30"' . $aria_req . '  class="form-control" /></div>',
 			
-			'email'  => '<p class="uk-width-1-3"><input name="email" type="text" placeholder="' . esc_html__('E-Mail (required)', 'megastar') . '" size="30"' . $aria_req . '  class="uk-width-1-1" /></p>',
+			'email'  => '<div class="form-group"><input name="email" type="text" placeholder="' . esc_html__('Enter Email', 'megastar') . '" size="30"' . $aria_req . '  class="form-control" /></div>',
 			
-			'url'    => '<p class="uk-width-1-3"><input name="url" type="text" placeholder="' . esc_html__('Website', 'megastar') . '" size="30" class="uk-width-1-1" /></p></div>',
+			'url'    => '<div class="form-group"><input name="url" type="text" placeholder="' . esc_html__('Website', 'megastar') . '" size="30" class="form-control" /></div></div>',
 		);
 
 		//Comment Form Args
         $comments_args = array(
-        	'class_form' => 'uk-form',
+        	'comment_notes_before' => '',
+        	'comment_notes_after' => '',
+        	'class_form' => '',
+        	'id_form' => 'comment-form',
+			'title_reply'   => esc_html__('Leave a Comment', 'megastar'),
+			'title_reply_before' => '<h5>',
+			'title_reply_after' => '</h5>',
+			'comment_field' => '<div  class="col-sm-6"><div class="form-group"><textarea id="comment" class="form-control" placeholder="'.esc_html__('Enter Message', 'megastar').'" name="comment" aria-required="true" rows="7" tabindex="4"></textarea></div>',
 			'fields'        => $fields,
-			'title_reply'   => esc_html__('Leave a reply', 'megastar'),
-			'comment_field' => '<div id="respond-textarea"><p class="uk-width-1-1"><textarea id="comment" class="uk-width-1-1" placeholder="'.esc_html__('Your comment here (required)', 'megastar').'" name="comment" aria-required="true" cols="58" rows="10" tabindex="4"></textarea></p></div>',
-			'label_submit'  => esc_html__('Submit Comment','megastar'),
-			'class_submit' => 'uk-button uk-button-primary uk-button-large',
+			'label_submit'=> 'Submit',
+			'class_submit' => 'btn btn-dark btn-flat pull-right m-0',
+			'submit_button' => '<div class="form-group">
+            <input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />
+        </div></div>',
 		);
 		
 		// Show Comment Form
 		comment_form($comments_args);
 	?>
-
-	</div>	
-
+	</div>
 <?php endif;  ?>
 
 </div>

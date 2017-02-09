@@ -128,7 +128,7 @@
                     </ul>
                 </div>
                 <div class="box-hover-effect effect1 mb-15">
-                    <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="http://placehold.it/300x115" alt="..."></a> </div>
+                    <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/2.jpg" alt="..."></a> </div>
                     <h5 class="text-uppercase letter-space-1 mb-0">adipisicing elit</h5>
                     <ul>
                       <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>

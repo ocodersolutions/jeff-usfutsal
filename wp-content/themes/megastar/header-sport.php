@@ -36,9 +36,9 @@
 	
 	<?php get_template_part('template-parts/slider');	?>	
 
-	<div id="content" class="site-content">
-
-		<div class="mainbody-wrapper" id="tmMainBody">
+	<section>
+	
+      <div class="container mt-30 mb-30 pt-30 pb-30">
 			<?php // Layout
 				$megastar_layout_container = (get_post_meta( get_the_ID(), 'megastar_layout', true ) != 'full') ? 'uk-container uk-container-center' : 'uk-container-fullwidth';
 			?>
