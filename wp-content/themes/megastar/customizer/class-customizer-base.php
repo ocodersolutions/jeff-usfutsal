@@ -165,33 +165,33 @@ class megastar_Customizer_Base {
 
 
 		//titlebar section
-//		$this->wp_customize->add_section('titlebar', array(
-//			'title' => esc_html_x('Titlebar', 'backend', 'megastar'),
-//			'priority' => 31
-//		));
+		$this->wp_customize->add_section('titlebar', array(
+			'title' => esc_html_x('Titlebar', 'backend', 'megastar'),
+			'priority' => 31
+		));
 
 		$this->wp_customize->add_setting('megastar_global_header', array(
 			'default' => 'title',
 			'sanitize_callback' => 'megastar_sanitize_choices'
 		));
-//		$this->wp_customize->add_control('megastar_global_header', array(
-//			'label'    => esc_html_x('Titlebar Layout', 'backend', 'megastar'),
-//			'section'  => 'titlebar',
-//			'settings' => 'megastar_global_header', 
-//			'type'     => 'select',
-//			'priority' => 1,
-//			'choices'  => array(
+		$this->wp_customize->add_control('megastar_global_header', array(
+			'label'    => esc_html_x('Titlebar Layout', 'backend', 'megastar'),
+			'section'  => 'titlebar',
+			'settings' => 'megastar_global_header', 
+			'type'     => 'select',
+			'priority' => 1,
+			'choices'  => array(
 //				'title'               => esc_html_x('Titlebar (Left Align)', 'backend', 'megastar'),
-//				'featuredimagecenter' => esc_html_x('Titlebar (Center Align)', 'backend', 'megastar'),
-//				'notitle'             => esc_html_x('No Titlebar', 'backend', 'megastar')
-//			)
-//		));
-//
-//
-//		$this->wp_customize->add_setting('megastar_titlebar_style', array(
-//			'default' => 'titlebar-dark',
-//			'sanitize_callback' => 'megastar_sanitize_choices'
-//		));
+				'featuredimagecenter' => esc_html_x('Titlebar (Center Align)', 'backend', 'megastar'),
+				'notitle'             => esc_html_x('No Titlebar', 'backend', 'megastar')
+			)
+		));
+
+
+		$this->wp_customize->add_setting('megastar_titlebar_style', array(
+			'default' => 'titlebar-dark',
+			'sanitize_callback' => 'megastar_sanitize_choices'
+		));
 //		$this->wp_customize->add_control('megastar_titlebar_style', array(
 //			'label'    => esc_html_x('Titlebar Style', 'backend', 'megastar'),
 //			'section'  => 'titlebar',
@@ -204,20 +204,22 @@ class megastar_Customizer_Base {
 //			)
 //		));
 //
-//		$this->wp_customize->add_setting( 'megastar_titlebar_bg_image' , array(
-//			'sanitize_callback' => 'esc_url'
-//		));
-//		$this->wp_customize->add_control( new WP_Customize_Image_Control( $this->wp_customize, 'megastar_titlebar_bg_image', array(
-//			'priority' => 1,
-//		    'label'    => esc_html_x( 'Titlebar Background', 'backend', 'megastar' ),
-//		    'section'  => 'titlebar',
-//		    'settings' => 'megastar_titlebar_bg_image'
-//		)));
+		$this->wp_customize->add_setting( 'megastar_titlebar_bg_image' , array(
+			'sanitize_callback' => 'esc_url'
+		));
+ 		
+ 		$this->wp_customize->add_control( new WP_Customize_Image_Control( $this->wp_customize, 'megastar_titlebar_bg_image', array(
+			'priority' => 1,
+		    'label'    => esc_html_x( 'Titlebar Background', 'backend', 'megastar' ),
+		    'section'  => 'titlebar',
+		    'settings' => 'megastar_titlebar_bg_image'
+		)));
 
 //		$this->wp_customize->add_setting('megastar_blog_title', array(
 //			'default' => esc_html_x('Blog', 'backend', 'megastar'),
 //			'sanitize_callback' => 'esc_attr'
 //		));
+//		
 //		$this->wp_customize->add_control('megastar_blog_title', array(
 //			'priority' => 2,
 //		    'label'    => esc_html_x('Blog Title: ', 'backend', 'megastar'),
@@ -238,22 +240,22 @@ class megastar_Customizer_Base {
 //			));
 //		}
 //		
-//		$this->wp_customize->add_setting('megastar_right_element', array(
-//			'default' => 'back_button',
-//			'sanitize_callback' => 'megastar_sanitize_choices'
-//		));
-//		$this->wp_customize->add_control('megastar_right_element', array(
-//			'label'    => esc_html_x('Right Element', 'backend', 'megastar'),
-//			'section'  => 'titlebar',
-//			'settings' => 'megastar_right_element', 
-//			'type'     => 'select',
-//			'priority' => 5,
-//			'choices'  => array(
-//				0             => esc_html_x('Nothing', 'backend', 'megastar'),
-//				'back_button' => esc_html_x('Back Button', 'backend', 'megastar'),
-//				'breadcrumb'  => esc_html_x('Breadcrumb', 'backend', 'megastar')
-//			)
-//		));
+		$this->wp_customize->add_setting('megastar_right_element', array(
+			'default' => 'back_button',
+			'sanitize_callback' => 'megastar_sanitize_choices'
+		));
+		$this->wp_customize->add_control('megastar_right_element', array(
+			'label'    => esc_html_x('Right Element', 'backend', 'megastar'),
+			'section'  => 'titlebar',
+			'settings' => 'megastar_right_element', 
+			'type'     => 'select',
+			'priority' => 5,
+			'choices'  => array(
+				0             => esc_html_x('Nothing', 'backend', 'megastar'),
+				'back_button' => esc_html_x('Back Button', 'backend', 'megastar'),
+				'breadcrumb'  => esc_html_x('Breadcrumb', 'backend', 'megastar')
+			)
+		));
 
 
 
@@ -479,14 +481,19 @@ class megastar_Customizer_Base {
 			)
 		)));
 
-
+                // footer appearance
+		$this->wp_customize->add_section('toolbar', array(
+			'title' => esc_html_x('Toolbar', 'backend', 'megastar'),
+			'description' => esc_html_x( 'All Megastar theme specific settings.', 'backend', 'megastar' ),
+			'priority' => 999
+		));
 		$this->wp_customize->add_setting('megastar_toolbar', array(
 			'default' => 0,
 			'sanitize_callback' => 'megastar_sanitize_choices'
 		));
 		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_toolbar', array(
 			'label'    => esc_html_x('Show Toolbar', 'backend', 'megastar'),
-			'section'  => 'layout',
+			'section'  => 'toolbar',
 			'settings' => 'megastar_toolbar', 
 			'type'     => 'select',
 			'choices'  => array(
@@ -495,6 +502,7 @@ class megastar_Customizer_Base {
 			)
 		)));
 
+                
 
 		$this->wp_customize->add_setting('megastar_toolbar_left', array(
 			'default' => 'tagline',
@@ -502,14 +510,88 @@ class megastar_Customizer_Base {
 		));
 		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_toolbar_left', array(
 			'label'           => esc_html_x('Toolbar Left Area', 'backend', 'megastar'),
-			'section'         => 'layout',
+			'section'         => 'toolbar',
 			'settings'        => 'megastar_toolbar_left', 
 			'active_callback' => 'megastar_toolbar_check',
 			'type'            => 'select',
 			'choices'         => $this->megastar_toolbar_left_elements()
 		)));
+                $this->wp_customize->add_setting('megastar_facebook_link', array(
+                    'default' => "#",
+                    'transport' => 'refresh',
+                ));
+		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_facebook_link', array(
+			'label'    => esc_html_x('Facebook Link', 'backend', 'megastar'),
+			'section'  => 'toolbar',
+			'settings' => 'megastar_facebook_link', 
+			'type'     => 'text',
+                        'description' => "leave it blank to remove the link."
 
-
+			 
+		)));
+                $this->wp_customize->add_setting('megastar_twitter_link', array(
+                    'default' => "#",
+                    'transport' => 'refresh',
+                ));
+		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_twitter_link', array(
+			'label'    => esc_html_x('Twitter Link', 'backend', 'megastar'),
+			'section'  => 'toolbar',
+			'settings' => 'megastar_twitter_link', 
+			'type'     => 'text',
+                    'description' => "leave it blank to remove the link."
+			 
+		)));
+                $this->wp_customize->add_setting('megastar_instagram_link', array(
+                    'default' => "#",
+                    'transport' => 'refresh',
+                ));
+		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_instagram_link', array(
+			'label'    => esc_html_x('Instagram Link', 'backend', 'megastar'),
+			'section'  => 'toolbar',
+			'settings' => 'megastar_instagram_link', 
+			'type'     => 'text',
+                    'description' => "leave it blank to remove the link."
+			 
+		)));
+                $this->wp_customize->add_setting('megastar_linked_link', array(
+                    'default' => "#",
+                    'transport' => 'refresh',
+                ));
+		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_linked_link', array(
+			'label'    => esc_html_x('Linked Link', 'backend', 'megastar'),
+			'section'  => 'toolbar',
+			'settings' => 'megastar_linked_link', 
+			'type'     => 'text',
+                    'description' => "leave it blank to remove the link."
+			 
+		)));
+                $this->wp_customize->add_setting('megastar_toolbar_email', array(
+                    'default' => get_option("admin_email"),// "admin@host.com",
+                    'transport' => 'refresh',
+                ));
+		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_toolbar_email', array(
+			'label'    => esc_html_x('Toolbar Email', 'backend', 'megastar'),
+			'section'  => 'toolbar',
+			'settings' => 'megastar_toolbar_email', 
+			'type'     => 'text',
+                    'description' => "leave it blank to remove from toolbar."
+			 
+		)));
+                 $this->wp_customize->add_setting('megastar_toolbar_tel', array(
+                    'default' => "123-456-789",
+                    'transport' => 'refresh',
+                ));
+		$this->wp_customize->add_control(new WP_Customize_Control( $this->wp_customize, 'megastar_toolbar_tel', array(
+			'label'    => esc_html_x('Toolbar Phone', 'backend', 'megastar'),
+			'section'  => 'toolbar',
+			'settings' => 'megastar_toolbar_tel', 
+			'type'     => 'text',
+                    'description' => "leave it blank to remove from toolbar."
+			 
+		)));
+                
+                
+                
 		$this->wp_customize->add_setting('megastar_toolbar_left_custom', array(
 			'sanitize_callback' => 'megastar_sanitize_textarea'
 		));
@@ -668,118 +750,118 @@ class megastar_Customizer_Base {
 
 
 		// Add header background color setting and control.
-		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'header_background_color', array(
-			'default'           => '#ffffff',
-			'sanitize_callback' => 'megastar_sanitize_rgba_color',
-			'css_map' => array(
-				'background-color' => array(
-					'.tm-headerbar'
-				),
-				'border-top-color|darken(5)' => array(
-					'.header-style2 .menu-wrapper'
-				)
-			)
-		)));
-
-		$this->wp_customize->add_control(new megastar_Alpha_Color_Control( $this->wp_customize, 'header_background_color', array(
-			'label'       => esc_html_x('Header Background Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'header_background_color', array(
+//			'default'           => '#ffffff',
+//			'sanitize_callback' => 'megastar_sanitize_rgba_color',
+//			'css_map' => array(
+//				'background-color' => array(
+//					'.tm-headerbar'
+//				),
+//				'border-top-color|darken(5)' => array(
+//					'.header-style2 .menu-wrapper'
+//				)
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new megastar_Alpha_Color_Control( $this->wp_customize, 'header_background_color', array(
+//			'label'       => esc_html_x('Header Background Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
 
         // Add menu color setting and control.
-		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'navbar_nav_color', array(
-			'default'           => '#888888',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'css_map' => array(
-				'color' => array(
-					'.menuzord-menu menuzord-right > li > a'
-				),
-			)
-		)));
-
-		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'navbar_nav_color', array(
-			'label'       => esc_html_x('Main Menu Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'navbar_nav_color', array(
+//			'default'           => '#888888',
+//			'sanitize_callback' => 'sanitize_hex_color',
+//			'css_map' => array(
+//				'color' => array(
+//					'.menuzord-menu menuzord-right > li > a'
+//				),
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'navbar_nav_color', array(
+//			'label'       => esc_html_x('Main Menu Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
         // Add menu hover color setting and control.
-		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'navbar_nav_hover_color', array(
-			'default'           => '#666666',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'css_map' => array(
-				'color' => array(
-					'.uk-navbar-nav > li.uk-active > a',
-					'.uk-navbar-nav > li:hover > a',
-					'.uk-navbar-nav > li > a:focus', 
-					'.uk-navbar-nav > li.uk-open > a',
-				),
-			)
-		)));
-
-		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'navbar_nav_hover_color', array(
-			'label'       => esc_html_x('Main Menu Hover Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'navbar_nav_hover_color', array(
+//			'default'           => '#666666',
+//			'sanitize_callback' => 'sanitize_hex_color',
+//			'css_map' => array(
+//				'color' => array(
+//					'.uk-navbar-nav > li.uk-active > a',
+//					'.uk-navbar-nav > li:hover > a',
+//					'.uk-navbar-nav > li > a:focus', 
+//					'.uk-navbar-nav > li.uk-open > a',
+//				),
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'navbar_nav_hover_color', array(
+//			'label'       => esc_html_x('Main Menu Hover Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
 
 
 
 		// Dropdown background color
-        $this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'dropdown_navbar_background', array(
-			'default'           => '#ffffff',
-			'sanitize_callback' => 'megastar_sanitize_rgba_color',
-			'css_map' => array(
-				'background-color' => array(
-					'.uk-dropdown-navbar'
-				),
-				'border-left-color|darken(5)' => array(
-					'.uk-dropdown:not(.uk-dropdown-stack) > .uk-dropdown-grid > [class*=\'uk-width-\']:nth-child(n+2)'
-				)
-			)
-		)));
-
-		$this->wp_customize->add_control(new megastar_Alpha_Color_Control( $this->wp_customize, 'dropdown_navbar_background', array(
-			'label'       => esc_html_x('Dropdown Background Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//        $this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'dropdown_navbar_background', array(
+//			'default'           => '#ffffff',
+//			'sanitize_callback' => 'megastar_sanitize_rgba_color',
+//			'css_map' => array(
+//				'background-color' => array(
+//					'.uk-dropdown-navbar'
+//				),
+//				'border-left-color|darken(5)' => array(
+//					'.uk-dropdown:not(.uk-dropdown-stack) > .uk-dropdown-grid > [class*=\'uk-width-\']:nth-child(n+2)'
+//				)
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new megastar_Alpha_Color_Control( $this->wp_customize, 'dropdown_navbar_background', array(
+//			'label'       => esc_html_x('Dropdown Background Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
 
 
         // Add menu color setting and control.
-		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'nav_navbar_color', array(
-			'default'           => '#666666',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'css_map' => array(
-				'color' => array(
-					'.uk-nav-navbar > li > a',
-					'div.uk-dropdown .sub-dropdown ul > li > a',
-				),
-			)
-		)));
-
-		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'nav_navbar_color', array(
-			'label'       => esc_html_x('Dropdown Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'nav_navbar_color', array(
+//			'default'           => '#666666',
+//			'sanitize_callback' => 'sanitize_hex_color',
+//			'css_map' => array(
+//				'color' => array(
+//					'.uk-nav-navbar > li > a',
+//					'div.uk-dropdown .sub-dropdown ul > li > a',
+//				),
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'nav_navbar_color', array(
+//			'label'       => esc_html_x('Dropdown Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
         // Add menu hover color setting and control.
-		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'nav_navbar_hover_color', array(
-			'default'           => '#000000',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'css_map' => array(
-				'color' => array(
-					'.uk-nav-navbar > li > a:hover',
-					'.uk-nav-navbar > li > a:focus',
-					'div.uk-dropdown .sub-dropdown ul > li > a:hover',
-				),
-			)
-		)));
-
-		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'nav_navbar_hover_color', array(
-			'label'       => esc_html_x('Dropdown Hover Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'nav_navbar_hover_color', array(
+//			'default'           => '#000000',
+//			'sanitize_callback' => 'sanitize_hex_color',
+//			'css_map' => array(
+//				'color' => array(
+//					'.uk-nav-navbar > li > a:hover',
+//					'.uk-nav-navbar > li > a:focus',
+//					'div.uk-dropdown .sub-dropdown ul > li > a:hover',
+//				),
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'nav_navbar_hover_color', array(
+//			'label'       => esc_html_x('Dropdown Hover Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
 
 
@@ -787,40 +869,40 @@ class megastar_Customizer_Base {
 
 
         // Add page background color setting and control.
-		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'global_page_background_color', array(
-			'default'           => '#ffffff',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'css_map' => array(
-				'background-color' => array(
-					'.site',
-					'.uk-navbar-nav > li:hover > a', 
-					'.uk-navbar-nav > li > a:focus', 
-					'.uk-navbar-nav > li.uk-open > a',
-					'.uk-form select', 
-					'.uk-form textarea', 
-					'.uk-form input:not([type])', 
-					'.uk-form input[type=\'text\']', 
-					'.uk-form input[type=\'password\']', 
-					'.uk-form input[type=\'datetime\']', 
-					'.uk-form input[type=\'datetime-local\']', 
-					'.uk-form input[type=\'date\']', 
-					'.uk-form input[type=\'month\']', 
-					'.uk-form input[type=\'time\']', 
-					'.uk-form input[type=\'week\']', 
-					'.uk-form input[type=\'number\']', 
-					'.uk-form input[type=\'email\']', 
-					'.uk-form input[type=\'url\']', 
-					'.uk-form input[type=\'search\']', 
-					'.uk-form input[type=\'tel\']', 
-					'.uk-form input[type=\'color\']'
-				),
-			)
-		)));
-
-		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'global_page_background_color', array(
-			'label'       => esc_html_x('Page Background Color', 'backend', 'megastar'),
-			'section'     => 'colors',
-        )));
+//		$this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'global_page_background_color', array(
+//			'default'           => '#ffffff',
+//			'sanitize_callback' => 'sanitize_hex_color',
+//			'css_map' => array(
+//				'background-color' => array(
+//					'.site',
+//					'.uk-navbar-nav > li:hover > a', 
+//					'.uk-navbar-nav > li > a:focus', 
+//					'.uk-navbar-nav > li.uk-open > a',
+//					'.uk-form select', 
+//					'.uk-form textarea', 
+//					'.uk-form input:not([type])', 
+//					'.uk-form input[type=\'text\']', 
+//					'.uk-form input[type=\'password\']', 
+//					'.uk-form input[type=\'datetime\']', 
+//					'.uk-form input[type=\'datetime-local\']', 
+//					'.uk-form input[type=\'date\']', 
+//					'.uk-form input[type=\'month\']', 
+//					'.uk-form input[type=\'time\']', 
+//					'.uk-form input[type=\'week\']', 
+//					'.uk-form input[type=\'number\']', 
+//					'.uk-form input[type=\'email\']', 
+//					'.uk-form input[type=\'url\']', 
+//					'.uk-form input[type=\'search\']', 
+//					'.uk-form input[type=\'tel\']', 
+//					'.uk-form input[type=\'color\']'
+//				),
+//			)
+//		)));
+//
+//		$this->wp_customize->add_control(new WP_Customize_Color_Control( $this->wp_customize, 'global_page_background_color', array(
+//			'label'       => esc_html_x('Page Background Color', 'backend', 'megastar'),
+//			'section'     => 'colors',
+//        )));
 
 
         // Add global link color setting.

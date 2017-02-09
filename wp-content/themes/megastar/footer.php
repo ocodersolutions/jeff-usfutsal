@@ -68,13 +68,7 @@ $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
         <div class="col-sm-6 col-md-3">
           <div class="widget dark"> 
             <img class="mt-10 mb-20" alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url($megastar_logo_upload); ?>">
-            <p class="font-12">Corporis dolor soluta officiis quam, repudiandae, culpa nostrum maiores dignissimos quod expedita, aliquid magnam tempore iste minima quaerat adipisci veniam.</p>
-            <ul class="styled-icons icon-bordered small square list-inline mt-10">
-              <li><a href="#"><i class="fa fa-facebook text-white"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter text-white"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype text-white"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube text-white"></i></a></li>
-            </ul>
+           <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets Below Logo')); ?>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
@@ -100,17 +94,7 @@ $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
             <h5 class="widget-title line-bottom">Opening Hours</h5>
-            <ul class="opening-hours list-border">
-              <li><p><span class="text-white">Monday To Friday:</span> <br>
-                9:00 am to 9:00 pm</p>
-              </li>
-              <li><p><span class="text-white">Monday To Friday:</span> <br>
-                9:00 am to 9:00 pm</p>
-              </li>
-              <li><p><span class="text-white">Monday To Friday:</span> <br>
-                9:00 am to 9:00 pm</p>
-              </li>
-            </ul>
+            <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets Open Hour')); ?>            
           </div>
         </div>
       </div>

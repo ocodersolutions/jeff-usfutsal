@@ -7,14 +7,14 @@
 function megastar_breadcrumbs() {
 
     $showOnHome  = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
-    $delimiter   = '/'; // delimiter between crumbs
-    $home        = get_bloginfo('name'); // text for the 'Home' link
+    $delimiter   = ''; // delimiter between crumbs
+    $home        = "Home";//get_bloginfo('name'); // text for the 'Home' link
     $blog        = get_theme_mod('megastar_blog_title', 'Blog');
     $shop        = get_theme_mod('megastar_woocommerce_title', 'Shop');;
     $forums      = get_theme_mod('megastar_bbpress_title', 'Forum');;
     $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
-    $before      = '<span class="current">'; // tag before the current crumb
-    $after       = '</span>'; // tag after the current crumb
+    $before      = '<li class="active text-theme-colored"><span class="current">'; // tag before the current crumb
+    $after       = '</span></li>'; // tag after the current crumb
     $output      = array();
  
     global $post;
@@ -29,10 +29,10 @@ function megastar_breadcrumbs() {
 
     if (is_home() || is_front_page()) {
         if ($showOnHome == 1) {
-            $output[] = '<div id="tm-breadcrumb" class="tm-breadcrumb"><a href="' . esc_url($homeLink) . '">' . esc_html($home) . '</a> ' . esc_html($delimiter) . ' ' . esc_html($blog) . '</a></div>';
+            $output[] = '<ol class="breadcrumb text-white mt-10"><li><a class="text-white" href="' . esc_url($homeLink) . '">' . esc_html($home) . '</a> </li>' . esc_html($delimiter) . $before . esc_html($blog) . $after. '</ol>';
         }
     } else {
-        $output[] = '<div id="tm-breadcrumb" class="tm-breadcrumb"><a href="' . esc_url($homeLink) . '">' . esc_html($home) . '</a> ' . esc_html($delimiter) . ' ';
+        $output[] = '<ol class="breadcrumb text-white mt-10"><li><a class="text-white" href="' . esc_url($homeLink) . '">' . esc_html($home) . '</a> </li>' . esc_html($delimiter) . ' ';
 
         if (is_category()) {
             $thisCat = get_category(get_query_var('cat'), false);
@@ -44,25 +44,25 @@ function megastar_breadcrumbs() {
         } elseif ( is_search() ) {
             $output[] = $before . esc_html__('Search', 'megastar') . $after;
         } elseif ( is_day() ) {
-            $output[] = '<a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . esc_html(get_the_time('Y')) . '</a> ' . esc_html($delimiter) . ' ';
-            $output[] = '<a href="' . esc_url(get_month_link(get_the_time('Y'),get_the_time('m'))) . '">' . esc_html(get_the_time('F')) . '</a> ' . esc_html($delimiter) . ' ';
+            $output[] = '<li><a class="text-white" href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . esc_html(get_the_time('Y')) . '</a> </li>' . esc_html($delimiter) . ' ';
+            $output[] = '<li><a class="text-white" href="' . esc_url(get_month_link(get_the_time('Y'),get_the_time('m'))) . '">' . esc_html(get_the_time('F')) . '</a> </li>' . esc_html($delimiter) . ' ';
             $output[] = $before . get_the_time('d') . $after;
 
         } elseif ( is_month() ) {
-            $output[] = '<a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . esc_html(get_the_time('Y')) . '</a> ' . esc_html($delimiter) . ' ';
+            $output[] = '<li><a class="text-white" href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . esc_html(get_the_time('Y')) . '</a> </li>' . esc_html($delimiter) . ' ';
             $output[] = $before . esc_html(get_the_time('F')) . $after;
 
         } elseif ( is_year() ) {
             $output[] = $before . esc_html(get_the_time('Y')) . $after;
 
         } elseif( class_exists('Woocommerce') && is_shop() ) {
-            $output[] = $before . '<a href="' . esc_url($shopLink) . '">' . esc_html($shop) . '</a>' . $after;
+            $output[] = $before . '<li><a class="text-white" href="' . esc_url($shopLink) . '">' . esc_html($shop) . '</a></li>' . $after;
 
         } elseif( class_exists('Woocommerce') && is_product() ) {
-            $output[] = '<a href="' . esc_url($shopLink) . '">' . esc_html($shop) . '</a> ' . esc_html($delimiter) . ' ' . $before . esc_html(get_the_title()) . $after;
+            $output[] = '<li><a class="text-white" href="' . esc_url($shopLink) . '">' . esc_html($shop) . '</a> </li>' . esc_html($delimiter) . ' ' . $before . esc_html(get_the_title()) . $after ;
 
         } elseif( class_exists('bbPress') && is_bbpress() ) {
-            $output[] = '<a href="' . esc_url($forumLink) . '">' . esc_html($forums) . '</a> ' . esc_html($delimiter) . ' ' . $before . esc_html(get_the_title()) . $after . '</a>';
+            $output[] = '<li><a class="text-white" href="' . esc_url($forumLink) . '">' . esc_html($forums) . '</a> </li>' . esc_html($delimiter) . ' ' . $before . esc_html(get_the_title()) . $after  ;
 
         } elseif ( is_single() && !is_attachment() ) {
             if ( get_post_type() != 'post' ) {
@@ -94,7 +94,7 @@ function megastar_breadcrumbs() {
             $breadcrumbs = array();
             while ($parent_id) {
                 $page = get_page($parent_id);
-                $breadcrumbs[] = '<a href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html(get_the_title($page->ID)) . '</a>';
+                $breadcrumbs[] = '<li><a class="text-white" href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html(get_the_title($page->ID)) . '</a></li>';
                 $parent_id  = $page->post_parent;
             }
             $breadcrumbs = array_reverse($breadcrumbs);
@@ -116,7 +116,7 @@ function megastar_breadcrumbs() {
         if ( get_query_var('paged') ) {
             $output[] = ' (' . esc_html__('Page', 'megastar') . ' ' . esc_html(get_query_var('paged')) . ')';
         }
-        $output[] = '</div>';
+        $output[] = '</ol>';
     }
 
     return implode("\n", $output);
