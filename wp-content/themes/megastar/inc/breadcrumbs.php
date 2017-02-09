@@ -65,6 +65,7 @@ function megastar_breadcrumbs() {
             $output[] = '<li><a class="text-white" href="' . esc_url($forumLink) . '">' . esc_html($forums) . '</a> </li>' . esc_html($delimiter) . ' ' . $before . esc_html(get_the_title()) . $after  ;
 
         } elseif ( is_single() && !is_attachment() ) {
+
             if ( get_post_type() != 'post' ) {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
@@ -75,7 +76,7 @@ function megastar_breadcrumbs() {
                 $cat = get_the_category(); $cat = $cat[0];
                 $cats = get_category_parents($cat, TRUE, ' ' . esc_html($delimiter) . ' ');
             if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
-                $output[] = $cats; // No need to escape here
+                $output[] = '<li>'.$cats.'</li>'; // No need to escape here
             if ($showCurrent == 1) $output[] = $before . esc_html(get_the_title()) . $after;
             }
 
@@ -87,9 +88,11 @@ function megastar_breadcrumbs() {
             if ($showCurrent == 1) $output[] = $before . esc_html(get_the_title()) . $after;
 
         } elseif ( is_page() && !$post->post_parent ) {
+
             if ($showCurrent == 1) $output[] = $before . esc_html(get_the_title()) . $after;
 
         } elseif ( is_page() && $post->post_parent ) {
+
             $parent_id  = $post->post_parent;
             $breadcrumbs = array();
             while ($parent_id) {
