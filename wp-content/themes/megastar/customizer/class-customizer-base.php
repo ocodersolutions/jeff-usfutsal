@@ -165,33 +165,33 @@ class megastar_Customizer_Base {
 
 
 		//titlebar section
-//		$this->wp_customize->add_section('titlebar', array(
-//			'title' => esc_html_x('Titlebar', 'backend', 'megastar'),
-//			'priority' => 31
-//		));
+		$this->wp_customize->add_section('titlebar', array(
+			'title' => esc_html_x('Titlebar', 'backend', 'megastar'),
+			'priority' => 31
+		));
 
 		$this->wp_customize->add_setting('megastar_global_header', array(
 			'default' => 'title',
 			'sanitize_callback' => 'megastar_sanitize_choices'
 		));
-//		$this->wp_customize->add_control('megastar_global_header', array(
-//			'label'    => esc_html_x('Titlebar Layout', 'backend', 'megastar'),
-//			'section'  => 'titlebar',
-//			'settings' => 'megastar_global_header', 
-//			'type'     => 'select',
-//			'priority' => 1,
-//			'choices'  => array(
+		$this->wp_customize->add_control('megastar_global_header', array(
+			'label'    => esc_html_x('Titlebar Layout', 'backend', 'megastar'),
+			'section'  => 'titlebar',
+			'settings' => 'megastar_global_header', 
+			'type'     => 'select',
+			'priority' => 1,
+			'choices'  => array(
 //				'title'               => esc_html_x('Titlebar (Left Align)', 'backend', 'megastar'),
-//				'featuredimagecenter' => esc_html_x('Titlebar (Center Align)', 'backend', 'megastar'),
-//				'notitle'             => esc_html_x('No Titlebar', 'backend', 'megastar')
-//			)
-//		));
-//
-//
-//		$this->wp_customize->add_setting('megastar_titlebar_style', array(
-//			'default' => 'titlebar-dark',
-//			'sanitize_callback' => 'megastar_sanitize_choices'
-//		));
+				'featuredimagecenter' => esc_html_x('Titlebar (Center Align)', 'backend', 'megastar'),
+				'notitle'             => esc_html_x('No Titlebar', 'backend', 'megastar')
+			)
+		));
+
+
+		$this->wp_customize->add_setting('megastar_titlebar_style', array(
+			'default' => 'titlebar-dark',
+			'sanitize_callback' => 'megastar_sanitize_choices'
+		));
 //		$this->wp_customize->add_control('megastar_titlebar_style', array(
 //			'label'    => esc_html_x('Titlebar Style', 'backend', 'megastar'),
 //			'section'  => 'titlebar',
@@ -204,20 +204,22 @@ class megastar_Customizer_Base {
 //			)
 //		));
 //
-//		$this->wp_customize->add_setting( 'megastar_titlebar_bg_image' , array(
-//			'sanitize_callback' => 'esc_url'
-//		));
-//		$this->wp_customize->add_control( new WP_Customize_Image_Control( $this->wp_customize, 'megastar_titlebar_bg_image', array(
-//			'priority' => 1,
-//		    'label'    => esc_html_x( 'Titlebar Background', 'backend', 'megastar' ),
-//		    'section'  => 'titlebar',
-//		    'settings' => 'megastar_titlebar_bg_image'
-//		)));
+		$this->wp_customize->add_setting( 'megastar_titlebar_bg_image' , array(
+			'sanitize_callback' => 'esc_url'
+		));
+ 		
+ 		$this->wp_customize->add_control( new WP_Customize_Image_Control( $this->wp_customize, 'megastar_titlebar_bg_image', array(
+			'priority' => 1,
+		    'label'    => esc_html_x( 'Titlebar Background', 'backend', 'megastar' ),
+		    'section'  => 'titlebar',
+		    'settings' => 'megastar_titlebar_bg_image'
+		)));
 
 //		$this->wp_customize->add_setting('megastar_blog_title', array(
 //			'default' => esc_html_x('Blog', 'backend', 'megastar'),
 //			'sanitize_callback' => 'esc_attr'
 //		));
+//		
 //		$this->wp_customize->add_control('megastar_blog_title', array(
 //			'priority' => 2,
 //		    'label'    => esc_html_x('Blog Title: ', 'backend', 'megastar'),
@@ -238,22 +240,22 @@ class megastar_Customizer_Base {
 //			));
 //		}
 //		
-//		$this->wp_customize->add_setting('megastar_right_element', array(
-//			'default' => 'back_button',
-//			'sanitize_callback' => 'megastar_sanitize_choices'
-//		));
-//		$this->wp_customize->add_control('megastar_right_element', array(
-//			'label'    => esc_html_x('Right Element', 'backend', 'megastar'),
-//			'section'  => 'titlebar',
-//			'settings' => 'megastar_right_element', 
-//			'type'     => 'select',
-//			'priority' => 5,
-//			'choices'  => array(
-//				0             => esc_html_x('Nothing', 'backend', 'megastar'),
-//				'back_button' => esc_html_x('Back Button', 'backend', 'megastar'),
-//				'breadcrumb'  => esc_html_x('Breadcrumb', 'backend', 'megastar')
-//			)
-//		));
+		$this->wp_customize->add_setting('megastar_right_element', array(
+			'default' => 'back_button',
+			'sanitize_callback' => 'megastar_sanitize_choices'
+		));
+		$this->wp_customize->add_control('megastar_right_element', array(
+			'label'    => esc_html_x('Right Element', 'backend', 'megastar'),
+			'section'  => 'titlebar',
+			'settings' => 'megastar_right_element', 
+			'type'     => 'select',
+			'priority' => 5,
+			'choices'  => array(
+				0             => esc_html_x('Nothing', 'backend', 'megastar'),
+				'back_button' => esc_html_x('Back Button', 'backend', 'megastar'),
+				'breadcrumb'  => esc_html_x('Breadcrumb', 'backend', 'megastar')
+			)
+		));
 
 
 
