@@ -4,8 +4,8 @@ Contributors: ModernTribe, barry.hughes, bordoni, borkweb, brianjessee, brook-tr
 Tags: events, calendar, event, venue, organizer, dates, date, google maps, conference, workshop, concert, meeting, seminar, summit, class, modern tribe, tribe, widget, pro
 Donate link: http://m.tri.be/29
 Requires at least: 3.9
-Tested up to: 4.6.1
-Stable tag: 4.3.4
+Tested up to: 4.7
+Stable tag: 4.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -202,6 +202,24 @@ Our Premium Plugins:
 * <a href="http://m.tri.be/fa" target="_blank">The Events Calendar: Filter Bar</a>
 
 == Changelog ==
+
+= [4.4.1] 2017-01-26 =
+
+* Tweak - Improve recurrence User Experience, easier interface for types of Rule [71501]
+* Fix - Single Event recurrency on the same day as the original Event will be created properly [68496]
+* Fix - Prevent legacy recurrent events to trigger Notices on front-end
+
+= [4.4] 2017-01-09 =
+
+* Feature - Added the [tribe_event_inline] shortcode to allow rendering of single event data anywhere shortcodes are allowed! [44803]
+* Feature - Add support for featured events [65898]
+* Feature - Allow deleting recurrences and exclusions [67110]
+* Feature - Make it possible to adjust map pins via the theme customizer [65889]
+* Tweak - Improvements to event-related aspects of the theme customizer [67485]
+* Tweak - Consolidated and simplified the UI when creating recurring events [67110, 66713-66716, 67122, 67123, 67143]
+* Tweak - Improved ordering of information in the advanced events list widget [36589]
+* Tweak - Cleanup of the plugin CSS to help make customization easier [33842]
+* Tweak - Added support for featured events to the [tribe_events] shortcode (using featured="on" type syntax) [65901]
 
 = [4.3.4] 2016-12-20 =
 
