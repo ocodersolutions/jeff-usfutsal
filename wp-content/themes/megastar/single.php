@@ -15,9 +15,11 @@ else{
 	$mainlayout = 'uk-width-medium-1-1';
 	$sidebarlayout = 'uk-hidden';
 } ?>
-
+<?php if(in_category('services',$post)){
+		get_template_part( '/template-parts/single-service');
+	}else{?>	
 <div class="row" data-uk-grid-match="" data-uk-grid-margin="" >
-
+	
 	<?php if($sidebar == 'sidebar-left'){ ?>
 	<div class="col-sm-12 col-md-3">
 		<div class="sidebar sidebar-left mt-sm-30">
@@ -127,5 +129,5 @@ else{
 	<?php } ?>
 
 </div>
-
+<?php }?>
 <?php get_footer('sport'); ?>

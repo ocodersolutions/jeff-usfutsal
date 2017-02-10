@@ -16,66 +16,33 @@ get_header();
 // }
 
 ?>
-
-<!-- <section>
-    <div class="container mt-30 mb-30 pt-30 pb-30">
-        <div class="row ">
-	        <?php if($megastar_layout == 'sidebar-left'){ ?>
-	        <div class="col-sm-12 col-md-3">
-	        	<div class="sidebar sidebar-left mt-sm-30">
-				<?php get_sidebar(); ?>
-				</div>
-			</div>
-	        <?php } ?>
-			
-			<div class="<?php echo esc_attr($mainlayout); ?>">
-	            <div class="blog-posts">
-	              	<div class="col-md-12">
-                		<div class="row list-dashed">
-	                	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>
-							
-						<?php endwhile; endif; ?>
-						
-						
-						</div>
-            		</div>
-            		<?php get_template_part( 'template-parts/pagination' ); ?>
-                </div>
-            </div>
-	              
-
-			<?php if( $megastar_layout == 'sidebar-right'){ ?>
-			<div class="col-sm-12 col-md-3">
-				<div class="sidebar sidebar-right mt-sm-30">
-				<?php get_sidebar(); ?>
-				</div>
-			</div>
-			<?php } ?>
-        </div>
-    </div>
-</section>
- -->
  <section id="services" data-bg-img="images/pattern/pattern8.png">
       <div class="container">
         <div class="section-content">
           <div class="row">
+          <?php $argument = array(
+          	'category' => 'services',
+          	'posts_per_page' => 6, 
+          	'orderby' => 'date', 
+          	'order' => 'DESC'
+          );
+          $sv_post = query_posts( $argument);
+          ?>
+          	<?php if ($sv_post): foreach ($sv_post as $post) :  setup_postdata($post);
+          	?>
             <div class="col-sm-6 col-md-4">
 
               <div class="class-item box-hover-effect effect1 mb-sm-30">
 
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
+                <div class="thumb"> <a href="<?php the_permalink();?>"><img class="img-fullwidth mb-20" src="<?php echo the_post_thumbnail_url();?>" alt="..."></a> </div>
 
                 <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
 
-                  <h3 class="text-uppercase letter-space-1 mt-10">Riding on <span class="text-theme-colored">Trainer</span></h3>
+                  <h3 class="text-uppercase letter-space-1 mt-10"><?php echo str_replace(get_the_title(),'',substr(get_the_title(),0, strrpos(get_the_title(), ' ')));?> <span class="text-theme-colored"><?php echo substr(get_the_title(), strrpos(get_the_title(), ' ') + 1);?></span></h3>
 
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, alias eos dolores unde aliquid quidem soluta ducimus quod numquam veniam obcaecati ratione, tempora quibusdam </p>
+                   <p><?php echo custom_excerpt_lt(get_the_content( ),350);?></p>
 
-                  <p>aperiam voluptates id, in consectetur amet quas voluptatem, accusantium? In dignissimos eveniet voluptatem accusamus explicabo sapiente, similique minus? Dolor, vel minima.</p>
-
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
+                  <p><a href="<?php the_permalink();?>" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
 
                 </div>
 
@@ -83,85 +50,10 @@ get_header();
 
             </div>
 
-            <div class="col-sm-6 col-md-4">
-
-              <div class="class-item box-hover-effect effect1 mb-sm-30">
-
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
-
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-
-                  <h3 class="text-uppercase letter-space-1 mt-10">Start your <span class="text-theme-colored">training</span></h3>
-
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, alias eos dolores unde aliquid quidem soluta ducimus quod numquam veniam obcaecati ratione, tempora quibusdam </p>
-
-                  <p>aperiam voluptates id, in consectetur amet quas voluptatem, accusantium? In dignissimos eveniet voluptatem accusamus explicabo sapiente, similique minus? Dolor, vel minima.</p>
-
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-
-              <div class="class-item box-hover-effect effect1 mb-sm-30">
-
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
-
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-
-                  <h3 class="text-uppercase letter-space-1 mt-10">competitive <span class="text-theme-colored">swimming</span></h3>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, alias eos dolores unde aliquid quidem soluta ducimus quod numquam veniam obcaecati ratione, tempora quibusdam </p>
-
-                  <p>aperiam voluptates id, in consectetur amet quas voluptatem, accusantium? In dignissimos eveniet voluptatem accusamus explicabo sapiente, similique minus? Dolor, vel minima.</p>
-
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-
-                </div>
-
-              </div>
-
-            </div>
+            
+            <?php  endforeach;endif; ?>
           </div>
-          <div class="row mt-30">
-            <div class="col-sm-6 col-md-4">
-              <div class="class-item box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-                  <h4 class="text-uppercase letter-space-1">Riding on <span class="text-theme-colored">Trainer</span></h4>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, alias eos dolores unde aliquid quidem soluta ducimus quod numquam veniam obcaecati ratione, tempora quibusdam </p>
-                  <p>aperiam voluptates id, in consectetur amet quas voluptatem, accusantium? In dignissimos eveniet voluptatem accusamus explicabo sapiente, similique minus? Dolor, vel minima.</p>
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="class-item box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-                  <h4 class="text-uppercase letter-space-1">Start your <span class="text-theme-colored">training</span></h4>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, alias eos dolores unde aliquid quidem soluta ducimus quod numquam veniam obcaecati ratione, tempora quibusdam </p>
-                  <p>aperiam voluptates id, in consectetur amet quas voluptatem, accusantium? In dignissimos eveniet voluptatem accusamus explicabo sapiente, similique minus? Dolor, vel minima.</p>
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="class-item box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="http://placehold.it/450x361" alt="..."></a> </div>
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-                  <h4 class="text-uppercase letter-space-1">competitive <span class="text-theme-colored">swimming</span></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, alias eos dolores unde aliquid quidem soluta ducimus quod numquam veniam obcaecati ratione, tempora quibusdam </p>
-                  <p>aperiam voluptates id, in consectetur amet quas voluptatem, accusantium? In dignissimos eveniet voluptatem accusamus explicabo sapiente, similique minus? Dolor, vel minima.</p>
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
