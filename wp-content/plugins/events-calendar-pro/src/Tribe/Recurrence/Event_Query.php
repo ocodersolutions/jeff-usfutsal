@@ -67,10 +67,10 @@ class Tribe__Events__Pro__Recurrence__Event_Query {
 			$this->query->set( 'post_parent', $this->parent_event->ID );
 			$this->query->set( 'post_status', $status );
 			$this->query->set( 'posts_per_page', tribe_get_option( 'postsPerPage', 10 ) );
+			$this->query->set( 'tribe_remove_date_filters', true );
 
 			// Configure what this page actually is
 			$this->query->is_singular = false;
-
 			$this->query->is_archive = true;
 			$this->query->is_post_type_archive = true;
 
