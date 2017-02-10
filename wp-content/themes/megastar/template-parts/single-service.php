@@ -17,24 +17,25 @@
 ?>
 
 <!-- Section: About -->
-    <section id="about">
+   <section id="about">
       <div class="container">
         <div class="section-content">
           <div class="row mt-50">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="col-md-5">
               <div class="class-item box-hover-effect effect1">
                   <div class="thumb"> <a href="#">
-                    <img class="img-fullwidth mb-20" src="<?php echo get_template_directory_uri()?>/images/services/4.jpg" alt="..."></a>
+                    <img class="img-fullwidth mb-20" src="<?php the_post_thumbnail_url();?>" alt="..."></a>
                   </div>
               </div>
             </div>
             <div class="col-md-7 mt-20">
                 <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-                  <h4 class="text-uppercase letter-space-1">adipisicing <span class="text-theme-colored">elit</span></h4>
-                  <p> Quam distinctio quis perspiciatis facere accusamus perferendis eligendi odit cum nemo fugit, tenetur sequi expedita earum nobis optio tempora id repellendus? Tempora illo ad, magni iusto quas, rerum debitis id et nisi eius quod dolor eos repudiandae perferendis, consequuntur illum alias. Molestiae provident voluptate corporis quae numquam eos earum porro quia officia, maiores magni accusantium iusto similique tempora.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam corrupti quam veritatis deleniti, suscipit quo at porro! Magni modi ipsam eveniet natus architecto corporis tempore debitis dolorum sint soluta magnam, necessitatibus eaque velit nostrum id fuga ad, laborum consequuntur voluptatibus nam? Incidunt temporibus obcaecati veritatis facere accusantium provident non quibusdam.</p>
+                  <h4 class="text-uppercase letter-space-1"><?php echo str_replace(get_the_title(),'',substr(get_the_title(),0, strrpos(get_the_title(), ' ')));?> <span class="text-theme-colored"><?php echo substr(get_the_title(), strrpos(get_the_title(), ' ') + 1);?></span></h4>
+                  <p> <?php the_content()?></p>
                 </div>
             </div>
+            <?php endwhile; endif; ?>
           </div>
           <div class="row mt-30 text-justify">
             <div class="col-md-7">
