@@ -78,7 +78,7 @@ function megastar_comment( $comment, $args, $depth ) {
 			<!-- If comments are open, but there are no comments. -->
 	
 		 <?php else : // comments are closed ?>
-			<div class="uk-alert uk-alert-warning"><?php esc_html_e('Comments are closed.', 'megastar'); ?></div>
+			<!-- <div class="uk-alert uk-alert-warning"><?php esc_html_e('Comments are closed.', 'megastar'); ?></div> -->
 	
 		<?php endif; ?>
 		

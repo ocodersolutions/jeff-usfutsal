@@ -1309,7 +1309,8 @@ class Widget_Latest_Post extends WP_Widget {
             'posts_per_page'      => $number,
             'no_found_rows'       => true,
             'post_status'         => 'publish',
-            'ignore_sticky_posts' => true
+            'ignore_sticky_posts' => true,
+            'category'            => 'news'
         ) ) );
 
         if ($r->have_posts()) :

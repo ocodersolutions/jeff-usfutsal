@@ -7,54 +7,54 @@ $megastar_layout = (is_active_sidebar('blog-widgets')) ? 'sidebar-right' : 'defa
 
 
 if($megastar_layout == 'sidebar-right'){
-	$mainlayout = 'uk-width-medium-7-10 uk-row-first';
-	$sidebarlayout = 'uk-width-medium-3-10';
+	$mainlayout = 'col-md-9 blog-pull-right';
+	$sidebarlayout = 'col-sm-12 col-md-3';
 } 
 else{
-	$mainlayout = 'uk-width-medium-1-1';
-	$sidebarlayout = 'uk-hidden';
+	$mainlayout = 'col-md-10 col-md-offset-1';
+	$sidebarlayout = '';
 }
 
 ?>
 
-<div id="page-wrap" class="tm-middle uk-grid" <?php echo ($megastar_layout == 'sidebar-left' or $megastar_layout == 'sidebar-right') ? 'data-uk-grid-match' : ''; ?> data-uk-grid-margin>
-
-	<div class="tm-main <?php echo esc_attr($mainlayout); ?>">
-		<main class="tm-content">
-
-			<?php if (is_author()) { ?>
-				<div class="author-archive">
-
-					<div id="author-info" class="uk-clearfix uk-margin-large-bottom">
-					    <div class="author-image uk-float-left uk-margin-right">
-						    	<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta( 'ID' ))); ?>"><?php echo get_avatar( esc_attr(get_the_author_meta('user_email')), '80', '' ); ?></a>
-						    </div>   
-						    <div class="author-bio">
-						       <h4 class="uk-margin-small-bottom"><?php esc_html_e('About', 'megastar'); ?> <?php the_author(); ?></h4>
-						        <?php the_author_meta('description'); ?>
-						    </div>
-					</div>
-
+<section>
+    <div class="container mt-30 mb-30 pt-30 pb-30">
+        <div class="row ">
+	        <?php if($megastar_layout == 'sidebar-left'){ ?>
+	        <div class="col-sm-12 col-md-3">
+	        	<div class="sidebar sidebar-left mt-sm-30">
+				<?php get_sidebar(); ?>
 				</div>
+			</div>
+	        <?php } ?>
+			
+			<div class="<?php echo esc_attr($mainlayout); ?>">
+	            <div class="blog-posts">
+	              	<div class="col-md-12">
+                		<div class="row list-dashed">
+	                	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>
+							
+						<?php endwhile; endif; ?>
+						
+						
+						</div>
+            		</div>
+            		<?php get_template_part( 'template-parts/pagination' ); ?>
+                </div>
+            </div>
+	              
+
+			<?php if( $megastar_layout == 'sidebar-right'){ ?>
+			<div class="col-sm-12 col-md-3">
+				<div class="sidebar sidebar-right mt-sm-30">
+				<?php get_sidebar(); ?>
+				</div>
+			</div>
 			<?php } ?>
-		
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				
-				<?php get_template_part( 'template-parts/post-format/entry', get_post_format() ); ?>
-		
-			<?php endwhile; endif; ?>
-
-			<?php get_template_part( 'template-parts/pagination' ); ?>
-	
-		</main> <!-- end main -->
-	</div> <!-- end content -->
-
-	<?php if($megastar_layout == 'sidebar-right'){ ?>
-		<aside class="tm-sidebar <?php echo esc_attr($megastar_layout); ?> <?php echo esc_attr($sidebarlayout); ?>">
-			<?php get_sidebar(); ?>
-		</aside> <!-- end aside -->
-	<?php } ?>
-
-</div>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>
