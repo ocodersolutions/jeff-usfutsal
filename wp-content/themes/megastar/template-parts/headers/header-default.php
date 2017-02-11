@@ -13,17 +13,17 @@ $header_transparancy = (get_theme_mod('megastar_header_type', 'fixed') and get_t
 
     <div class="header-nav">
         <div class="header-nav-wrapper bg-light navbar-scrolltofixed" style="z-index: auto; position: static; top: auto;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="menuzord-right" class="menuzord orange no-bg menuzord-responsive" style="">
-                            <?php get_template_part('template-parts/logo-default'); ?>
-                            <?php get_template_part('template-parts/menu-primary'); ?>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="menuzord-right" class="menuzord orange no-bg menuzord-responsive" style="">
+                        <?php get_template_part('template-parts/logo-default'); ?>
+                        <?php get_template_part('template-parts/menu-primary'); ?>
 
-                        </div>
                     </div>
                 </div>
             </div>
+           
         </div> 
     </div>
 </header>

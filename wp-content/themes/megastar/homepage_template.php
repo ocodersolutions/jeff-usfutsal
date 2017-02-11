@@ -8,17 +8,17 @@
     <!-- Section: home -->
     <section id="home" class="divider">
       <div class="fullwidth-carousel">
-        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg1.jpg">
+        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg.jpg">
           <div class="display-table">
             <div class="display-table-cell">
               <div class="container pt-200 pb-200">
                 <div class="row">
                   <div class="col-md-6 col-md-offset-6 text-center">
-                    <div class="home-banner bg-dark-transparent-light p-40 pt-70 pb-70"> <span class="text-white text-uppercase font-32 letter-space-6">Taking Time Out</span>
-                      <h2 class="m-0 text-uppercaes font-60 text-theme-colored line-height-0 pt-40 pb-40 letter-space-1">TO RELAX</h2>
-                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">AND RENEW</h3>
-                      <h5 class="font-weight-300 text-white text-theme-colored text-uppercase font-32 letter-space-6">IS ESSENTIAL TO</h5>
-                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-9 line-height-0 pt-30 pb-30">LIVING WELL</h3>
+                    <div class="home-banner bg-dark-transparent-light p-40 pt-70 pb-70">
+                      <h2 class="m-0 text-uppercaes font-60 text-white line-height-0 pt-40 pb-40 letter-space-1">2017</h2>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">U.S. FUTSAL</h3>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">REGIONAL</h3>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-9 line-height-0 pt-30 pb-30">CHAMPIONSHIP</h3>
                     </div>
                   </div>
                 </div>
@@ -26,17 +26,17 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg2.jpg">
+        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg.jpg">
           <div class="display-table">
             <div class="display-table-cell">
               <div class="container pt-200 pb-200">
                 <div class="row">
                   <div class="col-md-6 col-md-offset-3 text-center">
-                    <div class="home-banner bg-dark-transparent-light p-40 pt-70 pb-70"> <span class="text-white text-uppercase font-32 letter-space-6">Taking Time Out</span>
-                      <h2 class="m-0 text-uppercaes font-60 text-theme-colored line-height-0 pt-40 pb-40 letter-space-1">TO RELAX</h2>
-                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">AND RENEW</h3>
-                      <h5 class="font-weight-300 text-white text-theme-colored text-uppercase font-32 letter-space-6">IS ESSENTIAL TO</h5>
-                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-9 line-height-0 pt-30 pb-30">LIVING WELL</h3>
+                    <div class="home-banner bg-dark-transparent-light p-40 pt-70 pb-70">
+                      <h2 class="m-0 text-uppercaes font-60 text-white line-height-0 pt-40 pb-40 letter-space-1">2017</h2>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">U.S. FUTSAL</h3>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">REGIONAL</h3>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-9 line-height-0 pt-30 pb-30">CHAMPIONSHIP</h3>
                     </div>
                   </div>
                 </div>
@@ -44,18 +44,17 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg3.jpg">
+        <div class="carousel-item bg-img-cover" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg.jpg">
           <div class="display-table">
             <div class="display-table-cell">
               <div class="container pt-200 pb-200">
                 <div class="row">
                   <div class="col-md-6 col-md-offset-6 text-center">
-                    <div class="home-banner bg-dark-transparent-light p-40 pt-70 pb-70"> <span class="text-white text-uppercase font-32 letter-space-6">Taking Time Out</span>
-                      <h2 class="m-0 text-uppercaes font-60 text-theme-colored line-height-0 pt-40 pb-40 letter-space-1">TO RELAX</h2>
-                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">AND RENEW</h3>
-                      <h5 class="font-weight-300 text-white text-theme-colored text-uppercase font-32 letter-space-6">IS ESSENTIAL TO</h5>
-                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-9 line-height-0 pt-30 pb-30">LIVING WELL</h3>
-                    </div>
+                    <div class="home-banner bg-dark-transparent-light p-40 pt-70 pb-70">
+                      <h2 class="m-0 text-uppercaes font-60 text-white line-height-0 pt-40 pb-40 letter-space-1">2017</h2>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">U.S. FUTSAL</h3>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-6 line-height-0 pt-30 pb-30">REGIONAL</h3>
+                      <h3 class="text-uppercaes m-0 font-40 text-white letter-space-9 line-height-0 pt-30 pb-30">CHAMPIONSHIP</h3>
                   </div>
                 </div>
               </div>

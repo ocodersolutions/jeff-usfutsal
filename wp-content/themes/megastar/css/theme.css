@@ -22,3 +22,24 @@ footer {
 section {
   clear: both;
 }
+.header-nav .menuzord{
+	position: static;
+	max-width: 1150px;
+	margin:0 auto;
+	float: none;
+}
+.header-nav .stylish-header{
+	min-height: 40px;
+	padding-bottom: 6px;
+}
+.header-nav .menuzord-menu > li > a{
+	padding : 15px;
+}
+.header-nav .menuzord-menu ul.dropdown{
+	top:50px;
+	width: 100%;
+}
+.header-nav .header-nav-wrapper{
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
