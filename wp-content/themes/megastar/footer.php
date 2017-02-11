@@ -93,7 +93,7 @@ $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
-            <h5 class="widget-title line-bottom">Opening Hours</h5>
+            <!-- <h5 class="widget-title line-bottom">Opening Hours</h5> -->
             <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets Open Hour')); ?>            
           </div>
         </div>

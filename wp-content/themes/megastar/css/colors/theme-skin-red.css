@@ -120,11 +120,11 @@ blockquote {
 }
 /* border-top-color */
 .stylish-header:after {
-  -webkit-border-top: 80px solid #ef2043;
-  -moz-border-top: 80px solid #ef2043;
-  -ms-border-top: 80px solid #ef2043;
-  -o-border-top: 80px solid #ef2043;
-  border-top: 80px solid #ef2043;
+  -webkit-border-top: 50px solid #ef2043;
+  -moz-border-top: 50px solid #ef2043;
+  -ms-border-top: 50px solid #ef2043;
+  -o-border-top: 50px solid #ef2043;
+  border-top: 50px solid #ef2043;
 }
 /* border-bottom-color */
 .border-bottom {
@@ -642,6 +642,64 @@ fieldset[disabled] .btn-theme-colored.focus {
   border-color: #EE163B;
 }
 /* customize css*/
+/*
+*/
+.header-nav .menuzord{
+  position: static;
+  max-width: 1150px;
+  margin:0 auto;
+  float: none;
+}
+.header-nav .stylish-header{
+  min-height: 40px;
+  padding-bottom: 6px;
+}
+.header-nav .menuzord-menu > li > a{
+  padding : 15px;
+}
+.header-nav .menuzord-menu ul.dropdown{
+  top:50px;
+  width: 100%;
+  box-shadow: inset 2px 10px 9px -8px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+.header-nav .header-nav-wrapper{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.flag{
+  width: 150px;
+  height: auto;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  padding-top: 50px;
+  background: #ef2043;
+  z-index: 999;
+}
+.flag img{
+  padding:0 20px;
+}
+.flag:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #ef2043;
+  border-right: 150px solid transparent;
+}
+.flag:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #ef2043;
+  border-left: 150px solid transparent;
+}
+/**/
 .navbar-style2 .menuzord.orange .menuzord-menu > li > a,.navbar-style2 .menuzord.orange .menuzord-menu > li.active > a,
 .menuzord.orange .menuzord-menu ul.dropdown li:hover > a{
   background: transparent !important;
@@ -674,7 +732,7 @@ fieldset[disabled] .btn-theme-colored.focus {
 .menuzord-menu ul.dropdown  li:nth-child(odd) {
     float: left;
     margin-right: 10px;
-    width: 50%x;
+    width: 50%;
     text-align: right;
 }
 .menuzord-menu ul.dropdown li:nth-child(even) {
