@@ -11,3 +11,36 @@ footer{
 section{
     clear: both;
 }
+.contact-form{
+    .gform_footer{
+        input{
+            margin: 0 !important;
+            background: #da3839;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+    }
+    @media (min-width: 768px) {
+        ul{
+            position: relative;
+        }
+        li{
+            width: 50%;
+            &.message{
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 0 !important;
+                height: 208px;
+            }
+            input{
+                width: 100% !important;
+            }
+        }
+        .gform_footer{
+            text-align: right;             
+        }
+    }
+}
