@@ -12,7 +12,7 @@ $header_transparancy = (get_theme_mod('megastar_header_type', 'fixed') and get_t
 <?php get_template_part('template-parts/toolbar'); ?>
 
     <div class="header-nav">
-        <div class="header-nav-wrapper bg-light navbar-scrolltofixed" style="z-index: auto; position: static; top: auto;">
+        <div class="header-nav-wrapper bg-light " style="z-index: auto; position: static; top: auto;">
             
                 <div class="row">
                     <div class="col-md-12">
@@ -27,5 +27,11 @@ $header_transparancy = (get_theme_mod('megastar_header_type', 'fixed') and get_t
         </div> 
     </div>
 </header>
-
+<script>
+    $(document).ready(function() {
+        $( "#menu-item-341" ).hover(function() {
+          console.log();
+        });
+    });
+</script>
 <?php // get_template_part( 'template-parts/toolbar' );  ?>

@@ -650,3 +650,10 @@ fieldset[disabled] .btn-theme-colored.focus {
 .icon-box.iconbox-theme-colored.iconbox-border {
   border-color: #abc502;
 }
+/* customize css*/
+/*
+*/
+.navbar-style2 .menuzord.orange .menuzord-menu  li  a:before,.menuzord-menu ul.dropdown li a:before {
+  background: #abc502;
+    
+}
