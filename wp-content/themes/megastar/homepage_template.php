@@ -77,32 +77,43 @@
             </div> -->
           </div>
         </div>
+
+       
         <div class="section-content">
           <div class="row mt-50">
-            <div class="col-sm-4">
-              <div class="box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_template_directory_uri(); ?>/images/services/1.jpg" alt="..."></a> </div>
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-                  <h3 class="text-uppercase letter-space-1 mt-0">Riding on <span class="text-theme-colored">Trainer</span></h3>
-                   <p>Quam distinctio quis perspiciatis facere accusamus perferendis eligendi odit cum nemo fugit, tenetur sequi expedita earum nobis optio tempora id repellendus? Tempora illo ad, magni iusto quas, rerum debitis id et nisi eius quod dolor eos repudiandae perferendis, consequuntur illum alias. Molestiae provident voluptate corporis quae numquam eos earum porro quia officia, maiores magni accusantium iusto similique tempora.</p>
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="box-hover-effect effect1 mb-sm-30">
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_template_directory_uri(); ?>/images/services/2.jpg" alt="..."></a> </div>
-                <div class="caption"> <span class="text-uppercase letter-space-1 mb-10 font-12 text-gray-silver">ipsum fugit </span>
-                  <h3 class="text-uppercase letter-space-1 mt-0">Start your <span class="text-theme-colored">training</span></h3>
-                   <p>Quam distinctio quis perspiciatis facere accusamus perferendis eligendi odit cum nemo fugit, tenetur sequi expedita earum nobis optio tempora id repellendus? Tempora illo ad, magni iusto quas, rerum debitis id et nisi eius quod dolor eos repudiandae perferendis, consequuntur illum alias. Molestiae provident voluptate corporis quae numquam eos earum porro quia officia, maiores magni accusantium iusto similique tempora.</p>
-                  <p><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-                </div>
-              </div>
-              
-            </div>
-          
-            
-            <div class="col-sm-4">
+            <?php 
+              $args = array(
+                'posts_per_page'      => 2,
+                'no_found_rows'       => true,
+                'post_status'         => 'publish',
+                'ignore_sticky_posts' => true,
+                'category_name'            => 'News'
+                );
+              query_posts( $args );
+              while ( have_posts() ) : the_post();?>
+                  <div class="col-sm-4">
+                    <div class="box-hover-effect effect1 mb-sm-30">
+                      <?php if(has_post_thumbnail()){?>
+                        <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
+                      </div>
+                      <?php }?>
+                      
+                      <div class="caption"><h3 class="text-uppercase letter-space-1 font-20 mt-0 mb-0"><?php $catName = get_the_category();
+
+                      foreach ($catName as $cat){
+                        echo $cat->name;
+                        }?></h3>
+                        <h3 class="font-16 letter-space-1 mt-0 text-theme-colored"><?php the_title();?></h3>
+                         <p><?php echo custom_excerpt_lt(get_the_content(),450);?></p>
+                        <p><a href="<?php the_permalink()?>" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
+                      </div>
+                    </div>
+                  </div>
+              <?php endwhile;
+               
+              // Reset Query
+              wp_reset_query();?>
+           <div class="col-sm-4">
               <h3 class="text-uppercase mt-0 letter-space-2">Events</h3>
               <div class="bxslider" data-count="3">
                 <div class="box-hover-effect effect1 mb-15">
@@ -140,9 +151,27 @@
         </div>
       </div>
     </section>
+    <!-- Section: Registions -->
+    <section class="divider parallax"  data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/Registration_bg1.jpg" >
+      <div class="container">
+        <h2 class="text-white title">Register now width U.S. Futsal</h2>
+        <p class="text-white mb-20">Lorem ipsum dolor sit amet, a tellus accumsan donec, velit eros curabitur risus velit placerat, enim erat et ac augue non curabitur, aliquam sit potenti mattis. Sit sed leo, vestibulum pede at congue vitae sed, at lacus ut netus placerat cursus debitis, auctor libero diam augue euismod, aenean sapien porta. Morbi velit accumsan eu dolor nulla. </p>
+        <p ><a href="#" class="btn btn-border btn-transparent btn-sm" role="button">Read More</a></p>
+      </div>
+    </section>
+
+    <!-- Section: About -->
+    <section class="bg-lighter">
+      <div class="container">
+        <h2 class="mt-0 mb-0">What is Futsal ?</h2>
+        <h5 class="sub-title">About U.S. Futsal</h5>
+        <p class=" mb-20">Lorem ipsum dolor sit amet, a tellus accumsan donec, velit eros curabitur risus velit placerat, enim erat et ac augue non curabitur, aliquam sit potenti mattis. Sit sed leo, vestibulum pede at congue vitae sed, at lacus ut netus placerat cursus debitis, auctor libero diam augue euismod, aenean sapien porta. Morbi velit accumsan eu dolor nulla. </p>
+        <p class="text-center"><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
+      </div>
+    </section>
 
     <!-- Section: Clients -->
-    <section class="divider parallax layer-overlay overlay-dark"  data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg7.jpg" >
+    <section class="divider parallax"  data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/Registration_bg1.jpg" >
       <div class="container">
        <?php dynamic_sidebar('carousel_client'); ?>
         <!-- <div class="section-content">
@@ -163,16 +192,16 @@
     </section>
     
     <!-- Section: Pricing Table -->
-    <section id="pricing">
+    <!-- <section id="pricing">
       <div class="container pb-40">
         <div class="section-title">
           <div class="row">
-            <?php dynamic_sidebar('block-tittle-2'); ?>
-            <<!-- div class="col-md-8 col-md-offset-2 text-center">
+            <?php //dynamic_sidebar('block-tittle-2'); ?> -->
+            <!--< div class="col-md-8 col-md-offset-2 text-center">
               <h2 class="text-uppercase title">Membership <span class="text-black font-weight-300"> Packages</span></h2>
               <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
             </div> -->
-          </div>
+          <!-- </div>
         </div>
         <div class="section-content">
           <div class="row">
@@ -227,19 +256,14 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     
     <!-- Section: Team -->
-    <section id="trainer" class="bg-light">
+    <!-- <section id="trainer" class="bg-light">
       <div class="container pb-70">
         <div class="section-title text-center">
           <div class="row">
           <?php dynamic_sidebar('block-tittle-3'); ?>
-            <!-- <div class="col-md-8 col-md-offset-2">
-              <h2 class="title text-uppercase">Our Sports<span class="text-black font-weight-300"> Trainers</span></h2>
-              <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
-            </div>
-          </div> -->
         </div>
         <div class="section-content">
           <div class="row">
@@ -320,230 +344,52 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="achievements" class="divider parallax layer-overlay overlay-deep" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/bg2.jpg">
+    <!-- <section id="achievements" class="divider parallax layer-overlay overlay-deep" data-bg-img="<?php //echo get_template_directory_uri(); ?>/images/bg/bg2.jpg">
       <div class="container pt-60 pb-60">
         <div class="section-title text-center">
           <div class="row">
-          <?php dynamic_sidebar('block-tittle-4'); ?>
-            <!-- <div class="col-md-8 col-md-offset-2">
-              <h2 class="title text-uppercase">Our <span class="text-black font-weight-300">Achievements</span></h2>
-              <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
-            </div> -->
+          <?php //dynamic_sidebar('block-tittle-4'); ?>
           </div>
         </div>
-        <?php dynamic_sidebar('carousel_archievement'); ?>
-        <!-- <div class="section-content">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="owl-carousel-4col text-center" data-nav="true">
-                <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
-                  <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
-                </div>
-                <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
-                  <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
-                </div>
-                <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
-                  <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
-                </div>
-                <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
-                  <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
-                </div>
-                <div class="item">
-                  <a href="#"> <img style="width: 55%; margin: auto;" src="<?php echo get_template_directory_uri(); ?>/images/achievements/1.png" alt=""></a>
-                  <h5 class="letter-space-2 text-uppercase text-theme-colored">2010 Best Trainer Award</h5>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div> -->
+        <?php //dynamic_sidebar('carousel_archievement'); ?>
       </div>
-    </section>
+    </section> -->
 
     <!-- Section: Features -->
-    <section id="features" class="bg-lighter">
+    <!-- <section id="features" class="bg-lighter">
       <div class="container pb-40">
         <div class="section-title text-center">
           <div class="row">
-            <?php dynamic_sidebar('block-tittle-5'); ?>
-            <!-- <div class="col-md-8 col-md-offset-2">
-              <h2 class="text-uppercase title">Our <span class="text-black font-weight-300"> Features</span></h2>
-              <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
-            </div> -->
+            <?php //dynamic_sidebar('block-tittle-5'); ?>
           </div>
         </div>
         <div class="section-content">
           <div class="row multi-row-clearfix">
-            <?php dynamic_sidebar('feature_box'); ?>
-            <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center">
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-strength text-white"></i> </a>
-                <h4 class="Personal trainer text-uppercase"><strong>Weight Loss Specialized</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-sports-6 text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Golf Fitness Specialized</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-sport text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Youth Exercise Specialized</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-sports-1 text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Behavior Specialized</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-symbol text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Life Time Academy</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-player text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Truly Personal</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-signs text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Certifications</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-              <div class="icon-box text-center"> 
-                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-sports-gym-2 text-white"></i> </a>
-                <h4 class="icon-box-title mt-15 mb-10 text-uppercase"><strong>Insurance</strong></h4>
-                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
-              </div>
-            </div>
-          </div> -->
+            <?php //dynamic_sidebar('feature_box'); ?>
         </div>
       </div>
-    </section>
-
+    </section> -->
+  
     <!-- Section: Blog   -->
     <section id="blog">
-      <div class="container-fluid pb-40">
+      <div class="container pb-40">
         <div class="section-title text-center">
           <div class="row">
             <?php dynamic_sidebar('block-tittle-6'); ?>
-            <!-- <div class="col-md-8 col-md-offset-2">
-              <h2 class="title text-uppercase">Latest <span class="text-black font-weight-300">News</span></h2>
-              <p class="text-uppercase letter-space-1">Join our Training Club and Rise to a New Challenge</p>
-            </div> -->
+           
           </div>
         </div>
         <div class="section-content">
           <div class="row">
             <div class="col-md-12">
-              <div class="owl-carousel-4col">
-                <!-- <div class="items">
-                  <div class="schedule-box maxwidth500 mb-30 bg-lighter">
-                    <div class="thumb"> <img class="img-fullwidth" alt="" src="http://placehold.it/350x233">
-                      <div class="overlay"> <a href="#"><i class="fa fa-search mr-5 bg-theme-colored"></i></a> </div>
-                    </div>
-                    <div class="schedule-details clearfix p-20  pt-10">
-                      <h5 class="font-16 title text-uppercase"><a href="#">Riding on Trainer</a></h5>
-                      <p>with <a href="#">Corks</a> &amp; <a href="#">Camelia</a></p>
-                      <ul class="list-inline font-10 mt-15 mb-20 text-gray-silver">
-                        <li><i class="fa fa-calendar mr-5"></i> DEC 31/2016</li>
-                        <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet elit. Cum veritatis sequi nulla nihil, dolor voluptatum nemo adipisci eligendi! Sed nisi perferendis, totam harum dicta.</p>
-                      <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="#">Read More</a> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="items">
-                  <div class="schedule-box maxwidth500 mb-30 bg-lighter">
-                    <div class="thumb"> <img class="img-fullwidth" alt="" src="http://placehold.it/350x233">
-                      <div class="overlay"> <a href="#"><i class="fa fa-search mr-5 bg-theme-colored"></i></a> </div>
-                    </div>
-                    <div class="schedule-details clearfix p-20 pt-10">
-                      <h5 class="font-16 title text-uppercase"><a href="#">voluptatum nemo</a></h5>
-                      <p>with <a href="#">Corks</a> &amp; <a href="#">Camelia</a></p>
-                      <ul class="list-inline font-10 mt-15 mb-20 text-gray-silver">
-                        <li><i class="fa fa-calendar mr-5"></i> DEC 31/2016</li>
-                        <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet elit. Cum veritatis sequi nulla nihil, dolor voluptatum nemo adipisci eligendi! Sed nisi perferendis, totam harum dicta.</p>
-                      <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="#">Read More</a> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="items">
-                  <div class="schedule-box maxwidth500 mb-30 bg-lighter">
-                    <div class="thumb"> <img class="img-fullwidth" alt="" src="http://placehold.it/350x233">
-                      <div class="overlay"> <a href="#"><i class="fa fa-search mr-5 bg-theme-colored"></i></a> </div>
-                    </div>
-                    <div class="schedule-details clearfix p-20 pt-10">
-                      <h5 class="font-16 title text-uppercase"><a href="#">Nisi perferendis</a></h5>
-                      <p>with <a href="#">Corks</a> &amp; <a href="#">Camelia</a></p>
-                      <ul class="list-inline font-10 mt-15 mb-20 text-gray-silver">
-                        <li><i class="fa fa-calendar mr-5"></i> DEC 31/2016</li>
-                        <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet elit. Cum veritatis sequi nulla nihil, dolor voluptatum nemo adipisci eligendi! Sed nisi perferendis, totam harum dicta.</p>
-                      <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="#">Read More</a> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="items">
-                  <div class="schedule-box maxwidth500 mb-30 bg-lighter">
-                    <div class="thumb"> <img class="img-fullwidth" alt="" src="http://placehold.it/350x233">
-                      <div class="overlay"> <a href="#"><i class="fa fa-search mr-5 bg-theme-colored"></i></a> </div>
-                    </div>
-                    <div class="schedule-details clearfix p-20 pt-10">
-                      <h5 class="font-16 title text-uppercase"><a href="#">Totam harum dicta</a></h5>
-                      <p>with <a href="#">Corks</a> &amp; <a href="#">Camelia</a></p>
-                      <ul class="list-inline font-10 mt-15 mb-20 text-gray-silver">
-                        <li><i class="fa fa-calendar mr-5"></i> DEC 31/2016</li>
-                        <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet elit. Cum veritatis sequi nulla nihil, dolor voluptatum nemo adipisci eligendi! Sed nisi perferendis, totam harum dicta.</p>
-                      <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="#">Read More</a> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="items">
-                  <div class="schedule-box maxwidth500 mb-30 bg-lighter">
-                    <div class="thumb"> <img class="img-fullwidth" alt="" src="http://placehold.it/350x233">
-                      <div class="overlay"> <a href="#"><i class="fa fa-search mr-5 bg-theme-colored"></i></a> </div>
-                    </div>
-                    <div class="schedule-details clearfix p-20 pt-10">
-                      <h5 class="font-16 title text-uppercase"><a href="#">Kick Class</a></h5>
-                      <p>with <a href="#">Corks</a> &amp; <a href="#">Camelia</a></p>
-                      <ul class="list-inline font-10 mt-15 mb-20 text-gray-silver">
-                        <li><i class="fa fa-calendar mr-5"></i> DEC 31/2016</li>
-                        <li><i class="fa fa-map-marker mr-5"></i> 89 Newyork City.</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet elit. Cum veritatis sequi nulla nihil, dolor voluptatum nemo adipisci eligendi! Sed nisi perferendis, totam harum dicta.</p>
-                      <div class="mt-10"> <a class="btn btn-theme-colored btn-sm btn-flat" href="#">Read More</a> </div>
-                    </div>
-                  </div>
-                </div> -->
-
-                <?php echo do_shortcode('[latest_news_shortcode]'); ?>
+              <div id="out_nav" class="owl-carousel-4col" data-nav="true">
+                <?php //echo do_shortcode('[latest_news_shortcode]'); ?>
+                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
+                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
+                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
+                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
               </div>
             </div>
           </div>

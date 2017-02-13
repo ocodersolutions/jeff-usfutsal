@@ -1,3 +1,15 @@
 /* ========================================================================
    Use this file to add custom CSS easily
  ========================================================================== */
+ #out_nav .owl-controls .owl-nav > .owl-next{
+	right: auto;
+	left: 100%;
+ }
+ #out_nav .owl-controls .owl-nav > .owl-prev{
+	left: auto;
+	right: 100%;
+ }
+ #out_nav .owl-controls .owl-nav > div{
+ 	background:transparent;
+ }
+ 

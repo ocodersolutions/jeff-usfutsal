@@ -276,6 +276,7 @@ function my_function_name() {
     wp_enqueue_style('css-plugin-collections', get_stylesheet_directory_uri() . '/css/css-plugin-collections.css');
     wp_enqueue_style('menuzord-boxed', get_stylesheet_directory_uri() . '/css/menuzord-skins/menuzord-boxed.css');
     wp_enqueue_style('style-main', get_stylesheet_directory_uri() . '/css/style-main.css');
+    wp_enqueue_style('style-custom', get_stylesheet_directory_uri() . '/css/custom.css');
     
     $theme_style = get_theme_mod('main_themes_color', get_theme_support( 'main_themes_color', 'lemon' ) );
     wp_enqueue_style('theme-skin-lemon', get_stylesheet_directory_uri() . '/css/colors/theme-skin-'.$theme_style.'.css');
