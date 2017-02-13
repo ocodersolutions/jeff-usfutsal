@@ -162,7 +162,20 @@ function checkForChanges()
         jQuery('header').css('margin-bottom',0);
     }
     setTimeout(checkForChanges, 100);
+
 }
+
+function setContactFormHeight(){
+    if(jQuery(window).width() > 767){
+     jQuery('.message textarea').height(jQuery("#gform_fields_1").height() - 48);
+    } 
+}
+    jQuery(document).ready(function(){
+      setContactFormHeight();
+    })
+  jQuery(window).resize(function(){setContactFormHeight()})
+
+
 /*!
  * imagesLoaded PACKAGED v4.1.0
  * JavaScript is all like "You images are done yet or what?"
