@@ -37,6 +37,11 @@ class megastar_menu_walker extends Walker_Nav_Menu {
 
         // home/fronpage item
         } 
+         if($args->walker->has_children && $depth == 0){
+             
+            $classes[] = 'has_columns';
+           
+        }
 		/**
 		 * Filter the arguments for a single nav menu item.
 		 *

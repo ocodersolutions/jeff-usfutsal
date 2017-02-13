@@ -112,7 +112,7 @@ Boxed Skin
   padding-left: 40%;
 }
 .menu-item-left{
-  width: calc(37% - 31px);
+  width: calc(50% - 31px);
   float: left;
 }
 .menu-item-right{
@@ -147,7 +147,7 @@ Boxed Skin
 }
 /* Megamenu */
 .menuzord-menu > li > .megamenu{
-	top: 79px;
+	top: 50px;
 }
 
 /* Search Field */
@@ -215,4 +215,7 @@ Boxed Skin
 	.menuzord-responsive .menuzord-menu > li > a{
 		padding: 12px 20px !important;
 	}
+}   
+.has_columns .two-columns li{
+    position: relative;
 }
