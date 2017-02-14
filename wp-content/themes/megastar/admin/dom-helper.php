@@ -83,10 +83,10 @@ class megastar_nav_dom {
             $j = $i;
             if($i%2 == 0){
                 $class = "menu-item-left ";
-                $u->addClass("list-unstyled  two-columns pull-right");
+                $u->addClass("menuzord-menu menuzord-right menuzord-indented two-columns pull-right");
                 
             }else{
-                $u->addClass("list-unstyled  two-columns pull-left");
+                $u->addClass("menuzord-menu menuzord-right menuzord-indented  two-columns pull-left");
 //                if($count_li > 1)
 //                $j = 2;
             }
