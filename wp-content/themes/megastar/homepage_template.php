@@ -70,11 +70,6 @@
         <div class="section-title text-center">
           <div class="row">
             <?php dynamic_sidebar('block-tittle-1'); ?>
-            <!-- <div class="col-md-8 col-md-offset-2">
-              <h2 class="title text-uppercase">Welcome to <span class="text-black font-weight-300">Sports Club</span></h2>
-              <h6 class="letter-space-8 font-weight-400 text-uppercase">Exercise is really important to me</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe perferendis eveniet odio, ea. Architecto, nulla quis laboriosam voluptatibus dolorum consequuntur voluptate minima veritatis debitis sed molestias ullam pariatur similique vel dignissimos odit, natus ipsam nam temporibus, laudantium enim, sunt dolores!</p>
-            </div> -->
           </div>
         </div>
 
@@ -114,38 +109,10 @@
               // Reset Query
               wp_reset_query();?>
            <div class="col-sm-4">
-              <h3 class="text-uppercase mt-0 letter-space-2">Events</h3>
-              <div class="bxslider" data-count="3">
-                <div class="box-hover-effect effect1 mb-15">
-                  <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/1.jpg" alt="..."></a> </div>
-                    <h5 class="text-uppercase letter-space-1 mb-0">Riding on Trainer</h5>
-                    <ul>
-                      <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
-                    </ul>
-                </div>
-                <div class="box-hover-effect effect1 mb-15">
-                  <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/2.jpg." alt="..."></a> </div>
-                    <h5 class="text-uppercase letter-space-1 mb-0">Start your training</h5>
-                    <ul>
-                      <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
-                    </ul>
-                </div>
-                <div class="box-hover-effect effect1 mb-15">
-                    <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/3.jpg" alt="..."></a> </div>
-                    <h5 class="text-uppercase letter-space-1 mb-0">Golf Fitness training</h5>
-                    <ul>
-                      <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
-                    </ul>
-                </div>
-                <div class="box-hover-effect effect1 mb-15">
-                    <div class="thumb"> <a href="#"><img class="img-fullwidth mb-0" src="<?php echo get_template_directory_uri(); ?>/images/events/2.jpg" alt="..."></a> </div>
-                    <h5 class="text-uppercase letter-space-1 mb-0">adipisicing elit</h5>
-                    <ul>
-                      <li class="text-gray-silver font-12"><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm <i class="fa fa-map-marker ml-10"></i> 25 Newyork City.</li>
-                    </ul>
-                </div>
+           <?php dynamic_sidebar('events_sidebar'); ?>
+              
                 
-              </div>
+              
             </div>
           </div>
         </div>

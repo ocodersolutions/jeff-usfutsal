@@ -102,6 +102,7 @@ if (!function_exists('megastar_setup')) :
         if (function_exists('add_image_size')) {
             add_image_size('megastar-blog', 810, 350, true); // Standard Blog Image
             add_image_size('megastar-single', 847, 565, false); // Standard Blog Image
+            add_image_size('megastar-event', 360, 138, false); // Standard Blog Image
         }
 
         // This theme uses wp_nav_menu() in one location.
@@ -1103,7 +1104,17 @@ register_sidebar(array(
     'before_widget' => '<div class="widget">',
     'after_widget' => '</div>',
     'before_title' => '<div class="section-content">',
-    'after_title' => ''
+    'after_title' => '</div>'
+));
+// sidebar events
+register_sidebar(array(
+    'name' => 'Events Sidebar',
+    'id' => 'events_sidebar',
+    'description' => 'These a put Widgets event list for the Single Page',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h3 >',
+    'after_title' => '</h3>'
 ));
 
 function latest_news_sc(){
@@ -1403,3 +1414,6 @@ function custom_content_lt ($content,$limit){
     $custom_excerpt =  mb_strimwidth($content, 0, $limit, '.');
     return $custom_excerpt;
 }
+/*
+ * customize event list
+*/

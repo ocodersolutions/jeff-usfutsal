@@ -1790,8 +1790,8 @@ var THEMEMASCOT = {};
                         dots: data_dots,
                         nav: data_nav,
                         navText: [
-                            '<i class="pe-7s-angle-left"></i>',
-                            '<i class="pe-7s-angle-right"></i>'
+                            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
                         ],
                         responsive: {
                             0: {
