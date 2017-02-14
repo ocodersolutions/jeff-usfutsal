@@ -136,7 +136,7 @@
         <p class="text-center"><a href="#" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
       </div>
     </section>
-
+  
     <!-- Section: Clients -->
     <section class="divider parallax"  data-bg-img="<?php echo get_template_directory_uri(); ?>/images/bg/Registration_bg1.jpg" >
       <div class="container">
@@ -353,10 +353,10 @@
             <div class="col-md-12">
               <div id="out_nav" class="owl-carousel-4col" data-nav="true">
                 <?php //echo do_shortcode('[latest_news_shortcode]'); ?>
-                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
-                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
-                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
-                <div class="item"><img src="http://placehold.it/320x200" alt=""></div>
+                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g1.jpg" alt=""></div>
+                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g3.jpg" alt=""></div>
+                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g2.jpg" alt=""></div>
+                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g4.jpg" alt=""></div>
               </div>
             </div>
           </div>

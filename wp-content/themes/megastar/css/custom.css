@@ -4,12 +4,31 @@
  #out_nav .owl-controls .owl-nav > .owl-next{
 	right: auto;
 	left: 100%;
+	background-image: url(../images/pattern/arrow_next.png);
  }
  #out_nav .owl-controls .owl-nav > .owl-prev{
 	left: auto;
 	right: 100%;
+	background-image: url(../images/pattern/arrow_prev.png);
  }
  #out_nav .owl-controls .owl-nav > div{
  	background:transparent;
+ 	background-position: top center;
+	width: 50px;
+	height: 100px;
+	background-size: 100% 100%;
  }
- 
+ #out_nav .owl-controls .owl-nav > div > span{
+ 	width: 40px;
+ 	height: 80px;
+ 	position: relative;
+ }
+ #out_nav .owl-controls .owl-nav > .owl-prev > span.arrow-left{
+ 	background-image: url(../images/pattern/arrow_prev.png);
+ }
+ #out_nav .owl-carousel .owl-item .item{
+ 	background-color: #888;
+ }
+ #out_nav .owl-carousel .owl-item.active .item{
+	border: 2px solid red;
+ }
