@@ -12,6 +12,11 @@ Boxed Skin
 .header-nav .stylish-header{
     min-height: 40px;
     padding-bottom: 6px;
+    z-index: 1000;
+    min-width: 168px;
+}
+.header-nav .stylish-header span{
+ line-height: 45px;
 }
 /* Menu items */
 .menuzord-menu > li{
@@ -220,7 +225,7 @@ Boxed Skin
     }
 }   
 
-@media (max-width: 768px){
+@media (max-width: 800px){
     .menu-item-left{
         width: 100%;
         float: left;
@@ -231,6 +236,48 @@ Boxed Skin
         width: 100%;
         float: left;
         padding-left: 0;
+    }
+    .menuzord.menuzord-responsive .showhide{
+        position: absolute;
+        padding-top: 25px;
+        right: 10px;
+        z-index: 1001;
+    }
+    .menuzord.menuzord-responsive .showhide em{
+        background: #fff;
+    }
+    .header-nav .stylish-header{
+        width: 100%;
+        text-align: center;
+        padding-left: 40px;
+    }
+    .header-nav .stylish-header span{
+        line-height: 45px;
+    }
+    
+    .flag.logo_flag{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 66px;
+        z-index: 1002;
+        left: 25px;
+    }
+    .flag.logo_flag img{
+        padding: 0;
+    }
+    .flag.logo_flag:after,.flag.logo_flag:before{
+        content: "";
+        background: transparent;
+        border: none;
+    }
+    .header-nav .stylish-header span {
+        line-height: 68px;
+        font-size: 51px;
+    }
+}
+@media (max-width: 470px){
+     .header-nav .stylish-header span {
+         font-size: 31px;
     }
 }
 .menuzord-menu .has_columns .megamenu .two-columns  li{

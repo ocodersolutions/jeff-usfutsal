@@ -1826,11 +1826,11 @@ section > .container-fluid {
   -ms-border-left: 0px solid transparent;
   -o-border-left: 0px solid transparent;
   border-left: 0px solid transparent;
-  -webkit-border-right: 55px solid transparent;
-  -moz-border-right: 55px solid transparent;
-  -ms-border-right: 55px solid transparent;
-  -o-border-right: 55px solid transparent;
-  border-right: 55px solid transparent;
+  -webkit-border-right: 120px solid transparent;
+  -moz-border-right: 120px solid transparent;
+  -ms-border-right: 120px solid transparent;
+  -o-border-right: 120px solid transparent;
+  border-right: 120px solid transparent;
   bottom: 0;
 }
 @media only screen and (max-width: 400px) {
