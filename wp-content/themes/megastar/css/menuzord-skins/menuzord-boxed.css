@@ -112,12 +112,15 @@ Boxed Skin
   padding-left: 40%;
 }
 .menu-item-left{
-  width: calc(50% - 31px);
+  width: 50%;
   float: left;
+  border-right: 3px solid #ccc;
+  padding-right: 15px;
 }
 .menu-item-right{
-  width: calc(30% - 31px);
+  width: 50%;
   float: left;
+  padding-left: 15px;
 }
 .line-middle{
   margin: 0 30px;
@@ -218,4 +221,8 @@ Boxed Skin
 }   
 .has_columns .two-columns li{
     position: relative;
+}
+.has_columns .two-columns ul.dropdown{
+     top: 20px;
+     
 }

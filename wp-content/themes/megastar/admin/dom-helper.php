@@ -87,14 +87,14 @@ class megastar_nav_dom {
                 
             }else{
                 $u->addClass("list-unstyled  two-columns pull-left");
-                if($count_li > 1)
-                $j = 2;
+//                if($count_li > 1)
+//                $j = 2;
             }
             $div->append('<div class="'.$class.'"></div>')->children('div')->item($j)->append($u);
-             if($i%2 == 0 && $count_li > 1){        
-                $div->append('<div class="line-middle"></div>');
-
-            }
+//             if($i%2 == 0 && $count_li > 1){        
+//                $div->append('<div class="line-middle"></div>');
+//
+//            }
         }
     }
 
