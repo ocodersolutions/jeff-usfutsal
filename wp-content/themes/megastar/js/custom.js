@@ -1789,6 +1789,7 @@ var THEMEMASCOT = {};
                         margin: 15,
                         dots: data_dots,
                         nav: data_nav,
+ 
                         navText: [
                             '',
                             ''
@@ -1811,7 +1812,7 @@ var THEMEMASCOT = {};
                                 center: false
                             },
                             960: {
-                                items: 3
+                                items: 4
                             },
                             1170: {
                                 items: 4
@@ -1819,10 +1820,24 @@ var THEMEMASCOT = {};
                             1300: {
                                 items: 4
                             }
+                        },
+                        onInitialized: function(e){
+                            var i = this._current > 1 ? this._current + Math.floor(this._current/2) : 1;
+                            jQuery('.owl-carousel-4col .owl-item').removeClass('current-active');
+                            jQuery('.owl-carousel-4col .owl-item').eq(i).addClass('current-active');
                         }
+                         
                     });
                 });
             }
+            //active carousel
+  
+    jQuery('.owl-carousel-4col').on('translate.owl.carousel', function(e){
+       
+        var i =Math.floor(e.page.size   /2);
+        jQuery('.owl-carousel-4col .owl-item').removeClass('current-active');
+        jQuery('.owl-carousel-4col .owl-item').eq(e.item.index + i ).addClass('current-active');
+     });
 
             var $owl_carousel_5col = $('.owl-carousel-5col');
             if ( $owl_carousel_5col.length > 0 ) {
