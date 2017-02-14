@@ -120,11 +120,11 @@ blockquote {
 }
 /* border-top-color */
 .stylish-header:after {
-  -webkit-border-top: 50px solid #ef2043;
-  -moz-border-top: 50px solid #ef2043;
-  -ms-border-top: 50px solid #ef2043;
-  -o-border-top: 50px solid #ef2043;
-  border-top: 50px solid #ef2043;
+  -webkit-border-top: 130px solid #ef2043;
+  -moz-border-top: 130px solid #ef2043;
+  -ms-border-top: 130px solid #ef2043;
+  -o-border-top: 130px solid #ef2043;
+  border-top: 130px solid #ef2043;
 }
 /* border-bottom-color */
 .border-bottom {

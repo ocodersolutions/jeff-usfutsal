@@ -155,13 +155,15 @@ window.Modernizr=function(e,t,n){function r(e){b.cssText=e}function o(e,t){retur
  checkForChanges();
 function checkForChanges()
 {
+    var time = 100;
     var $element = jQuery(".megamenu:visible"); 
-    if($element && $element.is(':visible')){
+    if($element && $element.is(':visible') && !jQuery('.showhide').is(':visible')){
+        time = 8;
         jQuery('header').css('margin-bottom',$element.height() + 40) 
     }else{
         jQuery('header').css('margin-bottom',0);
     }
-    setTimeout(checkForChanges, 100);
+    setTimeout(checkForChanges, time);
 
 }
 
