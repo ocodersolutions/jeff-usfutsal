@@ -1155,9 +1155,61 @@ function latest_news_sc(){
         ob_end_clean();
  
         return $list_post;
+    // Reset Query
+    wp_reset_query();
 }
 add_shortcode( 'latest_news_shortcode', 'latest_news_sc' );
 
+
+/*
+ * Shortcode News in Homepage
+*/
+function Recent_news_sc(){
+    $argsNews = array(
+        'posts_per_page'      => 2,
+        'no_found_rows'       => true,
+        'post_status'         => 'publish',
+        'ignore_sticky_posts' => true,
+        'category_name'            => 'News'
+        );
+    ob_start();
+    $rc_news_Qr = new WP_Query ($argsNews);
+    if ( $rc_news_Qr->have_posts() ) :
+      while ( $rc_news_Qr->have_posts() ) : $rc_news_Qr->the_post();?>
+          <div class="col-sm-6">
+            <div class="box-hover-effect effect1 mb-sm-30">
+              <?php if(has_post_thumbnail()){?>
+                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
+              </div>
+              <?php }?>
+              
+              <div class="caption"><h3 class="text-uppercase letter-space-1 font-20 mt-0 mb-0"><?php $catName = get_the_category();
+
+              foreach ($catName as $cat){
+                echo $cat->name;
+                }?></h3>
+                <h3 class="font-16 letter-space-1 mt-0 text-theme-colored"><?php the_title();?></h3>
+                 <p><?php echo custom_excerpt_lt(get_the_content(),450);?></p>
+                <p><a href="<?php the_permalink()?>" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
+              </div>
+            </div>
+          </div>
+      <?php endwhile;
+       endif;
+       $rc_news_list = ob_get_contents(); 
+ 
+        ob_end_clean();
+ 
+        return $rc_news_list;
+
+      // Reset Query
+      wp_reset_query();
+}
+add_shortcode( 'recent_news_shortcode', 'Recent_news_sc' );
+
+/*
+ *
+*/
 add_filter( 'widget_text', 'do_shortcode' ); 
 // Assign the tag for our shortcode and identify the function that will run. 
 add_shortcode( 'template_directory_uri', 'wpse61170_template_directory_uri' );

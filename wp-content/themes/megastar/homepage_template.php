@@ -77,37 +77,7 @@
         <div class="section-content">
           <div class="row mt-50">
             <?php 
-              $args = array(
-                'posts_per_page'      => 2,
-                'no_found_rows'       => true,
-                'post_status'         => 'publish',
-                'ignore_sticky_posts' => true,
-                'category_name'            => 'News'
-                );
-              query_posts( $args );
-              while ( have_posts() ) : the_post();?>
-                  <div class="col-sm-4">
-                    <div class="box-hover-effect effect1 mb-sm-30">
-                      <?php if(has_post_thumbnail()){?>
-                        <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
-                      </div>
-                      <?php }?>
-                      
-                      <div class="caption"><h3 class="text-uppercase letter-space-1 font-20 mt-0 mb-0"><?php $catName = get_the_category();
-
-                      foreach ($catName as $cat){
-                        echo $cat->name;
-                        }?></h3>
-                        <h3 class="font-16 letter-space-1 mt-0 text-theme-colored"><?php the_title();?></h3>
-                         <p><?php echo custom_excerpt_lt(get_the_content(),450);?></p>
-                        <p><a href="<?php the_permalink()?>" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-                      </div>
-                    </div>
-                  </div>
-              <?php endwhile;
-               
-              // Reset Query
-              wp_reset_query();?>
+              echo do_shortcode("[recent_news_shortcode]" );?>
            <div class="col-sm-4">
            <?php dynamic_sidebar('events_sidebar'); ?>
               
@@ -353,10 +323,13 @@
             <div class="col-md-12">
               <div id="out_nav" class="owl-carousel-4col" data-nav="true">
                 <?php //echo do_shortcode('[latest_news_shortcode]'); ?>
-                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g1.jpg" alt=""></div>
-                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g3.jpg" alt=""></div>
-                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g2.jpg" alt=""></div>
-                <div class="item"><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g4.jpg" alt=""></div>
+                <div class="item">
+                  <div class="item-overlay"></div>
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g1.jpg" alt="">
+                </div>
+                <div class="item"><div class="item-overlay"></div><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g3.jpg" alt=""></div>
+                <div class="item"><div class="item-overlay"></div><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g2.jpg" alt=""></div>
+                <div class="item"><div class="item-overlay"></div><img src="<?php echo get_template_directory_uri(); ?>/images/gallery/g4.jpg" alt=""></div>
               </div>
             </div>
           </div>

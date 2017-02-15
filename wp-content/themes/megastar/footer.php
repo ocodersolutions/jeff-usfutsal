@@ -72,27 +72,27 @@ $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h5 class="widget-title line-bottom">Pages</h5>
+          <div class="widget dark color-logo">
+            <h5 class="widget-title line-bottom text-uppercase">Pages</h5>
             <?php
             if (has_nav_menu('footer')) {
-                    echo wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'list angle-double-right list-border', 'depth' => 1 ) );  
+                    echo wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'list angle-right list-border', 'depth' => 1 ) );  
             }
             ?>             
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h5 class="widget-title line-bottom">Quick Links</h5>
+          <div class="widget dark color-logo">
+            <h5 class="widget-title line-bottom text-uppercase">Quick Links</h5>
             <?php
             if (has_nav_menu('offcanvas')) {
-                    echo wp_nav_menu( array( 'theme_location' => 'offcanvas', 'container' => false, 'menu_class' => 'list angle-double-right list-border', 'depth' => 1 ) );  
+                    echo wp_nav_menu( array( 'theme_location' => 'offcanvas', 'container' => false, 'menu_class' => 'list angle-right list-border', 'depth' => 1 ) );  
             }
             ?>               
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
+          <div class="widget dark ">
             <!-- <h5 class="widget-title line-bottom">Opening Hours</h5> -->
             <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Widgets Open Hour')); ?>            
           </div>
