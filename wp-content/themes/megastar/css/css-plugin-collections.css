@@ -192,3 +192,6 @@ div.pp_default .pp_top,div.pp_default .pp_top .pp_middle,div.pp_default .pp_top 
 #out_nav .owl-item img {-webkit-filter: grayscale(100%); filter: grayscale(100%); transition: all 0.5s;}
  
 #out_nav .owl-stage  .current-active img{-webkit-filter: grayscale(0%); filter: grayscale(0%) !important ; border: 2px solid #EE163B; transition: all 0.5s;}
+#out_nav.owl-carousel .owl-item .item{
+	padding: 20px 0;
+}

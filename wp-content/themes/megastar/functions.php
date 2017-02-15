@@ -25,9 +25,9 @@ require_once(get_template_directory() . '/inc/nav_walker.php');
 
 
 //TGM Plugin Activation
-if (!class_exists('TGM_Plugin_Activation')) {
-    require_once(get_template_directory() . '/inc/plugin-activation.php');
-}
+// if (!class_exists('TGM_Plugin_Activation')) {
+//     require_once(get_template_directory() . '/inc/plugin-activation.php');
+// }
 // Custom Widgets
 require_once(get_template_directory() . '/inc/sidebars.php');
 require_once(get_template_directory() . '/inc/sidebar-generator.php');
@@ -1174,8 +1174,8 @@ function Recent_news_sc(){
         );
     ob_start();
     $rc_news_Qr = new WP_Query ($argsNews);
-    if ( $rc_news_Qr->have_posts() ) :
-      while ( $rc_news_Qr->have_posts() ) : $rc_news_Qr->the_post();?>
+    if ( $rc_news_Qr->have_posts() ) : 
+        while ( $rc_news_Qr->have_posts() ) : $rc_news_Qr->the_post();?>
           <div class="col-sm-6">
             <div class="box-hover-effect effect1 mb-sm-30">
               <?php if(has_post_thumbnail()){?>
@@ -1467,5 +1467,303 @@ function custom_content_lt ($content,$limit){
     return $custom_excerpt;
 }
 /*
- * customize event list
+ * widget address
 */
+class Widget_Address_Box extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+            'Widget_Address_Box', // Base ID
+            esc_html__( 'Widget Address Box', 'text_domain' ), // Name
+            array( 'description' => esc_html__( 'A Address Box Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    public function widget( $args, $instance ) {
+
+        //store the options in variables
+        $title = !empty( $instance['title'] ) ? $instance['title'] : '';
+        $icons = ! empty( $instance['icons'] ) ? $instance['icons'] : 'fa-map-marker';
+        $address =  ! empty( $instance['address'] ) ? $instance['address'] : '';
+        
+        // before widget (defined by theme)
+        echo $args['before_widget'];
+        echo '<div class="contact-icon-box p-30">';
+
+        if(!empty( $icons )){
+            echo '<div class="contact-icon bg-theme-logo"><i class="fa '.$icons.' text-white font-22"></i></div>';
+        }
+        if(!empty($title)){
+            echo '<h4 class="text-uppercase text-white">'.$title.'</h4>';
+        }
+         if(!empty($address)){
+            echo '<p class="font-16 mb-0">'.$address.'</p>';
+        }
+        
+        echo '</div>';
+        // after widget (defined by theme)
+        echo $args['after_widget'];
+    }
+
+    public function form( $instance ) {
+       
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : 'Address';
+        $icons = ! empty( $instance['icons'] ) ? $instance['icons'] : 'fa-map-marker';
+        $address = ! empty( $instance['address'] ) ? $instance['address'] : '';
+        ?>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Box Title :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_bf' ) ); ?>"><?php esc_attr_e( 'Box Icon:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'icons' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'icons' ) ); ?>" type="text" value="<?php echo esc_attr( $icons ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'address' ) ); ?>"><?php esc_attr_e( 'Address :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'address' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'address' ) ); ?>" type="text" value="<?php echo esc_attr( $address ); ?>">
+        </p>
+        
+      
+        <?php 
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = $new_instance['title'];
+        $instance['icons'] = $new_instance['icons'];
+        $instance['address'] = $new_instance['address'];
+        
+        
+        return $instance;
+    }
+
+}
+
+// register and remove WP_Widget_Categories
+function register_address_box() {
+    register_widget( 'Widget_Address_Box' );
+    
+}
+add_action( 'widgets_init', 'register_address_box' );
+
+/*
+ * widget Mail US
+*/
+class Widget_Email_Box extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+            'Widget_Email_Box', // Base ID
+            esc_html__( 'Widget Email Box', 'text_domain' ), // Name
+            array( 'description' => esc_html__( 'A Email Box Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    public function widget( $args, $instance ) {
+
+        //store the options in variables
+        $title = !empty( $instance['title'] ) ? $instance['title'] : 'Email Us';
+        $icons = ! empty( $instance['icons'] ) ? $instance['icons'] : 'fa-envelope-o';
+        $email1 =  ! empty( $instance['email1'] ) ? $instance['email1'] : '';
+        $email1_add = ! empty( $instance['email1_add'] ) ? $instance['email1_add'] : '';
+        $email2 =  ! empty( $instance['email2'] ) ? $instance['email2'] : '';
+        $email2_add = ! empty( $instance['email2_add'] ) ? $instance['email2_add'] : '';
+        
+        // before widget (defined by theme)
+        echo $args['before_widget'];
+        echo '<div class="contact-icon-box p-30">';
+
+        if(!empty( $icons )){
+            echo '<div class="contact-icon bg-theme-logo"><i class="fa '.$icons.' text-white font-22"></i></div>';
+        }
+        if(!empty($title)){
+            echo '<h4 class="text-uppercase text-white">'.$title.'</h4>';
+        }
+        if(!empty($email1) || !empty($email2) || !empty($email3)){
+            
+            if(!empty($email1)){
+                echo '<p class="font-16 text-white mb-0"><span class="font-weight-700">'.$email1.' : </span>';
+            }
+            if(!empty($email1_add)){
+                echo '<a class="" href="mailto:'.$email1_add.'" target="_top">'.$email1_add.' </a></p>';
+            }else{
+                echo '</p>';
+            }
+            if(!empty($email2)){
+                echo '<p class="font-16 text-white mb-0"><span class="font-weight-700">'.$email2.' : </span>';
+            }
+            if(!empty($email2_add)){
+                echo '<a class="" href="mailto:'.$email2_add.'" target="_top">'.$email2_add.' </a></p>';
+            }else{
+                echo '</p>';
+            }
+             echo '<p class="mb-0"><br></p>';
+         }
+       
+        
+        echo '</div>';
+        // after widget (defined by theme)
+        echo $args['after_widget'];
+    }
+
+    public function form( $instance ) {
+       
+        $title = !empty( $instance['title'] ) ? $instance['title'] : 'Email Us';
+        $icons = ! empty( $instance['icons'] ) ? $instance['icons'] : 'fa-envelope-o';
+        $email1 =  ! empty( $instance['email1'] ) ? $instance['email1'] : '';
+        $email1_add = ! empty( $instance['email1_add'] ) ? $instance['email1_add'] : '';
+        $email2 =  ! empty( $instance['email2'] ) ? $instance['email2'] : '';
+        $email2_add = ! empty( $instance['email2_add'] ) ? $instance['email2_add'] : '';
+        $email3 = ! empty( $instance['email3'] ) ? $instance['email3'] : '&#32;';
+        $email3_add = ! empty( $instance['email3_add'] ) ? $instance['email3_add'] : '';
+        ?>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Box Title :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_bf' ) ); ?>"><?php esc_attr_e( 'Box Icon:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'icons' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'icons' ) ); ?>" type="text" value="<?php echo esc_attr( $icons ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'email1' ) ); ?>"><?php esc_attr_e( 'Name Email 1 :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'email1' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'email1' ) ); ?>" type="text" value="<?php echo esc_attr( $email1 ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'email1_add' ) ); ?>"><?php esc_attr_e( 'Email 1 Address :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'email1_add' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'email1_add' ) ); ?>" type="email" value="<?php echo esc_attr( $email1_add ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'email2' ) ); ?>"><?php esc_attr_e( 'Name Email 2 :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'email2' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'email2' ) ); ?>" type="text" value="<?php echo esc_attr( $email2 ); ?>">
+        </p>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'email2_add' ) ); ?>"><?php esc_attr_e( 'Email 2 Address :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'email2_add' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'email2_add' ) ); ?>" type="email" value="<?php echo esc_attr( $email2_add ); ?>">
+        </p>
+
+      
+        <?php 
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] =  $new_instance['title'];
+        $instance['icons'] =  $new_instance['icons'];
+        $instance['email1'] =  $new_instance['email1'];
+        $instance['email1_add'] = $new_instance['email1_add'];
+        $instance['email2'] = $new_instance['email2'];
+        $instance['email2_add'] = $new_instance['email2_add'];
+        
+        
+        return $instance;
+    }
+
+}
+
+// register Widget_email box
+function register_emailus_box() {
+    register_widget( 'Widget_Email_Box' );
+}
+add_action( 'widgets_init', 'register_emailus_box' );
+
+/*
+ * widget phone/fax US
+*/
+class Widget_Phone_Box extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+            'Widget_Phone_Box', // Base ID
+            esc_html__( 'Widget Phone Box', 'text_domain' ), // Name
+            array( 'description' => esc_html__( 'A Phone/Fax Box Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    public function widget( $args, $instance ) {
+
+        //store the options in variables
+        $title = !empty( $instance['title'] ) ? $instance['title'] : 'Phone / Fax';
+        $icons = ! empty( $instance['icons'] ) ? $instance['icons'] : 'fa-phone';
+        $phone =   $instance['phone'];
+        $fax =  $instance['fax'];
+        
+        // before widget (defined by theme)
+        echo $args['before_widget'];
+        echo '<div class="contact-icon-box p-30">';
+
+        if(!empty( $icons )){
+            echo '<div class="contact-icon bg-theme-logo"><i class="fa '.$icons.' text-white font-22"></i></div>';
+        }
+        if(!empty($title)){
+            echo '<h4 class="text-uppercase text-white">'.$title.'</h4>';
+        }
+       
+            
+        if(!empty($phone)){
+            echo '<p class="font-16 text-white mb-0"><span class="font-weight-700">Phone : </span>'.$phone.'</p>';
+        }
+        
+        if(!empty($fax)){
+            echo '<p class="font-16 text-white mb-0"><span class="font-weight-700">Phone : </span>'.$fax.'</p>';
+        }
+
+        echo '<p class="mb-0"><br></p>'; 
+        
+        echo '</div>';
+        // after widget (defined by theme)
+        echo $args['after_widget'];
+    }
+
+    public function form( $instance ) {
+       
+        $title = !empty( $instance['title'] ) ? $instance['title'] : 'Phone / Fax';
+        $icons = ! empty( $instance['icons'] ) ? $instance['icons'] : 'fa-phone';
+        $phone =  ! empty( $instance['phone'] ) ? $instance['phone'] : '';
+        $fax = ! empty( $instance['fax'] ) ? $instance['fax'] : '';
+        ?>
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Box Title :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'icons' ) ); ?>"><?php esc_attr_e( 'Box Icon:', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'icons' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'icons' ) ); ?>" type="text" value="<?php echo esc_attr( $icons ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'phone' ) ); ?>"><?php esc_attr_e( 'Phone :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'phone' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'phone' ) ); ?>" type="text" value="<?php echo esc_attr( $phone ); ?>">
+        </p>
+
+        <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'fax' ) ); ?>"><?php esc_attr_e( 'Fax :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'fax' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'fax' ) ); ?>" type="text" value="<?php echo esc_attr( $fax ); ?>">
+        </p>
+      
+        <?php 
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] =  $new_instance['title'];
+        $instance['icons'] =  $new_instance['icons'];
+        $instance['phone'] =  $new_instance['phone'];
+        $instance['fax'] = $new_instance['fax'];
+        
+        return $instance;
+    }
+
+}
+
+// register and remove WP_Widget_Categories
+function register_Widget_Phone_Box() {
+    register_widget( 'Widget_Phone_Box' );
+}
+add_action( 'widgets_init', 'register_Widget_Phone_Box' );

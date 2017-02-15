@@ -34,9 +34,7 @@
 
 	?>
 
-	<?php if (!is_front_page() and !is_page_template( 'page-homepage.php' )) : ?>
-		<?php get_template_part('template-parts/titlebar');	?>
-	<?php endif; ?>
+	
 	
 	<?php get_template_part('template-parts/slider');	?>	
 
