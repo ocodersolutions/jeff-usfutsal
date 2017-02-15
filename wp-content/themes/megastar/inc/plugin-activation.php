@@ -45,18 +45,18 @@ function megastar_register_required_plugins() {
 //            'source'             => 'https://bdthemes.com/secure/megastar/bdthemes-faq.zip?key=13fb823b8016d31411a7fe281f41044f',
 //            'required'           => true
 //        ),
-        array(
-            'name'               => esc_html_x('Slider Revolution', 'backend', 'megastar'),
-            'slug'               => 'revslider',
-            'source'             => 'https://bdthemes.com/secure/megastar/revslider.zip?key=13fb823b8016d31411a7fe281f41044f',
-            'required'           => true
-        ),
-        array(
-            'name'               => esc_html_x('WPBakery Visual Composer', 'backend', 'megastar'),
-            'slug'               => 'js_composer',
-            'source'             => 'https://bdthemes.com/secure/megastar/js_composer.zip?key=13fb823b8016d31411a7fe281f41044f',
-            'required'           => true
-        ),
+//        array(
+//            'name'               => esc_html_x('Slider Revolution', 'backend', 'megastar'),
+//            'slug'               => 'revslider',
+//            'source'             => 'https://bdthemes.com/secure/megastar/revslider.zip?key=13fb823b8016d31411a7fe281f41044f',
+//            'required'           => true
+//        ),
+//        array(
+//            'name'               => esc_html_x('WPBakery Visual Composer', 'backend', 'megastar'),
+//            'slug'               => 'js_composer',
+//            'source'             => 'https://bdthemes.com/secure/megastar/js_composer.zip?key=13fb823b8016d31411a7fe281f41044f',
+//            'required'           => true
+//        ),
 //        array(
 //            'name' => esc_html_x('Contact Form 7', 'backend', 'megastar'),
 //            'slug' => 'contact-form-7',

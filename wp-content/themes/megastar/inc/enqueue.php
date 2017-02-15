@@ -17,6 +17,7 @@ function megastar_admin_script() {
 	wp_enqueue_script('admin-setting');
 	wp_enqueue_script('admin-less');
 }
+if(@$_GET["page"] != "vc-updater")
 add_action( 'admin_enqueue_scripts', 'megastar_admin_script' ); 
 
 
