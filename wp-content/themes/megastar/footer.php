@@ -12,7 +12,7 @@
 $footer_active = get_theme_mod('megastar_footer_widgets', 1) && get_post_meta( get_the_ID(), 'megastar_footer_widgets', true ) != 'hide';
 $footer_background_image =  get_theme_mod('footer_background_image','http://placehold.it/1920x1280');
 $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
-
+$menus = get_nav_menu_locations();
  ?>
 
 			</div>
@@ -73,20 +73,22 @@ $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark color-logo">
-            <h5 class="widget-title line-bottom text-uppercase">Pages</h5>
             <?php
             if (has_nav_menu('footer')) {
-                    echo wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'list angle-right list-border', 'depth' => 1 ) );  
+                $string = get_term($menus['footer'], 'nav_menu')->name;
+                echo '<h5 class="widget-title line-bottom text-uppercase">'.$string.'</h5>';
+                echo wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'list angle-right list-border', 'depth' => 1 ) );  
             }
             ?>             
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark color-logo">
-            <h5 class="widget-title line-bottom text-uppercase">Quick Links</h5>
             <?php
             if (has_nav_menu('offcanvas')) {
-                    echo wp_nav_menu( array( 'theme_location' => 'offcanvas', 'container' => false, 'menu_class' => 'list angle-right list-border', 'depth' => 1 ) );  
+                $string = get_term($menus['offcanvas'], 'nav_menu')->name;
+                echo '<h5 class="widget-title line-bottom text-uppercase">'.$string.'</h5>';
+                echo wp_nav_menu( array( 'theme_location' => 'offcanvas', 'container' => false, 'menu_class' => 'list angle-right list-border', 'depth' => 1 ) );  
             }
             ?>               
           </div>
