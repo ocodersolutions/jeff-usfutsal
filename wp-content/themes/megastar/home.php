@@ -12,7 +12,7 @@
  * @package megastar
  */
 
-get_header('sport');
+get_header();
 
 // Layout
 $megastar_layout = (get_post_meta( get_the_ID(), 'megastar_layout', true )) ? get_post_meta( get_the_ID(), 'megastar_layout', true ) : get_theme_mod('megastar_blog_layout', 'sidebar-right');
@@ -55,8 +55,8 @@ else{
 	            <div class="blog-posts">
 	              	<div class="col-md-12">
                 		<div class="row list-dashed">
+                		<?php the_content();?>
 	                	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
 							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>
 							
 						<?php endwhile; endif; ?>
@@ -80,4 +80,4 @@ else{
     </div>
 </section>
 	
-<?php get_footer('sport'); ?>
+<?php get_footer(); ?>
