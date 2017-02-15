@@ -109,7 +109,10 @@ Boxed Skin
     -webkit-transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.2);
     transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.2);
 }
-.navbar-style2 .menuzord.orange .menuzord-menu > li > a:hover:before,.navbar-style2 .menuzord.orange .menuzord-menu > li:hover > a:before ,.menuzord-menu ul.dropdown li a:hover:before{
+.navbar-style2 .menuzord.orange .menuzord-menu > li > a:hover:before,
+.navbar-style2 .menuzord.orange .menuzord-menu > li:hover > a:before ,
+.navbar-style2 .menuzord.orange .menuzord-menu > li.active > a:before ,
+.menuzord-menu ul.dropdown li a:hover:before{
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
 }
