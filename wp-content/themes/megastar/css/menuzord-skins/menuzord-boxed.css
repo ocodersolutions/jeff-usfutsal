@@ -297,6 +297,9 @@ Boxed Skin
       .header-nav .col-md-12{
           padding: 0;
       }
+      .container{
+          overflow-x: hidden;
+      }
 }
 @media (max-width: 470px){
      .header-nav .stylish-header span {

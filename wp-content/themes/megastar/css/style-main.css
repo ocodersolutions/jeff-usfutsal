@@ -2813,7 +2813,7 @@ form .error {
 .box-hover-effect.effect1 .thumb {
   position: relative;
 }
-.box-hover-effect.effect1 .thumb:after {
+.box-hover-effect.effect1 .thumb a:after {
   background-color: rgba(255, 255, 255, 0.15);
   bottom: 0;
   content: "";
@@ -2825,7 +2825,7 @@ form .error {
   transition: all 0.3s ease-out 0s;
   width: 0;
 }
-.box-hover-effect.effect1 .thumb:before {
+.box-hover-effect.effect1 .thumb    a:before {
   left: 0;
   content: "";
   height: 0;
@@ -2837,13 +2837,19 @@ form .error {
   width: 0;
   z-index: 1;
 }
-.box-hover-effect.effect1:hover .thumb:before,
-.box-hover-effect.effect1:hover .thumb:after {
+.box-hover-effect.effect1:hover .thumb a:before,
+.box-hover-effect.effect1:hover .thumb a:after {
   height: 100%;
   width: 100%;
+      display: block; 
+
   -webkit-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
+}
+.box-hover-effect.effect1 .thumb a{
+    height: 105%;
+    display: block; 
 }
 /*---------------*/
 /***** effect2 *****/
