@@ -41,8 +41,4 @@
 	<div id="content" class="site-content ">
 
 		<div class="mainbody-wrapper" id="tmMainBody">
-			<?php // Layout
-				$megastar_layout_container = (get_post_meta( get_the_ID(), 'megastar_layout', true ) != 'full') ? 'uk-container uk-container-center' : 'uk-container-fullwidth';
-			?>
-			<div class="<?php echo esc_attr($megastar_layout_container); ?>">
-
+			

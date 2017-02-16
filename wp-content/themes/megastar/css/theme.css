@@ -15,8 +15,7 @@ body * {
 footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.container,
-.vc_row.container {
+.vc_responsive .container,.vc_responsive .vc_row.container{
   margin: 0 auto;
 }
 section {
