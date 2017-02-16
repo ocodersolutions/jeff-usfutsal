@@ -3,30 +3,26 @@
 // Layout
 $megastar_layout = get_post_meta( get_the_ID(), 'megastar_layout', true );
 
-if($megastar_layout == 'default'){
-	$mainlayout    = 'uk-width-medium-1-1 ';                              
-	$sidebarlayout = 'uk-hidden';                                     
-} 
-elseif($megastar_layout == 'full'){
-	$mainlayout    = 'uk-width-medium-1-1';
-	$sidebarlayout = 'uk-hidden';                                     
-}
-elseif($megastar_layout == 'sidebar-left'){
-	$mainlayout    = 'uk-width-medium-7-10 uk-push-3-10 ';               
-	$sidebarlayout = 'uk-width-medium-3-10 uk-pull-7-10 uk-row-first';
+if($megastar_layout == 'sidebar-left'){
+	$mainlayout = 'col-md-9 blog-pull-right';
+	$sidebarlayout = 'col-sm-12 col-md-3';
 }
 elseif($megastar_layout == 'sidebar-right'){
-	$mainlayout    = 'uk-width-medium-7-10 uk-row-first';                
-	$sidebarlayout = 'uk-width-medium-3-10';                          
+	$mainlayout = 'col-md-9 blog-pull-right';
+	$sidebarlayout = 'col-sm-12 col-md-3';
 } 
 else{
-	$mainlayout    = 'uk-width-medium-1-1';                              
-	$sidebarlayout = 'uk-hidden';                                     
-} ?>
+	$mainlayout = 'col-md-12 col-sm-12';
+	$sidebarlayout = 'hidden';
+}  
+   ?>
 
-
-
-<div id="page-wrap" class="tm-middle uk-grid" <?php echo ($megastar_layout == 'sidebar-left' or $megastar_layout == 'sidebar-right') ? 'data-uk-grid-match' : ''; ?> data-uk-grid-margin>
+  <?php
+    // Layout
+    $megastar_layout_container = (get_post_meta(get_the_ID(), 'megastar_layout', true) != 'full') ? 'container' : 'row';
+    ?>
+    <div class="<?php echo esc_attr($megastar_layout_container); ?>">
+<div id="page-wrap">
 
 	<div class="tm-main <?php echo esc_attr($mainlayout); ?>">
 		<main class="tm-content">
@@ -52,5 +48,5 @@ else{
 	<?php } ?>
 
 </div> <!-- end page-wrap -->
-	
+    </div>	
 <?php get_footer(); ?>

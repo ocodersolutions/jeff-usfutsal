@@ -15,7 +15,6 @@ $megastar_logo_upload = get_theme_mod('megastar_logo_upload');
 $menus = get_nav_menu_locations();
  ?>
 
-			</div>
 		</div>
 	</div><!-- #content -->
  
