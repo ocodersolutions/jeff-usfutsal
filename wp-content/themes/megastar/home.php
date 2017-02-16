@@ -41,7 +41,7 @@ else{
 
 
 <section>
-    <div class="container mt-30 mb-30 pt-30 pb-30">
+    <div class="container abc mt-30 mb-30 pt-30 pb-30">
         <div class="row ">
 	        <?php if($megastar_layout == 'sidebar-left'){ ?>
 	        <div class="col-sm-12 col-md-3">
@@ -55,8 +55,7 @@ else{
 	            <div class="blog-posts">
 	              	<div class="col-md-12">
                 		<div class="row list-dashed">
-                		<?php the_content();?>
-	                	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>
 							
 						<?php endwhile; endif; ?>
@@ -79,5 +78,5 @@ else{
         </div>
     </div>
 </section>
-	
+
 <?php get_footer(); ?>

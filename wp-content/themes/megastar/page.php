@@ -35,10 +35,12 @@ else{
 				<?php the_content(); ?>
 
 				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-
-				<?php if(get_theme_mod('megastar_comment_show', 1) == 1) { ?>
+				<?php if(!is_page(431)){?>
+					<?php if(get_theme_mod('megastar_comment_show', 1) == 1) { ?>
 					<?php comments_template(); ?>
 				<?php } ?>
+				<?php }?>
+				
 
 			<?php endwhile; endif; ?>
 		</main> <!-- end main -->

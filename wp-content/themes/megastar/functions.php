@@ -11,7 +11,7 @@ define('MEGASTAR_VER', wp_get_theme()->get('Version'));
 if (version_compare($GLOBALS['wp_version'], '4.4-alpha', '<')) {
     require get_template_directory() . '/inc/back-compat.php';
 }
-
+//require_once(get_template_directory() . '/template-parts/pagination.php');
 require_once(get_template_directory() . '/admin/dom-helper.php');
 require_once(get_template_directory() . '/admin/compile.php');
 /* Demo Installer */
@@ -101,6 +101,7 @@ if (!function_exists('megastar_setup')) :
 
         if (function_exists('add_image_size')) {
             add_image_size('megastar-blog', 810, 350, true); // Standard Blog Image
+            add_image_size('megastar-blog-list', 350, 300, true); // Standard Blog Image
             add_image_size('megastar-single', 847, 565, false); // Standard Blog Image
             add_image_size('megastar-event', 360, 138, false); // Standard Blog Image
         }
@@ -1207,6 +1208,115 @@ function Recent_news_sc(){
 }
 add_shortcode( 'recent_news_shortcode', 'Recent_news_sc' );
 
+
+/*
+ * Shortcode News in Homepage
+*/
+function ct_display_posts_sc(){
+    
+    ob_start();
+    
+    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+    $aNews = array(
+      'post_type' => 'post',
+      'category_name' => 'News',
+      'posts_per_page' => 5,
+      'paged' => $paged
+    );
+    $posts_per_page = get_option('posts_per_page');echo ($posts_per_page);
+    $query_blog = new WP_Query ($aNews);
+    $max   = $query_blog->max_num_pages ;
+    if ( $query_blog->have_posts() ) : 
+        $numpages = ceil( $max/$posts_per_page );
+        while ( $query_blog->have_posts() ) : $query_blog->the_post();?>
+          <div class="post_entry">
+            
+            <?php if(has_post_thumbnail()){?>
+            <div class="post_thump ">
+                <div class="box-hover-effect effect1 mb-sm-30">
+                    <div class="thumb"> <a href="<?php the_permalink();?>"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
+                    </div>
+                </div>
+            </div>
+            <?php }?>
+              
+            <div class="caption"><h3 class="text-uppercase letter-space-1 font-20 mt-0 mb-0"><?php $catName = get_the_category();
+
+            foreach ($catName as $cat){
+            echo $cat->name;
+            }?></h3>
+            <h3 class="font-16 letter-space-1 mt-0 text-theme-colored"><?php the_title();?></h3>
+             <p><?php echo custom_excerpt_lt(get_the_content(),450);?></p>
+            <p><a href="<?php the_permalink()?>" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
+            </div>
+            
+          </div>
+      <?php endwhile;
+       endif;
+       //megastar_pagination();
+       custom_pagination();
+
+       $content = ob_get_contents(); 
+ 
+        ob_end_clean();
+ 
+        return $content;
+
+      // Reset Query
+      wp_reset_query();
+}
+add_shortcode( 'custom_display_news_shortcode', 'ct_display_posts_sc' );
+/*
+ * Custom pagenagin
+*/
+function custom_pagination($numpages = '', $pagerange = '', $paged='') {
+
+  if (empty($pagerange)) {
+    $pagerange = 2;
+  }
+
+  global $paged;
+  if (empty($paged)) {
+    $paged = 1;
+  }
+  if ($numpages == '') {
+    global $wp_query;
+    $numpages = $wp_query->max_num_pages;
+    if(!$numpages) {
+        $numpages = 1;
+    }
+  }
+
+  /** 
+   * We construct the pagination arguments to enter into our paginate_links
+   * function. 
+   */
+  $pagination_args = array(
+    'base'            => get_pagenum_link(1) . '%_%',
+    'format'          => 'page/%#%',
+    'total'           => $numpages,
+    'current'         => $paged,
+    'show_all'        => False,
+    'end_size'        => 1,
+    'mid_size'        => $pagerange,
+    'prev_next'       => True,
+    'prev_text'       => __('&laquo;'),
+    'next_text'       => __('&raquo;'),
+    'type'            => 'plain',
+    'add_args'        => false,
+    'add_fragment'    => ''
+  );
+
+  $paginate_links = paginate_links($pagination_args);
+
+  if ($paginate_links) {
+    echo "<nav class='custom-pagination'>";
+      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
+      echo $paginate_links;
+    echo "</nav>";
+  }
+
+}
 /*
  *
 */
@@ -1374,7 +1484,7 @@ class Widget_Latest_Post extends WP_Widget {
             'no_found_rows'       => true,
             'post_status'         => 'publish',
             'ignore_sticky_posts' => true,
-            'category'            => 'news'
+            'category'            => 'News'
         ) ) );
 
         if ($r->have_posts()) :

@@ -1,9 +1,9 @@
 <div class="blog-posts single-post">
   <article class="post clearfix mb-0">
     <?php if (has_post_thumbnail()) : ?>
-    <div class="entry-header">
+    <div class="entry-header pull-left mr-20 mb-10">
       <?php if(is_single()) : ?>
-                <?php echo  the_post_thumbnail('megastar-single', array('class' => ''));  ?>
+                <?php echo  the_post_thumbnail('megastar-blog-list', array('class' => ''));  ?>
             <?php else : ?>
       <div class="post-thumb thumb"> <?php the_post_thumbnail('full');?></div>
       <?php endif; ?>

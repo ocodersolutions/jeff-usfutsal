@@ -12,13 +12,13 @@ elseif($sidebar == 'sidebar-right'){
 	$sidebarlayout = 'col-sm-12 col-md-3';
 } 
 else{
-	$mainlayout = 'uk-width-medium-1-1';
-	$sidebarlayout = 'uk-hidden';
+	$mainlayout = 'col-sm-12';
+	$sidebarlayout = '';
 } ?>
 <?php if(in_category('services',$post)){
 		get_template_part( '/template-parts/single-service');
 	}else{?>	
-<div class="row" data-uk-grid-match="" data-uk-grid-margin="" >
+<div class="container mt-30 mb-30 pt-30 pb-30" data-uk-grid-match="" data-uk-grid-margin="" >
 	
 	<?php if($sidebar == 'sidebar-left'){ ?>
 	<div class="col-sm-12 col-md-3">

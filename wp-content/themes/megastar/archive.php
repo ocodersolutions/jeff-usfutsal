@@ -11,7 +11,7 @@ if($megastar_layout == 'sidebar-right'){
 	$sidebarlayout = 'col-sm-12 col-md-3';
 } 
 else{
-	$mainlayout = 'col-md-10 col-md-offset-1';
+	$mainlayout = 'col-md-12';
 	$sidebarlayout = '';
 }
 
@@ -31,7 +31,7 @@ else{
 			<div class="<?php echo esc_attr($mainlayout); ?>">
 	            <div class="blog-posts">
 	              	<div class="col-md-12">
-                		<div class="row list-dashed">
+                		<div class="row list">
 	                	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>

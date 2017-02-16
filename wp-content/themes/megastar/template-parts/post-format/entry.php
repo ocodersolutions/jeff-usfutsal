@@ -55,35 +55,44 @@
 </article> -->
 
 
-<article class="post mb-50 pb-30" id="item-<?php the_ID(); ?>" data-permalink="<?php the_permalink(); ?>">                  
-    <div class="entry-header">
+<article class="post mb-50 pb-30 border-bottom-gray" id="item-<?php the_ID(); ?>" data-permalink="<?php the_permalink(); ?>">                  
+    <div class="entry-header pull-left mr-10 mb-10">
         <?php if (has_post_thumbnail()) : ?>
             <?php if(is_single()) : ?>
-                <?php echo  the_post_thumbnail('megastar-blog', array('class' => ''));  ?>
+                <?php echo  the_post_thumbnail('megastar-blog', array('class' => 'img-fullwidth img-responsive'));  ?>
             <?php else : ?>
             <div class="post-thumb">
-                <img alt="" src="<?php the_post_thumbnail_url();?>" class="img-fullwidth img-responsive"> 
+                <?php echo  the_post_thumbnail('megastar-blog-list', array('class' => 'img-fullwidth img-responsive'));  ?>
             </div>
             <?php endif; ?>
         <?php endif; ?>
-    <?php if(!is_single()) :?>
-        <h5 class="entry-title text-uppercase mt-30"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-    <?php endif; ?>
-      <ul class="list-inline font-12 mb-20 mt-10">
+    
+     <!--  <ul class="list-inline font-12 mb-20 mt-10">
         <?php if(get_the_date()) { ?>
         <li><i class="fa fa-calendar mr-5"></i><?php echo get_the_date( 'd/m/Y');?> </li>
         <?php } ?>
         <?php if(comments_open() || get_comments_number()) : ?>
         <li><i class="fa fa-comments-o ml-5 mr-5"></i><?php comments_popup_link(__('No Comments', 'megastar'), esc_html__('1 Comment', 'megastar'), esc_html__('% Comments', 'megastar'), "", ""); ?></li>
         <?php endif; ?>
-      </ul>
+      </ul> -->
     </div>
-    <div class="clearfix"></div>
+
     <div class="entry-content">
+         <?php if(!is_single()) :?>
+            <h2 class="entry-title mt-30 font-weight-700 mb-0"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+        <?php endif; ?>
+        <?php 
+            foreach((get_the_category()) as $category) { ?>
+               <h4 class="title mt-0 mb-0"><?php echo $category->cat_name;?></h4>
+           <?php } 
+           
+        ?>
         <?php if(!is_single()) {?>
-        <p><?php echo custom_content_lt(get_the_content(),160); ?></p>
-        <?php }else{ ?>
-        <p><?php echo custom_content_lt(get_the_content(),150)?></p>
-         <?php }?>
-      <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> </div>
+        <p><?php echo wp_kses_post(custom_excerpt_lt(get_the_content(),1500)); ?></p>
+        <?php }?>
+    </div>
+    <div class="entry_readmore text-center mt-30">
+        <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> 
+    </div>
+    <div class="clear-fix" style="clear:both;"></div>
 </article>

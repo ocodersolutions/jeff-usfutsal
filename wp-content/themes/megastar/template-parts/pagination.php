@@ -32,7 +32,7 @@ function megastar_pagination() {
 		$links[] = $paged + 1;
 	}
 
-	echo '<div class="col-md-12"><nav><ul class="pagination theme-colored">' . "\n";
+	echo '<div class="col-md-12 text-right"><nav><ul class="pagination theme-colored">' . "\n";
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
