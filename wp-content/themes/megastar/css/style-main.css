@@ -7522,3 +7522,26 @@ blockquote p {
     padding-right: 0;
 }
 .single-post.row{margin-bottom: 20px;}
+
+/*page header*/
+
+#header-style-1{
+    text-align: center;
+    padding: 15px 0 20px 0;
+}
+#header-style-1 h2{
+    margin-top: 0;
+    display: inline-block;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 42px;
+}
+.header-text h2{
+    font-size: 32px;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+.header-text h5{
+    margin-top: 0;
+}
