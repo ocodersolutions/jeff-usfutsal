@@ -1179,7 +1179,7 @@ function Recent_news_sc(){
           <div class="col-sm-6">
             <div class="box-hover-effect effect1 mb-sm-30">
               <?php if(has_post_thumbnail()){?>
-                <div class="thumb"> <a href="#"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
+                <div class="thumb"> <a href="<?php the_permalink()?>"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
               </div>
               <?php }?>
               
