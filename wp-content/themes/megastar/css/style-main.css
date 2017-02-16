@@ -7510,4 +7510,8 @@ blockquote p {
 }
 
 /*# sourceMappingURL=style-main.css.map */
-.vc_responsive .vc_row, .vc_responsive .row{margin: 0;}
+.vc_row-fluid.vc_row, .vc_responsive .row{margin: 0;}
+.vc_responsive .vc_column_container>.vc_column-inner{
+    padding-left: 0;
+    padding-right: 0;
+}
