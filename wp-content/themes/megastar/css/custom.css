@@ -54,3 +54,18 @@
 .color-logo ul.list li::before{
 	color: #0071bc;
 }
+/* custom pagenavgin */
+.ct_pagination span.current{
+	background: #EE163B;
+	color: #fff;
+}
+.ct_pagination > a,.ct_pagination > span{
+	padding: 3px 6px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+}
+.ct_pagination > a:hover{
+	background: #EE163B;
+	color: #fff;
+}

@@ -12,7 +12,7 @@ elseif($megastar_layout == 'sidebar-right'){
 	$sidebarlayout = 'col-sm-12 col-md-3';
 } 
 else{
-	$mainlayout = 'col-md-12 col-sm-12';
+	$mainlayout = '';
 	$sidebarlayout = 'hidden';
 }  
    ?>
@@ -21,11 +21,11 @@ else{
     // Layout
     $megastar_layout_container = (get_post_meta(get_the_ID(), 'megastar_layout', true) != 'full') ? 'container' : 'row';
     ?>
-    <div class="<?php echo esc_attr($megastar_layout_container); ?>">
+    <div class="<?php //echo esc_attr($megastar_layout_container); ?>">
 <div id="page-wrap">
 
 	<div class="tm-main <?php echo esc_attr($mainlayout); ?>">
-		<main class="tm-content">
+		<main class="tm-content row">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<?php the_content(); ?>

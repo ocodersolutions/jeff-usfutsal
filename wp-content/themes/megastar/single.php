@@ -26,7 +26,7 @@ if (in_category('services', $post)) {
     ?>
     <div class="<?php echo esc_attr($megastar_layout_container); ?>">
 
-        <div class="single-post row"  >
+        <div class="single-post"  >
 
     <?php if ($sidebar == 'sidebar-left') { ?>
                 <div class="col-sm-12 <?php echo esc_attr($sidebarlayout); ?>">

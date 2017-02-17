@@ -54,10 +54,9 @@ else{
 			<div class="<?php echo esc_attr($mainlayout); ?>">
 	            <div class="blog-posts">
 	              	<div class="col-md-12">
-                		<div class="row list-dashed">
+                		<div class="row list">
                 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php get_template_part( 'template-parts/post-format/entry', get_post_format() )?>
-							
 						<?php endwhile; endif; ?>
 						
 						
@@ -78,5 +77,4 @@ else{
         </div>
     </div>
 </section>
-
 <?php get_footer(); ?>

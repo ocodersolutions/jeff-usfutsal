@@ -11,7 +11,6 @@ define('MEGASTAR_VER', wp_get_theme()->get('Version'));
 if (version_compare($GLOBALS['wp_version'], '4.4-alpha', '<')) {
     require get_template_directory() . '/inc/back-compat.php';
 }
-//require_once(get_template_directory() . '/template-parts/pagination.php');
 require_once(get_template_directory() . '/admin/dom-helper.php');
 require_once(get_template_directory() . '/admin/compile.php');
 /* Demo Installer */
@@ -1212,29 +1211,32 @@ add_shortcode( 'recent_news_shortcode', 'Recent_news_sc' );
 /*
  * Shortcode News in Homepage
 */
-function ct_display_posts_sc(){
-    
+function ct_display_posts_sc($atts){
+    $att = shortcode_atts( array(
+        'name' => 'News',
+        'number' => 3
+    ), $atts );
     ob_start();
     
-    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
     $aNews = array(
       'post_type' => 'post',
-      'category_name' => 'News',
-      'posts_per_page' => 5,
+      'category_name' => $att['name'],
+      'posts_per_page' => $att['number'],
       'paged' => $paged
     );
-    $posts_per_page = get_option('posts_per_page');echo ($posts_per_page);
+    $posts_per_page = get_option('posts_per_page');
     $query_blog = new WP_Query ($aNews);
-    $max   = $query_blog->max_num_pages ;
     if ( $query_blog->have_posts() ) : 
-        $numpages = ceil( $max/$posts_per_page );
+
         while ( $query_blog->have_posts() ) : $query_blog->the_post();?>
-          <div class="post_entry">
+    
+          <div class="post_entry mb-30 border-bottom-gray">
             
             <?php if(has_post_thumbnail()){?>
-            <div class="post_thump ">
+            <div class="post_thump pull-left">
                 <div class="box-hover-effect effect1 mb-sm-30">
-                    <div class="thumb"> <a href="<?php the_permalink();?>"><img class="img-fullwidth mb-20" src="<?php echo get_the_post_thumbnail_url();?>" alt="..."></a> 
+                    <div class="thumb mr-20 mb-10"> <a href="<?php the_permalink();?>"><?php the_post_thumbnail('megastar-blog-list', array('class' => 'img-fullwidth img-responsive'));?></a> 
                     </div>
                 </div>
             </div>
@@ -1246,15 +1248,21 @@ function ct_display_posts_sc(){
             echo $cat->name;
             }?></h3>
             <h3 class="font-16 letter-space-1 mt-0 text-theme-colored"><?php the_title();?></h3>
-             <p><?php echo custom_excerpt_lt(get_the_content(),450);?></p>
-            <p><a href="<?php the_permalink()?>" class="btn btn-theme-colored btn-flat mt-10 btn-sm" role="button">Read More</a></p>
-            </div>
+             <p><?php echo custom_excerpt_lt(get_the_content(),1000);?></p>
             
+            </div>
+             <div class="entry_readmore text-center mt-30 mb-30">
+                <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> 
+            </div>
+            <div class="clear-fix" style="clear:both;"></div>
           </div>
       <?php endwhile;
        endif;
-       //megastar_pagination();
-       custom_pagination();
+       
+      if (function_exists(custom_pagination)) {
+        custom_pagination($query_blog->max_num_pages,"",$paged);
+      }
+    
 
        $content = ob_get_contents(); 
  
@@ -1299,7 +1307,7 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
     'show_all'        => False,
     'end_size'        => 1,
     'mid_size'        => $pagerange,
-    'prev_next'       => True,
+    'prev_next'       => false,
     'prev_text'       => __('&laquo;'),
     'next_text'       => __('&raquo;'),
     'type'            => 'plain',
@@ -1310,9 +1318,8 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
   $paginate_links = paginate_links($pagination_args);
 
   if ($paginate_links) {
-    echo "<nav class='custom-pagination'>";
-      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
-      echo $paginate_links;
+    echo "<nav class='ct_pagination pagination theme-colored pull-right'>";
+    echo $paginate_links;
     echo "</nav>";
   }
 
