@@ -36,6 +36,9 @@ $menus = get_nav_menu_locations();
 	</div>
 </div>
 <?php endif; ?>
+<?php if ( ! is_home() && ! is_front_page() ) : ?>
+<?php echo do_shortcode('[vc_owlcarousel_ocoder title="Futsal Partner"]');?>
+<?php endif;?>
 <footer class="footer divider layer-overlay overlay-dark" data-bg-img="<?php echo $footer_background_image ?>">
     <div class="container pt-100 pb-30">
         <div class="row mb-50">
