@@ -89,8 +89,8 @@ This file contains the common styles of this theme.
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-@import url(https://fonts.googleapis.com/css?family=Playball);
+/*@import url(https://fonts.googleapis.com/css?family=Pacifico);*/
+/*@import url(https://fonts.googleapis.com/css?family=Playball);*/
 /*
  * typography.less
  * -----------------------------------------------
@@ -7537,6 +7537,10 @@ blockquote p {
     color: white;
     font-size: 42px;
 }
+#page-container .vc_column-inner {padding-top: 0;}
+#page-container .wpb_content_element{
+    margin-bottom: 0;
+}
 .header-text h2{
     font-size: 32px;
     margin-bottom: 0;
@@ -7544,4 +7548,10 @@ blockquote p {
 }
 .header-text h5{
     margin-top: 0;
+}
+#category-list .thumb{
+    max-width: 300px;
+}
+#category-list  .box-hover-effect{
+    width: auto;
 }
