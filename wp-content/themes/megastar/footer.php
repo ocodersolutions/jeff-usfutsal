@@ -37,7 +37,17 @@ $menus = get_nav_menu_locations();
 </div>
 <?php endif; ?>
 <?php if ( ! is_home() && ! is_front_page() ) : ?>
-<?php echo do_shortcode('[vc_owlcarousel_ocoder title="Futsal Partner"]');?>
+  <?php if (is_active_sidebar('carousel_client')){ ?>
+  <section class="parallax"  data-bg-img="<?php echo get_template_directory_uri()?>/images/bg/Registration_bg1.jpg" >
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+          <?php  dynamic_sidebar('carousel_client'); ?>
+          </div>
+        </div>
+      </div>
+    </section>
+  <?php } ?>
 <?php endif;?>
 <footer class="footer divider layer-overlay overlay-dark" data-bg-img="<?php echo $footer_background_image ?>">
     <div class="container pt-100 pb-30">

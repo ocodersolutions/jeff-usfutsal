@@ -1117,6 +1117,7 @@ register_sidebar(array(
     'after_title' => '</h3>'
 ));
 
+
 function latest_news_sc(){
     $lt_new_Qr = new WP_Query(array(
                 'posts_per_page' => 5,
@@ -1884,3 +1885,100 @@ function register_Widget_Phone_Box() {
     register_widget( 'Widget_Phone_Box' );
 }
 add_action( 'widgets_init', 'register_Widget_Phone_Box' );
+
+// widget select partner logo 
+
+class ctUp_ads extends WP_Widget{
+    
+    function __construct() {
+        parent::__construct(
+            'Widget_Partner_slide', // Base ID
+            esc_html__( 'WG Partner Slide', 'text_domain' ), // Name
+            array( 'description' => esc_html__( 'A Partner Slide Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    public function widget($args, $instance){ 
+        
+        $text = !empty($instance['text']) ? $instance['text']:'FUTSAL PARTNER';
+        $image_uri = $instance['image_uri'];
+        //$background_uri = $instance['background_uri'];
+        
+        echo $args['before_widget'];
+
+         
+        if(!empty($text)){
+            echo '<h2 class="text-uppercase title text-center text-white pt-0 pb-20">'.$text.'</h2>';
+        }
+
+        if(!empty($image_uri)){
+            echo '<div class="clients-logo carousel owl-carousel-6col">';
+            $A_url = explode(",",$image_uri);
+            foreach ($A_url as $url ) {
+                echo '<div class="item"><a href="#"><img src="'.$url.'" alt=""></a></div>';
+            }
+            // echo '<h2 class="text-uppercase title text-center text-white pt-0 pb-20">'.$image_uri.'</h2>';
+            echo '</div>';
+        }
+    
+       
+        echo $args['after_widget'];
+    }
+
+    
+
+    public function form($instance){ 
+    
+    $text = !empty( $instance['text'] ) ? $instance['text'] : '';
+    $image_uri = ! empty( $instance['image_uri'] ) ? $instance['image_uri'] : '';
+    //$background_uri = ! empty( $instance['background_uri'] ) ? $instance['background_uri'] : '';
+
+    ?>
+    <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php esc_attr_e( 'Tittle :', 'text_domain' ); ?></label> 
+        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" value="<?php echo esc_attr( $text ); ?>">
+    </p>
+
+    
+    <p>
+      
+        <input class="widefat media_url" id="<?php echo esc_attr( $this->get_field_id( 'image_uri' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'image_uri' ) ); ?>" type="hidden" value="<?php echo esc_attr( $image_uri ); ?>">
+
+        <input type="button" value="<?php _e( 'Upload Image', 'theme name' ); ?>" class="button custom_media_upload" id="custom_image_uploader"/>
+        
+    </p>
+    <div id="something">
+        <?php if (!empty($image_uri)){?>
+            <?php $Ar_img_url = explode(",",$image_uri);foreach ($Ar_img_url as $uri) { ?>
+                <div class="img_preview"><img src="<?php echo $uri; ?>" alt="" class="img-fullwidth img-responsive"/><a class="delete-img " data-url="<?php echo $uri; ?>" href="#"></a></div>
+        <?php } ?>
+        <?php }?>
+        <div id= "offset_" style="clear: both"></div>
+    </div>
+    <!-- <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'background_uri' ) ); ?>"><?php esc_attr_e( 'background images :', 'text_domain' ); ?></label> 
+        <input class="background_uri" id="<?php echo esc_attr( $this->get_field_id( 'background_uri' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'background_uri' ) ); ?>" type="text" value="<?php echo esc_attr( $background_uri ); ?>">
+        <input type="button" value="<?php _e( 'Choice Image', 'theme name' ); ?>" class="button background_upload" id="background_image_uploader"/>
+    </p> -->
+    <?php
+    }
+    function update($new_instance, $old_instance) {
+        $instance = $old_instance;
+        $instance['text'] = $new_instance['text'] ;
+        $instance['image_uri'] = $new_instance['image_uri'] ;
+        //$instance['background_uri'] = $new_instance['background_uri'] ;
+
+        return $instance;
+    }
+}
+add_action('widgets_init', 'ctUp_ads_widget');
+function ctUp_ads_widget() {
+    register_widget( 'ctUp_ads' );
+}
+
+function ctUp_wdScript(){
+  wp_enqueue_media();
+  wp_enqueue_script('logo-slider', get_stylesheet_directory_uri() . '/js/logo-slider.js');
+  wp_enqueue_style('logo-slider-style', get_stylesheet_directory_uri() . '/css/logo-slider.css');
+}
+add_action('admin_enqueue_scripts', 'ctUp_wdScript');

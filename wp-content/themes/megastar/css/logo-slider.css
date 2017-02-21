@@ -1,0 +1,37 @@
+/*style logo */
+#something:before{
+	content: "";
+	clear: both;
+}
+#something .img_preview{
+	padding-right: 20px;
+	position: relative;
+	width: 30%;
+	float: left;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+#something .img_preview:last-child{
+	clear: bottom;
+}
+#something .img_preview img{
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+#something .img_preview a.delete-img {
+	position: absolute;
+	top: -10px;
+	right: 10px;
+	text-decoration: none;
+}
+#something .img_preview:hover .delete-img:after{
+	border: 1px solid #e44646;
+	border-radius: 50%;
+	color: red;
+}
+#something .img_preview a.delete-img:after{
+	content: "\f153";
+	font: 400 20px/1 dashicons;
+	color: #000;
+}
