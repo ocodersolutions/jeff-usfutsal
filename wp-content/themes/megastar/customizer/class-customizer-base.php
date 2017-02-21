@@ -1472,30 +1472,30 @@ class megastar_Customizer_Base {
 		// )));
                 
                 //typography section
-                $this->wp_customize->add_section('typography', array(
-			'title' => esc_html_x('Typography', 'backend', 'megastar'),
-			'priority' => 30
-		));
-                 //Add setting Heading font family settings
-                $this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'base_heading_font_family', array(
-			'type'              => 'theme_mod',
-			'default'           => 'Open Sans',
-			'transport'         => 'postMessage',
-			'sanitize_callback' => false,
-                        'css_map' => array(
-				'font-family' => array(
-                                    'h1, h2, h3, h4, h5, h6',
-					'.largeHeading,.largeHeading h1,.largeHeading h2,.largeHeading h3, .largeHeadingWhite,.largeHeadingWhite h1,'
-                                    . '.largeHeadingWhite h2,.largeHeadingWhite h3, .mediumHeading,.mediumHeading h1,.mediumHeading h2,.mediumHeading h3, '
-                                    . '.mediumHeadingThin,.mediumHeadingThin h1,.mediumHeadingThin h2,.mediumHeadingThin h3, '
-                                    . '.smallHeading,.smallHeading h1,.smallHeading h2,.smallHeading h3, '
-                                    . '.mediumHeadingWhite,.mediumHeadingWhite h1,.mediumHeadingWhite h2,.mediumHeadingWhite h3, '
-                                    . '.mediumHeadingBlack,.mediumHeadingBlack h1,.mediumHeadingBlack h2,.mediumHeadingBlack h3, '
-                                    . '.sup-style1 .mega-hovertitle, .pace.pace-active .pace-progress:before '
-				)
-			)
-		)));
- 
+//                $this->wp_customize->add_section('typography', array(
+//			'title' => esc_html_x('Typography', 'backend', 'megastar'),
+//			'priority' => 30
+//		));
+//                 //Add setting Heading font family settings
+//                $this->wp_customize->add_setting( new megastar_Customizer_Dynamic_CSS( $this->wp_customize, 'base_heading_font_family', array(
+//			'type'              => 'theme_mod',
+//			'default'           => 'Open Sans',
+//			'transport'         => 'postMessage',
+//			'sanitize_callback' => false,
+//                        'css_map' => array(
+//				'font-family' => array(
+//                                    'h1, h2, h3, h4, h5, h6',
+//					'.largeHeading,.largeHeading h1,.largeHeading h2,.largeHeading h3, .largeHeadingWhite,.largeHeadingWhite h1,'
+//                                    . '.largeHeadingWhite h2,.largeHeadingWhite h3, .mediumHeading,.mediumHeading h1,.mediumHeading h2,.mediumHeading h3, '
+//                                    . '.mediumHeadingThin,.mediumHeadingThin h1,.mediumHeadingThin h2,.mediumHeadingThin h3, '
+//                                    . '.smallHeading,.smallHeading h1,.smallHeading h2,.smallHeading h3, '
+//                                    . '.mediumHeadingWhite,.mediumHeadingWhite h1,.mediumHeadingWhite h2,.mediumHeadingWhite h3, '
+//                                    . '.mediumHeadingBlack,.mediumHeadingBlack h1,.mediumHeadingBlack h2,.mediumHeadingBlack h3, '
+//                                    . '.sup-style1 .mega-hovertitle, .pace.pace-active .pace-progress:before '
+//				)
+//			)
+//		)));
+// 
 		// Add Heading Font Control
 		$this->wp_customize->add_control( new megastar_Google_Fonts_Control( $this->wp_customize, 'base_heading_font_family', array(
 				'label' => esc_html__( 'Font Family', 'total' ),
