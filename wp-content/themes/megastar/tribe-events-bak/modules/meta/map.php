@@ -17,7 +17,7 @@ if ( empty( $map ) ) {
 ?>
 
 <div class="uk-width-1-1">
-	<div class="tribe-events-venue-map ">
+	<div class="tribe-events-venue-map pd-0 border-radius-0" style="width:100%!important">
 	<?php
 	// Display the map.
 	do_action( 'tribe_events_single_meta_map_section_start' );

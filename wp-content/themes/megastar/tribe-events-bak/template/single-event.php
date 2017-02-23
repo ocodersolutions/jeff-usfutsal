@@ -23,7 +23,7 @@ $city = tribe_get_city();
         <h5 class="text-uppercase letter-space-1 mb-0"><a href="<?php echo $link; ?>"><?php the_title();?></a></h5>
         <ul>
 
-          <li class="text-gray-silver font-12"><?php if(tribe_get_start_date()){?><i class="fa fa-clock-o"></i>  <?php echo 'at '.tribe_get_start_date($post, false, $format = 'g:i A');}?> <?php if(tribe_get_end_date()) { echo ' - '.tribe_get_end_date($post, false, $format = 'g:i A');}?> <?php  if ( isset( $address ) && $address ) { ?><i class="fa fa-map-marker ml-10"></i> <?php echo $address; }?><?php  if ( isset( $city ) && $city ) {echo '&#32;'.$city; }?></li>
+          <li class="text-gray-silver font-12"><?php if(tribe_get_start_date()){?><i class="fa fa-clock-o"></i>  <?php echo 'at '.tribe_get_start_date($post_id, false, $format = 'g:i A');}?> <?php if(tribe_get_end_date()) { echo ' - '.tribe_get_end_date($post_id, false, $format = 'g:i A');}?> <?php  if ( isset( $address ) && $address ) { ?><i class="fa fa-map-marker ml-10"></i> <?php echo $address; }?><?php  if ( isset( $city ) && $city ) {echo '&#32;'.$city; }?></li>
         </ul>
     </div>
     <?php }?>

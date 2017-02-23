@@ -69,3 +69,31 @@
 	background: #EE163B;
 	color: #fff;
 }
+.single #tribe-bar-form,.archive #tribe-bar-form{
+	background-color: #ffffff;
+}
+.single.single-tribe_events main.tm-content{
+	background: url(../images/bg/what-is-futsal-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#tribe-bar-form label{
+	color: #000;
+}
+#tribe-events-content .tribe-events-single-section .pd-0{
+	padding: 0;
+}
+#tribe-events-content .tribe-events-single-section .border-radius-0{
+	border-radius: 0px;
+}
+.color-logo{
+	color : #0071bc !important;
+}
+.tribe-events-venue-details.title a{
+	color: inherit;
+}
+.bg_img_logo{
+	background-image: url(../images/bg/what-is-futsal-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}

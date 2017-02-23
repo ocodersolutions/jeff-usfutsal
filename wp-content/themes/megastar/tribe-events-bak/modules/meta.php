@@ -18,10 +18,12 @@ $set_venue_apart = apply_filters( 'tribe_events_single_event_the_meta_group_venu
 ?>
 
 <?php if ( $not_skeleton ) : ?>
-	<div class="tribe-events-single-section tribe-events-event-meta primary tribe-clearfix "><div class="uk-grid">
+	<div class="tribe-events-single-section primary tribe-clearfix "><div class="uk-grid">
 <?php endif; ?>
-
+<div class="col-sm-6">
+	<div class="row">
 <?php
+ do_action( 'tribe_events_single_event_after_the_content' );
 do_action( 'tribe_events_single_event_meta_primary_section_start' );
 
 // Always include the main event details in this first section
@@ -33,7 +35,13 @@ if ( ! $set_venue_apart && ! tribe_embed_google_map() ) {
 } elseif ( ! $set_venue_apart && ! tribe_has_organizer() && tribe_embed_google_map() ) {
 	// If we have no organizer, no need to separate the venue but we have a map to embed...
 	tribe_get_template_part( 'modules/meta/venue' );
-	echo '<div class="tribe-events-meta-group tribe-events-meta-group-gmap">';
+	?>
+	<div class="tribe-events-back text-left text-uppercaes">
+		<a class="btn btn-dark btn-theme-colored btn-flat btn-sm " href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( esc_html__( 'VIEW MORE EVENTS', 'megastar'), $events_label_plural ); ?></a>
+	</div>
+	<?php
+	echo '</div></div>';
+	echo '<div class="col-sm-6">';
 	tribe_get_template_part( 'modules/meta/map' );
 	echo '</div>';
 } else {
@@ -50,7 +58,6 @@ if ($set_venue_apart) {
 tribe_get_template_part( 'modules/meta/venue' );
 	
 }
-
 do_action( 'tribe_events_single_event_meta_primary_section_end' );
 ?>
 
@@ -63,6 +70,7 @@ do_action( 'tribe_events_single_event_meta_primary_section_end' );
 	<?php if ( $not_skeleton ) : ?>
 		<div class="tribe-events-single-section tribe-events-event-meta secondary tribe-clearfix"><div class="uk-grid">
 	<?php endif; ?>
+
 	<?php
 	do_action( 'tribe_events_single_event_meta_secondary_section_start' );
 

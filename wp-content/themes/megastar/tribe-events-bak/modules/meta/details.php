@@ -65,12 +65,12 @@ $website = tribe_get_event_website_link();
 
 				<dt> <?php esc_html_e( 'Start:', 'megastar') ?> </dt>
 				<dd>
-					<abbr class="tribe-events-abbr tribe-events-start-datetime published dtstart" title="<?php printf(esc_attr__('%s', 'megastar'), $start_ts) ?>"> <?php printf(esc_html__('%s', 'megastar'),$start_date) ?> </abbr>
+					<abbr class="tribe-events-abbr tribe-events-start-datetime published dtstart" title="<?php printf(esc_attr__('%s', 'megastar'), $start_ts) ?>"> <?php printf(esc_html__('%s', 'megastar'),$start_time) ?> </abbr>
 				</dd>
 
 				<dt> <?php esc_html_e( 'End:', 'megastar') ?> </dt>
 				<dd>
-					<abbr class="tribe-events-abbr dtend" title="<?php printf(esc_attr__('%s', 'megastar'), $end_ts) ?>"> <?php printf(esc_html__('%s', 'megastar'),$end_date) ?> </abbr>
+					<abbr class="tribe-events-abbr dtend" title="<?php printf(esc_attr__('%s', 'megastar'), $end_ts) ?>"> <?php printf(esc_html__('%s', 'megastar'),$end_time) ?> </abbr>
 				</dd>
 
 			<?php
@@ -103,15 +103,14 @@ $website = tribe_get_event_website_link();
 			else :
 				?>
 
-				<dt> <?php esc_html_e( 'Date:', 'megastar') ?> </dt>
+				<dt><em><?php esc_html_e( 'Start:', 'megastar') ?></em></dt>
 				<dd>
-					<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php printf(esc_attr__('%s', 'megastar'), $start_ts) ?>"> <?php printf(esc_html__('%s', 'megastar'),$start_date) ?> </abbr>
+					<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php printf(esc_attr__('%s', 'megastar'), $start_ts) ?>"> <?php echo tribe_get_start_date( null, false, $time_format ); ?> </abbr>
 				</dd>
-
-				<dt> <?php echo esc_html( $time_title ); ?> </dt>
+				<dt><em><?php esc_html_e( 'End:', 'megastar') ?></em></dt>
 				<dd>
 					<div class="tribe-events-abbr tribe-events-start-time published dtstart" title="<?php printf(esc_attr__('%s', 'megastar'), $end_ts) ?>">
-						<?php echo esc_html($time_formatted); ?>
+						<?php echo $end_time; ?>
 					</div>
 				</dd>
 

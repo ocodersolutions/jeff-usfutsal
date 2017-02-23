@@ -304,7 +304,7 @@ add_action('wp_enqueue_scripts', 'my_function_name');
 // add  script in footer
 function your_function() {
     wp_enqueue_script('calendar-events-data', get_stylesheet_directory_uri() . '/js/calendar-events-data.js');
-    wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');
+    //wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');
     wp_enqueue_script('actions', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.actions.min.js');
     wp_enqueue_script('carousel', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.carousel.min.js');
     wp_enqueue_script('kenburn', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.kenburn.min.js');
@@ -316,13 +316,13 @@ function your_function() {
     wp_enqueue_script('video', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.video.min.js');
     wp_enqueue_script('gmap', 'http://maps.google.com/maps/api/js?key=AIzaSyAYWE4mHmR9GyPsHSOVZrSCOOljk8DU9B4');
     wp_enqueue_script('gmap_init', get_stylesheet_directory_uri() ."/js/google-map-init.js");
-        
+    wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');   
 }
 
 add_action('wp_footer', 'your_function');
 // enqueue script control select color
 function select_color_enqueue_js() {
-    wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/admin/js/select-min-color.js');
+    wp_enqueue_script('select-min-color', get_stylesheet_directory_uri() . '/admin/js/select-min-color.js');
 }
 add_action('customize_preview_init', 'select_color_enqueue_js');
 
@@ -1902,7 +1902,6 @@ class ctUp_ads extends WP_Widget{
         
         $text = !empty($instance['text']) ? $instance['text']:'FUTSAL PARTNER';
         $image_uri = $instance['image_uri'];
-        //$background_uri = $instance['background_uri'];
         
         echo $args['before_widget'];
 
@@ -1917,7 +1916,6 @@ class ctUp_ads extends WP_Widget{
             foreach ($A_url as $url ) {
                 echo '<div class="item"><a href="#"><img src="'.$url.'" alt=""></a></div>';
             }
-            // echo '<h2 class="text-uppercase title text-center text-white pt-0 pb-20">'.$image_uri.'</h2>';
             echo '</div>';
         }
     
@@ -1931,14 +1929,12 @@ class ctUp_ads extends WP_Widget{
     
     $text = !empty( $instance['text'] ) ? $instance['text'] : '';
     $image_uri = ! empty( $instance['image_uri'] ) ? $instance['image_uri'] : '';
-    //$background_uri = ! empty( $instance['background_uri'] ) ? $instance['background_uri'] : '';
 
     ?>
     <p>
         <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php esc_attr_e( 'Tittle :', 'text_domain' ); ?></label> 
         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" value="<?php echo esc_attr( $text ); ?>">
     </p>
-
     
     <p>
       
@@ -1955,18 +1951,13 @@ class ctUp_ads extends WP_Widget{
         <?php }?>
         <div id= "offset_" style="clear: both"></div>
     </div>
-    <!-- <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'background_uri' ) ); ?>"><?php esc_attr_e( 'background images :', 'text_domain' ); ?></label> 
-        <input class="background_uri" id="<?php echo esc_attr( $this->get_field_id( 'background_uri' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'background_uri' ) ); ?>" type="text" value="<?php echo esc_attr( $background_uri ); ?>">
-        <input type="button" value="<?php _e( 'Choice Image', 'theme name' ); ?>" class="button background_upload" id="background_image_uploader"/>
-    </p> -->
+    
     <?php
     }
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
         $instance['text'] = $new_instance['text'] ;
         $instance['image_uri'] = $new_instance['image_uri'] ;
-        //$instance['background_uri'] = $new_instance['background_uri'] ;
 
         return $instance;
     }
@@ -1982,3 +1973,8 @@ function ctUp_wdScript(){
   wp_enqueue_style('logo-slider-style', get_stylesheet_directory_uri() . '/css/logo-slider.css');
 }
 add_action('admin_enqueue_scripts', 'ctUp_wdScript');
+
+/* Add Hook in single Events Page*/
+function single_event_redirect_home_btn(){
+    echo '<p class="tribe-events-back">aaaaaaaaaaa</p>';
+}

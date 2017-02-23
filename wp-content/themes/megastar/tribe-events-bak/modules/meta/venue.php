@@ -37,8 +37,8 @@ $website = tribe_get_venue_website_link();
 			<?php endif; ?>
 
 			<?php if ( ! empty( $phone ) ): ?>
-				<dt> <?php esc_html_e( 'Phone:', 'megastar') ?> </dt>
-				<dd class="tribe-venue-tel"> <?php echo esc_attr($phone) ?> </dd>
+				<dt class="mb-10"><?php esc_html_e( 'Phone:', 'megastar') ?><span class="font-weight-300">&nbsp;<?php echo esc_attr($phone);?></span></dt>
+				
 			<?php endif ?>
 
 			<?php if ( ! empty( $website ) ): ?>
