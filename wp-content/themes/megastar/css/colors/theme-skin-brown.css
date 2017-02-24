@@ -5,6 +5,12 @@
 COLOR : Brown
 COLOR CODE: #8D6E63
 ----------------------------------------- */
+.flag{
+  background-color: #8D6E63 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #8D6E63 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #8D6E63 !important;

@@ -5,6 +5,12 @@
 COLOR : Blue Gray
 COLOR CODE: #546E7A
 ----------------------------------------- */
+.flag{
+  background-color: #546E7A !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #546E7A !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #546E7A !important;

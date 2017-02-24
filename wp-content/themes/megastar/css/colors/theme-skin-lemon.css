@@ -5,6 +5,12 @@
 COLOR : Lemon
 COLOR CODE: #abc502
 ----------------------------------------- */
+.flag{
+  background-color: #abc502 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #abc502 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #abc502 !important;

@@ -5,6 +5,12 @@
 COLOR : Green
 COLOR CODE: #72A230
 ----------------------------------------- */
+.flag{
+  background-color: #72A230 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #72A230 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #72A230 !important;

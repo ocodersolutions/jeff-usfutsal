@@ -40,7 +40,7 @@ $link_to_all = tribe_events_get_list_widget_view_all_link( $instance );
 
 // Check if any posts were found.
 if ( isset( $posts ) && $posts ) : ?>
-	<h3 class="text-uppercase mt-0 letter-space-2">Upcomming Events</h3>
+	<h3 class="text-uppercase mt-0 letter-space-2">Upcoming Events</h3>
 	<div class="bxslider" data-count="3">
 	<?php foreach ( $posts as $post ) :
 		setup_postdata( $post );

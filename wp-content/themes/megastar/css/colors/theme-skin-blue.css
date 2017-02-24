@@ -4,7 +4,14 @@
 
 COLOR : Blue
 COLOR CODE: #735CB0
+
 ----------------------------------------- */
+.flag{
+  background-color: #735CB0 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #735CB0 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #735CB0 !important;

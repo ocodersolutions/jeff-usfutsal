@@ -5,6 +5,12 @@
 COLOR : Gray
 COLOR CODE: #757575
 ----------------------------------------- */
+.flag{
+  background-color: #757575 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #757575 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #757575 !important;

@@ -5,6 +5,12 @@
 COLOR : Orange
 COLOR CODE: #FF5722
 ----------------------------------------- */
+.flag{
+  background-color: #FF5722 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #FF5722 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #FF5722 !important;

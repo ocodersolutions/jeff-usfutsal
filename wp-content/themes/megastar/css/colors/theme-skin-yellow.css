@@ -5,6 +5,12 @@
 COLOR : Yellow
 COLOR CODE: #FFAB00
 ----------------------------------------- */
+.flag{
+  background-color: #FFAB00 !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #FFAB00 !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #FFAB00 !important;

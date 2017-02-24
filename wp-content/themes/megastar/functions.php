@@ -45,9 +45,9 @@ require_once get_template_directory() . '/inc/meta-boxes.php';
 
 
 // Visual composer integration
-if (class_exists('WPBakeryVisualComposerAbstract')) {
-    require_once(get_template_directory() . '/inc/visualComposer.php');
-}
+// if (class_exists('WPBakeryVisualComposerAbstract')) {
+//     require_once(get_template_directory() . '/inc/visualComposer.php');
+// }
 
 // Visual composer integration
 if (class_exists('Woocommerce')) {
@@ -291,18 +291,25 @@ function my_function_name() {
     wp_enqueue_style('navigation', get_stylesheet_directory_uri() . '/css/revolution-slider/navigation.css');
     // Enqueue the script
 
-    wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
-    wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
-    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
-    wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
-    wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
-    wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
+    // wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
+    // wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
+    // wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
+    // wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
+    // wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
+    // wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
 }
 
 add_action('wp_enqueue_scripts', 'my_function_name');
 
 // add  script in footer
 function your_function() {
+    wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
+    wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
+    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
+    wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
+    wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
+    wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
+    ///
     wp_enqueue_script('calendar-events-data', get_stylesheet_directory_uri() . '/js/calendar-events-data.js');
     //wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');
     wp_enqueue_script('actions', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.actions.min.js');
@@ -1978,3 +1985,38 @@ add_action('admin_enqueue_scripts', 'ctUp_wdScript');
 function single_event_redirect_home_btn(){
     echo '<p class="tribe-events-back">aaaaaaaaaaa</p>';
 }
+
+//Add these scripts to only the front page
+function tribehome_enqueue_front_page_scripts() {
+    if(  tribe_is_event() && is_single()  )
+    {
+ 
+        //Add the stylesheet into the header
+        // wp_enqueue_style("tribe.homepage",WP_PLUGIN_URL."/the-events-calendar/resources/tribe-events-full.css");
+ 
+        // wp_enqueue_style("tribe.homepage.date",WP_PLUGIN_URL."/tribe-homepage-search/css/datepicker.css");
+ 
+        //Add the scripts in the footer
+        wp_enqueue_script("jquery");
+ 
+        wp_enqueue_script(
+        "tribe.homepage.bar", WP_PLUGIN_URL."/the-events-calendar/src/resources/js/tribe-events-bar.min.js",
+        array("jquery"), "",10);
+ 
+        // wp_enqueue_script(
+        // "tribe.homepage.events", WP_PLUGIN_URL."/the-events-calendar/src/resources/tribe-events.js",
+        // array("jquery"), "",1);
+ 
+        // wp_enqueue_script(
+        // "tribe.homepage.datepicker", WP_PLUGIN_URL."/tribe-homepage-search/js/bootstrap-datepicker.js",
+        // array("jquery"), "",1);
+ 
+        // wp_enqueue_script(
+        // "tribe.homepage.footer", WP_PLUGIN_URL."/tribe-homepage-search/js/footer.js",
+        // array("jquery"), "",1);
+ 
+    }
+}
+add_action( 'wp_enqueue_scripts', 'tribehome_enqueue_front_page_scripts' );
+ 
+?>

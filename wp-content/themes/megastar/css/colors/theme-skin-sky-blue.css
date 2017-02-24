@@ -5,6 +5,12 @@
 COLOR : Sky Blue
 COLOR CODE: #00A4EF
 ----------------------------------------- */
+.flag{
+  background-color: #00A4EF !important;
+}
+.flag:before,.flag:after{
+  border-top: 30px solid #00A4EF !important;
+}
 /* text-theme-color */
 .text-theme-colored {
   color: #00A4EF !important;
