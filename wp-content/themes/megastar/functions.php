@@ -321,8 +321,8 @@ function your_function() {
     wp_enqueue_script('parallax', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.parallax.min.js');
     wp_enqueue_script('slideanims', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.slideanims.min.js');
     wp_enqueue_script('video', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.video.min.js');
-    wp_enqueue_script('gmap', 'http://maps.google.com/maps/api/js?key=AIzaSyAYWE4mHmR9GyPsHSOVZrSCOOljk8DU9B4');
-    wp_enqueue_script('gmap_init', get_stylesheet_directory_uri() ."/js/google-map-init.js");
+//    wp_enqueue_script('gmap', 'http://maps.google.com/maps/api/js?key=AIzaSyAYWE4mHmR9GyPsHSOVZrSCOOljk8DU9B4');
+//    wp_enqueue_script('gmap_init', get_stylesheet_directory_uri() ."/js/google-map-init.js");
     wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');   
 }
 
