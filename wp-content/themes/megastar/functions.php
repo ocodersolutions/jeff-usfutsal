@@ -269,6 +269,7 @@ add_filter('wp_nav_menu_args', function($args) {
 });
 
 // add css and script
+
 function my_function_name() {
     // Enqueue the css
     wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css');
@@ -278,55 +279,86 @@ function my_function_name() {
     wp_enqueue_style('menuzord-boxed', get_stylesheet_directory_uri() . '/css/menuzord-skins/menuzord-boxed.css');
     wp_enqueue_style('style-main', get_stylesheet_directory_uri() . '/css/style-main.css');
     wp_enqueue_style('style-custom', get_stylesheet_directory_uri() . '/css/custom.css');
-    
+
     $theme_style = get_theme_mod('main_themes_color', get_theme_support( 'main_themes_color', 'lemon' ) );
+
     wp_enqueue_style('theme-skin-lemon', get_stylesheet_directory_uri() . '/css/colors/theme-skin-'.$theme_style.'.css');
 
+
+
 //    wp_enqueue_style('theme-skin-lemon', get_stylesheet_directory_uri() . '/css/colors/theme-skin-lemon.css');
+
     wp_enqueue_style('preloader', get_stylesheet_directory_uri() . '/css/preloader.css');
+
     wp_enqueue_style('custom-bootstrap-margin-padding', get_stylesheet_directory_uri() . '/css/custom-bootstrap-margin-padding.css');
+
     wp_enqueue_style('responsive', get_stylesheet_directory_uri() . '/css/responsive.css');
+
     wp_enqueue_style('settings', get_stylesheet_directory_uri() . '/css/revolution-slider/settings.css');
+
     wp_enqueue_style('layers', get_stylesheet_directory_uri() . '/css/revolution-slider/layers.css');
+
     wp_enqueue_style('navigation', get_stylesheet_directory_uri() . '/css/revolution-slider/navigation.css');
+
     // Enqueue the script
 
-    // wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
-    // wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
-    // wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
-    // wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
-    // wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
-    // wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
+
+
+    wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
+
+    wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
+
+    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
+
+    wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
+
+    wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
+
+    wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
+
 }
+
+
 
 add_action('wp_enqueue_scripts', 'my_function_name');
 
+
+
 // add  script in footer
+
 function your_function() {
-    wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
-    wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
-    wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
-    wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
-    wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
-    wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
-    ///
+
     wp_enqueue_script('calendar-events-data', get_stylesheet_directory_uri() . '/js/calendar-events-data.js');
-    //wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');
+
+    wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');
+
     wp_enqueue_script('actions', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.actions.min.js');
+
     wp_enqueue_script('carousel', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.carousel.min.js');
+
     wp_enqueue_script('kenburn', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.kenburn.min.js');
+
     wp_enqueue_script('layeranimation', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.layeranimation.min.js');
+
     wp_enqueue_script('migration', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.migration.min.js');
+
     wp_enqueue_script('navigation', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.navigation.min.js');
+
     wp_enqueue_script('parallax', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.parallax.min.js');
+
     wp_enqueue_script('slideanims', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.slideanims.min.js');
+
     wp_enqueue_script('video', get_stylesheet_directory_uri() . '/js/revolution-slider/extensions/revolution.extension.video.min.js');
-//    wp_enqueue_script('gmap', 'http://maps.google.com/maps/api/js?key=AIzaSyAYWE4mHmR9GyPsHSOVZrSCOOljk8DU9B4');
-//    wp_enqueue_script('gmap_init', get_stylesheet_directory_uri() ."/js/google-map-init.js");
-    wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js');   
+
+        
+
 }
 
+
+
 add_action('wp_footer', 'your_function');
+
+
 // enqueue script control select color
 function select_color_enqueue_js() {
     wp_enqueue_script('select-min-color', get_stylesheet_directory_uri() . '/admin/js/select-min-color.js');
@@ -1989,35 +2021,35 @@ function tribehome_enqueue_front_page_scripts() {
     {
  
         //Add the stylesheet into the header
-        // wp_enqueue_style("tribe.homepage",WP_PLUGIN_URL."/the-events-calendar/resources/tribe-events-full.css");
+        wp_enqueue_style("tribe.homepage",WP_PLUGIN_URL."/the-events-calendar/vendor/bootstrap-datepicker/css/datepicker.css");
  
         // wp_enqueue_style("tribe.homepage.date",WP_PLUGIN_URL."/tribe-homepage-search/css/datepicker.css");
  
         //Add the scripts in the footer
-        wp_enqueue_script("jquery");
+        wp_enqueue_script(
+        "tribe.homepage.datepicker", WP_PLUGIN_URL."/the-events-calendar/vendor/jquery-placeholder/jquery.placeholder.min.js",
+        array("jquery"), "",1);
  
         wp_enqueue_script(
+        "tribe.homepage.footer", WP_PLUGIN_URL."/the-events-calendar/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js",
+        array("jquery"), "",1);
+
+        wp_enqueue_script(
         "tribe.homepage.bar", WP_PLUGIN_URL."/the-events-calendar/src/resources/js/tribe-events-bar.min.js",
-        array("jquery"), "",20);
+        array("jquery"), "",1);
  
         wp_enqueue_script(
         "tribe.homepage.events", WP_PLUGIN_URL."/the-events-calendar/src/resources/js/tribe-events.js",
-        array("jquery"), "",20);
+        array("jquery"), "",1);
  
         // wp_enqueue_script(
         // "tribe.homepage.datepicker", WP_PLUGIN_URL."/the-events-calendar/src/resources/js/bootstrap-datepicker.js",
         // array("jquery"), "",10);
 
-        wp_enqueue_script(
-        "tribe.homepage.datepicker", WP_PLUGIN_URL."/the-events-calendar/vendor/jquery-placeholder/jquery.placeholder.min.js",
-        array("jquery"), "",20);
- 
-        wp_enqueue_script(
-        "tribe.homepage.footer", WP_PLUGIN_URL."/the-events-calendar/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js",
-        array("jquery"), "",20);
+        
  
     }
 }
-add_action( 'wp_footer', 'tribehome_enqueue_front_page_scripts' );
+add_action( 'wp_footer', 'tribehome_enqueue_front_page_scripts',1 );
  
 ?>

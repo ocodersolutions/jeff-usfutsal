@@ -5,7 +5,7 @@ $logo_width_height = get_theme_mod('logo_width_height', '');
 
 <?php if (!$megastar_logo_upload) : ?>
     <a class="menuzord-brand stylish-header font-30 text-white pull-left flip"  href="<?php echo get_home_url(); ?>" > 
-        <span><?php bloginfo('name'); ?></span>
+        <span><?php wp_kses_post(bloginfo('name')); ?></span>
   	</a>
 <?php else : ?>
 	<a class="menuzord-brand stylish-header font-30 text-white pull-left flip"  href="<?php echo get_home_url(); ?>" > 
