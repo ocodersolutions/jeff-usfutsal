@@ -156,3 +156,7 @@
     background-color: #c30e2d;
     border-color: #b90e2b;
 }
+.border-bottom-gray:last-child {
+    border: none;
+    margin-bottom: 10px !important;
+}
