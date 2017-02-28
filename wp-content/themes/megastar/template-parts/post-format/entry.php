@@ -56,14 +56,17 @@
 
 
 <article class="post mb-50 pb-30 border-bottom-gray" id="item-<?php the_ID(); ?>" data-permalink="<?php the_permalink(); ?>">                  
-    <div class="entry-header pull-left mr-10 mb-10">
+    <div class="entry-header pull-left mr-10 mb-0">
         <?php if (has_post_thumbnail()) : ?>
             <?php if(is_single()) : ?>
                 <?php echo  the_post_thumbnail('megastar-blog', array('class' => 'img-fullwidth img-responsive'));  ?>
             <?php else : ?>
-            <div class="post-thumb">
-                <?php echo  the_post_thumbnail('megastar-blog-list', array('class' => 'img-fullwidth img-responsive'));  ?>
-            </div>
+             
+        <div class="box-hover-effect effect1 post-thumb">
+        <div class="thumb"> <a href="<?php the_permalink() ?>">
+               <?php echo  the_post_thumbnail('megastar-blog-list', array('class' => 'img-fullwidth img-responsive'));  ?></a> 
+              </div>
+        </div>
             <?php endif; ?>
         <?php endif; ?>
     
@@ -77,9 +80,9 @@
       </ul> -->
     </div>
 
-    <div class="entry-content">
+    <div class="entry-content mt-30">
          <?php if(!is_single()) :?>
-            <h2 class="entry-title mt-30 font-weight-700 mb-0"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+            <h2 class="entry-title  font-weight-700 mb-0"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
         <?php endif; ?>
         <?php 
             foreach((get_the_category()) as $category) { ?>
@@ -92,7 +95,7 @@
         <?php }?>
     </div>
     <div class="entry_readmore text-center mt-30">
-        <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> 
+        <a href="<?php the_permalink() ?>" class="btn  hvr-shutter-out-horizontal  btn-sm border-1px   btn-theme-colored btn-flat "> Read More</a> 
     </div>
     <div class="clear-fix" style="clear:both;"></div>
 </article>

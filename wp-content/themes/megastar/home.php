@@ -41,7 +41,7 @@ else{
 
 
 <section>
-    <div class="container abc mt-30 mb-30 pt-30 pb-30">
+    <div class="container abc mt-30 pb-60 pt-30 ">
         <div class="row ">
 	        <?php if($megastar_layout == 'sidebar-left'){ ?>
 	        <div class="col-sm-12 col-md-3">

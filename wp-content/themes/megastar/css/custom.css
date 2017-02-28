@@ -68,6 +68,14 @@
     background-repeat: no-repeat;
     background-color: #f4f4f4;
 }
+#page.layout-full-wrapper{
+   
+    background: url(../images/bg/what-is-futsal-bg.png);
+    background-size: 600px;
+    background-position: 100% 109%;        
+    background-repeat: no-repeat;
+     background-color: #f4f4f4;
+}
 #tribe-bar-form label{
     color: #000;
 }

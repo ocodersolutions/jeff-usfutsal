@@ -1294,7 +1294,7 @@ function ct_display_posts_sc($atts){
             
             </div>
              <div class="entry_readmore text-center mt-30 mb-30">
-                <a href="<?php the_permalink() ?>" class="btn btn-colored btn-light-blue-hover hvr-shutter-out-horizontal no-bg btn-sm border-1px"> Read More</a> 
+                <a href="<?php the_permalink() ?>" class="btn  hvr-shutter-out-horizontal  btn-sm border-1px   btn-theme-colored btn-flat "> Read More</a> 
             </div>
             <div class="clear-fix" style="clear:both;"></div>
           </div>
