@@ -32,7 +32,7 @@ function megastar_scripts() {
 //	$megastar_header_search = get_theme_mod( 'megastar_header_search', 1);
 
 	// Register Script
-	wp_register_script('uikit', get_template_directory_uri() . '/inc/vendor/uikit/js/uikit.min.js', array( 'jquery' ), NULL, true);
+//	wp_register_script('uikit', get_template_directory_uri() . '/inc/vendor/uikit/js/uikit.min.js', array( 'jquery' ), NULL, true);
 	wp_register_script('uikit-tooltip', get_template_directory_uri() . '/inc/vendor/uikit/js/components/tooltip.js', array( 'jquery' ), NULL, true);
 	wp_register_script('uikit-lightbox', get_template_directory_uri() . '/inc/vendor/uikit/js/components/lightbox.js', array( 'jquery' ), NULL, true);
 	wp_register_script('uikit-slideshow', get_template_directory_uri() . '/inc/vendor/uikit/js/components/slideshow.js', array( 'jquery' ), NULL, true);

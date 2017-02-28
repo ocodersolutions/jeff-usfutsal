@@ -26,19 +26,7 @@
  #out_nav.owl-carousel .owl-item .item{
  	position: relative;
  }
- // #out_nav.owl-carousel .owl-item .item .item-overlay{
-	// background: #fff;
-	// opacity: 0.8;
-	// position: absolute;
-	// z-index: 9;
-	// top: 0;
-	// left: 0;
-	// width: 100%;
-	// height: 100%;
- // }
- // #out_nav.owl-carousel .owl-item.active .item{
-	// border: 2px solid red;
- // }
+ 
  #out_nav.owl-carousel .center.active > .item > .item-overlay{
  	z-index: 0;
  }
@@ -72,10 +60,13 @@
 .single #tribe-bar-form,.archive #tribe-bar-form{
 	background-color: #ffffff;
 }
-.single.single-tribe_events main.tm-content{
+.single.single-tribe_events main.tm-content.row,
+.bg_img_logo{
 	background: url(../images/bg/what-is-futsal-bg.png);
-	background-size: cover;
+	background-size: 600px;
+        background-position: 100% 109%;        
 	background-repeat: no-repeat;
+        background-color: #f4f4f4;
 }
 #tribe-bar-form label{
 	color: #000;
@@ -92,8 +83,18 @@
 .tribe-events-venue-details.title a{
 	color: inherit;
 }
-.bg_img_logo{
-	background-image: url(../images/bg/what-is-futsal-bg.png);
-	background-size: cover;
-	background-repeat: no-repeat;
+ 
+#tribe-bar-form #tribe-bar-views{
+    left: 83.4%;
+}
+.single-tribe_events .tribe-events-venue-map{
+    margin-right: 35px;
+}
+#tribe-events-bar{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#tribe-bar-form input[type="text"]{
+    padding: 5px 0;
+    font-weight: 600;
 }
