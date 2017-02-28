@@ -1,10 +1,11 @@
 <?php
 /**
- * List View Loop
- * This file sets up the structure for the list loop
+ * Map View Loop
+ * This file sets up the structure for the map view events loop
  *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/list/loop.php
+ * Override this template in your own theme by creating a file at [your-theme]/tribe-events/pro/map/loop.php
  *
+ * @version 4.4
  * @package TribeEventsCalendar
  *
  */
@@ -14,32 +15,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 } ?>
 
 <?php
-global $post;
+
 global $more;
 $more = false;
+
 ?>
 
-<div class="tribe-events-loop tribe-event-item">
+<?php while ( have_posts() ) : the_post(); ?>
+	<?php do_action( 'tribe_events_inside_before_loop' ); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php do_action( 'tribe_events_inside_before_loop' ); ?>
-
-		<!-- Month / Year Headers -->
-		<?php tribe_events_list_the_date_headers(); ?>
-
-		<!-- Event  -->
+	<!-- Event  -->
+	<div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>">
 		<?php
-		$post_parent = '';
-		if ( $post->post_parent ) {
-			$post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
-		}
+		$event_type = tribe( 'tec.featured_events' )->is_featured( get_the_ID() ) ? 'featured' : 'event';
+
+		/**
+		 * Filters the event type used when selecting a template to render
+		 *
+		 * @param $event_type
+		 */
+		$event_type = apply_filters( 'tribe_events_map_view_event_type', $event_type );
+		
+		tribe_get_template_part( 'pro/map/single', $event_type );
 		?>
-		<div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>" <?php echo esc_attr($post_parent); ?>>
-			<?php tribe_get_template_part( 'list/single', 'event' ) ?>
-		</div>
+	</div>
 
 
-		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
-	<?php endwhile; ?>
-
-</div><!-- .tribe-events-loop -->
+	<?php do_action( 'tribe_events_inside_after_loop' ); ?>
+<?php
+endwhile;
