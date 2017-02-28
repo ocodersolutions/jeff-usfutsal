@@ -312,21 +312,11 @@ function my_function_name() {
 
     wp_enqueue_style('navigation', get_stylesheet_directory_uri() . '/css/revolution-slider/navigation.css');
 
-    // Enqueue the script
-
-   // wp_deregister_script('jquery');
-
-    //wp_enqueue_script('jquery-2.2.4', get_stylesheet_directory_uri() . '/js/jquery-2.2.4.min.js');
-
-    // wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js');
-
-    // wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js');
+    // Enqueue the script        
 
     wp_enqueue_script('jquery-plugin-collection', get_stylesheet_directory_uri() . '/js/jquery-plugin-collection.js');
 
-    wp_enqueue_script('jquery-themepunch-tools', get_stylesheet_directory_uri() . '/js/jquery.themepunch.tools.min.js');
-
-    wp_enqueue_script('jquery-themepunch-revolution', get_stylesheet_directory_uri() . '/js/jquery.themepunch.revolution.min.js');
+        
 
 }
 
