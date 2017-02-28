@@ -53,7 +53,7 @@ $has_venue_address = ( ! empty( $venue_details['address'] ) ) ? ' location' : ''
 
 	<?php if ( $venue_details ) : ?>
 		<!-- Venue Display Info -->
-		<div class="tribe-events-venue-details title font-weight-700 font-size-20 mb-30">
+		<div class="tribe-events-venue-details title font-weight-700 font-size-20 mb-10">
 			<?php echo implode( ', ', $venue_details ); ?>
 		</div> <!-- .tribe-events-venue-details -->
 	<?php endif; ?>

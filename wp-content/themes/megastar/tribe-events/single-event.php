@@ -73,7 +73,7 @@ else{
 					
 						<?php echo str_replace('@','at',tribe_events_event_schedule_details( $event_id, '', '' )); ?>
 					</div>
-					<div class="title font-weight-700 font-size-20 mb-30">
+					<div class="title font-weight-700 font-size-20 mb-10">
 					
 						<?php echo '<span>'.tribe_get_venue().'</span>'.',&nbsp;'.tribe_get_full_address(); ?>
 					</div>

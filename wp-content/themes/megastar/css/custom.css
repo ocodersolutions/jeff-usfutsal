@@ -88,7 +88,7 @@
     left: 83.4%;
 }
 .single-tribe_events .tribe-events-venue-map{
-    margin-right: 35px;
+    margin-right: 0;
 }
 #tribe-events-bar{
     margin-top: 50px;
@@ -97,4 +97,8 @@
 #tribe-bar-form input[type="text"]{
     padding: 5px 0;
     font-weight: 600;
+}
+.single-tribe_events .col-sm-6{
+    padding-left: 0;
+    padding-right: 35px;
 }
