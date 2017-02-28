@@ -1,89 +1,89 @@
 /* ========================================================================
    Use this file to add custom CSS easily
  ========================================================================== */
- #out_nav .owl-controls .owl-nav > .owl-next{
-	right: auto;
-	left: 100%;
-	background-image: url(../images/pattern/arrow_next.png);
- }
- #out_nav .owl-controls .owl-nav > .owl-prev{
-	left: auto;
-	right: 100%;
-	background-image: url(../images/pattern/arrow_prev.png);
- }
- #out_nav .owl-controls .owl-nav > div{
- 	background:transparent;
- 	background-position: top center;
-	width: 50px;
-	height: 100px;
-	background-size: 100% 100%;
- }
- #out_nav .owl-controls .owl-nav > div > span{
- 	width: 40px;
- 	height: 80px;
- 	position: relative;
- }
- #out_nav.owl-carousel .owl-item .item{
- 	position: relative;
- }
- 
- #out_nav.owl-carousel .center.active > .item > .item-overlay{
- 	z-index: 0;
- }
+#out_nav .owl-controls .owl-nav > .owl-next{
+    right: auto;
+    left: 100%;
+    background-image: url(../images/pattern/arrow_next.png);
+}
+#out_nav .owl-controls .owl-nav > .owl-prev{
+    left: auto;
+    right: 100%;
+    background-image: url(../images/pattern/arrow_prev.png);
+}
+#out_nav .owl-controls .owl-nav > div{
+    background:transparent;
+    background-position: top center;
+    width: 50px;
+    height: 100px;
+    background-size: 100% 100%;
+}
+#out_nav .owl-controls .owl-nav > div > span{
+    width: 40px;
+    height: 80px;
+    position: relative;
+}
+#out_nav.owl-carousel .owl-item .item{
+    position: relative;
+}
 
- /**/
- .bg-theme-logo{
- 	background-color: #0071bc !important;
- }
- /**/
- .color-logo .line-bottom:after{
-	background-color: #0071bc !important;
- }
+#out_nav.owl-carousel .center.active > .item > .item-overlay{
+    z-index: 0;
+}
+
+/**/
+.bg-theme-logo{
+    background-color: #0071bc !important;
+}
+/**/
+.color-logo .line-bottom:after{
+    background-color: #0071bc !important;
+}
 .color-logo ul.list li::before{
-	color: #0071bc;
+    color: #0071bc;
 }
 /* custom pagenavgin */
 .ct_pagination span.current{
-	background: #EE163B;
-	color: #fff;
+    background: #EE163B;
+    color: #fff;
 }
 .ct_pagination > a,.ct_pagination > span{
-	padding: 3px 6px;
-	font-size: 14px;
-	font-weight: bold;
-	color: #000;
+    padding: 3px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
 }
 .ct_pagination > a:hover{
-	background: #EE163B;
-	color: #fff;
+    background: #EE163B;
+    color: #fff;
 }
 .single #tribe-bar-form,.archive #tribe-bar-form{
-	background-color: #ffffff;
+    background-color: #ffffff;
 }
 .single.single-tribe_events main.tm-content.row,
 .bg_img_logo{
-	background: url(../images/bg/what-is-futsal-bg.png);
-	background-size: 600px;
-        background-position: 100% 109%;        
-	background-repeat: no-repeat;
-        background-color: #f4f4f4;
+    background: url(../images/bg/what-is-futsal-bg.png);
+    background-size: 600px;
+    background-position: 100% 109%;        
+    background-repeat: no-repeat;
+    background-color: #f4f4f4;
 }
 #tribe-bar-form label{
-	color: #000;
+    color: #000;
 }
 #tribe-events-content .tribe-events-single-section .pd-0{
-	padding: 0;
+    padding: 0;
 }
 #tribe-events-content .tribe-events-single-section .border-radius-0{
-	border-radius: 0px;
+    border-radius: 0px;
 }
 .color-logo{
-	color : #0071bc !important;
+    color : #0071bc !important;
 }
 .tribe-events-venue-details.title a{
-	color: inherit;
+    color: inherit;
 }
- 
+
 #tribe-bar-form #tribe-bar-views{
     left: 83.4%;
 }
@@ -101,4 +101,50 @@
 .single-tribe_events .col-sm-6{
     padding-left: 0;
     padding-right: 35px;
+}
+
+
+
+#tribe-geo-map-wrapper{
+    margin-top: 40px;
+}
+.events-list .tribe-events-loop, .single-tribe_organizer .tribe-events-loop, .single-tribe_venue .tribe-events-loop, .tribe-events-day .tribe-events-loop{
+    max-width: 960px;
+}
+.tribe-events-list .type-tribe_events{
+    padding: 10px 0 30px 0;
+    border-bottom: 3px dotted #aaa;
+}
+.tribe-events-map-event-title a{
+    color: #21759b;
+}
+.tribe-events-list .tribe-events-venue-details,
+.tribe-events-list .tribe-events-venue-details a{
+    color: #CA4540;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+}
+.tribe-events-list .time-details{
+    font-size: 13px;
+    font-weight: normal;
+    color: #aaa;
+    margin: 10px 0 10px 0;
+}
+.tribe-events-list .tribe-events-event-meta.location{
+    margin-bottom: 11px;
+}
+.tribe-events-loop .tribe-events-content{
+    padding: 0 10px 0 0;
+}
+#tribe-bar-form .tribe-bar-submit input[type="submit"]{
+    color: #fff;
+    background-color: #CA4540;
+    border-color: #CA4540;
+    transition: all 0.7s;
+}
+#tribe-bar-form .tribe-bar-submit input[type="submit"]:hover{
+    color: #fff;
+    background-color: #c30e2d;
+    border-color: #b90e2b;
 }
