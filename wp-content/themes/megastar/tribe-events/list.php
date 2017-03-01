@@ -13,6 +13,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+  get_template_part( 'template-parts/events/titlebar' );  
 
 do_action( 'tribe_events_before_template' );
 ?>

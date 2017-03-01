@@ -18,7 +18,7 @@ $city = tribe_get_city();
 			&& get_post_thumbnail_id( $post_id )
 		) { ?>
 	<div class="box-hover-effect effect1 mb-15">
-      	<div class="thumb"><a href="<?php echo $link; ?>"><?php the_post_thumbnail( $thumbnail_size , array('class' =>'img-fullwidth mb-0')); ?></a>
+            <div class="thumb"><a href="<?php echo $link; ?>"><img class="img-fullwidth mb-0" src="<?php the_post_thumbnail_url( 'post-thumbnail'); ?>" /></a>
       	</div>
         <h5 class="text-uppercase letter-space-1 mb-0"><a href="<?php echo $link; ?>"><?php the_title();?></a></h5>
         <ul>

@@ -23,16 +23,16 @@ $event_id = get_the_ID();
 $sidebar = (is_active_sidebar('event-calender')) ? get_theme_mod('megastar_blog_layout', 'sidebar-right') : '';
 
 if($sidebar == 'sidebar-left'){
-	$mainlayout = 'uk-width-medium-7-10 uk-push-3-10';
-	$sidebarlayout = 'uk-row-first uk-width-medium-3-10 uk-pull-7-10';
+	$mainlayout = ' ';
+	$sidebarlayout = ' ';
 }
 elseif($sidebar == 'sidebar-right'){
-	$mainlayout = 'uk-row-first uk-width-medium-7-10';
-	$sidebarlayout = 'uk-width-medium-3-10';
+	$mainlayout = ' ';
+	$sidebarlayout = ' ';
 } 
 else{
-	$mainlayout = 'uk-width-medium-1-1';
-	$sidebarlayout = 'uk-hidden';
+	$mainlayout = ' ';
+	$sidebarlayout = ' ';
 
 
 	$filters = tribe_events_get_filters();

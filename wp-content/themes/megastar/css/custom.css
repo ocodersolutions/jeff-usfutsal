@@ -69,12 +69,12 @@
     background-color: #f4f4f4;
 }
 #page.layout-full-wrapper{
-   
+
     background: url(../images/bg/what-is-futsal-bg.png);
     background-size: 600px;
     background-position: 100% 109%;        
     background-repeat: no-repeat;
-     background-color: #f4f4f4;
+    background-color: #f4f4f4;
 }
 #tribe-bar-form label{
     color: #000;
@@ -159,4 +159,40 @@
 .border-bottom-gray:last-child {
     border: none;
     margin-bottom: 10px !important;
+}
+.line-height-55{
+    line-height: 55px !important;
+}
+.recurringinfo{
+    vertical-align: baseline !important; 
+
+}
+.recurringinfo .event-is-recurring{
+        color: #777777;
+    font-size: 14px;
+}
+.recurringinfo a{
+    color: #CA4540;
+    transition: all 0.7s;
+}
+.recurringinfo a:hover{
+    color: #c30e2d;
+}
+.btn-dark.btn-theme-colored{
+    transition: all 0.7s;
+
+}
+.tribe-events-user-recurrence-toggle{
+    display: none;
+}
+.tribe-events-page-title sup{
+    font-size: 60%;
+}
+.events-list #tribe-events-footer, .single-tribe_events #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer, .tribe-events-photo #tribe-events-footer{
+    border: none !important;
+}
+
+.upcoming-event-title{
+    line-height: 24px;
+    margin-top: -4px !important;
 }

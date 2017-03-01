@@ -18,7 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- List Title -->
 	<?php do_action( 'tribe_events_before_the_title' ); ?>
-	<h2 class="tribe-events-page-title"><?php echo tribe_get_events_title(); ?></h2>
+        <h2 class="tribe-events-page-title title text-uppercase"> Upcoming <span class="text-black"> Futsal<sup>&reg;</sup> Events</span></h2>
+
+	 <?php // echo tribe_get_events_title(); ?> 
 	<?php do_action( 'tribe_events_after_the_title' ); ?>
 
 	<!-- Notices -->
